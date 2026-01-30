@@ -1,7 +1,7 @@
 ---
 title: Restore deleted records with code (preview)
-description: Learn how to configure tables to enable a recycle bin so that you can restore records deleted within a specified time period. 
-ms.date: 09/04/2024
+description: Learn how to configure tables so that you can restore records deleted within a specified time period. 
+ms.date: 01/30/2026
 author: rijoshi1
 ms.author: rijoshi
 ms.reviewer: jdaly
@@ -19,9 +19,9 @@ ms.custom: bap-template
 
 [This article is prerelease documentation and is subject to change.]
 
-Sometimes people delete records that they shouldn't. Administrators can enable a recycle bin for tables so that they can restore deleted records within a specified period of time. [Learn how administrators can restore deleted records](/power-platform/admin/restore-deleted-table-records)
+Sometimes people delete records that they shouldn't. Administrators can enable tables so that they can restore deleted records within a specified period of time. [Learn how administrators can restore deleted records](/power-platform/admin/restore-deleted-table-records)
 
-[When the recycle bin is enabled](/power-platform/admin/restore-deleted-table-records#enable-restore-table-records), developers can use the `Restore` message to restore deleted record before the specified period of time. The period of time can be up to 30 days.
+[When the this feature is enabled is enabled](/power-platform/admin/restore-deleted-table-records#enable-restore-table-records), developers can use the `Restore` message to restore deleted record before the specified period of time. The period of time can be up to 30 days.
 
 ## Retrieve deleted records that can be restored
 
@@ -343,7 +343,7 @@ If you delete an optionset option, and that option was used in a deleted record,
 
 #### Primary Key Violation on Delete
 
-If the record with same primary key was already deleted before, copy to recycle bin is ignored for the record. To enforce all deleted items are stored in recycle bin, you can set the `DoNotEnforcePrimaryKeyOrgSettingRecycleBin` setting using the [OrgDBOrgSettings tool for Microsoft Dynamics CRM](/power-platform/admin/environment-database-settings). 
+If the record with same primary key was already deleted before, nothing happens. To enforce all deleted items are recorded, you can set the `DoNotEnforcePrimaryKeyOrgSettingRecycleBin` setting using the [OrgDBOrgSettings tool for Microsoft Dynamics CRM](/power-platform/admin/environment-database-settings). 
 
 After enabling this setting, you might receive the following error:
 
@@ -352,17 +352,17 @@ After enabling this setting, you might receive the following error:
 > Number: `-2147182279`<br />
 > Message: `A record that has the attribute values Deleted Object already exists on Delete.`
 
-## Detect which tables are enabled for recycle bin
+## Detect which tables are enabled
 
-Before the recycle bin feature is enabled, the [Recycle Bin Configuration (RecycleBinConfig) table](reference/entities/recyclebinconfig.md) has no rows.
+Before this feature is enabled, the [Restore Deleted Records Configuration (RecycleBinConfig) table](reference/entities/recyclebinconfig.md) has no rows.
 
-In time, we expect that eventually most tables will be available to use the recycle bin feature. [Solution components](/power-platform/alm/solution-concepts-alm#solution-components), [virtual tables](../../maker/data-platform/create-edit-virtual-entities.md), and [elastic tables](../../maker/data-platform/create-edit-elastic-tables.md) aren't supported for recycle bin. During this preview, some tables not currently enabled might be enabled later (For example, tables with more than 400 columns). For a list of tables that don't support recycle bin, see [Tables not currently supported for Recycle Bin](#tables-not-currently-supported-for-recycle-bin).
+In time, we expect that eventually most tables will be available to use this feature. [Solution components](/power-platform/alm/solution-concepts-alm#solution-components), [virtual tables](../../maker/data-platform/create-edit-virtual-entities.md), and [elastic tables](../../maker/data-platform/create-edit-elastic-tables.md) aren't supported. During this preview, some tables not currently enabled might be enabled later (For example, tables with more than 400 columns). For a list of tables that don't support this feature, see [Tables not currently supported](#tables-not-currently-supported-for-the-restore-deleted-records-feature).
 
-You can also [disable recycle bin for specific tables](#disable-recycle-bin-for-a-table) and [disable recycle bin for the environment](#disable-recycle-bin-for-the-environment). If the recycle bin isn't enabled for a table, you won't [find any records eligible to be restored](#retrieve-deleted-records-that-can-be-restored). You can query Dataverse to find out whether the recycle bin is enabled for a table or not.
+You can also [disable the restore deleted records feature for specific tables](#disable-restore-deleted-records-feature-for-a-table) and [disable Restore deleted records feature for the environment](#disable-restore-deleted-records-feature-for-the-environment). If the restore deleted records feature isn't enabled for a table, you won't [find any records eligible to be restored](#retrieve-deleted-records-that-can-be-restored). You can query Dataverse to find out whether the restore deleted records feature is enabled for a table or not.
 
-Tables that are enabled for recycle bin have a row in the `RecycleBinConfig` table where the `statecode` is active and `isreadyforrecyclebin` is true. The `RecycleBinConfig` table doesn't contain the name of the table, but refers to a row in the [Entity table](reference/entities/entity.md) where the `logicalname` column contains the [LogicalName](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata.logicalname) of the table.
+Tables that are enabled for the restore deleted records feature have a row in the `RecycleBinConfig` table where the `statecode` is active and `isreadyforrecyclebin` is true. The `RecycleBinConfig` table doesn't contain the name of the table, but refers to a row in the [Entity table](reference/entities/entity.md) where the `logicalname` column contains the [LogicalName](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata.logicalname) of the table.
 
-Use the following FetchXml query to detect which tables have recycle bin enabled:
+Use the following FetchXml query to detect which tables have the restore deleted records feature enabled:
 
 ```xml
 <fetch>
@@ -389,9 +389,9 @@ Use the following FetchXml query to detect which tables have recycle bin enabled
 
 [Learn to query data using FetchXml](fetchxml/overview.md)
 
-## Detect which tables don't have recycle bin enabled
+## Detect which tables don't have the restore deleted records feature enabled
 
-To know which tables aren't enabled for recycle bin, use the following FetchXml query that is the reverse of the one found in [Detect which tables are enabled for recycle bin](#detect-which-tables-are-enabled-for-recycle-bin).
+To know which tables aren't enabled for the restore deleted records feature, use the following FetchXml query that is the reverse of the one found in [Detect which tables are enabled](#detect-which-tables-are-enabled).
 
 ```xml
 <fetch>
@@ -422,10 +422,10 @@ To know which tables aren't enabled for recycle bin, use the following FetchXml 
 
 [Learn to query data using FetchXml](fetchxml/overview.md)
 
-The results of this query as of May 2024 when this preview feature began are in [Tables not currently supported for Recycle Bin](#tables-not-currently-supported-for-recycle-bin)
+The results of this query as of May 2024 when this preview feature began are in [Tables not currently supported for restore deleted records](#tables-not-currently-supported-for-the-restore-deleted-records-feature)
 
 
-## Retrieve and set the automatic cleanup time period configuration for the recycle bin
+## Retrieve and set the automatic cleanup time period configuration for the restore deleted records feature
 
 The value to determine how long deleted records are available to be restored is set in the [RecycleBinConfig.CleanupIntervalInDays](reference/entities/recyclebinconfig.md#BKMK_CleanupIntervalInDays) column where the [Name](reference/entities/recyclebinconfig.md#BKMK_Name) column value is `organization`. Every other row in the `RecycleBinConfig` table has a `CleanupIntervalInDays` column value of `-1`. This value indicates it uses the same values set for the `organization` table.
 
@@ -482,7 +482,7 @@ static void SetCleanupIntervalInDays(
     }
     else
     {
-        throw new Exception($"Recycle bin configuration for table '{tableLogicalName}' not found.");
+        throw new Exception($"Restore deleted records configuration for table '{tableLogicalName}' not found.");
     }
 }
 ```
@@ -518,7 +518,7 @@ function Set-CleanupIntervalInDays{
          }
       }
       else {
-         Write-Host "Recycle bin configuration for table $tableEntityId not found."
+         Write-Host "Restore deleted records configuration for table $tableEntityId not found."
       }
 }
 ```
@@ -529,24 +529,24 @@ function Set-CleanupIntervalInDays{
 
 ---
 
-## Disable recycle bin for a table
+## Disable restore deleted records feature for a table
 
-To disable the recycle bin for a table, disable the `recyclebinconfig` record for the table by setting the [statecode](reference/entities/recyclebinconfig.md#BKMK_statecode) and [statuscode](reference/entities/recyclebinconfig.md#BKMK_statuscode) properties to their **Inactive** values: `2` and `1` respectively.
+To disable the this feature for a table, disable the `recyclebinconfig` record for the table by setting the [statecode](reference/entities/recyclebinconfig.md#BKMK_statecode) and [statuscode](reference/entities/recyclebinconfig.md#BKMK_statuscode) properties to their **Inactive** values: `2` and `1` respectively.
 
 > [!NOTE]
 > The following queries compare the `EntityId` value against the [Entity.EntityId](reference/entities/entity.md#BKMK_EntityId) column value, which stores the table [EntityMetadata.MetadataId ](/dotnet/api/microsoft.xrm.sdk.metadata.metadatabase.metadataid).
 
 ### [SDK for .NET](#tab/sdk)
 
-Use this static `DisableRecycleBinForTable` method to disable the recycle bin for a specific table.
+Use this static `DisableRestoreDeletedRecordsFeatureForTable` method to disable the restore deleted records feature for a specific table.
 
 ```csharp
 /// <summary>
-/// Disable the Recycle bin for a specified table
+/// Disable the restore deleted records feature for a specified table
 /// </summary>
 /// <param name="service">The authenticated IOrganizationService instance</param>
 /// <param name="tableEntityId">The entityId of the table</param>
-static void DisableRecycleBinForTable(
+static void DisableRestoreDeletedRecordsFeatureForTable(
     IOrganizationService service,
     Guid tableEntityId)
 {
@@ -585,7 +585,7 @@ static void DisableRecycleBinForTable(
     }
     else
     {
-        string message = $"Recycle bin configuration for table '{extensionofrecordid}' not found.";
+        string message = $"Restore deleted records configuration for table '{extensionofrecordid}' not found.";
         throw new Exception(message);
     }
 }
@@ -597,11 +597,11 @@ static void DisableRecycleBinForTable(
 ### [Web API](#tab/webapi)
 
 
-Use this `Disable-RecycleBinForTable` PowerShell function to disable the recycle bin for a specific table. This function depends on the `Get-Records` and `Update-Record` functions described in [Create table operations functions](webapi/use-ps-and-vscode-web-api.md#create-table-operations-functions)
+Use this `Disable-RestoreDeletedRecordsFeatureForTable` PowerShell function to disable the restore deleted records feature for a specific table. This function depends on the `Get-Records` and `Update-Record` functions described in [Create table operations functions](webapi/use-ps-and-vscode-web-api.md#create-table-operations-functions)
 
 
 ```powershell
-function Disable-RecycleBinForTable {
+function Disable-RestoreDeletedRecordsFeatureForTable {
    param(
       [Parameter(Mandatory)]
       [guid]$tableId
@@ -627,7 +627,7 @@ function Disable-RecycleBinForTable {
       } | Out-Null
    }
    else {
-      Write-Host "Recycle bin configuration for table $tableId not found."
+      Write-Host "Restore deleted records configuration for table $tableId not found."
    }
 }
 ```
@@ -638,12 +638,12 @@ function Disable-RecycleBinForTable {
 
 ---
 
-## Disable recycle bin for the environment
+## Disable restore deleted records feature for the environment
 
 > [!NOTE]
-> The preferred way to disable recycle bin for an environment is to [turn it off in the Power Platform admin center](/power-platform/admin/restore-deleted-table-records#enable-restore-table-records). The method described here may change before the feature becomes generally available.
+> The preferred way to disable the restore deleted records feature for an environment is to [turn it off in the Power Platform admin center](/power-platform/admin/restore-deleted-table-records#enable-restore-table-records). The method described here may change before the feature becomes generally available.
 
-Delete the row in the [RecycleBinConfig](reference/entities/recyclebinconfig.md) table where the `name` value is `"organization"`. This triggers deleting all the records in the `RecycleBinConfig` table and disable recycle bin for the environment.
+Delete the row in the [RecycleBinConfig](reference/entities/recyclebinconfig.md) table where the `name` value is `"organization"`. This triggers deleting all the records in the `RecycleBinConfig` table and disable the restore deleted records feature for the environment.
 
 > [!IMPORTANT]
 > Don't try to delete other individual records. It is important that Dataverse manage this.
@@ -672,9 +672,9 @@ If you have this kind of custom business logic, then Dataverse doesn't know abou
 >
 > The [InputParameters](understand-the-data-context.md#inputparameters) and [OutputParameters](understand-the-data-context.md#outputparameters) of the `Restore` message are similar to `Create` message, so plug-ins written to be registered for the `Create` message can be re-used for the `Restore` message with fewer changes.
 
-## Tables not currently supported for Recycle Bin
+## Tables not currently supported for the restore deleted records feature
 
-The query described in [Detect which tables don't have recycle bin enabled](#detect-which-tables-dont-have-recycle-bin-enabled) was used to generate [this list](/power-platform/admin/restore-deleted-table-records#tables-not-currently-supported-for-recycle-bin) in August of 2024.
+The query described in [Detect which tables don't have the restore deleted records feature enabled](#detect-which-tables-dont-have-the-restore-deleted-records-feature-enabled) was used to generate [this list](/power-platform/admin/restore-deleted-table-records#tables-not-currently-supported-for-the-deleted-records-feature) in August of 2024.
 
 
 
