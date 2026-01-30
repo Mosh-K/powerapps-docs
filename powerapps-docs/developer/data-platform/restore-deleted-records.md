@@ -674,7 +674,7 @@ If you have this kind of custom business logic, Dataverse doesn't know about it 
 
 ## Tables not currently supported for the restore deleted records feature
 
-The query described in [Detect which tables don't have the restore deleted records feature enabled](#detect-which-tables-dont-have-the-restore-deleted-records-feature-enabled) was used to generate [this list](/power-platform/admin/restore-deleted-table-records#tables-not-currently-supported-for-the-deleted-records-feature) in August 2024.
+The query described in [Detect which tables aren't enabled](#detect-which-tables-arent-enabled) was used to generate [this list](/power-platform/admin/restore-deleted-table-records#tables-not-currently-supported-for-the-deleted-records-feature) in August 2024.
 
 
 
