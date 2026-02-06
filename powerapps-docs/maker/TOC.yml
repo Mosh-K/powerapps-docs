@@ -405,6 +405,8 @@
             href: ./canvas-apps/add-configure-controls.md
           - name: Add a screen
             href: ./canvas-apps/add-screen-context-variables.md
+          - name: Add Microsoft 365 Copilot chat to canvas apps (preview)
+            href: ./canvas-apps/microsoft-365-copilot-chat-canvas-apps.md  
           - name: Add a Copilot control (preview)
             href: ./canvas-apps/add-ai-copilot.md
           - name: Add a custom Copilot (preview)
