@@ -2,7 +2,7 @@
 title: Manage model-driven app settings in the Power Apps app designer
 description: Learn how to manage the settings for your app using the app designer
 keywords: ""
-ms.date: 12/15/2025
+ms.date: 03/03/2026
 ms.custom: 
 ms.topic: how-to
 applies_to:
@@ -20,6 +20,7 @@ search.audienceType:
 contributors:
 - chmoncay
 - jasongre
+- clromano 
 ---
 # Manage model-driven app settings in the app designer
 
@@ -69,7 +70,8 @@ The **Upcoming** tab displays preview features currently available:
 > [!IMPORTANT]
 > [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
-- **Choose the offline mode to apply to your app**. When enabled, users can continue working in the model-driven app when offline. More information: [Mobile offline overview (preview)](../../mobile/mobile-offline-overview.md)
+- **M365 Copilot in model-driven apps**. Microsoft 365 Copilot chat makes it easier for users to work with model-driven apps by offering AI-powered insights through natural language conversations. With this feature, users can quickly find information, navigate apps more easily, and get help to boost their productivity. More information: [Add Microsoft 365 Copilot chat for app users in model-driven apps (preview)](add-microsoft-365-copilot.md)
+- **Enable your app in Microsoft 365 Copilot**. Power Apps in Copilot lets users interact with your Power Apps model-driven app directly from Copilot. When a user talks to the agent, it can surface your app's data as interactive widgets — a grid for browsing records and a form for viewing, editing, or creating them — all without leaving the Copilot experience. The feature works by generating a declarative agent from your app. More information: [Set up Power Apps in Copilot](#set-up-power-apps-in-copilot)
 
 ## Known limitations
 
@@ -77,6 +79,22 @@ The following app properties can't be edited in the app designer:
 
 - App Url Suffix
 - Manage App
+
+### Set up Power Apps in Copilot
+
+#### Prerequisites
+
+- A model-driven app. Currently, this feature is only available with model-driven apps.
+- Microsoft 365 Copilot license. Required for both the maker deploying the agent and end users interacting with it.
+- Permission to upload custom apps in Microsoft Teams. Your Microsoft 365 admin may need to enable this. Check your Teams admin settings if the upload option is not visible.
+
+#### Steps to set up Power Apps in Copilot
+
+1. Under **Enable your app in Microsoft 365 Copilot**, select **Download app package**.
+1. Upload the app from Microsoft Teams or Microsoft 365 Agents:
+
+   - Teams: Upload as a custom app in Teams. More information [Upload your app in Teams]( /microsoftteams/platform/concepts/deploy-and-publish/apps-upload)
+   - Microsoft 365 Agents: <!—Need a Learn link to how to do this in M365 similar to the Teams article.-->
 
 ## See also
 
