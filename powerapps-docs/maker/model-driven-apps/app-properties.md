@@ -73,13 +73,6 @@ The **Upcoming** tab displays preview features currently available:
 - **M365 Copilot in model-driven apps**. Microsoft 365 Copilot chat makes it easier for users to work with model-driven apps by offering AI-powered insights through natural language conversations. With this feature, users can quickly find information, navigate apps more easily, and get help to boost their productivity. More information: [Add Microsoft 365 Copilot chat for app users in model-driven apps (preview)](add-microsoft-365-copilot.md)
 - **Enable your app in Microsoft 365 Copilot**. Power Apps in Copilot lets users interact with your Power Apps model-driven app directly from Copilot. When a user talks to the agent, it can surface your app's data as interactive widgets — a grid for browsing records and a form for viewing, editing, or creating them — all without leaving the Copilot experience. The feature works by generating a declarative agent from your app. More information: [Set up Power Apps in Copilot](#set-up-power-apps-in-copilot)
 
-## Known limitations
-
-The following app properties can't be edited in the app designer:
-
-- App Url Suffix
-- Manage App
-
 ### Set up Power Apps in Copilot
 
 #### Prerequisites
@@ -95,6 +88,13 @@ The following app properties can't be edited in the app designer:
 
    - Teams: Upload as a custom app in Teams. More information [Upload your app in Teams]( /microsoftteams/platform/concepts/deploy-and-publish/apps-upload)
    - Microsoft 365 Agents: <!—Need a Learn link to how to do this in M365 similar to the Teams article.-->
+
+## Known limitations
+
+The following app properties can't be edited in the app designer:
+
+- App Url Suffix
+- Manage App
 
 ## See also
 
