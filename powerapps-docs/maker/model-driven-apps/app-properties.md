@@ -61,6 +61,16 @@ Here are a few of the features available to app makers:
 - **New look for model-driven apps**. Enabled by default, this feature determines whether end users see the modern refresh app experience or the classic look. This setting is hidden and ignored with the **2026 Wave 1** release when the new look becomes mandatory. More information: [Modern, refreshed look for model-driven apps](../../user/modern-fluent-design.md)
 - **Form fill assist toolbar**. When enabled, the form fill assist toolbar is visible at the top of a form, providing easy access to Copilot form fill assistance capabilities like smart paste and files. For more information about AI form fill assistance environment settings, go to [AI form fill assistance](/power-platform/admin/settings-features#ai-form-fill-assistance). For more information about using this feature, go to [Use Copilot's form fill assistance feature in model-driven apps](../../user/form-filling-assistance.md).
 
+## Navigation
+
+Controls navigation features for the app.
+
+- **Home**. Displays a link to the home page for the model-driven app.
+- **Recent**. Displays the list of links for the model-driven app that were recently visited.
+- **Pinned**. Pin items from you Recent list to make them easily located.
+- **Enable collapsibile groups**. Disabled by default. Allows groups to be collapsed or expanded. More information: [Create a group](app-navigation.md#create-a-group)
+- **Enable Areas**. Disabled by default. Areas can contains multiple groups. For apps, with multiple areas, a user must  select the area switch located at the bottom left in the app to change to a different area. [Add a new area](app-navigation.md#add-a-new-area)
+
 ## Upcoming 
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
