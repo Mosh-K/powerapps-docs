@@ -94,7 +94,7 @@ The **Upcoming** tab displays preview features currently available:
 #### Steps to set up Power Apps in Copilot
 
 1. Under **Enable your app in Microsoft 365 Copilot**, select **Download app package**.
-1. Upload the app from Microsoft Teams or Microsoft 365 Agents:
+1. Upload the compressed file that is named similar to `declarative-agent-app name.zip` from Microsoft Teams or Microsoft 365 Agents:
 
    - Teams: Upload as a custom app in Teams. More information [Upload your app in Teams]( /microsoftteams/platform/concepts/deploy-and-publish/apps-upload)
    - Microsoft 365 Agents: <!-- Need a Learn link to how to do this in M365 similar to the Teams article.-->
