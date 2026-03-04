@@ -67,9 +67,9 @@ Controls navigation features for the app.
 
 - **Home**. Displays a link to the home page for the model-driven app.
 - **Recent**. Displays the list of links for the model-driven app that were recently visited.
-- **Pinned**. Pin items from you Recent list to make them easily located.
+- **Pinned**. Pin items from the **Recent** list to locate them easily.
 - **Enable collapsibile groups**. Disabled by default. Allows groups to be collapsed or expanded. More information: [Create a group](app-navigation.md#create-a-group)
-- **Enable Areas**. Disabled by default. Areas can contains multiple groups. For apps, with multiple areas, a user must  select the area switch located at the bottom left in the app to change to a different area. [Add a new area](app-navigation.md#add-a-new-area)
+- **Enable Areas**. Disabled by default. Areas can contain multiple groups. For apps with multiple areas, a user must  select the area switch located at the bottom left in the app to change to a different area. [Add a new area](app-navigation.md#add-a-new-area)
 
 ## Upcoming 
 
