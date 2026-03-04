@@ -97,7 +97,7 @@ The **Upcoming** tab displays preview features currently available:
 1. Upload the app from Microsoft Teams or Microsoft 365 Agents:
 
    - Teams: Upload as a custom app in Teams. More information [Upload your app in Teams]( /microsoftteams/platform/concepts/deploy-and-publish/apps-upload)
-   - Microsoft 365 Agents: <!—Need a Learn link to how to do this in M365 similar to the Teams article.-->
+   - Microsoft 365 Agents: <!-- Need a Learn link to how to do this in M365 similar to the Teams article.-->
 
 ## Known limitations
 
