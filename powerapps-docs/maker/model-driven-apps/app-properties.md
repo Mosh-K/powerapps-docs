@@ -96,8 +96,8 @@ The **Upcoming** tab displays preview features currently available:
 1. Under **Enable your app in Microsoft 365 Copilot**, select **Download app package**.
 1. Upload the compressed file that is named similar to `declarative-agent-app name.zip` from Microsoft Teams or Microsoft 365 Agents:
 
-   - Teams: Upload as a custom app in Teams. More information [Upload your app in Teams]( /microsoftteams/platform/concepts/deploy-and-publish/apps-upload)
-   - Microsoft 365 Agents: <!-- Need a Learn link to how to do this in M365 similar to the Teams article.-->
+   - Teams: Upload for personal use as a custom app in Teams. More information [Upload your app in Teams]( /microsoftteams/platform/concepts/deploy-and-publish/apps-upload)
+   - Microsoft 365 Agents: Publish the package for a team or group from the Microsoft 365 admin center. More information: [Publish agents](/microsoft-365/admin/manage/agent-registry?view=o365-worldwide#publish-agents)
 
 ## Known limitations
 
