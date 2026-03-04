@@ -48,9 +48,9 @@ If you encounter issues, submit feedback through Microsoft 365 Copilot. Your fee
 
 ## What operational factors and settings allow for effective and responsible use of the system?
 
-- **Data retrieval is powered by the [Data Exploration Agent](https://learn.microsoft.com/en-us/power-apps/user/grid-filters).** Power Apps in Agents leverages the Data Exploration Agent, the same underlying AI capability that powers the Grid view experience in Power Apps model-driven apps. As a result, the quality and accuracy of data retrieval is benchmarked against and consistent with the data exploration experience users already have in model-driven apps.
+- **Data retrieval is powered by the [Data Exploration Agent](https://learn.microsoft.com/en-us/power-apps/user/find-data-with-ai).** Power Apps in Agents leverages the Data Exploration Agent, the same underlying AI capability that powers the Grid view experience in Power Apps model-driven apps. As a result, the quality and accuracy of data retrieval is benchmarked against and consistent with the data exploration experience users already have in model-driven apps.
 
-- **Form filling is powered by [Form Fill Assistance](https://learn.microsoft.com/en-us/power-apps/maker/common/faq-from-filling-assistance).** Power Apps in Agents leverages Form Fill Assistance, the same underlying AI capability that powers field suggestions in Power Apps model-driven app forms. As a result, the quality and accuracy of prefilled values is benchmarked against and consistent with the form-filling experience users already have in model-driven apps. Users should review prefilled values before saving.
+- **Form filling is powered by [Form Fill Assistance](https://learn.microsoft.com/en-us/power-apps/user/form-filling-assistance).** Power Apps in Agents leverages Form Fill Assistance, the same underlying AI capability that powers field suggestions in Power Apps model-driven app forms. As a result, the quality and accuracy of prefilled values is benchmarked against and consistent with the form-filling experience users already have in model-driven apps. Users should review prefilled values before saving.
 
 ---
 
