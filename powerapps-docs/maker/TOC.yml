@@ -2550,6 +2550,8 @@
   items:
   - name: Overview
     href: ./common/responsible-ai-overview.md
+  - name: FAQ about Power Apps in agents
+    href: ./common/faq-apps-in-agents.md
   - name: FAQ about building apps through conversation
     href: ./common/faqs-build-apps-conversation.md
   - name: FAQ about generating app descriptions with Copilot

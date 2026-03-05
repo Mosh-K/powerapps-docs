@@ -16,6 +16,8 @@ ms.collection:
 ---
 # FAQ for Power Apps in agents
 
+These frequently asked questions (FAQs) describe the AI impact of Power Apps in agents for model-driven apps.
+
 ## What is Power Apps in agents?
 
 Power Apps in agents enables users to interact with data from Power Apps model-driven apps directly in Microsoft 365 Copilot through natural language. When makers deploy a declarative agent for a model-driven app, users can query records, view data in grids, create and edit records, and receive AI-generated summaries, all through a Copilot conversation, without switching to the app.
