@@ -2,15 +2,6 @@
 
 Users can quickly find, filter, and sort their data by using natural language, so they don't need to use complicated advanced filters. If your administrator turns on **Natural Language Grid and View Search**, you see the natural language search box.
 
-## Search data by using agents in Microsoft 365 Copilot chat
-
-When users interact with agents in Microsoft 365 Copilot chat, the agents can search and retrieve data from Power Apps views directly within the conversation. By using natural language, users can find, filter, and review app data without switching to the app experience.
-Copilot interprets the user’s request and applies the appropriate filters, sorting, and text search against the underlying view data. The agent returns the results in Copilot chat, presented in a structured, tabular format that reflects the view data.
-Users can continue to work with the returned results in the conversation, such as requesting summaries of the data or exporting the results to formats like Excel or PowerPoint. All data access respects the same permissions and view constraints defined in Power Apps.
-
-> [!NOTE]
-> Searching data through agents in Copilot chat follows the same capabilities and limitations as finding data in a view with AI in Power Apps.
-
 ## Natural language search in Power Apps
 
 Use smart grid natural language search to ask data-related questions in natural language. For example, request “cases with high priority with overdue follow-up by date” to filter your view and display only those relevant cases.
@@ -40,3 +31,12 @@ These capabilities aren't supported:
   - Refer to data columns by the names shown in the grid header.
   - Separate multiple conditions with commas or periods.
 - If your search string has two words or fewer, Copilot does a text search. To do a Copilot search, use more than two words. To do a text search with more than two words, put the search term in single or double quotes.
+
+## Search data by using agents in Microsoft 365 Copilot chat
+
+When users interact with agents in Microsoft 365 Copilot chat, the agents can search and retrieve data from Power Apps views directly within the conversation. By using natural language, users can find, filter, and review app data without switching to the app experience.
+Copilot interprets the user’s request and applies the appropriate filters, sorting, and text search against the underlying view data. The agent returns the results in Copilot chat, presented in a structured, tabular format that reflects the view data.
+Users can continue to work with the returned results in the conversation, such as requesting summaries of the data or exporting the results to formats like Excel or PowerPoint. All data access respects the same permissions and view constraints defined in Power Apps.
+
+> [!NOTE]
+> Searching data through agents in Copilot chat follows the same capabilities and limitations as finding data in a view with AI in Power Apps.
