@@ -54,13 +54,18 @@ To provide feedback about the feature, select the thumbs up or down button on th
 
 :::image type="content" source="/power-apps/user/media/formfill_feedback.png" alt-text="Screenshot that shows the feedback survey for the form fill feature.":::
 
-## Use form fill assistance with agents in Copilot chat
+## Use form fill assistance with agents in Microsoft 365 Copilot chat
 
-When you interact with agents in Microsoft 365 Copilot chat, agents can surface forms from model-driven apps directly in the conversation. Form fill assistance helps populate these forms by suggesting values based on relevant context available to Microsoft 365 Copilot, such as existing data you have access to from emails, chats, or any document.
+With Microsoft 365 Copilot you have ability to bring app-based experiences to agents, the app experience can leverage the form fill assistance right in the chat. 
+
+> [!NOTE]
+> To use this capability, you need to [set up an apps agent in Microsoft 365 Copilot](/power-apps/maker/model-driven-apps/app-properties#upcoming).
+
+When you interact with agents in Copilot chat, agents can surface forms from apps directly in the conversation. Form fill assistance helps populate these forms by suggesting values based on relevant context available, such as existing data you have access to from emails, chats, or any document.
 
 The suggestions appear inline in the chat-based form and can be reviewed or edited before submission. All suggestions are optional and aren't saved until you explicitly accept and save the input.
 
-After submission, the data saves to the connected model-driven app and is available in Power Apps, just as if you completed the form directly in the app.
+After submission, the data is saved to the connected app and is available, just as if you complete the form directly in the app.
 
 ## Use smart paste (preview)
 

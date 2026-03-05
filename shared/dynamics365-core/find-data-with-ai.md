@@ -2,7 +2,7 @@
 
 Users can quickly find, filter, and sort their data by using natural language, so they don't need to use complicated advanced filters. If your administrator turns on **Natural Language Grid and View Search**, you see the natural language search box.
 
-## Natural language search in Power Apps
+## Natural language search
 
 Use smart grid natural language search to ask data-related questions in natural language. For example, request “cases with high priority with overdue follow-up by date” to filter your view and display only those relevant cases.
 
@@ -15,7 +15,7 @@ Use smart grid natural language search to ask data-related questions in natural 
 With Microsoft 365 Copilot you have the ability to bring app-based experiences to agents, the app experience can also use the AI assisted search in the grid view. 
 
 > [!NOTE]
-> To use this capability, you need to set up an agent in Microsoft 365 Copilot.
+> To use this capability, you need to [set up an apps agent in Microsoft 365 Copilot](/power-apps/maker/model-driven-apps/app-properties#upcoming).
 
 When users interact with agents in Copilot chat, the agents can search and retrieve data from apps view directly within the conversation. By using natural language, users can find, filter, and review app data without switching to the app experience.
 Copilot interprets the user's request and applies the appropriate filters, sorting, and text search against the underlying view data. The agent returns the results in Copilot chat, presented in a structured, tabular format that reflects the view data.
