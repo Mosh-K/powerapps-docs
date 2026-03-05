@@ -61,9 +61,9 @@ If you encounter problems, submit feedback through Microsoft 365 Copilot. Micros
 
 ## What operational factors and settings allow for effective and responsible use of the system?
 
-- Data retrieval is powered by the [data exploration agent](/power-apps/user/find-data-with-ai). Power Apps in agents leverages the Data Exploration Agent, the same underlying AI capability that powers the Grid view experience in Power Apps model-driven apps. As a result, the quality and accuracy of data retrieval is benchmarked against and consistent with the data exploration experience users already have in model-driven apps.
+Data retrieval is powered by the [data exploration agent](/power-apps/user/find-data-with-ai). Power Apps in agents leverages the Data Exploration Agent, the same underlying AI capability that powers the Grid view experience in Power Apps model-driven apps. As a result, the quality and accuracy of data retrieval is benchmarked against and consistent with the data exploration experience users already have in model-driven apps.
 
-- Form filling is powered by [form fill assistance](/power-apps/user/form-filling-assistance). Power Apps in agents leverages Form Fill Assistance, the same underlying AI capability that powers field suggestions in Power Apps model-driven app forms. As a result, the quality and accuracy of prefilled values is benchmarked against and consistent with the form-filling experience users already have in model-driven apps. Users should review prefilled values before saving.
+Form filling is powered by [form fill assistance](/power-apps/user/form-filling-assistance). Power Apps in agents leverages Form Fill Assistance, the same underlying AI capability that powers field suggestions in Power Apps model-driven app forms. As a result, the quality and accuracy of prefilled values is benchmarked against and consistent with the form-filling experience users already have in model-driven apps. Users should review prefilled values before saving.
 
 ## How do I provide feedback?
 
