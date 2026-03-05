@@ -1,8 +1,17 @@
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
-Users can find, filter, and sort their data quickly with natural language, bypassing complicated advanced filters. If your administrator has turned on **Natural Language Grid and View Search**, then the natural language search box will be visible.
+Users can quickly find, filter, and sort their data by using natural language, so they don't need to use complicated advanced filters. If your administrator turns on **Natural Language Grid and View Search**, you see the natural language search box.
 
-### Natural language search
+## Search data by using agents in Microsoft 365 Copilot chat
+
+When users interact with agents in Microsoft 365 Copilot chat, the agents can search and retrieve data from Power Apps views directly within the conversation. By using natural language, users can find, filter, and review app data without switching to the app experience.
+Copilot interprets the user’s request and applies the appropriate filters, sorting, and text search against the underlying view data. The agent returns the results in Copilot chat, presented in a structured, tabular format that reflects the view data.
+Users can continue to work with the returned results in the conversation, such as requesting summaries of the data or exporting the results to formats like Excel or PowerPoint. All data access respects the same permissions and view constraints defined in Power Apps.
+
+> [!NOTE]
+> Searching data through agents in Copilot chat follows the same capabilities and limitations as finding data in a view with AI in Power Apps.
+
+## Natural language search in Power Apps
 
 Use smart grid natural language search to ask data-related questions in natural language. For example, request “cases with high priority with overdue follow-up by date” to filter your view and display only those relevant cases.
 
@@ -12,7 +21,7 @@ Use smart grid natural language search to ask data-related questions in natural 
 
 ### Supported features
 
-- Filtering of record
+- Filtering of records
 - Sorting
 - Text search
 
