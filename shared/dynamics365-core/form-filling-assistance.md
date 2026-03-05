@@ -56,6 +56,9 @@ To provide feedback about the feature, select the thumbs up or down button on th
 
 ## Use form fill assistance with agents in Microsoft 365 Copilot chat
 
+> [!IMPORTANT]
+> This feature is being gradually rolled out across regions and might not be available yet in your region.
+
 With Microsoft 365 Copilot you have ability to bring app-based experiences to agents, the app experience can leverage the form fill assistance right in the chat. 
 
 > [!NOTE]

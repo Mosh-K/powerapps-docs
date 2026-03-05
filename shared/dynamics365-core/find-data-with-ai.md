@@ -12,6 +12,9 @@ Use smart grid natural language search to ask data-related questions in natural 
 
 ## Explore data with agents in Microsoft 365 Copilot chat
 
+> [!IMPORTANT]
+> This feature is being gradually rolled out across regions and might not be available yet in your region.
+
 With Microsoft 365 Copilot you have the ability to bring app-based experiences to agents, the app experience can also use the AI assisted search in the grid view. 
 
 > [!NOTE]
