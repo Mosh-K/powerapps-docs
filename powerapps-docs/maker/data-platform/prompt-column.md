@@ -137,7 +137,7 @@ This variable is used as a filter on the primary column of the data source and i
 
 The platform requires a single text input variable, which is automatically added and applied as a filter on the primary column of the data source. When you save the column, an error is displayed if the text input variable is missing or not used as a filter on the primary column. <!--Is the "text input variable" the Instructions box for the prompt column in the UI? Also, you can edit the default prompt, right? We should mention that here.-->
 
-:::image type="content" source="media/prompt-columns/prompt-column-filter-attribute-value.png" alt-text="prompt-column-filter-attribute-value.png":::
+:::image type="content" source="media/prompt-columns/prompt-column-filter-attribute-value.png" alt-text="Filter attribute example for a prompt column":::
 
 ## Prompt column with filter condition
 
@@ -154,12 +154,12 @@ With filter based execution, prompts run only when specified conditions are sati
 1. Clear the **Allow form fill assistance** checkbox.
 1. Select **+Add new prompt**. You can create up to five prompt columns per table. If editing an existing column, select **Edit** next to the **Prompt** box.
 1. Open a table variable, such as PromptTest.cr3dd_name in this example, and then select **Apply filter**.
- :::image type="content" source="media/prompt-columns/prompt-column-apply-filter.png" alt-text="prompt column apply filter.png" lightbox="media/prompt-columns/prompt-column-apply-filter.png:::
+ :::image type="content" source="media/prompt-columns/prompt-column-apply-filter.png" alt-text="Apply filter link for the prompt column" lightbox="media/prompt-columns/prompt-column-apply-filter.png":::
 
 1. On the **Filter conditions** pane, select **Add filter**, and then select **OK**.
-   :::image type="content" source="media/prompt-columns/prompt-column-add-filter-conditions.png" alt-text="prompt column apply filter.png":::
+   :::image type="content" source="media/prompt-columns/prompt-column-add-filter-conditions.png" alt-text="Filter conditions for prompt column":::
 1. On the **Edit column** pane, notice **Filters selected** is applied. Select **Save**.
- :::image type="content" source="media/prompt-columns/prompt-column-filter-selected.png" alt-text="prompt column apply filter.png":::
+ :::image type="content" source="media/prompt-columns/prompt-column-filter-selected.png" alt-text="Filters selected message is displayed":::
 
 ## View the prompt column status
 
@@ -196,7 +196,7 @@ This example demonstrates a prompt column named *testSummary* and its correspond
 1. On the **Edit column** pane, clear the **Allow prompt column execution** checkbox, and then select **Save**.
   :::image type="content" source="media/prompt-columns/prompt-column-disable.png" alt-text="prompt column disable.png":::
 
-By default, the **Allow prompt column execution** setting is enabled. When disabled, or the  [AI Prompts feature environment setting]((/power-platform/admin/settings-features?tabs=new#copilot-preview)) <!--This is a prerequisite already mentioned above and would turn ALL prompt columns off so I don't think we need to mention it here. --> is turned off, AI analysis isn't performed for the prompt column.
+By default, the **Allow prompt column execution** setting is enabled. When disabled, or the  [AI Prompts feature environment setting](/power-platform/admin/settings-features?tabs=new#copilot-preview) <!--This is a prerequisite already mentioned above and would disable ALL prompt columns so I don't think we need to mention it here. --> is turned off, AI analysis isn't performed for the prompt column.
 
 ### FAQs
 
