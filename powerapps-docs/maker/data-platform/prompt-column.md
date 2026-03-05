@@ -139,7 +139,7 @@ The platform requires a single text input variable, which is automatically added
 
 :::image type="content" source="media/prompt-columns/prompt-column-filter-attribute-value.png" alt-text="Filter attribute example for a prompt column":::
 
-## Prompt column with filter condition
+## Prompt column with filter condition <!-- Do the steps described in this section require the update?-->
 
 Filter conditions ensure prompts run only when they add value.
 
@@ -161,7 +161,7 @@ With filter based execution, prompts run only when specified conditions are sati
 1. On the **Edit column** pane, notice **Filters selected** is applied. Select **Save**.
  :::image type="content" source="media/prompt-columns/prompt-column-filter-selected.png" alt-text="Filters selected message is displayed":::
 
-## View the prompt column status
+## View the prompt column status <!-- Does this require the update?-->
 
 When a prompt column is created, the table automatically includes two corresponding columns, **Status** and **Details**, for that prompt column.
 
