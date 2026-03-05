@@ -2,16 +2,16 @@
 title: "Prompt columns in Microsoft Dataverse"
 description: "Understand how to create, manage, and use prompt columns with Power Apps and Dataverse."
 keywords: ""
-ms.date: 01/09/2026
+ms.date: 03/05/2026
 ms.custom: 
 ms.topic: article
 applies_to: 
   - "Dynamics 365 (online)"
   - "Dynamics 365 Version 9.x"
   - "powerapps"
-author: "paulliew"
+author: "ashiyad"
 ms.subservice: dataverse-maker
-ms.author: paulliew
+ms.author: ashi
 ms.reviewer: Mattp123
 ms.collection: bap-ai-copilot
 search.audienceType: 
@@ -109,107 +109,110 @@ Create a model-driven app to view and validate your prompt column results.
 1. Go to the **Tables** area in Power Apps and select **Views**.
 1. Observe the values in the records including new records that contain prompt column values.
 
+## Prompt column feature enhancements
 
-# Prompt Column feature enhancements
+> [!NOTE]
+>
+> - This capability is in process of rolling out, and might not be available in your region yet.
+> - The feature enhancments for prompt columns requires service update <!--I added the rolling out and might not be available messaging. Do we really need to mention a specific version/build here? If so, we have to have the version number here and where to find it in the UI. -->or higher.
 
-**Pre-requiste:** Requires service update <> or higher for below updated features.
+Prompt columns leverage asynchronous computation so that AI-driven processing is decoupled from real-time transactions. This preserves system responsiveness, protects business critical workflows, and enables organizations to adopt AI capabilities at scale without compromising operational reliability.
 
-Prompt Columns leverage asynchronous computation so that AI-driven processing is decoupled from real-time transactions. This preserves system responsiveness, protects business critical workflows, and enables organizations to adopt AI capabilities at scale without compromising operational reliability.
+### How to know when prompt values in prompt columns are asynchronous
 
-### How to check if Prompts are asynchronous
-When prompt column is added to an entity, a banner message appears at the top of the page.
+When a prompt column is added to a table, a banner message appears at the top of the page indicating that the value is generated asynchronously.
 
-   :::image type="content" source="media/prompt-columns/Prompt-Column-Async-Message.png" alt-text="Prompts Aysnc Message" lightbox="media/prompt-columns/prompt-column-async-message.png":::
+:::image type="content" source="media/prompt-columns/Prompt-Column-Async-Message.png" alt-text="Message displays: Prompt column values are generated asynchronously" lightbox="media/prompt-columns/prompt-column-async-message.png":::
 
-**Note:** If your environment is not upgraded to the latest version, the banner message may not be visible. Prompt Columns created in earlier versions will continue to operate without change until the upgrade occurs. As part of the upgrade process, existing prompt definitions are updated to support asynchronous execution.
+> [!NOTE]
+> If your environment isn't updated to the latest version, the banner message might not be visible. Prompt columns created in earlier versions will continue to operate without change until the upgrade occurs. As part of the upgrade process, existing prompt definitions are updated to support asynchronous execution.
 
-### Text Input variable is added by-default 
-A default Text Input variable is automatically added to prompt definition. This variable is used as a filter on the primary column of the data source and is required to save the prompt definition.
+### Text input variable
+
+A default text input variable is automatically added to the prompt definition. This variable is used as a filter on the primary column of the data source and is required to save the prompt definition.
 
 :::image type="content" source="media/prompt-columns/prompt-column-recordid.png" alt-text="media/prompt-columns/Prompt-Column-recordid.png":::
 
 This variable is used as a filter on the primary column of the data source and is required to save the prompt definition.
 
+The platform requires a single text input variable, which is automatically added and applied as a filter on the primary column of the data source. When you save the column, an error is displayed if the text input variable is missing or not used as a filter on the primary column. <!--Is the "text input variable" the Instructions box for the prompt column in the UI? Also, you can edit the default prompt, right? We should mention that here.-->
 
 :::image type="content" source="media/prompt-columns/prompt-column-filter-attribute-value.png" alt-text="prompt-column-filter-attribute-value.png":::
 
-**Note:** The platform requires a single Text Input variable, which is automatically added and applied as a filter on the primary column of the data source. When saving, an error is displayed if the Text Input variable is missing or not used as a filter on the primary column.
+## Prompt column with filter condition
 
+Filter conditions ensure prompts run only when they add value.
 
-## Prompt column with Filter Condition
-Filter conditions ensure Prompts run only when they add value. 
+With filter based execution, prompts run only when specified conditions are satisfied. During record creation or update, the prompt column evaluates the filter first and then executes the prompt for eligible records, helping minimize unnecessary executions and optimize credit <!--What do you mean by "credit" here?--> usage.
 
-With filter based execution, prompts run only when specified conditions are satisfied. During record creation or update, Prompt Column evaluates the filter first and executes the prompt only for eligible records, helping minimize unnecessary executions and optimize credit usage.
+### Add filters to a prompt column
+<!-- We need to cover both editing an existing prompt and creating a new prompt in this procedure. I tried to do this here. Please confirm it is accurate and matches the new experience.-->
+1. Go to [Power Apps](https://make.powerapps.com/), and select **Solutions** on the left navigation pane.
+1. Open the solution that has the table you want, select **Tables**, open table that has prompt column you want to edit or create a new one, and then select **Columns**.
+   - If creating a new column, select **New** > **Column**. On the right properties page, enter a **Display name** and **Description** for your column, for **Data type**, select **Prompt**.
+   - If editing an existing prompt, open the column. Under the **Data type** dropdown list, select **Prompt**. <!--If this is already a prompt column but created using the previous version do you need to select it as a Prompt column again? -->
+1. Clear the **Allow form fill assistance** checkbox.
+1. Select **+Add new prompt**. You can create up to five prompt columns per table. If editing an existing column, select **Edit** next to the **Prompt** box.
+1. Open a table variable, such as PromptTest.cr3dd_name in this example, and then select **Apply filter**.
+ :::image type="content" source="media/prompt-columns/prompt-column-apply-filter.png" alt-text="prompt column apply filter.png" lightbox="media/prompt-columns/prompt-column-apply-filter.png:::
 
-### Adding Filters on Existing Prompt Column
-1. Go to [Power Apps](https://make.powerapps.com/). Select **Tables** on the left navigation pane.
-1. Click on Table that has Prompt column.
-1. Click on Prompt Column > Edit Column.
-1. Click on **Apply filter**.
- :::image type="content" source="media/prompt-columns/prompt-column-apply-filter.png" alt-text="prompt column apply filter.png":::
-
-1. On Filter conditions screen > Add Filter (example below).
- :::image type="content" source="media/prompt-columns/prompt-column-add-filter-conditions.png" alt-text="prompt column apply filter.png":::
-1. Press **Ok**.
-1. On Edit column screen, notice Filters selected is applied
+1. On the **Filter conditions** pane, select **Add filter**, and then select **OK**.
+   :::image type="content" source="media/prompt-columns/prompt-column-add-filter-conditions.png" alt-text="prompt column apply filter.png":::
+1. On the **Edit column** pane, notice **Filters selected** is applied. Select **Save**.
  :::image type="content" source="media/prompt-columns/prompt-column-filter-selected.png" alt-text="prompt column apply filter.png":::
-1. Press **Save**.
 
+## View the prompt column status
 
-## Prompt Column Execution Status
-When a Prompt Column is created, the table automatically includes two corresponding columns—Status and Details—for that Prompt Column.
+When a prompt column is created, the table automatically includes two corresponding columns, **Status** and **Details**, for that prompt column.
 
-1. Go to [Power Apps](https://make.powerapps.com/). Select **Tables** on the left navigation pane.
-1. Open Table that has Prompt Column created. 
-1. On Table Page, go to the table columns. Press (v) chevron to view all columns. 
-1. On Show existing column – search for Prompt Column Name. 
-1. Select columns named as 
-    * (columnName) _PromptColumnStatus
-    * (columnName)_PromptColumnDetails
+1. Go to [Power Apps](https://make.powerapps.com/), and then select **Tables** on the left navigation pane.
+1. Open the table that has the prompt column where you want to view the status. 
+1. On the **Tables** list, select **Edit** next to **Table columns and data**. Press (v) chevron to view all columns. <!--I'm confused by this. If you want to view the columns from the table can't you just select Edit in the Table columns and data and add the columns you want there?-->
+1. Select the n more column header, and then in the select **Show existing column** list search for the prompt column name. 
+1. Select columns named:
+   * `(columnName) _PromptColumnStatus`
+   * `(columnName)_PromptColumnDetails`
 
 When prompt execution starts, these columns are populated to record the execution status and any failure details.
 
-The example below demonstrates a Prompt Column named testSummary and its corresponding Status and Details columns.
+This example demonstrates a prompt column named *testSummary* and its corresponding **Status** and **Details** columns.
 
  :::image type="content" source="media/prompt-columns/prompt-column-show-status-details-column.png" alt-text="prompt column show status details column.png":::
-
-
 
 **Prompt column status codes:**
 
 
 | Status  | Name | Description |
 |---|---|---|
-| 0 | NotStarted | Record created. AI analysis has not started yet. |
+| 0 | NotStarted | Record created. AI analysis hasn't started yet. |
 | 1 | InProgress | The prompt AI analysis is currently in-progress. Details column shows start Date and Time.|
 | 2 | Completed | Prompt execution completed successfully. Details column shows last successful Date and Time.|
-| 3 | Failed | The prompt AI generation failed. Detail column shows error details in last execution.|
+| 3 | Failed | The prompt AI generation failed. Detail column shows error details in the last execution.|
 
-### Disable Prompt column AI generation
+### Disable AI generation for a prompt column
+
 1. Go to [Power Apps](https://make.powerapps.com/). Select **Tables** on the left navigation pane.
-1. Go to Table
-1. Go to column that is of data type Prompt > Edit column
-1. On Edit column screen > Uncheck **Allow prompt column** execution checkbox 
+1. Open the table, select **Columns**, and then open the column that is of data type Prompt where you want to disable AI generation. 
+1. On the **Edit column** pane, clear the **Allow prompt column execution** checkbox, and then select **Save**.
   :::image type="content" source="media/prompt-columns/prompt-column-disable.png" alt-text="prompt column disable.png":::
 
-**Note:** By default, this setting is enabled. When Allow prompt column execution is disabled or AI Prompts feature (environment settings: More information: Manage feature settings) is turned off, AI analysis is not performed for Prompt column. 
+By default, the **Allow prompt column execution** setting is enabled. When disabled, or the  [AI Prompts feature environment setting]((/power-platform/admin/settings-features?tabs=new#copilot-preview)) <!--This is a prerequisite already mentioned above and would turn ALL prompt columns off so I don't think we need to mention it here. --> is turned off, AI analysis isn't performed for the prompt column.
 
 ### FAQs
 
 **Are backfills supported?** 
 
-Prompt column generates AI results when a new record is created, or when one or more columns specified in the Prompt Column definition are updated.
+Prompt columns generate AI results when a new record is created, or when one or more columns specified in the prompt column definition are updated.
 
-Existing records are not processed by default. However, updating a column defined in the Prompt Column definition triggers AI analysis.
+Existing records aren't processed by default. However, updating a column defined in the prompt column definition triggers AI analysis.
 
-**Are Prompt columns audited?** 
+**Are prompt columns audited?** 
 
-Prompt columns are not audited.
+Prompt columns aren't audited.
 
 **Can I perform on-demand AI analysis without updating a record?** 
 
-The Prompt Column is automatically triggered when a record is updated; however, on‑demand execution for that record is not currently supported.
-
+Prompt columns are automatically triggered when a record is updated; however, on‑demand execution for that record isn't currently supported. <!--What do you mean by on-demand execution for that record isn't supported? Can you provide an example? -->
 
 ## Related articles
 
