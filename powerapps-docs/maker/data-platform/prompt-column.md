@@ -112,11 +112,7 @@ Create a model-driven app to view and validate your prompt column results.
 ## Prompt column feature enhancements
 
 > [!NOTE]
->
 > - This capability is in process of rolling out, and might not be available in your region yet.
-> - The feature enhancments for prompt columns requires service update <!--I added the rolling out and might not be available messaging. Do we really need to mention a specific version/build here? If so, we have to have the version number here and where to find it in the UI. -->or higher.
-
-<!-- [Ashish] I am fine with it, if that's the cadence. Otherwise service update or version number can be checked in Power Platform Admin center > Manage > Environments > Version -->
 
 Prompt columns leverage asynchronous computation so that AI-driven processing is decoupled from real-time transactions. This preserves system responsiveness, protects business critical workflows, and enables organizations to adopt AI capabilities at scale without compromising operational reliability.
 
@@ -131,39 +127,32 @@ When a prompt column is added to a table, a banner message appears at the top of
 
 ### Text input variable
 
-A default Text input variable is automatically added to the prompt definition. This variable is used as a filter on the primary column of the data source and is required to save the prompt definition.
+A default text input variable is automatically added to the prompt definition. This variable is used as a filter on the primary column of the data source and is required to save the prompt definition.
 
 :::image type="content" source="media/prompt-columns/prompt-column-recordid.png" alt-text="media/prompt-columns/Prompt-Column-recordid.png":::
 
 This variable is used as a filter on the primary column of the data source and is required to save the prompt definition.
 
-The platform requires a single Text input variable. This variable is automatically added and applied as a filter on the primary column of the data source. Users may edit the prompt definition or add additional columns, provided the required Text input variable remains included in the prompt definition. When the column is saved, the platform validates this requirement and displays an error if the Text input variable is missing or not applied as a filter on the primary column.
-
- <!--Is the "text input variable" the Instructions box for the prompt column in the UI? Also, you can edit the default prompt, right? We should mention that here.-->
-<!--[Ashish] Added -->
+The platform requires a single text input variable. This variable is automatically added and applied as a filter on the primary column of the data source. Users can edit the prompt definition or add additional columns, provided the required text input variable remains included in the prompt definition. When the column is saved, the platform validates this requirement and displays an error if the text input variable is missing or not applied as a filter on the primary column.
 
 :::image type="content" source="media/prompt-columns/prompt-column-filter-attribute-value.png" alt-text="Filter attribute example for a prompt column":::
 
-## Prompt column with filter condition <!-- Do the steps described in this section require the update? -->
-<!-- Ashish - Yes -->
+### Prompt column with filter condition
+
 Filter conditions ensure prompts run only when they add value.
 
-With filter based execution, prompts run only when specified conditions are satisfied. During record creation or update, the prompt column evaluates the filter first and then executes the prompt for eligible records. This approach reduces unnecessary executions and helps optimize Copilot credit consumption. <!--What do you mean by "credit" here?--> 
-<!-- Ashish - co-pilot credt consumption. User saves on their copliot credits when unnecessary runs are excluded with this feature addition. -->
+With filter based execution, prompts run only when specified conditions are satisfied. During record creation or update, the prompt column evaluates the filter first and then executes the prompt for eligible records. This approach reduces unnecessary executions and helps optimize Copilot credit consumption.
 
 ### Add filters to a prompt column
-<!-- We need to cover both editing an existing prompt and creating a new prompt in this procedure. I tried to do this here. Please confirm it is accurate and matches the new experience.-->
-<!-- Ashish - Yeah, it applies to both create and update -->
+
 1. Go to [Power Apps](https://make.powerapps.com/), and select **Solutions** on the left navigation pane.
 1. Open the solution that has the table you want, select **Tables**, open table that has prompt column you want to edit or create a new one, and then select **Columns**.
    - If creating a new column, select **New** > **Column**. On the right properties page, enter a **Display name** and **Description** for your column, for **Data type**, select **Prompt**.
-   - If editing an existing prompt, open the column. Under the **Data type** dropdown list, select **Prompt**. <!--If this is already a prompt column but created using the previous version do you need to select it as a Prompt column again? -->
-   - 
-   <!--[Ashish] Once column is saved, you cannot Data type again, it is read only. We can remove this line. User need to just select "Apply Filter" when they are applying the filter first time while creating first time or editing new column. If filter already exists, they can click on "Edit Filter"-->
+   - If editing an existing prompt, go to step 5 to apply a filter.
 
 1. Clear the **Allow form fill assistance** checkbox.
 1. Select **+Add new prompt**. You can create up to five prompt columns per table. If editing an existing column, select **Edit** next to the **Prompt** box.
-1. Open a table variable, such as PromptTest.cr3dd_name in this example, and then select **Apply filter**.
+1. Open a table variable, such as `PromptTest.cr3dd_name` in this example, and then select **Apply filter**.
  :::image type="content" source="media/prompt-columns/prompt-column-apply-filter.png" alt-text="Apply filter link for the prompt column" lightbox="media/prompt-columns/prompt-column-apply-filter.png":::
 
 1. On the **Filter conditions** pane, select **Add filter**, and then select **OK**.
@@ -171,8 +160,7 @@ With filter based execution, prompts run only when specified conditions are sati
 1. On the **Edit column** pane, notice **Filters selected** is applied. Select **Save**.
  :::image type="content" source="media/prompt-columns/prompt-column-filter-selected.png" alt-text="Filters selected message is displayed":::
 
-## View the prompt column status <!-- Does this require the update? -->
-<!--[Ashish] -- Yes-->
+### View the prompt column status
 
 When a prompt column is created, the table automatically includes two corresponding columns, **Status** and **Details**, for that prompt column.
 
@@ -193,7 +181,6 @@ This example demonstrates a prompt column named *testSummary* and its correspond
 
 **Prompt column status codes:**
 
-
 | Status  | Name | Description |
 |---|---|---|
 | 0 | NotStarted | Record created. AI analysis hasn't started yet. |
@@ -210,24 +197,21 @@ This example demonstrates a prompt column named *testSummary* and its correspond
 
 By default, the **Allow prompt column execution** setting is enabled. When disabled, AI analysis isn't performed for the prompt column.
 
- <!--This is a prerequisite already mentioned above and would disable ALL prompt columns so I don't think we need to mention it here. -->
-
-<!--[Ashish] - Removed the content. -->
-
-Note: For prompts to get executed, both Tenant level and Column level settings need to be enabled.
-
+> [!NOTE]
+> For prompts to be executed, both tenant level and column level settings need to be enabled.
 
 ### When Prompt column fails to generate AI Analysis
 
-When AI analysis failed to generate, users will see AI field generation failed message.
-  :::image type="content" source="media/prompt-columns/prompt-column-ai-generation-failed-message.png" alt-text="prompt column ai generation failed message.png":::
+When AI analysis failed to generate, users see an AI field generation failed message.
 
-Prompt Column execution failures can occur due to various conditions. The scenarios listed below represent common causes but do not cover all possible cases.
+:::image type="content" source="media/prompt-columns/prompt-column-ai-generation-failed-message.png" alt-text="prompt column ai generation failed message.png":::
 
-* The user does not have sufficient permissions on one or more input columns referenced in the prompt column definition. 
-* Lack of Entitlements and credits.
+Prompt column execution failures can occur due to various conditions. The scenarios listed below represent common causes but don't cover all possible cases.
 
-Check **Details** and **Status** columns in the table for more information.
+- The user doesn't have sufficient permissions on one or more input columns referenced in the prompt column definition. 
+- Lack of entitlements and credits in Copilot.
+
+Check **Details** and **Status** columns in the table. More information: [View the prompt column status](#view-the-prompt-column-status)
 
 ### FAQs
 
@@ -248,15 +232,13 @@ Prompt columns are triggered automatically on record updates; however, on‑dema
 **Why didn't the prompt column execute?**
 
 Common scenarios where the prompt does not execute, no error is surfaced, and execution is skipped
-* AI Prompt feature is disabled.  
-* Prompt column execution is disabled.
-* Filters conditions are not met.
+
+- AI Prompt feature is disabled. More information: [Prerequisites](#prerequisites)
+- Prompt column execution is disabled. More information: [Disable AI generation for a prompt column](#disable-ai-generation-for-a-prompt-column)
+- Filters conditions aren't met. More information: [Add filters to a prompt column](#add-filters-to-a-prompt-column)
 
 Check **Details** and **Status** columns in the table for more information.
 
-
-<!--What do you mean by on-demand execution for that record isn't supported? Can you provide an example? -->
-<!-- Ashish - Clarified -->
 ## Related articles
 
 For information about how the AI is used with this feature, go to [FAQ for prompts and text generation capabilities](/ai-builder/faqs-text-generation)
