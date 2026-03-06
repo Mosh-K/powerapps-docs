@@ -22,7 +22,7 @@ With Microsoft 365 Copilot you have the ability to bring app-based experiences t
 
 When users interact with agents in Copilot chat, the agents can search and retrieve data from apps view directly within the conversation. By using natural language, users can find, filter, and review app data without switching to the app experience.
 Copilot interprets the user's request and applies the appropriate filters, sorting, and text search against the underlying view data. The agent returns the results in Copilot chat, presented in a structured, tabular format that reflects the view data.
-Users can continue to work with the returned results in the conversation, such as requesting summaries of the data or exporting the results to required formats.
+Users can continue to work with the returned results in the conversation, iterating with natural language to refine the output until it reflects the exact results they’re looking for.
 
 ## Supported features
 
