@@ -80,7 +80,7 @@ The **Upcoming** tab displays preview features currently available:
 > [!IMPORTANT]
 > [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
-- **M365 Copilot in model-driven apps**. Microsoft 365 Copilot chat makes it easier for users to work with model-driven apps by offering AI-powered insights through natural language conversations. With this feature, users can quickly find information, navigate apps more easily, and get help to boost their productivity. More information: [Add Microsoft 365 Copilot chat for app users in model-driven apps (preview)](add-microsoft-365-copilot.md)
+- **Microsoft 365 Copilot in model-driven apps**. Microsoft 365 Copilot chat makes it easier for users to work with model-driven apps by offering AI-powered insights through natural language conversations. With this feature, users can quickly find information, navigate apps more easily, and get help to boost their productivity. More information: [Add Microsoft 365 Copilot chat for app users in model-driven apps (preview)](add-microsoft-365-copilot.md)
 - **Enable your app in Microsoft 365 Copilot**. Power Apps in Copilot lets users interact with your Power Apps model-driven app directly from Copilot. When a user talks to the agent, it can surface your app's data as interactive widgets — a grid for browsing records and a form for viewing, editing, or creating them — all without leaving the Copilot experience. The feature works by generating a declarative agent from your app. More information: [Set up Power Apps in Copilot](#set-up-power-apps-in-copilot)
 
 ### Set up Power Apps in Copilot
