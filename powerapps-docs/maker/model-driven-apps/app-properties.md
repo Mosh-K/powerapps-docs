@@ -98,6 +98,9 @@ The **Upcoming** tab displays preview features currently available:
 
    - Teams: Upload for personal use as a custom app in Teams. More information [Upload your app in Teams]( /microsoftteams/platform/concepts/deploy-and-publish/apps-upload)
    - Microsoft 365 Agents: Publish the package for a team or group from the Microsoft 365 admin center. More information: [Publish agents](/microsoft-365/admin/manage/agent-registry?view=o365-worldwide#publish-agents)
+  
+
+Note: Makers can customize the declarative agent included in the app package at their own discretion; however, these customizations are made at their own risk. More information: [Declarative Agents for Microsoft 365 Copilot | Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/overview-declarative-agent#building-declarative-agents)
 
 ## Known limitations
 
