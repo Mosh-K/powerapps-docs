@@ -25,14 +25,13 @@ A prompt column is an AI-powered data type in Microsoft Dataverse that enables y
 
 The key function is that the prompt column contains generative AI results stored in the table persistently. This is how customer data is enriched using generative AI and brings value to their data.
 
+[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
 Example use cases:
 
 - Customer support: Automate responses to frequently asked questions by using AI prompts to generate accurate and timely replies based on customer inquiries stored in Dataverse.
 - Content creation: Use prompts to assist in writing articles, reports, or marketing materials by generating text that aligns with the input provided.
 - Data analysis: Use AI prompts to analyze complex datasets and generate insights, sentiments, extract, and classify contents or summaries that help in making informed decisions.
 - Workflow automation: Integrate AI prompts into business workflows to automatically do tasks such as scheduling, reporting, and data entry.
-
-[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
 
 ## Prerequisites
 
@@ -112,7 +111,7 @@ Create a model-driven app to view and validate your prompt column results.
 ## Prompt column feature enhancements
 
 > [!NOTE]
-> - This capability is in process of rolling out, and might not be available in your region yet.
+> This capability is in process of rolling out, and might not be available in your region yet.
 
 Prompt columns leverage asynchronous computation so that AI-driven processing is decoupled from real-time transactions. This preserves system responsiveness, protects business critical workflows, and enables organizations to adopt AI capabilities at scale without compromising operational reliability.
 
@@ -120,7 +119,7 @@ Prompt columns leverage asynchronous computation so that AI-driven processing is
 
 When a prompt column is added to a table, a banner message appears at the top of the page indicating that the value is generated asynchronously.
 
-:::image type="content" source="media/prompt-columns/Prompt-Column-Async-Message.png" alt-text="Message displays: Prompt column values are generated asynchronously" lightbox="media/prompt-columns/prompt-column-async-message.png":::
+:::image type="content" source="media/prompt-columns/prompt-column-async-message.png" alt-text="Message displays: Prompt column values are generated asynchronously" lightbox="media/prompt-columns/prompt-column-async-message.png":::
 
 > [!NOTE]
 > If your environment isn't updated to the latest version, the banner message might not be visible. Prompt columns created in earlier versions will continue to operate without change until the upgrade occurs. As part of the upgrade process, existing prompt definitions are updated to support asynchronous execution.
@@ -129,7 +128,7 @@ When a prompt column is added to a table, a banner message appears at the top of
 
 A default text input variable is automatically added to the prompt definition. This variable is used as a filter on the primary column of the data source and is required to save the prompt definition.
 
-:::image type="content" source="media/prompt-columns/prompt-column-recordid.png" alt-text="media/prompt-columns/Prompt-Column-recordid.png":::
+:::image type="content" source="media/prompt-columns/prompt-column-record-id.png" alt-text="media/prompt-columns/Prompt-Column-recordid.png":::
 
 This variable is used as a filter on the primary column of the data source and is required to save the prompt definition.
 
@@ -165,13 +164,14 @@ With filter based execution, prompts run only when specified conditions are sati
 When a prompt column is created, the table automatically includes two corresponding columns, **Status** and **Details**, for that prompt column.
 
 1. Go to [Power Apps](https://make.powerapps.com/), and then select **Tables** on the left navigation pane.
-1. Open the table that has the prompt column where you want to view the status. 
-1. On the **Tables** list, select **Edit** next to **Table columns and data**. Press (v) chevron to view all columns. <!--I'm confused by this. If you want to view the columns from the table can't you just select Edit in the Table columns and data and add the columns you want there?-->
- <!--[Ashish] Edit only show two options if you click (v), First option is "Edit" and second option is "Edit in new tab"-->
+1. Open the table that has the prompt column where you want to view the status.
+1. On the **Tables** page, in the list of columns and data select the **+n more** header to add additional columns. 
 1. In the select **Show existing column** list search for the prompt column name. 
-1. Select columns named:
-   * `(columnName) _PromptColumnStatus`
-   * `(columnName)_PromptColumnDetails`
+1. Search and select the columns named:
+   - `(columnName) _PromptColumnStatus`
+   - `(columnName)_PromptColumnDetails`
+1. Select **Save**.
+1. Select **Edit** to the right of the list to open the columns list with records in a separate view. 
 
 When prompt execution starts, these columns are populated to record the execution status and any failure details.
 
