@@ -34,7 +34,7 @@ Access to the SharePoint site that contains the list you want to use.
 
 ## Add an existing SharePoint list
 
-You manually select an existing SharePoint list to use with your app. Vibe doesn’t currently suggest or automatically identify available lists.
+Select an existing SharePoint list to use with your app. Vibe doesn’t currently suggest or automatically identify available lists.
 
 1. Sign in to [https://vibe.powerapps.com](https://vibe.powerapps.com/).
 1. Open an app for editing, and then select **Data** > **Add table** > **Existing SharePoint list**.
