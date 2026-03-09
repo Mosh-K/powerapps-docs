@@ -25,7 +25,8 @@ A prompt column is an AI-powered data type in Microsoft Dataverse that enables y
 
 The key function is that the prompt column contains generative AI results stored in the table persistently. This is how customer data is enriched using generative AI and brings value to their data.
 
-[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
+[!INCLUDE [preview-banner](../../../shared/preview-includes/preview-note-pp.md)]
+
 Example use cases:
 
 - Customer support: Automate responses to frequently asked questions by using AI prompts to generate accurate and timely replies based on customer inquiries stored in Dataverse.
