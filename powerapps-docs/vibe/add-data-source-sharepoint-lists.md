@@ -13,7 +13,7 @@ ms.contributors:
 - yueshu
 ---
 
-## Add a SharePoint list to Power Apps vibe (preview)
+# Add a SharePoint list to Power Apps vibe (preview)
 
 [This article is prerelease documentation and is subject to change.]
 
@@ -40,7 +40,7 @@ Manually select an existing SharePoint list. Vibe doesn't currently suggest or a
 1. Sign in to [https://vibe.powerapps.com](https://vibe.powerapps.com/).
 1. Open an app for editing and select **Data** > **Add table** > **Existing SharePoint list**.
 
-    :::image type="content" source="media/Sharepoint-data/add-sharepoint-list-vibe.png" alt-text="Connect to a SharePoint list in Power Apps vibe ":::
+    :::image type="content" source="media/sharepoint-data/add-sharepoint-list-vibe.png" alt-text="Connect to a SharePoint list in Power Apps vibe ":::
 
 1. Enter the SharePoint URL and then select **Connect**. Or, select a recent list from the list of **Recent sites**.
 1. Select a list from **Select a list** and then select **Connect**.
