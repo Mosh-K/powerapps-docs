@@ -1,6 +1,6 @@
 ---
 title: Use SharePoint lists as a data source in Power Apps vibe (preview)
-description: Learn how to connect SharePoint lists as data sources in Power Apps vibe (preview). Build apps quickly while leveraging existing SharePoint workflows.
+description: Learn how to connect and add SharePoint lists as data sources in Power Apps vibe (preview). Build apps quickly while leveraging existing SharePoint workflows.
 author: mduelae
 ms.author: yueshu
 ms.reviewer: mkaur
@@ -13,7 +13,7 @@ ms.contributors:
 - yueshu
 ---
 
-## Connect a SharePoint list to Power Apps vibe (preview)
+## Add a SharePoint list to Power Apps vibe (preview)
 
 [This article is prerelease documentation and is subject to change.]
 
