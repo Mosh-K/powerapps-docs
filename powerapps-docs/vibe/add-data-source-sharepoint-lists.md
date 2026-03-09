@@ -30,7 +30,7 @@ When you connect a SharePoint list to vibe, your app can display and work with t
 
 ## Prerequisites
 
-- Access to the SharePoint site that contains the list you want to use.
+Access to the SharePoint site that contains the list you want to use.
 
 ## Add an existing SharePoint list
 
