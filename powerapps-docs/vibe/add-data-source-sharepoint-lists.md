@@ -43,7 +43,7 @@ Select an existing SharePoint list to use with your app. Vibe doesn’t currentl
 
 1. Enter the SharePoint site URL, and then select **Connect**. Alternatively, select a site from **Recent sites**.
 1. Under **Select a list**, choose the list you want, and then select **Connect**.
-1. Vibe connects directly to your SharePoint list without copying it into Dataverse. After the list is added, it appears in the data workspace with a SharePoint icon and its columns.
+1. Vibe connects directly to your SharePoint list. After the list is added, it appears in the data workspace with a SharePoint icon and its columns.
 
     :::image type="content" source="media/Sharepoint-data/sharepoint-data-added-vibe.png" alt-text="SharePoint list added to vibe":::
 
