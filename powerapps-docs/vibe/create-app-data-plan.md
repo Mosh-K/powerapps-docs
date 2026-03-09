@@ -6,6 +6,7 @@ ms.author: mkaur
 ms.reviewer: mkaur
 ms.date: 01/29/2026
 ms.topic: concept-article
+ms.custom: vibe
 ---
 
 # Create apps, data, and plans together using vibe (preview)
