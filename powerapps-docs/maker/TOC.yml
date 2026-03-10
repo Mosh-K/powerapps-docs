@@ -1518,8 +1518,13 @@
             href: ./model-driven-apps/model-app-page-issues.md
           - name: Use live monitor to troubleshoot custom pages
             href: ./model-driven-apps/monitor-page-checker.md
-        - name: Create a generative page
-          href: ./model-driven-apps/generative-pages.md
+        - name: Work with generative pages
+          href: 
+          items: 
+          - name: Create a generative page
+            href: ./model-driven-apps/generative-pages.md
+          - name: Create generative pages with AI code generation tools (preview)
+            href: ./model-driven-apps/generative-page-external-tools.md
         - name: Create, add, or remove forms and views
           href: ./model-driven-apps/create-add-remove-forms-views-dashboards.md
       - name: Work with views
@@ -1931,6 +1936,8 @@
     items:
     - name: How offline first functionality works in Power Apps mobile
       href: ../mobile/mobile-offline-works-overview.md
+    - name: FetchXML editor for offline profiles overview (preview)
+      href: ../mobile/fetchxml-editor.md
     - name: Mobile offline for canvas apps
       items:
       - name: Mobile offline for canvas apps overview
@@ -2449,7 +2456,7 @@
       href: ./data-platform/data-platform-mcp-disable.md      
     - name: Connect to Dataverse MCP with Copilot Studio
       href: ./data-platform/data-platform-mcp-copilot-studio.md
-    - name: Connect to Dataverse MCP with Visual Studio Code
+    - name: Connect to Dataverse MCP with Visual Studio Code and Copilot CLI
       href: ./data-platform/data-platform-mcp-vscode.md
     - name: Connect to Dataverse MCP with non-Microsoft clients
       href: ./data-platform/data-platform-mcp-other-clients.md
@@ -2457,6 +2464,16 @@
       href: ./data-platform/data-platform-mcp-preview-tools.md
     - name: Connect to Dataverse with MCP FAQ
       href: ./data-platform/data-platform-mcp-faq.md
+  - name: Dataverse intelligence (preview)
+    items:
+    - name: Overview of Dataverse intelligence
+      href: ./data-platform/data-platform-intelligence.md
+    - name: Business skills with Dataverse intelligence
+      items:
+      - name: Business skills overview
+        href: ./data-platform/data-platform-business-skill-overview.md
+      - name: Create and use business skills
+        href: ./data-platform/data-platform-business-skills.md
   - name: License requirements for tables
     href: ./data-platform/data-platform-entity-licenses.md
     items:
