@@ -253,7 +253,7 @@
     href:   ../vibe/overview.md
   - name: Create apps, data, and plans using vibe 
     href: ../vibe/create-app-data-plan.md
-  - name: Add a SharePoint list to Power Apps vibe 
+  - name: Add a SharePoint list in Power Apps vibe 
     href: ../vibe/add-data-source-sharepoint-lists.md
   - name: Released versions 
     href: /power-platform/released-versions/new-powerapps

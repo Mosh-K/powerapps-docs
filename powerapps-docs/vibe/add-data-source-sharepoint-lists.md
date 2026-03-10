@@ -13,7 +13,7 @@ ms.contributors:
 - yueshu
 ---
 
-# Add a SharePoint list to Power Apps vibe (preview)
+# Add a SharePoint list in Power Apps vibe (preview)
 
 [This article is prerelease documentation and is subject to change.]
 
