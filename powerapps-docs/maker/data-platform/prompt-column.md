@@ -240,12 +240,12 @@ Common scenarios where the prompt does not execute, no error is surfaced, and ex
 
 Check **Details** and **Status** columns in the table for more information.
 
-**Do I need to disable ‘Block unmanaged customizations’ to create or edit Prompt Columns?**
-To create or edit Prompt Columns, the‘Block unmanaged customizations’ setting must be disabled.
-If this setting is enabled, users may encounter the following error when attempting to create or modify a Prompt Column:
+**Do I need to disable ‘Block unmanaged customizations’ to create or edit prompt columns?**
 
-"This clustered environment doesn't allow unmanaged customizations on 'msdyn_AIConfiguration' component. This was a choice made by your admin, and certain actions won't be available or will be view only." [Learn More] (https://learn.microsoft.com/en-us/power-platform/alm/block-unmanaged-customizations)
- 
+To create or edit Prompt Columns, the‘Block unmanaged customizations’ environment setting must be disabled.
+If this setting is enabled, users might encounter the following error when attempting to create or modify a prompt column:
+
+"This clustered environment doesn't allow unmanaged customizations on 'msdyn_AIConfiguration' component. This was a choice made by your admin, and certain actions won't be available or will be view only." For more information about this environment setting, go to [Block unmanaged customizations](/power-platform/alm/block-unmanaged-customizations)
 
 ## Related articles
 
