@@ -4,7 +4,7 @@ description: Learn how to connect and add SharePoint lists as data sources in Po
 author: mduelae
 ms.author: yueshu
 ms.reviewer: mkaur
-ms.date: 03/09/2026
+ms.date: 03/10/2026
 ms.topic: how-to
 ms.subservice: code-apps
 ms.custom: vibe
@@ -17,24 +17,24 @@ ms.contributors:
 
 [This article is prerelease documentation and is subject to change.]
 
-Power Apps vibe lets you connect SharePoint lists directly as data sources when building apps. This integration allows you to work with your existing SharePoint list data without migrating to Dataverse tables.
+Connect your SharePoint lists directly to Power Apps vibe and start building apps with your existing data in minutes. No migration required.
 
-When you connect a SharePoint list to vibe, your app can display and work with the list data in real time. This approach is ideal for scenarios where you want to:
+Build a functional app using your SharePoint list data while keeping your current workflows intact. This approach is ideal for scenarios where you want to:
 
-- Use existing SharePoint lists. 
+- Use existing SharePoint lists.
 - Build apps quickly without data migration. 
 - Maintain your current SharePoint-based workflows.
 
 > [!IMPORTANT] 
-> SharePoint lists are currently read-only in the vibe. To modify list items, make changes directly in SharePoint.
+> SharePoint lists are currently read-only in Power Apps vibe. To modify list items, you need to make changes directly in SharePoint.
 
 ## Prerequisites
 
-Access to the SharePoint site that contains the list you want to use.
+You need access to the SharePoint site that contains the list you want to use.
 
 ## Add an existing SharePoint list
 
-Select an existing SharePoint list to use with your app. Vibe doesn’t currently suggest or automatically identify available lists.
+Select an existing SharePoint list to use with your app. Vibe doesn't suggest or automatically identify available lists.
 
 1. Sign in to [https://vibe.powerapps.com](https://vibe.powerapps.com/).
 1. Open an app for editing, and then select **Data** > **Add table** > **Existing SharePoint list**.
