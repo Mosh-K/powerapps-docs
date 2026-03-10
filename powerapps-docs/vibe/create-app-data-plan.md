@@ -204,6 +204,9 @@ Add new or existing tables, or make targeted changes to relationships, tables, a
 
     :::image type="content" source="media/create-app-data-plan/add-tables.png" alt-text="Add more data tables":::
 
+> [!NOTE]
+> You can also add SharePoint data. For more information, [Add a SharePoint list in Power Apps vibe](add-data-source-sharepoint-lists.md).
+
 ### Add and edit relationship
 
 1. Select **Add relationship** in the command bar to add a new relationship between two tables.
