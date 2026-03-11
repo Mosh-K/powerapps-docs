@@ -1,5 +1,5 @@
 ---
-title: Set up push notifications for Wrap apps
+title: Set up push notifications for wrap 
 description: Learn how to set up push notifications for your Power Apps wrap app on iOS and Android. Follow this step-by-step guide to keep users engaged with timely alerts.
 author: Murugesh1985
 ms.author: murugeshs
@@ -8,7 +8,7 @@ ms.date: 03/10/2026
 ms.topic: how-to
 ---
 
-# Set up push notifications for wrap apps 
+# Set up push notifications for wrap  
 
 By using push notifications, your custom branded, white-labeled Power Apps wrapped app can alert users with messages, even when they're not actively using the app. This article walks you through everything you need to set up push notifications for iOS, Android, or both. 
 
@@ -26,7 +26,7 @@ Make sure you have the following items ready before you start:
 
 Your wrap app uses Firebase Cloud Messaging (FCM) to deliver push notifications. Here's what happens when a user opens the app: 
 
-1.  The app checks whether push notifications are turned on in the Wrap Wizard. 
+1.  The app checks whether push notifications are turned on in the wrap Wizard. 
 1.  If enabled, the app asks the user for permission and registers the device to receive notifications. 
 1.  The device is subscribed to two notification channels: 
     - **All users**: for notifications sent to everyone. 
@@ -36,9 +36,9 @@ Your wrap app uses Firebase Cloud Messaging (FCM) to deliver push notifications.
 > [!NOTE]
 > On Android 13 and later, users must explicitly allow notifications. The app automatically prompts for this permission after sign-in. If the user denies the permission prompt, notifications don't appear and the user must manually re-enable notifications from **system settings**. 
 
-## Step 1: Configure your Apple Developer account (iOS only) 
+## Step 1: Configure your Apple developer account (iOS only) 
 
-Set up two things in your Apple Developer account: verify your app is configured to receive push notifications and create a key that lets Firebase communicate with Apple on your behalf. 
+Set up two things in your Apple Developer account: verify your app is configured to receive push notifications, and create a key that lets Firebase communicate with Apple on your behalf. 
 
 ### Create an APNs auth key 
 
@@ -56,7 +56,7 @@ Next, create a key that Firebase uses to send notifications to Apple devices on 
 > Firebase uses token‑based APNs authentication (.p8 key). This authentication works for both development and production builds. Use the production environment when you configure the APNs Authentication Key. 
 
 > [!IMPORTANT]
-> Save the .p8 file somewhere secure right away — Apple only lets you download it once. If you lose it, you need to revoke the key and start over. You can have up to two active APNs keys per account. 
+> Save the .p8 file somewhere secure right away. Apple only lets you download it once. If you lose it, you need to revoke the key and start over. You can have up to two active APNs keys per account. 
 
 Keep note of these two values, you'll need them in the next step: 
 
@@ -78,25 +78,22 @@ Firebase manages notification delivery for both iOS and Android. Register your a
 
 ### Create or open a Firebase project 
 
-1.  Go to [Firebase Console](https://console.firebase.google.com) and sign in. 
-
-1.  Select an existing project, or select **Create a project** to make a new one. 
+1. Go to [Firebase console](https://console.firebase.google.com) and sign in. 
+1. Select an existing project, or select **Create a project** to make a new one. 
 
 ### Add Firebase to your iOS app 
 
-1.  In **Project Overview**, select **Add app** (+ icon) and select **iOS** (icon). 
-
-1.  Enter your app's **Bundle ID** — The **Bundle ID must match exactly** across: Apple App ID,  Firebase iOS app configuration, and Wrap build configuration. 
-
-1.  Complete the setup and download the `GoogleService-Info.plist` file. Include this file in your wrap build within Power Apps studio. 
+1. In **Project Overview**, select **Add app** (+ icon) and select **iOS** (icon). 
+1. Enter your app's **Bundle ID**. The **Bundle ID must match exactly** across Apple App ID, Firebase iOS app configuration, and wrap build configuration.
+1. Complete the setup and download the `GoogleService-Info.plist` file. Include this file in your wrap build within Power Apps studio. 
 
 ### Connect your APNs key to Firebase (iOS only) 
 
 This step authorizes Firebase to deliver notifications through Apple's servers: 
 
-1. In Firebase Console, go to your iOS project.  
+1. In Firebase console, go to your iOS project.  
 
-1. Go to **Settings (the gear icon)** > **Cloud Messaging**. 
+1. Go to **Settings** > **Cloud Messaging**. 
 
 1. Under **Apple app configuration**, find your iOS app. 
 
@@ -114,7 +111,7 @@ This step authorizes Firebase to deliver notifications through Apple's servers:
 
 1. Complete the setup and download the google-services.json file for your wrap build. 
 
-## Step 3: Enable push notifications in the Wrap Wizard 
+## Step 3: Enable push notifications in the wrap wizard 
 
 After you configure Firebase, turn on push notifications in your wrap app: 
 
@@ -124,14 +121,14 @@ After you configure Firebase, turn on push notifications in your wrap app:
 
 1. Turn on the Push notifications toggle for iOS, Android, or both, depending on your needs.  
 
-:::image type="content" source="media/push-notifications-for-wrap/image2.png" alt-text="Screenshot of the Wrap Wizard target platforms step showing the push notifications toggle for iOS and Android."::: 
+:::image type="content" source="media/push-notifications-for-wrap/wrap-wizard-push-notification.png" alt-text="Screenshot of the Wrap Wizard target platforms step showing the push notifications toggle for iOS and Android."::: 
 
 1. Upload the GoogleService-Info.plist file (iOS) and the google-services.json file (Android). 
 
 1. Complete and publish your wrap build. 
 
 > [!NOTE]
-> The **Wrap Wizard Push Notifications toggle only controls device registration**.   
+> The wrap wizard push notifications toggle only controls device registration.   
 > Push notifications aren't delivered unless: 
 > 
 > - You complete the Apple App ID and Firebase setup. 
@@ -144,9 +141,9 @@ After you configure Firebase, turn on push notifications in your wrap app:
 
 The quickest way to verify your setup is to send a test notification from Firebase: 
 
-1. In Firebase Console, go to your project, and then select **Cloud Messaging** \> **New Campaign** \> **Compose Notification**. 
+1. In Firebase console, go to your project, and then select **Cloud Messaging** > **New Campaign** > **Compose Notification**. 
 
-1. Enter a **notification title** and **text**. 
+1. Enter **Notification title** and **Text**. 
 
 1. Under **Target**, select **User segment** and select your app in **Target user if** dropdown. Alternatively, under **Target**, select **Topic** and enter an email address in the **Message topic** field. To test notifications for a specific user, use an email address without special characters as the topic name. Firebase topic names don't support special characters, so the app automatically converts the email by lowercasing it and stripping out anything that isn't a letter, number, or `-_.~%`. For example: 
 
@@ -159,7 +156,7 @@ The quickest way to verify your setup is to send a test notification from Fireba
 
 1. Select **Send** and check that the notification appears on a test device. 
 
-1. When sending test notifications from Firebase Cloud Messaging, ensure you select the **correct iOS or Android app** under the project. Sending a campaign at the project level or to the wrong app might result in notifications not being delivered. 
+1. When you send test notifications from Firebase Cloud Messaging, make sure you select the **correct iOS or Android app** under the project. Sending a campaign at the project level or to the wrong app might result in notifications not being delivered. 
 
 1. Expected behavior 
 
@@ -171,32 +168,12 @@ The quickest way to verify your setup is to send a test notification from Fireba
 
  
 
-Reference documentation (Apple & Firebase)   
-Apple and Firebase portals evolve frequently. If UI labels or navigation differ from screenshots or steps in this article, refer to the official documentation below for the latest guidance. 
-
-**Firebase Cloud Messaging – iOS setup**   
-Purpose: End‑to‑end FCM setup for Apple apps, including APNs key upload and registration flow.   
-<https://firebase.google.com/docs/cloud-messaging/ios/get-started>   
-[\[firebase.google.com\]](https://firebase.google.com/docs/cloud-messaging/ios/get-started) 
-
-**Firebase – Upload APNs authentication key (.p8)**   
-Purpose: How Firebase uses APNs Auth Keys instead of certificates.   
-(covered inside the same guide above – Cloud Messaging → APNs authentication key section)   
-[\[firebase.google.com\]](https://firebase.google.com/docs/cloud-messaging/ios/get-started) 
-
-**APNs token‑based authentication (Auth Key / .p8)**   
-Purpose: Explains token‑based APNs auth, why it's preferred, and environment behavior.   
-[https://developer.apple.com/documentation/usernotifications/establishing-a-token-based-connection-t…](https://developer.apple.com/documentation/usernotifications/establishing-a-token-based-connection-to-apns)   
-[\[developer.apple.com\]](https://developer.apple.com/documentation/usernotifications/establishing-a-token-based-connection-to-apns) 
-
-**Background Modes – Remote notifications (required for iOS)**   
-Purpose: Confirms why *Background Modes → Remote notifications* must be enabled.   
-<https://developer.apple.com/documentation/usernotifications/pushing-background-updates-to-your-app>   
-[\[developer.apple.com\]](https://developer.apple.com/documentation/usernotifications/pushing-background-updates-to-your-app) 
-
-**Notifications overview (general Apple reference)**   
-Purpose: High‑level Apple guidance if behaviour differs across iOS versions.   
-<https://developer.apple.com/notifications/>   
-[\[developer.apple.com\]](https://developer.apple.com/notifications/)
+## Related information 
+Apple and Firebase portals frequently evolve. If UI labels or navigation differ from the above screenshots or steps, see the official documentation for the latest guidance. 
+   
+- [Get started with Firebase Cloud Messaging in Apple platform apps](https://firebase.google.com/docs/cloud-messaging/ios/get-started) is used for Firebase cloud messaging iOS setup and uploading APNs authentication key.
+- [Establishing a token-based connection to APNs](https://developer.apple.com/documentation/usernotifications/establishing-a-token-based-connection-to-apns) explains token‑based APNs auth, why it's preferred, and environment behavior. 
+- [Pushing background updates to your App](https://developer.apple.com/documentation/usernotifications/pushing-background-updates-to-your-app) confirms why **Background Modes → Remote notifications** must be enabled.   
+- [Notifications in iOS](https://developer.apple.com/notifications/) gives high‑level Apple guidance if behaviour differs across iOS versions.
 
 
