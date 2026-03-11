@@ -29,8 +29,8 @@ Your wrap app uses Firebase Cloud Messaging (FCM) to deliver push notifications.
 1.  The app checks whether push notifications are turned on in the Wrap Wizard. 
 1.  If enabled, the app asks the user for permission and registers the device to receive notifications. 
 1.  The device is subscribed to two notification channels: 
-    - All users — for notifications sent to everyone. 
-    - Individual user — for notifications sent to a specific user, identified by their sign-in email. 
+    - **All users**: for notifications sent to everyone. 
+    - **Individual user**: for notifications sent to a specific user, identified by their sign-in email. 
 1.  FCM handles delivery on both platforms. On iOS, it routes through Apple's Push Notification service (APNs). On Android, it delivers through Google's messaging service. 
 
 > [!NOTE]
@@ -40,23 +40,17 @@ Your wrap app uses Firebase Cloud Messaging (FCM) to deliver push notifications.
 
 Set up two things in your Apple Developer account: verify your app is configured to receive push notifications and create a key that lets Firebase communicate with Apple on your behalf. 
 
-### Create an APNs Auth Key 
+### Create an APNs auth key 
 
 Next, create a key that Firebase uses to send notifications to Apple devices on your behalf. One key works across all your apps and environments (development and production). 
 
-- Go to your Apple developer account.  
-
-- In the left sidebar, select **Keys**, and then select **+**. 
-
-- Give the key a descriptive name, such as *PowerAppsWrapPushNotifications*. 
-
-- Select the toggle **Apple Push Notifications service** (APNs) and select **Configure**. 
-
-- In **Configure Key**, select **environment** and **Save**. 
-
-- Select **Continue** and select **Register**. 
-
-- After you register the key, select **Download** to save the .p8 key file. 
+1. Go to your Apple developer account.  
+1. In the left sidebar, select **Keys**, and then select **+**. 
+1. Give the key a descriptive name, such as *PowerAppsWrapPushNotifications*.
+1. Select the toggle **Apple Push Notifications service** (APNs) and select **Configure**. 
+1. In **Configure Key**, select **environment** and **Save**. 
+1. Select **Continue** and select **Register**. 
+1. After you register the key, select **Download** to save the .p8 key file. 
 
 > [!NOTE]
 > Firebase uses token‑based APNs authentication (.p8 key). This authentication works for both development and production builds. Use the production environment when you configure the APNs Authentication Key. 
@@ -64,16 +58,19 @@ Next, create a key that Firebase uses to send notifications to Apple devices on 
 > [!IMPORTANT]
 > Save the .p8 file somewhere secure right away — Apple only lets you download it once. If you lose it, you need to revoke the key and start over. You can have up to two active APNs keys per account. 
 
-Keep note of these two values — you'll need them in the next step: 
+Keep note of these two values, you'll need them in the next step: 
 
-- Key ID — the 10-character code shown on the key details page 
+- **Key ID**: the 10-character code shown on the key details page 
 
-- Team ID — shown in the top-right corner of the portal, or under Membership 
+- **Team ID**: shown in the top-right corner of the portal, or under Membership 
 
 :::image type="content" source="media/push-notifications-for-wrap/image1.png" alt-text="Screenshot of the Apple Developer portal showing the Key ID and Team ID values for APNs key configuration."::: 
 
 > [!IMPORTANT]
-> Ensure the Apple App ID you use for your wrap build has the following capabilities enabled in the Apple Developer portal: 1) Push Notifications; 2) Background Modes → Remote notifications. If **Background Modes** isn't enabled, the app might successfully register with Firebase, but push notifications don't get delivered when the app is backgrounded or terminated. 
+> Ensure the Apple App ID you use for your wrap build has the following capabilities enabled in the Apple Developer portal: 
+> 1. Push Notifications 
+> 2. Background Modes → Remote notifications. 
+> If **Background Modes** isn't enabled, the app might successfully register with Firebase, but push notifications don't get delivered when the app is backgrounded or terminated. 
 
 ## Step 2: Set up Firebase 
 
