@@ -64,7 +64,7 @@ Keep note of these two values, you'll need them in the next step:
 
 - **Team ID**: shown in the top-right corner of the portal, or under Membership 
 
-:::image type="content" source="media/push-notifications-for-wrap/image1.png" alt-text="Screenshot of the Apple Developer portal showing the Key ID and Team ID values for APNs key configuration."::: 
+:::image type="content" source="media/push-notifications-for-wrap/key-id-in-iOS.png" alt-text="Screenshot of the Apple Developer portal showing the Key ID and Team ID values for APNs key configuration."::: 
 
 > [!IMPORTANT]
 > Ensure the Apple App ID you use for your wrap build has the following capabilities enabled in the Apple Developer portal: 
