@@ -5,7 +5,7 @@ author: shwetamurkute
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: smurkute
-ms.date: 01/08/2026
+ms.date: 03/16/2026
 ms.subservice: canvas-maker
 ms.author: smurkute
 search.audienceType: 
@@ -56,68 +56,53 @@ When you update and republish your app, the wrapped app is automatically updated
 
 2. Under **Target platform(s)**, select all the mobile platforms that your end users use on their mobile devices.
 
-3. You need to have Azure key vault, to upload your build to Azure blob storage. If you haven't already created, create one. For more information see, [create an Azure key vault](create-key-vault-for-code-signing.md). Add the required tags, secrets, and certificates. Add the environment variable if not created already.
+3. You need to have Azure key vault, to upload your build to Azure blob storage. If you haven't already created, create one. Create an Azure key vault right within the Wrap wizard, or follow the instructions manually.
 
-   a. To create the environment variable, go to [Power Apps](https://make.powerapps.com) > **Solutions** > **Default solution**. Then select **New** > **More** > **Environment variable**, add the display name as "PA_Wrap_KV_ResourceID".
-      :::image type="content" source="media/how-to-v2/add-new-env-variable.png" alt-text="Screenshot that shows screen for adding new environment variable." lightbox="media/how-to-v2/add-new-env-variable.png":::
-    The name of the new environment variable must have the prefix "new." If it doesn't, see [Set Environment Variable Prefix](#set-environment-variable-prefix) for detailed steps.
-    :::image type="content" source="media/how-to-v2/new-prefix-solution.png" alt-text="Screenshot that shows screen with prefix as new" lightbox="media/how-to-v2/new-prefix-solution.png":::
-   b. To add vault information to your environment variables, access the **Azure** portal as an admin. Navigate to **All Resources** > **Your Key Vault** > **Properties**, and then copy the **Resource ID**.
-      :::image type="content" source="media/how-to-v2/copy-resource-id.png" alt-text="Screenshot that shows resource id to be copied." lightbox="media/how-to-v2/copy-resource-id.png":::
-
-   c. To add the input to the environment variable, go to **Power Apps** > **ApplicationName** > **All** > **Environment variable**. Click the three dots, select **Edit**, add the copied value to **Default value**, and save. 
-
-   d. To check whether the table value has been updated, go to **Power Apps** > **Tables** > **Environment variable definition** > **new_PA_Wrap_KV_ResourceID** . The value in **Default value** must be same as that of the resourceID for which you want to add the vault. 
-     > [!NOTE]
-     > Guidelines for adding the input behind the environment variables for Key vault information:
-     > - Environment variables must not be empty or can contain multiple entries.
-     > - Ensure that the resourceID added is correct (verify spelling).
-     > - Ensure that the resourceID added has non-empty tags and includes all the tags expected with the bundle ID used in the wrap wizard.
-
-   e. Follow the steps in [Steps for automated code signing](create-key-vault-for-code-signing.md) to create the tags, secrets, and certificates required during the automatic signing process.
-
-4. You need to have Azure blob storage account and container, to upload your build to Azure blob storage. If you haven't already created, create one.
-   - More about creating a storage account: [Create an Azure storage account](/azure/storage/common/storage-account-create?tabs=azure-portal).
-   - Watch a tutorial: [How to create a storage account](https://www.youtube.com/watch?v=AhuNgBafmUo&list=PLLasX02E8BPBKgXP4oflOL29TtqTzwhxR&index=6).
- 
-   1. In your key vault in the [Azure portal](https://ms.portal.azure.com), go to **Secrets** to create a secret for your Azure blob storage access key. More information: [Add a secret to key vault](/azure/key-vault/secrets/quick-create-portal#add-a-secret-to-key-vault).
-      :::image type="content" source="media/how-to-v2/azure-secret-2.png" alt-text="Screenshot that shows how to create Azure secrets" lightbox="media/how-to-v2/azure-secret-2.png":::
-      
-   2. To view and copy your access key: [View account access keys](/azure/storage/common/storage-account-keys-manage?tabs=azure-portal#view-account-access-keys)
-      :::image type="content" source="media/how-to-v2/view-access-key.png" alt-text="Screenshot that shows access key" lightbox="media/how-to-v2/view-access-key.png":::
-
-   3. Enter the Azure blob storage access key in the **Secret value** field.
-      :::image type="content" source="media/how-to-v2/azure-secret-1.png" alt-text="Screenshot that shows Azure secrets" lightbox="media/how-to-v2/azure-secret-1.png":::
-      
-   4. In your key vault, go to **Tags** and create a new tag with the same secret value as above.
-      :::image type="content" source="media/how-to-v2/azure-tag.png" alt-text="Screenshot that shows Azure tags" lightbox="media/how-to-v2/azure-tag.png":::
-
-5. Turn **ON** automatic app signing (Optional).
-   :::image type="content" source="media/how-to-v2/select-target-platforms-updated.png" alt-text="Screenshot that shows the second step to choose the target platform." lightbox="media/how-to-v2/select-target-platforms-updated.png":::
-
+4. Turn **ON** the **Autosigning** toggle to automate the signing process.
    > [!NOTE]
    > Manual signing options:
    > - [Code sign for iOS](code-sign-ios.md)
    > - [Code sign for Android](code-sign-android.md)
    > - [Code sign for Google Play Store](https://developer.android.com/studio/publish/app-signing)
-   >
    > You must manually sign AAB files regardless of the signing option selected in the wizard.
-  
 
-6. Select **Next**.
+5. Set up autosigning through the wizard.
+   1. In the target platform step, toggle on **Autosigning**. The service checks if keyvaults and certificates are already attached.
+   1. If you don't have keyvaults and certificates or want to change them, select **Configure**.
+   1. On the side panel, select the subscription and resource group, and choose the keyvault. To create a new keyvault, select **Create a new keyvault**. After you select the keyvault, select **Next**.
+   1. The service checks if the appropriate service principal, reader role, access policies, and environment variables are set up for the keyvault. If errors appear, fix them. After all checks pass, select **Next**.
+   1. On the next screen, enter the name of the certificate in the keyvault. 
+   1. If no certificate exists or you want to change the certificate, see Generate key and signature hash to create a new certificate. Then select **Create a certificate** on this screen. This action takes you to the Azure portal keyvault location. Upload the generated certificate into the configured keyvault. 
+   1. Select **Finish**.
+   1. On the main screen, the Azure keyvault and certificate appear as confirmed.
+   1. On the main screen, select **Next**.
 
-#### Set environment variable prefix
+6. You can set up autosigning from within Azure portal.
+    1. Refer to instructions in [create an Azure key vault](create-key-vault-for-code-signing.md) to create an Azure key vault. Once the vault is created, you need to add the required tags, secrets, and certificates. Add the environment variable if not created already.
+    1. To create the environment variable, go to [Power Apps](https://make.powerapps.com) > **Solutions** > **Default solution**. Then select **New** > **More** > **Environment variable**, add the display name as "PA_Wrap_KV_ResourceID".
+      :::image type="content" source="media/how-to-v2/add-new-env-variable.png" alt-text="Screenshot that shows screen for adding new environment variable." lightbox="media/how-to-v2/add-new-env-variable.png":::
+    The name of the new environment variable must have the prefix "new." If it doesn't, see [Set Environment Variable Prefix](#set-environment-variable-prefix) for detailed steps.
+    :::image type="content" source="media/how-to-v2/new-prefix-solution.png" alt-text="Screenshot that shows screen with prefix as new" lightbox="media/how-to-v2/new-prefix-solution.png":::
+    1. To add vault information to your environment variables, access the **Azure** portal as an admin. Navigate to **All Resources** > **Your Key Vault** > **Properties**, and then copy the **Resource ID**.
+      :::image type="content" source="media/how-to-v2/copy-resource-id.png" alt-text="Screenshot that shows resource id to be copied." lightbox="media/how-to-v2/copy-resource-id.png":::
+    1. To add the input to the environment variable, go to **Power Apps** > **ApplicationName** > **All** > **Environment variable**. Click the three dots, select **Edit**, add the copied value to **Default value**, and save.
+    1. To check whether the table value has been updated, go to **Power Apps** > **Tables** > **Environment variable definition** > **new_PA_Wrap_KV_ResourceID** . The value in **Default value** must be same as that of the resourceID for which you want to add the vault. 
+     > [!NOTE]
+     > Guidelines for adding the input behind the environment variables for Key vault information:
+     > - Environment variables must not be empty or can contain multiple entries.
+     > - Ensure that the resourceID added is correct (verify spelling).
+     > - Ensure that the resourceID added has non-empty tags and includes all the tags expected with the bundle ID used in the wrap wizard.
+    1. Follow the steps in [Steps for automated code signing](create-key-vault-for-code-signing.md) to create the tags, secrets, and certificates required during the automatic signing process.
 
-The name of the new environment variable must have the prefix "new." If it doesn't, follow these steps:
+### 4. Manage output
 
-1. Go to **Solutions** > **New solution**.
-1. Select a **Publisher** or create one.
-1. Select the edit icon next to the **Publisher** to view or change the prefix.
-1. If the prefix isn't "new," edit it to set the prefix to "new."
-1. Save the changes.
+To upload your build to Azure blob storage, you need an Azure blob storage account and container. If you don't have one, create one.
+   1. On **Manage output**, select **Configure** to add your key vault, storage account, and container information.
+   1. In the **Configure keyvault** side panel, select the key vault that stores access credentials to your Azure blob storage, and then select **Next**.
+   1. In the **Configure storage** screen, select the storage name and container name, and then enter the name of the secret that contains access to the storage. To create a new secret, follow the instructions in the "How to create a secret" section on the same screen.
+   1. Select **Finish**.
 
-
-### 4. Register your app
+### 5. Register your app
 
 On the **Register your app** screen, register your application in Azure to establish trust with the Microsoft identity platform.
 
@@ -226,7 +211,7 @@ If you get errors, manually configure API permissions. For more information, see
    For Android, enter both the **Bundle ID** and **Signature hash key**.
    :::image type="content" source="media/how-to-v2/redirect-uri.png" alt-text="Screenshot that shows redirect URIs for the app." lightbox="media/how-to-v2/redirect-uri.png":::
 
-### 5. Configure branding
+### 6. Configure branding
 
 1. On the **Configure Branding** step, set the following options for your app:
 
@@ -243,13 +228,6 @@ If you get errors, manually configure API permissions. For more information, see
 | **Status bar text theme** | Color for the status bar text | Light or Dark |
 
 2. Select **Next**.
-
-### 6. Manage output
-
-1. Enter your Azure blob storage account name and container name.
-2. After the build completes, download your APK or IPA from the Azure blob storage location.
-
-:::image type="content" source="media/how-to-v2/manage-output.png" alt-text="Screenshot that shows the fifth step on how to manage the output using Azure blob storage." lightbox="media/how-to-v2/manage-output.png":::
 
 ### 7. Wrap up and build
 
