@@ -67,11 +67,13 @@ When you update and republish your app, the wrapped app is automatically updated
 5. Set up autosigning through the wizard.
    1. In the target platform step, toggle on **Autosigning**. The service checks if keyvaults and certificates are already attached.
    1. If you don't have keyvaults and certificates or want to change them, select **Configure**.
-      :::image type="content" source="media/how-to-v2/auto-signing-target-platform.png" alt-text="Screenshot that shows the first step to select the app." lightbox="media/how-to-v2/auto-signing-target-platform.png":::
+      :::image type="content" source="media/how-to-v2/auto-signing-target-platform.png" alt-text="Screenshot that shows auto signing option in target platform step." lightbox="media/how-to-v2/auto-signing-target-platform.png":::
    1. On the side panel, select the subscription and resource group, and choose the keyvault. To create a new keyvault, select **Create a new keyvault**. After you select the keyvault, select **Next**.
+      :::image type="content" source="media/how-to-v2/auto-signing-key-vault-selection.png" alt-text="Screenshot that shows keyvault selected for auto signing in target platform step" lightbox="media/how-to-v2/auto-signing-key-vault-selection.png":::
    1. The service checks if the appropriate service principal, reader role, access policies, and environment variables are set up for the keyvault. If errors appear, fix them. After all checks pass, select **Next**.
    1. On the next screen, enter the name of the certificate in the keyvault. 
    1. If no certificate exists or you want to change the certificate, see [Generate key and signature hash](code-sign-android.md#generate-key-and-signature-hash) to create a new certificate. Then select **Create a certificate** on this screen. This action takes you to the Azure portal keyvault location. Upload the generated certificate into the configured keyvault. 
+      :::image type="content" source="media/how-to-v2/auto-signing-adding-mobile-signing-certificatesn.png" alt-text="Screenshot that shows create or enter a certificate for auto signing in target platform step" lightbox="media/how-to-v2/auto-signing-adding-mobile-signing-certificates.png":::
    1. Select **Finish**.
    1. On the main screen, the Azure keyvault and certificate appear as confirmed.
    1. On the main screen, select **Next**.
@@ -108,7 +110,9 @@ The name of the new environment variable must have the prefix "new." If it doesn
 To upload your build to Azure blob storage, you need an Azure blob storage account and container. If you don't have one, create one.
    1. On **Manage output**, select **Configure** to add your key vault, storage account, and container information.
    1. In the **Configure keyvault** side panel, select the key vault that stores access credentials to your Azure blob storage, and then select **Next**.
+      :::image type="content" source="media/how-to-v2/manage-output-screen-configure-keyvault.png" alt-text="Screenshot that shows keyvault selected in manage output step" lightbox="media/how-to-v2/manage-output-screen-configure-keyvault.png":::
    1. In the **Configure storage** screen, select the storage name and container name, and then enter the name of the secret that contains access to the storage. To create a new secret, follow the instructions in the "How to create a secret" section on the same screen.
+      :::image type="content" source="media/how-to-v2/manage-output-screen-configure-storage.png" alt-text="Screenshot that shows options for configuring storage in manage output step" lightbox="media/how-to-v2/manage-output-screen-configure-storage.png":::
    1. Select **Finish**.
 
 ### 5. Register your app
