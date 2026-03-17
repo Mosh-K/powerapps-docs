@@ -81,9 +81,9 @@ When you update and republish your app, the wrapped app is automatically updated
 6. Set up autosigning from within Azure portal.
     1. Refer to instructions in [create an Azure key vault](create-key-vault-for-code-signing.md) to create an Azure key vault. Once the vault is created, you need to add the required tags, secrets, and certificates. Add the environment variable if not created already.
     1. To create the environment variable, go to [Power Apps](https://make.powerapps.com) > **Solutions** > **Default solution**. Then select **New** > **More** > **Environment variable**, add the display name as "PA_Wrap_KV_ResourceID".
-      :::image type="content" source="media/how-to-v2/add-new-env-variable.png" alt-text="Screenshot that shows screen for adding new environment variable." lightbox="media/how-to-v2/add-new-env-variable.png":::
+       :::image type="content" source="media/how-to-v2/add-new-env-variable.png" alt-text="Screenshot that shows screen for adding new environment variable." lightbox="media/how-to-v2/add-new-env-variable.png":::
     The name of the new environment variable must have the prefix "new." If it doesn't, see [Set Environment Variable Prefix](#set-environment-variable-prefix) for detailed steps.
-    :::image type="content" source="media/how-to-v2/new-prefix-solution.png" alt-text="Screenshot that shows screen with prefix as new" lightbox="media/how-to-v2/new-prefix-solution.png":::
+       :::image type="content" source="media/how-to-v2/new-prefix-solution.png" alt-text="Screenshot that shows screen with prefix as new" lightbox="media/how-to-v2/new-prefix-solution.png":::
     1. To add vault information to your environment variables, access the **Azure** portal as an admin. Navigate to **All Resources** > **Your Key Vault** > **Properties**, and then copy the **Resource ID**.
       :::image type="content" source="media/how-to-v2/copy-resource-id.png" alt-text="Screenshot that shows resource id to be copied." lightbox="media/how-to-v2/copy-resource-id.png":::
     1. To add the input to the environment variable, go to **Power Apps** > **ApplicationName** > **All** > **Environment variable**. Click the three dots, select **Edit**, add the copied value to **Default value**, and save.
