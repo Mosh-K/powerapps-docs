@@ -72,12 +72,12 @@ When you update and republish your app, the wrapped app is automatically updated
    1. On the side panel, select the subscription and resource group, and choose the keyvault. To create a new keyvault, select **Create a new keyvault**. After you select the keyvault, select **Next**.
    1. The service checks if the appropriate service principal, reader role, access policies, and environment variables are set up for the keyvault. If errors appear, fix them. After all checks pass, select **Next**.
    1. On the next screen, enter the name of the certificate in the keyvault. 
-   1. If no certificate exists or you want to change the certificate, see Generate key and signature hash to create a new certificate. Then select **Create a certificate** on this screen. This action takes you to the Azure portal keyvault location. Upload the generated certificate into the configured keyvault. 
+   1. If no certificate exists or you want to change the certificate, see [Generate key and signature hash](code-sign-android.md#generate-key-and-signature-hash) to create a new certificate. Then select **Create a certificate** on this screen. This action takes you to the Azure portal keyvault location. Upload the generated certificate into the configured keyvault. 
    1. Select **Finish**.
    1. On the main screen, the Azure keyvault and certificate appear as confirmed.
    1. On the main screen, select **Next**.
 
-6. You can set up autosigning from within Azure portal.
+6. Set up autosigning from within Azure portal.
     1. Refer to instructions in [create an Azure key vault](create-key-vault-for-code-signing.md) to create an Azure key vault. Once the vault is created, you need to add the required tags, secrets, and certificates. Add the environment variable if not created already.
     1. To create the environment variable, go to [Power Apps](https://make.powerapps.com) > **Solutions** > **Default solution**. Then select **New** > **More** > **Environment variable**, add the display name as "PA_Wrap_KV_ResourceID".
       :::image type="content" source="media/how-to-v2/add-new-env-variable.png" alt-text="Screenshot that shows screen for adding new environment variable." lightbox="media/how-to-v2/add-new-env-variable.png":::
@@ -93,6 +93,16 @@ When you update and republish your app, the wrapped app is automatically updated
      > - Ensure that the resourceID added is correct (verify spelling).
      > - Ensure that the resourceID added has non-empty tags and includes all the tags expected with the bundle ID used in the wrap wizard.
     1. Follow the steps in [Steps for automated code signing](create-key-vault-for-code-signing.md) to create the tags, secrets, and certificates required during the automatic signing process.
+
+#### Set environment variable prefix 
+
+The name of the new environment variable must have the prefix "new." If it doesn't, follow these steps:
+
+1. Go to **Solutions** > **New solution**.
+1. Select a **Publisher** or create one.
+1. Select the edit icon next to the **Publisher** to view or change the prefix. 
+1. If the prefix isn't "new," change it to "new."
+1. Save your changes.
 
 ### 4. Manage output
 
@@ -115,13 +125,7 @@ On the **Register your app** screen, register your application in Azure to estab
      - **Application name**: The customer-facing name of your app
      - **Android signature hash** (if targeting Android): A 28-character alphanumeric string
        :::image type="content" source="media/how-to-v2/new-app-reg2-updated.png" alt-text="Screenshot that shows new app registration screen" lightbox="media/how-to-v2/new-app-reg2-updated.png":::
-  3. In the Microsoft Entra admin center, go to App registrations and select your app. In the Essentials section, locate Supported account types, set it to Accounts in any organizational directory (Any Microsoft Entra directory - Multitenant).
-      :::image type="content" source="media/how-to-v2/registration-multitenant.png" alt-text="Screenshot that shows multitenant registration screen" lightbox="media/how-to-v2/registration-multitenant.png":::
-  4. Save your changes.
-
-     > [!NOTE]
-     > If the signature hash key already exists, you can reuse it.
-
+  3. Save your changes.
      
 #### Configure admin allowed third-party apps as an azure tenant admin
 
