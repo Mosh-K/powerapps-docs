@@ -73,7 +73,7 @@ When you update and republish your app, the wrapped app is automatically updated
    1. The service checks if the appropriate service principal, reader role, access policies, and environment variables are set up for the keyvault. If errors appear, fix them. After all checks pass, select **Next**.
    1. On the next screen, enter the name of the certificate in the keyvault. 
    1. If no certificate exists or you want to change the certificate, see [Generate key and signature hash](code-sign-android.md#generate-key-and-signature-hash) to create a new certificate. Then select **Create a certificate** on this screen. This action takes you to the Azure portal keyvault location. Upload the generated certificate into the configured keyvault. 
-      :::image type="content" source="media/how-to-v2/auto-signing-adding-mobile-signing-certificatesn.png" alt-text="Screenshot that shows create or enter a certificate for auto signing in target platform step" lightbox="media/how-to-v2/auto-signing-adding-mobile-signing-certificates.png":::
+      :::image type="content" source="media/how-to-v2/auto-signing-adding-mobile-signing-certificates.png" alt-text="Screenshot that shows create or enter a certificate for auto signing in target platform step" lightbox="media/how-to-v2/auto-signing-adding-mobile-signing-certificates.png":::
    1. Select **Finish**.
    1. On the main screen, the Azure keyvault and certificate appear as confirmed.
    1. On the main screen, select **Next**.
