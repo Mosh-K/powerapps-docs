@@ -39,8 +39,6 @@ When you update and republish your app, the wrapped app is automatically updated
    - **Primary app**: The main app end users see when the mobile app launches.
    - **Secondary app(s)**: Optional other apps bundled in the same mobile app package.
 
-   :::image type="content" source="media/how-to-v2/select-apps-updated.png" alt-text="Screenshot that shows the first step to select the app." lightbox="media/how-to-v2/select-apps-updated.png":::
-
    > [!NOTE]
    > - You can use the same primary app in multiple wrap projects.
    > - If the primary app name appears incorrect, proceed to the next step and return to refresh the name.
@@ -69,6 +67,7 @@ When you update and republish your app, the wrapped app is automatically updated
 5. Set up autosigning through the wizard.
    1. In the target platform step, toggle on **Autosigning**. The service checks if keyvaults and certificates are already attached.
    1. If you don't have keyvaults and certificates or want to change them, select **Configure**.
+      :::image type="content" source="media/how-to-v2/auto-signing-target-platform.png" alt-text="Screenshot that shows the first step to select the app." lightbox="media/how-to-v2/auto-signing-target-platform.png":::
    1. On the side panel, select the subscription and resource group, and choose the keyvault. To create a new keyvault, select **Create a new keyvault**. After you select the keyvault, select **Next**.
    1. The service checks if the appropriate service principal, reader role, access policies, and environment variables are set up for the keyvault. If errors appear, fix them. After all checks pass, select **Next**.
    1. On the next screen, enter the name of the certificate in the keyvault. 
