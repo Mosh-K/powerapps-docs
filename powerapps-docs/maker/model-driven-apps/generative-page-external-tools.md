@@ -153,6 +153,113 @@ Use this workflow to update a page that already exists in your environment.
 
 1. Review, publish, test, and iterate. The AI tool generates updated TypeScript code based on your requested changes. Follow the same review, publish, and test process described in the "Create a new generative page" section. Continue iterating with natural language instructions until the page meets your requirements.
 
+## Localize a generative page
+
+If your Power Apps environment is configured with multiple languages, you can localize your generative page to display content in the user's preferred language and format numbers, dates, and currency according to their regional settings.
+
+Use the following guidance to instruct your AI code generation tool to implement localization, or to manually add it to existing generated code.
+
+### Step 1: Identify configured languages
+
+Run the following PAC CLI command to see which languages are configured in your environment:
+
+```powershell
+pac model list-languages
+```
+
+Note the language names and their locale IDs (LCIDs) from the output — you need these in the steps that follow.
+
+### Step 2: Add language detection
+
+Ask your AI tool to add language detection based on the user's Xrm context, using the LCIDs from the previous step. For example:
+
+> "Add language detection to this generative page. My environment has English (1033), French (1036), and Arabic (1025) configured. Use `Xrm.Utility?.getGlobalContext()?.userSettings?.languageId` to read the current user's language, defaulting to 1033 if unavailable."
+
+The generated code reads the current user's language preference at runtime and falls back to English if no match is found:
+
+```typescript
+const language = React.useMemo(() => {
+  const uiLanguageId = (typeof Xrm !== "undefined" &&
+    Xrm.Utility?.getGlobalContext()?.userSettings?.languageId) || 1033;
+  const langMap: Record<number, { code: string; name: string; isRtl: boolean }> = {
+    1033: { code: "en-US", name: "English", isRtl: false },
+    1036: { code: "fr-FR", name: "French", isRtl: false },
+    1025: { code: "ar-SA", name: "Arabic", isRtl: true },
+  };
+  return langMap[uiLanguageId] || { code: "en-US", name: "English", isRtl: false };
+}, []);
+```
+
+### Step 3: Add a translations dictionary
+
+Ask your AI tool to create a translations dictionary for all user-visible text and a `t()` helper function to look up translated strings. For example:
+
+> "Add a translations dictionary for English, French, and Arabic for all the labels and text in this page."
+
+The pattern looks like this:
+
+```typescript
+const translations: Record<string, Record<string, string>> = {
+  "en-US": {
+    title: "Dashboard",
+    save: "Save",
+    cancel: "Cancel",
+  },
+  "fr-FR": {
+    title: "Tableau de bord",
+    save: "Enregistrer",
+    cancel: "Annuler",
+  },
+  "ar-SA": {
+    title: "لوحة القيادة",
+    save: "حفظ",
+    cancel: "إلغاء",
+  },
+};
+
+const t = (key: string): string =>
+  translations[language.code]?.[key] || translations["en-US"]?.[key] || key;
+```
+
+> [!IMPORTANT]
+> All user-visible text must use `t()` — for example, `<Text>{t("title")}</Text>`. Never hardcode display strings directly in JSX.
+
+### Step 4: Support right-to-left (RTL) languages
+
+If your environment includes Arabic or Hebrew, ask your AI tool to add RTL layout support:
+
+> "Add RTL support for Arabic."
+
+RTL support involves two things:
+
+- **Wrapping the root element** with a `dir` attribute:
+
+  ```tsx
+  <div dir={language.isRtl ? "rtl" : "ltr"}>
+    {/* page content */}
+  </div>
+  ```
+
+- **Using logical CSS properties** instead of physical directional ones:
+
+  | Instead of | Use |
+  |---|---|
+  | `marginLeft` / `marginRight` | `marginInlineStart` / `marginInlineEnd` |
+  | `paddingLeft` / `paddingRight` | `paddingInlineStart` / `paddingInlineEnd` |
+  | `left` / `right` | `insetInlineStart` / `insetInlineEnd` |
+  | `borderLeft` / `borderRight` | `borderInlineStart` / `borderInlineEnd` |
+  | `textAlign: "left"` / `"right"` | `textAlign: "start"` / `"end"` |
+
+  For flexbox row layouts, use `flexDirection: language.isRtl ? "row-reverse" : "row"` when logical properties alone are insufficient.
+
+### Step 5: Use user settings for number, date, and currency formatting
+
+Dataverse stores each user's regional formatting preferences in the `usersettings` table. Ask your AI tool to fetch these and use them for all formatted values:
+
+> "Fetch user formatting preferences from the `usersettings` Dataverse table using `dataApi.retrieveRow`, using the current user's ID from `Xrm.Utility?.getGlobalContext()?.userSettings?.userId`. Retrieve these columns: `decimalsymbol`, `numberseparator`, `currencysymbol`, `dateformatstring`, `dateseparator`. Use these to build formatting helpers for all dates, numbers, and currency values in the page. Do not use `Intl.NumberFormat` with hardcoded locale or currency codes, and do not hardcode any currency symbols."
+
+The helpers read from `usersettings` to format values correctly for each user's locale — for example, using the correct decimal separator, thousands separator, currency symbol, and date format.
+
 ## Troubleshooting
 
 ### Page fails to load in Power Apps
@@ -197,7 +304,7 @@ The AI tool then:
 The limitations for generative pages created with AI code generation tools are the same as those for generative pages created in the Power Apps maker portal:
 
 - Your page can connect to only Dataverse tables.
-- Currently, only US English is supported.
+- Localization support when creating generative pages through the Power Apps maker portal is limited to US English. For multi-language environments, see [Localize a generative page](#localize-a-generative-page).
 - Collaboration isn't supported—ensure only one maker is working on a generative page at a time.
 - Only these data types are supported: Choice, Currency, Customer, Date and Time, Date Only, Decimal Number, Floating Point Number, Image, Lookup, Multiline Text, Status, Status Reason, Text, Whole Number, Yes/No, Unique Identifier.
 
