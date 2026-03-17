@@ -1,7 +1,7 @@
 ---
 title: Customize and build your mobile app using the wrap wizard
 description: Learn about the steps to build and customize your mobile app using wrap wizard.
-author: shwetamurkute
+author: Murugesh1985
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: smurkute
