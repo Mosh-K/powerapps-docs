@@ -123,13 +123,26 @@ Generative pages are solution-aware and can be added to a solution (via an app) 
 
 After export, you can import the app and generative pages into another environment. When opened in the designer in the target environment, only the first prompt and published code are available. The full agent conversation doesn't transfer with the page.
 
+## Localize a generative page
+
+Generative pages support multi-language environments when created using AI code generation tools such as Claude Code or GitHub Copilot CLI. When a page is created for an environment with multiple languages configured, it's built to work with all of those languages. The page respects each user's preferred language and regional settings, including:
+
+- **Translated UI text**: Labels and other user-visible text are displayed in the user's preferred language.
+- **Right-to-left (RTL) layout**: The layout adapts automatically for RTL languages such as Arabic and Hebrew.
+- **Regional formatting**: Dates, numbers, and currency values follow each user's formatting preferences from their Dataverse user settings.
+
+> [!NOTE]
+> The sitemap entry for a generative page isn't localized by default. Sitemap localization needs to be handled separately in the app designer.
+
+For detailed localization implementation guidance and code patterns, see the [Power Platform Skills repository](https://github.com/microsoft/power-platform-skills/tree/main/plugins/model-apps).
+
 ## Limitations
 
 These are the current limitations of generative pages:
 
 - Your page can connect to only Dataverse tables (up to 6 for a single page). No other data sources can be used.
 - Your prompt can have a maximum of 50,000 characters.
-- Only US English is supported.
+- When creating generative pages through the Power Apps maker portal, only US English is supported. To build generative pages that support multiple languages, use AI code generation tools — see [Create and edit generative pages with AI code generation tools](generative-page-external-tools.md).
 - Collaboration isn't supported. Ensure only one maker is working on a generative page at a time to avoid unintended conflicts.
 - Only these data types are supported:
     - Choice
