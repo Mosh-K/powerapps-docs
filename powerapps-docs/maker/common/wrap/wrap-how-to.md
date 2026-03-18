@@ -56,7 +56,7 @@ Follow these steps to configure, build, sign, and distribute a custom-branded na
 
 3. You need to have Azure key vault, to upload your build to Azure blob storage. If you haven't already created, create one. Create an Azure key vault right within the Wrap wizard, or follow the instructions manually.
 
-4. Turn **ON** the **Autosigning** toggle to automate the signing process.
+4. Turn on the **Autosigning** toggle to automate the signing process.
    > [!NOTE]
    > Manual signing options:
    > - [Code sign for iOS](code-sign-ios.md)
