@@ -122,11 +122,13 @@ This skill enables you to describe what you want to build and have the AI tool g
 
 Follow this workflow when building a new page from scratch.
 
-1. Start a conversation with your AI tool. Describe what you want to create, including what data you want to include (which Dataverse tables or whether to create sample mock data). Be as specific as you want—the more vague you are with the request, the more details the agent tries to fill in itself. You can also attach or provide an image or other materials to help guide the visuals, theming, and layout. If your environment is configured with multiple languages and you want your page to be localized, mention this upfront — for example, "My environment has English, French, and Arabic configured." For more information, see [Localize a generative page](#localize-a-generative-page). For example:
+1. Start a conversation with your AI tool. Describe what you want to create, including what data you want to include (which Dataverse tables or whether to create sample mock data). Be as specific as you want—the more vague you are with the request, the more details the agent tries to fill in itself. You can also attach or provide an image or other materials to help guide the visuals, theming, and layout. For example:
    - "Create a generative page dashboard showing our top 10 accounts by revenue using the Account table"
    - "Build a generative page form for creating and editing contact records with sample data"
    - "Make a generative page for displaying incident reports on a map using the Incident table"
    - "Create a generative page for a sales pipeline visualization with opportunities using the modern blue theme"
+
+   If your page needs to support multiple languages, include that in your description — see [Localize a generative page](#localize-a-generative-page).
 
 2. Answer clarifying questions. The AI tool asks questions to understand your requirements. Be specific about business needs and data requirements, identify mobile requirements early, and mention any specific UI components or layout preferences.
 
