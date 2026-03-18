@@ -128,8 +128,6 @@ Follow this workflow when building a new page from scratch.
    - "Make a generative page for displaying incident reports on a map using the Incident table"
    - "Create a generative page for a sales pipeline visualization with opportunities using the modern blue theme"
 
-   If your page needs to support multiple languages, include that in your description — see [Localize a generative page](#localize-a-generative-page).
-
 2. Answer clarifying questions. The AI tool asks questions to understand your requirements. Be specific about business needs and data requirements, identify mobile requirements early, and mention any specific UI components or layout preferences.
 
 3. Review the implementation plan. The AI tool presents a plan describing the components to be built, Dataverse tables and columns to be used, key features and interactions, and data retrieval approach. Confirm the plan meets your requirements or request changes.
@@ -155,82 +153,18 @@ Use this workflow to update a page that already exists in your environment.
 
 1. Review, publish, test, and iterate. The AI tool generates updated TypeScript code based on your requested changes. Follow the same review, publish, and test process described in the "Create a new generative page" section. Continue iterating with natural language instructions until the page meets your requirements.
 
-## Localize a generative page
+## Localization
 
-If your Power Apps environment is configured with multiple languages, you can localize your generative page to display content in the user's preferred language and format numbers, dates, and currency according to their regional settings.
+When you create a generative page using the Power Apps plugin for Claude Code or GitHub Copilot CLI, localization is handled automatically. The agent detects all languages enabled in your environment and generates code so that the page works with all of those languages. The page respects each user's preferred language and regional formatting preferences for dates, numbers, and currency.
 
-Use the following guidance to instruct your AI code generation tool to implement localization, or to manually add it to existing generated code.
+If you want to target a different set of languages than those enabled in your environment, you can ask the agent to adjust, for example:
 
-### Step 1: Identify configured languages
+> "Update this page to support English, French, and Spanish only."
 
-Run the following PAC CLI command to see which languages are configured in your environment:
+> [!NOTE]
+> The sitemap entry for a generative page isn't localized by default. To localize sitemap entries, update them separately in the app designer.
 
-```powershell
-pac model list-languages
-```
-
-Note the language names and their locale IDs (LCIDs) from the output — you need these in the steps that follow.
-
-### Step 2: Add language detection
-
-Ask your AI tool to add language detection based on the user's Xrm context, using the LCIDs from the previous step. For example:
-
-> "Add language detection to this generative page. My environment has English (1033), French (1036), and Arabic (1025) configured. Use `Xrm.Utility?.getGlobalContext()?.userSettings?.languageId` to read the current user's language, defaulting to 1033 if unavailable."
-
-The generated code reads the current user's language preference at runtime and falls back to English if no match is found:
-
-```typescript
-const language = React.useMemo(() => {
-  const uiLanguageId = (typeof Xrm !== "undefined" &&
-    Xrm.Utility?.getGlobalContext()?.userSettings?.languageId) || 1033;
-  const langMap: Record<number, { code: string; name: string; isRtl: boolean }> = {
-    1033: { code: "en-US", name: "English", isRtl: false },
-    1036: { code: "fr-FR", name: "French", isRtl: false },
-    1025: { code: "ar-SA", name: "Arabic", isRtl: true },
-  };
-  return langMap[uiLanguageId] || { code: "en-US", name: "English", isRtl: false };
-}, []);
-```
-
-### Step 3: Add a translations dictionary
-
-Ask your AI tool to create a translations dictionary for all user-visible text. For example:
-
-> "Add a translations dictionary for English, French, and Arabic for all the labels and text in this page."
-
-The pattern looks like this:
-
-```typescript
-const translations: Record<string, Record<string, string>> = {
-  "en-US": {
-    title: "Dashboard",
-    save: "Save",
-    cancel: "Cancel",
-  },
-  "fr-FR": {
-    title: "Tableau de bord",
-    save: "Enregistrer",
-    cancel: "Annuler",
-  },
-  "ar-SA": {
-    title: "لوحة القيادة",
-    save: "حفظ",
-    cancel: "إلغاء",
-  },
-};
-```
-
-### Step 4: Support right-to-left (RTL) languages
-
-If your environment includes Arabic or Hebrew, ask your AI tool to add RTL layout support:
-
-> "Add RTL support for Arabic."
-
-### Step 5: Use user settings for number, date, and currency formatting
-
-Dataverse stores each user's regional formatting preferences in the `usersettings` table. Ask your AI tool to fetch these and use them for all formatted values:
-
-> "Fetch user formatting preferences from the `usersettings` Dataverse table using `dataApi.retrieveRow`, using the current user's ID from `Xrm.Utility?.getGlobalContext()?.userSettings?.userId`. Retrieve these columns: `decimalsymbol`, `numberseparator`, `currencysymbol`, `dateformatstring`, `dateseparator`. Use these to build formatting helpers for all dates, numbers, and currency values in the page. Do not use `Intl.NumberFormat` with hardcoded locale or currency codes, and do not hardcode any currency symbols."
+For more information, see [Localize a generative page](generative-pages.md#localize-a-generative-page).
 
 ## Troubleshooting
 
@@ -276,7 +210,6 @@ The AI tool then:
 The limitations for generative pages created with AI code generation tools are the same as those for generative pages created in the Power Apps maker portal:
 
 - Your page can connect to only Dataverse tables.
-- Localization support when creating generative pages through the Power Apps maker portal is limited to US English. For multi-language environments, see [Localize a generative page](#localize-a-generative-page).
 - Collaboration isn't supported—ensure only one maker is working on a generative page at a time.
 - Only these data types are supported: Choice, Currency, Customer, Date and Time, Date Only, Decimal Number, Floating Point Number, Image, Lookup, Multiline Text, Status, Status Reason, Text, Whole Number, Yes/No, Unique Identifier.
 
