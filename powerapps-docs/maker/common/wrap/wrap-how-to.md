@@ -65,17 +65,28 @@ Follow these steps to configure, build, sign, and distribute a custom-branded na
    > You must manually sign AAB files regardless of the signing option selected in the wizard.
 
 5. Set up autosigning through the wizard.
-   1. In the target platform step, toggle on **Autosigning**. The service checks if keyvaults and certificates are already attached.
-   1. If you don't have keyvaults and certificates or want to change them, select **Configure**.
+   1. In the target platform step, toggle on **Autosigning**. The service checks if key vault and certificate are already attached.
+
+      > [!NOTE]
+      > Azure Key Vault is used to securely store and manage application secrets and certificates, with centralized access and full audit logging.
+   1. If you don't have key vault and certificate or want to change them, select **Configure**.
+
+      > [!NOTE]
+      > Only Azure admins can create a key vault from the wrap wizard. Other users need to follow the [manual key vault creation process](create-key-vault-for-code-signing.md).
+
       :::image type="content" source="media/how-to-v2/auto-signing-target-platform.png" alt-text="Screenshot that shows auto signing option in target platform step." lightbox="media/how-to-v2/auto-signing-target-platform.png":::
-   1. On the side panel, select the subscription and resource group, and choose the keyvault. To create a new keyvault, select **Create a new keyvault**. After you select the keyvault, select **Next**.
-      :::image type="content" source="media/how-to-v2/auto-signing-key-vault-selection.png" alt-text="Screenshot that shows keyvault selected for auto signing in target platform step" lightbox="media/how-to-v2/auto-signing-key-vault-selection.png":::
-   1. The service checks if the appropriate service principal, reader role, access policies, and environment variables are set up for the keyvault. If errors appear, fix them. After all checks pass, select **Next**.
-   1. On the next screen, enter the name of the certificate in the keyvault. 
-   1. If no certificate exists or you want to change the certificate, see [Generate key and signature hash](code-sign-android.md#generate-key-and-signature-hash) to create a new certificate. Then select **Create a certificate** on this screen. This action takes you to the Azure portal keyvault location. Upload the generated certificate into the configured keyvault. 
+   1. On the side panel, select the subscription and resource group, and choose the key vault. To create a new key vault, select **Create a new keyvault**. After you select the key vault, select **Next**.
+
+      :::image type="content" source="media/how-to-v2/auto-signing-key-vault-selection.png" alt-text="Screenshot that shows key vault selected for auto signing in target platform step" lightbox="media/how-to-v2/auto-signing-key-vault-selection.png":::
+   1. The service checks if the appropriate service principal, reader role, access policies, and environment variables are set up for the key vault. If errors appear, fix them. After all checks pass, select **Next**.
+   1. On the next screen, enter the name of the certificate in the key vault. 
+   1. If no certificate exists or you want to change the certificate, see [Generate key and signature hash](code-sign-android.md#generate-key-and-signature-hash) to create a new certificate. Then select **Create a certificate** on this screen. This action takes you to the Azure portal key vault location. Upload the generated certificate into the configured key vault. 
+      > [!NOTE]
+      > Users are responsible for creating the certificate.
+
       :::image type="content" source="media/how-to-v2/auto-signing-adding-mobile-signing-certificates.png" alt-text="Screenshot that shows create or enter a certificate for auto signing in target platform step" lightbox="media/how-to-v2/auto-signing-adding-mobile-signing-certificates.png":::
    1. Select **Finish**.
-   1. On the main screen, the Azure keyvault and certificate appear as confirmed.
+   1. On the main screen, the Azure Key Vault and certificate appear as confirmed.
    1. On the main screen, select **Next**.
 
 6. Set up autosigning from within Azure portal.
@@ -167,10 +178,9 @@ After completing these steps, the registration screen will look like this:
 
 #### Grant API permissions as an Azure tenant admin
 
-Azure admin grants API permissions during registration. Make sure **DeviceManagementManagedApplication** is set to **Yes** when you grant admin consent for your app. For more information, see [Grant tenant-wide admin consent in Enterprise apps pane](/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal#grant-tenant-wide-admin-consent-in-enterprise-apps-pane).
-    :::image type="content" source="media/how-to-v2/api-permissions-2.png" alt-text="Screenshot that shows the API permissions for the app." lightbox="media/how-to-v2/api-permissions-2.png":::
+The wrap wizard configures required API permissions automatically.
 
-### Required API permissions
+##### Required API permissions
 
 | API Type                    | Specific API                                             | Reason                                                                                                                       |
 |----------------------------|----------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
@@ -180,6 +190,15 @@ Azure admin grants API permissions during registration. Make sure **DeviceManage
 | **APIs my organization uses** | Power BI                                                 | The application needs Power BI permissions to access or embed Power BI content.                                          |
 | **APIs my organization uses** | Microsoft Mobile Application Management        | The application needs this permission because Power Apps uses Intune SDK internally. |
 
+##### Configure permissions from within Wrap wizard 
+
+The wrap wizard checks and flags permissions that aren't available with the app. As an Azure admin, select one click access to grant the pending permissions. Alternatively, you can configure permissions through the Powershell commands below.
+
+##### Configure permissions through Powershell commands:
+
+
+Azure admin grants API permissions during registration. Make sure **DeviceManagementManagedApplication** is set to **Yes** when you grant admin consent for your app. For more information, see [Grant tenant-wide admin consent in Enterprise apps pane](/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal#grant-tenant-wide-admin-consent-in-enterprise-apps-pane).
+    :::image type="content" source="media/how-to-v2/api-permissions-2.png" alt-text="Screenshot that shows the API permissions for the app." lightbox="media/how-to-v2/api-permissions-2.png":::
 
 For detailed steps, see [Request the permissions in the app registration portal](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal).
 
@@ -205,7 +224,7 @@ Run these PowerShell commands as an Azure admin if you don't see permissions und
 > [!NOTE]
 > If only the **Application name** field is visible, continue to the next steps and select **Android** as a target platform to display the signature hash field.
 
-## Configure API permissions manually (optional)
+##### Configure API permissions manually (optional)
 
 If you get errors, manually configure API permissions. For more information, see [Add and configure](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal).
 
