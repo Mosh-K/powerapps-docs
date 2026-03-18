@@ -99,11 +99,11 @@ Follow these steps to configure, build, sign, and distribute a custom-branded na
       :::image type="content" source="media/how-to-v2/copy-resource-id.png" alt-text="Screenshot that shows resource id to be copied." lightbox="media/how-to-v2/copy-resource-id.png":::
     1. To add the input to the environment variable, go to **Power Apps** > **ApplicationName** > **All** > **Environment variable**. Click the three dots, select **Edit**, add the copied value to **Default value**, and save.
     1. To check whether the table value has been updated, go to **Power Apps** > **Tables** > **Environment variable definition** > **new_PA_Wrap_KV_ResourceID** . The value in **Default value** must be same as that of the resourceID for which you want to add the vault. 
-     > [!NOTE]
-     > Guidelines for adding the input behind the environment variables for Key vault information:
-     > - Environment variables must not be empty or can contain multiple entries.
-     > - Ensure that the resourceID added is correct (verify spelling).
-     > - Ensure that the resourceID added has non-empty tags and includes all the tags expected with the bundle ID used in the wrap wizard.
+         > [!NOTE]
+         > Guidelines for adding the input behind the environment variables for Key vault information:
+         > - Environment variables must not be empty or can contain multiple entries.
+         > - Ensure that the resourceID added is correct (verify spelling).
+         > - Ensure that the resourceID added has non-empty tags and includes all the tags expected with the bundle ID used in the wrap wizard.
     1. Follow the steps in [Steps for automated code signing](create-key-vault-for-code-signing.md) to create the tags, secrets, and certificates required during the automatic signing process.
 
 #### Set environment variable prefix 
