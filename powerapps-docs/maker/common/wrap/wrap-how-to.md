@@ -24,7 +24,7 @@ When you update and republish your app, the wrapped app is automatically updated
 
 ## Steps to create a custom-branded native app using the wrap wizard
 
-> [!VIDEO 4b04af25-b332-4286-a615-e3f36de574e0]
+Follow these steps to configure, build, sign, and distribute a custom-branded native mobile app package (APK, AAB, or IPA) from your canvas apps using the wrap wizard in Power Apps.
 
 ### 1. Sign in and start a wrap project
 
