@@ -1,6 +1,6 @@
 ---
 title: Set up push notifications for wrap 
-description: Learn how to set up push notifications for your Power Apps wrap app on iOS and Android. Follow this step-by-step guide to keep users engaged with timely alerts.
+description: Learn how to set up push notifications for your Power Apps wrap app on iOS and Android. Follow the step-by-step instructions to keep users engaged with timely alerts. 
 author: Murugesh1985
 ms.author: murugeshs
 ms.reviewer: smurkute
