@@ -194,7 +194,7 @@ const language = React.useMemo(() => {
 
 ### Step 3: Add a translations dictionary
 
-Ask your AI tool to create a translations dictionary for all user-visible text and a `t()` helper function to look up translated strings. For example:
+Ask your AI tool to create a translations dictionary for all user-visible text. For example:
 
 > "Add a translations dictionary for English, French, and Arabic for all the labels and text in this page."
 
@@ -218,13 +218,7 @@ const translations: Record<string, Record<string, string>> = {
     cancel: "إلغاء",
   },
 };
-
-const t = (key: string): string =>
-  translations[language.code]?.[key] || translations["en-US"]?.[key] || key;
 ```
-
-> [!IMPORTANT]
-> All user-visible text must use `t()` — for example, `<Text>{t("title")}</Text>`. Never hardcode display strings directly in JSX.
 
 ### Step 4: Support right-to-left (RTL) languages
 
@@ -232,35 +226,11 @@ If your environment includes Arabic or Hebrew, ask your AI tool to add RTL layou
 
 > "Add RTL support for Arabic."
 
-RTL support involves two things:
-
-- **Wrapping the root element** with a `dir` attribute:
-
-  ```tsx
-  <div dir={language.isRtl ? "rtl" : "ltr"}>
-    {/* page content */}
-  </div>
-  ```
-
-- **Using logical CSS properties** instead of physical directional ones:
-
-  | Instead of | Use |
-  |---|---|
-  | `marginLeft` / `marginRight` | `marginInlineStart` / `marginInlineEnd` |
-  | `paddingLeft` / `paddingRight` | `paddingInlineStart` / `paddingInlineEnd` |
-  | `left` / `right` | `insetInlineStart` / `insetInlineEnd` |
-  | `borderLeft` / `borderRight` | `borderInlineStart` / `borderInlineEnd` |
-  | `textAlign: "left"` / `"right"` | `textAlign: "start"` / `"end"` |
-
-  For flexbox row layouts, use `flexDirection: language.isRtl ? "row-reverse" : "row"` when logical properties alone are insufficient.
-
 ### Step 5: Use user settings for number, date, and currency formatting
 
 Dataverse stores each user's regional formatting preferences in the `usersettings` table. Ask your AI tool to fetch these and use them for all formatted values:
 
 > "Fetch user formatting preferences from the `usersettings` Dataverse table using `dataApi.retrieveRow`, using the current user's ID from `Xrm.Utility?.getGlobalContext()?.userSettings?.userId`. Retrieve these columns: `decimalsymbol`, `numberseparator`, `currencysymbol`, `dateformatstring`, `dateseparator`. Use these to build formatting helpers for all dates, numbers, and currency values in the page. Do not use `Intl.NumberFormat` with hardcoded locale or currency codes, and do not hardcode any currency symbols."
-
-The helpers read from `usersettings` to format values correctly for each user's locale — for example, using the correct decimal separator, thousands separator, currency symbol, and date format.
 
 ## Troubleshooting
 
