@@ -110,7 +110,7 @@ Wrap supports customization of the mobile app bootstrap experience to match your
 
 :::image type="content" source="media/wrap-intro/wrap-branding.png" alt-text="Branding in wrap." border="false":::
 
-Branding customization options are available when building your wrap project. More information: [Configure branding](wrap-how-to.md#6-configure-branding)
+Branding customization options are available when building your wrap project. Learn more in [Configure branding](wrap-how-to.md#6-configure-branding)
 
 ---
 
