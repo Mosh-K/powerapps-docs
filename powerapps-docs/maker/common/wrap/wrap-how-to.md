@@ -133,6 +133,8 @@ On the **Register your app** screen, register your application in Azure to estab
      
 #### Configure admin allowed third-party apps as an azure tenant admin
 
+The registered app must be configured as a third-party app. To configure the app, the Azure tenant admin follows these steps.
+
 # [For Windows](#tab/windows)
 
 1. Open Windows PowerShell as administrator.
@@ -166,6 +168,8 @@ After completing these steps, the registration screen will look like this:
 
 #### Grant API permissions as an Azure tenant admin
 
+The app requires the following API permissions to function correctly.
+
 ##### Required API permissions
 
 | API Type                    | Specific API                                             | Reason                                                                                                                       |
@@ -179,6 +183,8 @@ After completing these steps, the registration screen will look like this:
 ##### Configure permissions from within Wrap wizard 
 
 The wrap wizard checks and flags permissions that aren't available with the app. As an Azure admin, select one click access in the wrap wizard to grant the pending permissions. Alternatively, you can configure permissions through the Powershell commands below.
+
+:::image type="content" source="media/how-to-v2/api-permission-one-click.png" alt-text="Screenshot that shows one click fix app permissions option" lightbox="media/how-to-v2/api-permission-one-click.png":::
 
 ##### Configure permissions through Powershell commands:
 
