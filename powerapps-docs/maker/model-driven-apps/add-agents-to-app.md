@@ -1,7 +1,7 @@
 ---
 title: "Add agents to your model-driven app" 
 description: Learn how to add agents to your model-driven app in Power Apps.
-ms.date: 02/10/2026
+ms.date: 03/19/2026
 ms.reviewer: matp
 ms.topic: how-to
 author: HemantGaur
@@ -81,7 +81,7 @@ MCP is an open protocol that enables seamless integration between large language
    :::image type="content" source="media/add-agents-to-app/copilot-studio-power-apps-mcp-server.png" alt-text="Find and select Power apps MCP server":::
 1. Select **Add and configure** to connect the agent to Power Apps MCP tools.
    :::image type="content" source="media/add-agents-to-app/copilot-studio-configure-power-apps-mcp-server.png" alt-text="Add and configure Power Apps MCP server":::
-1. In the details section, change the "Credentials to use" field to "Maker-provided credentials" to enable the MCP Server to be initialized autonomously via a trigger. See [Control maker-provided credentials for authentication](https://learn.microsoft.com/en-us/microsoft-copilot-studio/configure-no-maker-authentication#scope-of-enforcement-and-experience) for more details if this option is disabled.
+1. In the details section, change the **Credentials to use** field to *Maker-provided credentials* to enable the MCP Server to initialize autonomously via a trigger. Go to [Control maker-provided credentials for authentication](/microsoft-copilot-studio/configure-no-maker-authentication#scope-of-enforcement-and-experience) for more details if this option is disabled.
    :::image type="content" source="media/add-agents-to-app/copilot-studio-configure-maker-credentials.png" alt-text="Add and configure Power Apps MCP server":::  
 1. Notice the tools available to use with your agent. You can select to enable the tools you want. For information about these tools go to [Work with Power Apps MCP server](power-apps-mcp-server.md). 
    :::image type="content" source="media/add-agents-to-app/copilot-studio-configure-power-apps-mcp-tools.png" alt-text="Power apps MCP server tools available.":::
@@ -92,7 +92,7 @@ The agent is ready to use the Power Apps MCP server tools. This image shows how 
 
 :::image type="content" source="media/add-agents-to-app/copilot-studio-power-apps-agent-instructions.png" alt-text="Instructions read: When the agent is triggered, create a task for human review. Use the Booking Reference as the review item title with Review Booking":::
 
-When a new booking record is created, it triggers the agent, which adds the review task in the agent feed **Completed** tab. Note that all tasks created by the `log_for_review` tool will be created as "Completed" items intended for passive supervision of agent activity.
+When a new booking record is created, it triggers the agent, which adds the review task in the agent feed **Completed** tab. Note that all tasks created by the `log_for_review` tool are created as "Completed" items intended for passive supervision of agent activity.
 
 :::image type="content" source="media/add-agents-to-app/copilot-studio-power-apps-agent-instructions-result.png" alt-text="Review task created by automomous agent":::
 

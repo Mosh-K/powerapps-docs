@@ -1,7 +1,7 @@
 ---
 title: "Work with Power Apps MCP Server" 
 description: Learn about the tools available with the Power Apps MCP Server.
-ms.date: 02/10/2026
+ms.date: 03/19/2026
 ms.reviewer: matp
 ms.topic: how-to
 author: HemantGaur
@@ -34,22 +34,22 @@ The Power Apps MCP Server equips your agent with two types of capabilities:
 :::image type="content" source="media/add-agents-to-app/power-apps-mcp-server.png" alt-text="Power Apps MCP server" lightbox="media/add-agents-to-app/power-apps-mcp-server.png":::
 
 > [!NOTE]
-> Access to the agent feed and supervision capabilities is limited by default to the System Administrator and System Customizer roles. To allow additional users to view the agent feed, grant organization‑level read/write permissions on the entities listed below. You can create a new security role with these permissions and assign it to multiple users as needed.
+> Access to the agent feed and supervision capabilities is limited by default to the System Administrator and System Customizer security roles. To allow additional users to view the agent feed, grant organization‑level read/write permissions on the tables listed here. You can create a new security role with these permissions and assign the role to multiple users as needed.
+>
 > - Agent Hub Goal(agenthubgoal)
 > - Agent Hub Insight(agenthubinsight)
 > - Agent Hub Metric(agenthubmetric)
 > - Agent Task(agenttask)
 > - Copilot(bot)
 
-The Power Apps MCP tools improve the more you use them. For example, when you make corrections to suggestions in the agent canvas, the data entry tool improves based on your corrections. To use the enhanced agent feed capabilities, enable and configure the Power Apps MCP Server from the Microsoft Copilot Studio agent. Once configured, you can invoke Power Apps MCP Server tools from agent instructions using natural language.
+The Power Apps MCP tools improve the more you use them. For example, when you make corrections to suggestions in the agent canvas, the data entry tool improves based on your corrections. To use the enhanced agent feed capabilities, enable and configure the Power Apps MCP server from the Microsoft Copilot Studio agent. Once configured, you can invoke Power Apps MCP server tools from agent instructions using natural language.
 
-More information: [Create an autonomous agent connected to Power Apps MCP Server](add-agents-to-app.md#create-an-autonomous-agent-connected-to-power-apps-mcp-server)
+More information: [Create an autonomous agent connected to Power Apps MCP server](add-agents-to-app.md#create-an-autonomous-agent-connected-to-power-apps-mcp-server)
 
 > [!IMPORTANT]
 >
-> For autonomous agent scenarios where an agent runs via a trigger, the Power Apps MCP Server must be configured to run using "Maker-provided credentials" as seen in the details section of the tool. See [Control maker-provided credentials for authentication](https://learn.microsoft.com/en-us/microsoft-copilot-studio/configure-no-maker-authentication#scope-of-enforcement-and-experience) for more details if this option is disabled.
->    :::image type="content" source="media/add-agents-to-app/copilot-studio-configure-maker-credentials.png" alt-text="Maker-provided credentials selection":::  
-
+> For autonomous agent scenarios where an agent runs via a trigger, the Power Apps MCP server must be configured to run using "Maker-provided credentials" as seen in the details section of the tool. Go to [Control maker-provided credentials for authentication](/microsoft-copilot-studio/configure-no-maker-authentication#scope-of-enforcement-and-experience) for more details if this option is disabled.
+> :::image type="content" source="media/add-agents-to-app/copilot-studio-configure-maker-credentials.png" alt-text="Maker-provided credentials selection":::  
 
 ## List of tools
 
@@ -83,13 +83,13 @@ Like with the `log_for_review` tool, you can control the task output for title, 
 
 ### Sample instruction
 
-When this agent is triggered by the creation of a new support case, it should request assistance. In the request, set the title by prefixing the value of issue with “Assistance needed: ”. In the task description include the issue type, issue description, date reported, and the Resolved value. Include your reasoning steps. Also include a link to the related Dataverse issue record. Once the user completes the task, continue processing by <insert next step for agent>.
+When this agent is triggered by the creation of a new support case, it should request assistance. In the request, set the title by prefixing the value of issue with “Assistance needed: ”. In the task description include the issue type, issue description, date reported, and the resolved value. Include your reasoning steps. Also include a link to the related Dataverse issue record. Once the user completes the task, continue processing by <insert next step for agent>. <!-- Is there supposed to be something more here? -->
 
 :::image type="content" source="media/add-agents-to-app/request-assistance-with-nav-example.png" alt-text="Request user assistance example":::
 
 ## invoke_data_entry
 
-The `invoke_data_entry` tool streamlines the creation of Dataverse records by extracting structured information from unstructured inputs such as emails, messages, or documents. When invoked from a Copilot Studio agent, it automatically analyzes incoming content, fills out the appropriate form with the extracted data, and presents the proposed entry as a task in the agent feed for user review and approval. It requires review of the propsoed entry by a user before creating the record. This enables fast, reliable data capture with minimal manual effort.
+The `invoke_data_entry` tool streamlines the creation of Dataverse records by extracting structured information from unstructured inputs such as emails, messages, or documents. When invoked from a Copilot Studio agent, it automatically analyzes incoming content, fills out the appropriate form with the extracted data, and presents the proposed entry as a task in the agent feed for user review and approval. It requires review of the proposed entry by a user before creating the record. This enables fast, reliable data capture with minimal manual effort.
 
 ### Sample instruction - shared email triggered agent
 
