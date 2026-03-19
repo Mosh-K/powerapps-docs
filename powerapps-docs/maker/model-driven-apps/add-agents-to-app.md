@@ -82,7 +82,7 @@ MCP is an open protocol that enables seamless integration between large language
 1. Select **Add and configure** to connect the agent to Power Apps MCP tools.
    :::image type="content" source="media/add-agents-to-app/copilot-studio-configure-power-apps-mcp-server.png" alt-text="Add and configure Power Apps MCP server":::
 1. In the details section, change the **Credentials to use** field to *Maker-provided credentials* to enable the MCP Server to initialize autonomously via a trigger. Go to [Control maker-provided credentials for authentication](/microsoft-copilot-studio/configure-no-maker-authentication#scope-of-enforcement-and-experience) for more details if this option is disabled.
-   :::image type="content" source="media/add-agents-to-app/copilot-studio-configure-maker-credentials.png" alt-text="Add and configure Power Apps MCP server":::  
+   :::image type="content" source="media/add-agents-to-app/copilot-studio-configure-maker-credentials.png" alt-text="Credentials to use for Power Apps MCP server":::  
 1. Notice the tools available to use with your agent. You can select to enable the tools you want. For information about these tools go to [Work with Power Apps MCP server](power-apps-mcp-server.md). 
    :::image type="content" source="media/add-agents-to-app/copilot-studio-configure-power-apps-mcp-tools.png" alt-text="Power apps MCP server tools available.":::
 1. Add a trigger for this autonoumous agent so that it is invoked when the trigger is fired. In this example, the trigger **When a row is added, modified, or deleted** is selected for the Dataverse **Booking** table.
