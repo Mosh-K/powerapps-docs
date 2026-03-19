@@ -39,7 +39,7 @@ You can create generative pages using two approaches:
 1. In the app designer, select **Add a page** > **Describe a page**.
 
    A full-page generative page experience opens.
-1. In the textbox, type a description of the type of page you want to create. The description should include functional requirements and optionally any UX specifications. For example, you could enter *Build a page showing Account records as a gallery of cards using a modern look and feel. Include name, entityimage on the top, and website, email, phone number. Make the gallery scrollable by using data from the Account table*. If you want the page to support multiple languages, include that in your description — see [Localize a generative page](#localize-a-generative-page).
+1. In the textbox, type a description of the type of page you want to create. The description should include functional requirements and optionally any UX specifications. For example, you could enter *Build a page showing Account records as a gallery of cards using a modern look and feel. Include name, entityimage on the top, and website, email, phone number. Make the gallery scrollable by using data from the Account table*. If you want the page to support multiple languages, follow the guidance in [Localize a generative page](#localize-a-generative-page).
 1. Add tables and images as appropriate by selecting **Add data** > **Add table**. You can link up to six Dataverse tables. In the screenshot, the account table is added.
    :::image type="content" source="media/generative-page/add-table-generative-page.png" alt-text="Add a table to the generative page" lightbox="media/generative-page/add-table-generative-page.png":::
 
@@ -125,23 +125,17 @@ After export, you can import the app and generative pages into another environme
 
 ## Localize a generative page
 
-Generative pages support multi-language environments when created using AI code generation tools such as Claude Code or GitHub Copilot CLI. When a page is created for an environment with multiple languages configured, it's built to work with all of those languages. The page respects each user's preferred language and regional settings, including:
+To localize a generative page, ensure your prompt covers the follow items. 
 
-- **Translated UI text**: Labels and other user-visible text are displayed in the user's preferred language.
-- **Right-to-left (RTL) layout**: The layout adapts automatically for RTL languages such as Arabic and Hebrew.
-- **Regional formatting**: Dates, numbers, and currency values follow each user's formatting preferences from their Dataverse user settings.
-
-To localize a generative page, use the following prompting guidance with your AI code generation tool:
-
-1. **Specify your languages.** Tell the agent which languages your environment supports, for example: "My environment has English, French, and Arabic configured. Build this page to support all of these languages."
-1. **Request translated text.** Ask the agent to provide translations for all user-visible labels and text in the page for each language.
-1. **Enable RTL support.** If your environment includes Arabic or Hebrew, ask the agent to add right-to-left layout support.
+1. **Specify your languages.** Tell the agent which languages you want the page to support, ideally language name and LCID.  
+1. **Request translated text.** Ask the agent to create a translation dictionary for all user-visible labels and text in the page for each language.
+1. **Enable RTL support.** If your environment includes an RTL language like Arabic or Hebrew, ask the agent to implement the appropriate right-to-left layout support.
 1. **Use regional formatting.** Ask the agent to format dates, numbers, and currency using each user's preferences from their Dataverse user settings, rather than using hardcoded formats or locale codes.
+
+For detailed localization implementation guidance and code patterns, see the **Localization" section in this file of the [Power Platform Skills repository](https://github.com/microsoft/power-platform-skills/tree/main/plugins/model-apps).
 
 > [!NOTE]
 > The sitemap entry for a generative page isn't localized by default. Sitemap localization needs to be handled separately in the app designer.
-
-For detailed localization implementation guidance and code patterns, see the [Power Platform Skills repository](https://github.com/microsoft/power-platform-skills/tree/main/plugins/model-apps).
 
 ## Limitations
 
@@ -149,7 +143,7 @@ These are the current limitations of generative pages:
 
 - Your page can connect to only Dataverse tables (up to 6 for a single page). No other data sources can be used.
 - Your prompt can have a maximum of 50,000 characters.
-- When creating generative pages through the Power Apps maker portal, only US English is supported. To build generative pages that support multiple languages, use AI code generation tools — see [Create and edit generative pages with AI code generation tools](generative-page-external-tools.md).
+- When creating generative pages through the Power Apps maker portal, only US English is a supported prompting language.
 - Collaboration isn't supported. Ensure only one maker is working on a generative page at a time to avoid unintended conflicts.
 - Only these data types are supported:
     - Choice
