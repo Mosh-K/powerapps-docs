@@ -83,7 +83,7 @@ Like with the `log_for_review` tool, you can control the task output for title, 
 
 ### Sample instruction
 
-When this agent is triggered by the creation of a new support case, it should request assistance. In the request, set the title by prefixing the value of issue with “Assistance needed: ”. In the task description include the issue type, issue description, date reported, and the resolved value. Include your reasoning steps. Also include a link to the related Dataverse issue record. Once the user completes the task, continue processing by <insert next step for agent>. <!-- Is there supposed to be something more here? -->
+When this agent is triggered by the creation of a new support case, it should request assistance. In the request, set the title by prefixing the value of issue with “Assistance needed: ”. In the task description include the issue type, issue description, date reported, and the resolved value. Include your reasoning steps. Also include a link to the related Dataverse issue record. Once the user completes the task, continue processing by setting the case status to Closed.
 
 :::image type="content" source="media/add-agents-to-app/request-assistance-with-nav-example.png" alt-text="Request user assistance example":::
 
