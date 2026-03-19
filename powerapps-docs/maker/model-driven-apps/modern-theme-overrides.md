@@ -2,7 +2,7 @@
 title: "Use modern themes in Power Apps"
 description: Learn how to change the colors and font of apps including the app header in model-driven apps with the modern look in Power Apps.
 ms.custom: ""
-ms.date: 05/05/2025
+ms.date: 03/19/2026
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -48,7 +48,7 @@ The first step to creating a custom modern theme is to create an XML file with y
 - `Font` – The font for your custom theme. The font being rendered by the custom theme is dependent on the browser and target machine's ability to show that font. 
 - `Vibrancy` – An optional parameter that impacts the muteness or brightness of the palette, especially the lighter colors. The allowed values are between -100 and 100, with a default value of 0. This option is only applicable when `lockPrimary="true"`. 
 - `HueTorsion` – An optional parameter that impacts the tint, shade, or tone of the palette, especially the lighter colors. The allowed values are between -100 and 100, with a default value of 0. This option is only applicable when `lockPrimary="true"`.
-- `LogoWebResource` – The logical name of the image web resource to use as the logo in the app header. Logos that are too large don't display; the recommended image size is 156 pixels wide × 48 pixels high.
+- `LogoWebResource` – The logical name of the image web resource to use as the logo in the app header. Logos that are too large don't display. The recommended image size is 156 pixels wide × 48 pixels high.
 - `LogoTooltip` – The tooltip text displayed when a user hovers over the app logo. Defaults to *Dynamics 365* if not specified.
 
 #### Override the palette
