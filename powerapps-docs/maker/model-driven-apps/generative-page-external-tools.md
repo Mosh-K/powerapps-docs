@@ -164,7 +164,7 @@ If you want to target a different set of languages than those enabled in your en
 > [!NOTE]
 > The sitemap entry for a generative page isn't localized by default. To localize sitemap entries, update them separately in the app designer.
 
-For more information, see [Localize a generative page](generative-pages.md#localize-a-generative-page).
+For more information, see the [localization instructions](https://github.com/microsoft/power-platform-skills/blob/main/plugins/model-apps/references/genpage-rules-reference.md#localization) in the Power Platform Skills repository.
 
 ## Troubleshooting
 
