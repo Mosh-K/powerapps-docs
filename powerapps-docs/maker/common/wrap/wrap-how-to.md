@@ -5,7 +5,7 @@ author: Murugesh1985
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: smurkute
-ms.date: 03/16/2026
+ms.date: 03/19/2026
 ms.subservice: canvas-maker
 ms.author: smurkute
 search.audienceType: 
@@ -106,16 +106,6 @@ Follow these steps to configure, build, sign, and distribute a custom-branded na
          > - Ensure that the resourceID added has non-empty tags and includes all the tags expected with the bundle ID used in the wrap wizard.
     1. Follow the steps in [Steps for automated code signing](create-key-vault-for-code-signing.md) to create the tags, secrets, and certificates required during the automatic signing process.
 
-#### Set environment variable prefix 
-
-The name of the new environment variable must have the prefix "new." If it doesn't, follow these steps:
-
-1. Go to **Solutions** > **New solution**.
-1. Select a **Publisher** or create one.
-1. Select the edit icon next to the **Publisher** to view or change the prefix. 
-1. If the prefix isn't "new," change it to "new."
-1. Save your changes.
-
 ### 4. Manage output
 
 To upload your build to Azure blob storage, you need an Azure blob storage account and container. If you don't have one, create one.
@@ -142,8 +132,6 @@ On the **Register your app** screen, register your application in Azure to estab
   3. Save your changes.
      
 #### Configure admin allowed third-party apps as an azure tenant admin
-
-The wrap wizard configures required API permissions automatically. To grant admin access:
 
 # [For Windows](#tab/windows)
 
@@ -178,8 +166,6 @@ After completing these steps, the registration screen will look like this:
 
 #### Grant API permissions as an Azure tenant admin
 
-The wrap wizard configures required API permissions automatically.
-
 ##### Required API permissions
 
 | API Type                    | Specific API                                             | Reason                                                                                                                       |
@@ -192,10 +178,9 @@ The wrap wizard configures required API permissions automatically.
 
 ##### Configure permissions from within Wrap wizard 
 
-The wrap wizard checks and flags permissions that aren't available with the app. As an Azure admin, select one click access to grant the pending permissions. Alternatively, you can configure permissions through the Powershell commands below.
+The wrap wizard checks and flags permissions that aren't available with the app. As an Azure admin, select one click access in the wrap wizard to grant the pending permissions. Alternatively, you can configure permissions through the Powershell commands below.
 
 ##### Configure permissions through Powershell commands:
-
 
 Azure admin grants API permissions during registration. Make sure **DeviceManagementManagedApplication** is set to **Yes** when you grant admin consent for your app. For more information, see [Grant tenant-wide admin consent in Enterprise apps pane](/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal#grant-tenant-wide-admin-consent-in-enterprise-apps-pane).
     :::image type="content" source="media/how-to-v2/api-permissions-2.png" alt-text="Screenshot that shows the API permissions for the app." lightbox="media/how-to-v2/api-permissions-2.png":::
@@ -277,6 +262,15 @@ You can view your build in several ways:
 
 Test your app and distribute it as needed. If you encounter issues, see the [troubleshooting page](/troubleshoot/power-platform/power-apps/manage-apps/wrap-issues).
 
+## Set environment variable prefix 
+
+The name of the new environment variable must have the prefix "new." If it doesn't, follow these steps:
+
+1. Go to **Solutions** > **New solution**.
+1. Select a **Publisher** or create one.
+1. Select the edit icon next to the **Publisher** to view or change the prefix. 
+1. If the prefix isn't "new," change it to "new."
+1. Save your changes.
 
 ## Register your app on Azure portal manually (optional)
 
