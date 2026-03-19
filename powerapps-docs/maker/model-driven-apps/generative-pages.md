@@ -132,7 +132,7 @@ To localize a generative page, ensure your prompt covers the follow items.
 1. **Enable RTL support.** If your environment includes an RTL language like Arabic or Hebrew, ask the agent to implement the appropriate right-to-left layout support.
 1. **Use regional formatting.** Ask the agent to format dates, numbers, and currency using each user's preferences from their Dataverse user settings, rather than using hardcoded formats or locale codes.
 
-For detailed localization implementation guidance and code patterns, see the **Localization" section in this file of the [Power Platform Skills repository](https://github.com/microsoft/power-platform-skills/tree/main/plugins/model-apps).
+For detailed localization implementation guidance and code patterns, see the **Localization" section in this file of the [Power Platform Skills repository]([https://github.com/microsoft/power-platform-skills/tree/main/plugins/model-apps](https://github.com/microsoft/power-platform-skills/blob/main/plugins/model-apps/references/genpage-rules-reference.md#localization)).
 
 > [!NOTE]
 > The sitemap entry for a generative page isn't localized by default. Sitemap localization needs to be handled separately in the app designer.
