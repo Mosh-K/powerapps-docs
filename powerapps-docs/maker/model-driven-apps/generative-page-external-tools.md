@@ -4,7 +4,7 @@ description: Learn how to use AI code generation tools like Claude Code to creat
 author: jasongre
 ms.author: jasongre
 ms.reviewer: matp
-ms.date: 02/24/2026
+ms.date: 03/19/2026
 ms.topic: how-to
 ms.service: powerapps
 ms.subservice: mda-maker
@@ -106,7 +106,7 @@ Once installed, you can use the plugin by either:
 
 ### Using other AI code generation tools
 
-For other AI code generation tools, ensure your tool has access to the generative page resources from the [Power Platform skills](https://github.com/microsoft/power-platform-skills/tree/main/plugins/model-apps) GitHub repository. The model-apps plugin folder includes component documentation, sample code, PAC CLI command reference, and workflow instructions necessary to create code adhering to generative page requirements, including how to create pages that support multiple languages and regions. Consult the repository [readme](https://github.com/microsoft/power-platform-skills/blob/main/plugins/model-apps/README.md) for information on accessing and using these resources with your preferred tool.
+For other AI code generation tools, ensure your tool has access to the generative page resources from the [Power Platform skills](https://github.com/microsoft/power-platform-skills/tree/main/plugins/model-apps) GitHub repository. The model-apps plugin folder includes component documentation, sample code, PAC CLI command reference, and workflow instructions necessary to create code adhering to generative page requirements, including how to create pages that support multiple languages and regions. Consult the repository [readme](https://github.com/microsoft/power-platform-skills/blob/main/plugins/model-apps/README.md) for information about accessing and using these resources with your preferred tool.
 
 ## Skills overview
 
@@ -164,7 +164,7 @@ If you want to target a different set of languages than those enabled in your en
 > [!NOTE]
 > The sitemap entry for a generative page isn't localized by default. To localize sitemap entries, update them separately in the app designer.
 
-For more information, see the [localization instructions](https://github.com/microsoft/power-platform-skills/blob/main/plugins/model-apps/references/genpage-rules-reference.md#localization) in the Power Platform Skills repository.
+For more information, go to the [localization instructions](https://github.com/microsoft/power-platform-skills/blob/main/plugins/model-apps/references/genpage-rules-reference.md#localization) in the Power Platform Skills repository.
 
 ## Troubleshooting
 
