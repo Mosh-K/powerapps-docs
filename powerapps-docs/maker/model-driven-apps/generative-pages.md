@@ -5,7 +5,7 @@ author: jasongre
 ms.subservice: mda-maker
 ms.author: jasongre
 ms.reviewer: matp
-ms.date: 02/24/2026
+ms.date: 03/19/2026
 ms.topic: how-to
 applies_to:
   - PowerApps
@@ -39,7 +39,7 @@ You can create generative pages using two approaches:
 1. In the app designer, select **Add a page** > **Describe a page**.
 
    A full-page generative page experience opens.
-1. In the textbox, type a description of the type of page you want to create. The description should include functional requirements and optionally any UX specifications. For example, you could enter *Build a page showing Account records as a gallery of cards using a modern look and feel. Include name, entityimage on the top, and website, email, phone number. Make the gallery scrollable by using data from the Account table*.
+1. In the textbox, type a description of the type of page you want to create. The description should include functional requirements and optionally any UX specifications. For example, you could enter *Build a page showing Account records as a gallery of cards using a modern look and feel. Include name, entityimage on the top, and website, email, phone number. Make the gallery scrollable by using data from the Account table*. If you want the page to support multiple languages, follow the guidance in [Localize a generative page](#localize-a-generative-page).
 1. Add tables and images as appropriate by selecting **Add data** > **Add table**. You can link up to six Dataverse tables. In the screenshot, the account table is added.
    :::image type="content" source="media/generative-page/add-table-generative-page.png" alt-text="Add a table to the generative page" lightbox="media/generative-page/add-table-generative-page.png":::
 
@@ -123,13 +123,27 @@ Generative pages are solution-aware and can be added to a solution (via an app) 
 
 After export, you can import the app and generative pages into another environment. When opened in the designer in the target environment, only the first prompt and published code are available. The full agent conversation doesn't transfer with the page.
 
+## Localize a generative page
+
+To localize a generative page, ensure your prompt covers the follow items:
+
+- Specify your languages. Tell the agent which languages you want the page to support, ideally language name and LCID.  
+- Request translated text. Ask the agent to create a translation dictionary for all user-visible labels and text in the page for each language.
+- Enable RTL support. If your environment includes an RTL language like Arabic or Hebrew, ask the agent to implement the appropriate right-to-left layout support.
+- Use regional formatting. Ask the agent to format dates, numbers, and currency using each user's preferences from their Dataverse user settings, rather than using hardcoded formats or locale codes.
+
+For detailed implementation guidance and code patterns, go to the [localization instructions](https://github.com/microsoft/power-platform-skills/blob/main/plugins/model-apps/references/genpage-rules-reference.md#localization) in the Power Platform Skills repository.
+
+> [!NOTE]
+> The sitemap entry for a generative page isn't localized by default. Sitemap localization needs to be handled separately in the app designer.
+
 ## Limitations
 
 These are the current limitations of generative pages:
 
 - Your page can connect to only Dataverse tables (up to 6 for a single page). No other data sources can be used.
 - Your prompt can have a maximum of 50,000 characters.
-- Only US English is supported.
+- When you create generative pages through in Power Apps (make.powerapps.com), only US English is a supported prompting language.
 - Collaboration isn't supported. Ensure only one maker is working on a generative page at a time to avoid unintended conflicts.
 - Only these data types are supported:
     - Choice
