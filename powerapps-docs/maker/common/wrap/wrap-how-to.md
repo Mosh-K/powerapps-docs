@@ -5,7 +5,7 @@ author: Murugesh1985
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: smurkute
-ms.date: 03/19/2026
+ms.date: 03/20/2026
 ms.subservice: canvas-maker
 ms.author: smurkute
 search.audienceType: 
@@ -188,10 +188,8 @@ The wrap wizard checks and flags permissions that aren't available with the app.
 
 ##### Configure permissions through Powershell commands:
 
-Azure admin grants API permissions during registration. Make sure **DeviceManagementManagedApplication** is set to **Yes** when you grant admin consent for your app. For more information, see [Grant tenant-wide admin consent in Enterprise apps pane](/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal#grant-tenant-wide-admin-consent-in-enterprise-apps-pane).
+Make sure **DeviceManagementManagedApplication** is set to **Yes** when you grant admin consent for your app.
     :::image type="content" source="media/how-to-v2/api-permissions-2.png" alt-text="Screenshot that shows the API permissions for the app." lightbox="media/how-to-v2/api-permissions-2.png":::
-
-For detailed steps, see [Request the permissions in the app registration portal](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-in-the-app-registration-portal).
 
 Run these PowerShell commands as an Azure admin if you don't see permissions under **APIs my organization uses**:
 
