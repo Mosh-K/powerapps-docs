@@ -27,15 +27,10 @@ Users of model-driven apps with the modern, refreshed look for model-driven apps
 
 ## Modify the app theme
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
 With the [modern, refreshed look enabled](../../user/modern-fluent-design.md) in the app, makers can create a custom theme that helps align to their organizational branding. With a custom theme you can change the app header, hyperlinks, lookups, primary buttons,  active tab indicators, row selection, and hover effects. The custom theme also lets you change the font that is used in the application. To accomplish this, you encapsulate the desired theme information into an XML resource, use an app setting to point to this web resource, and then verify the new modern theme matches your expectations.  
 
-> [!IMPORTANT]
->
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
-> - The majority of the UI reflects the custom theme; however, there are still areas in the app that don't use modern theming, such as the Timeline control, lookup dropdowns, legacy grids, and audit history.
+> [!NOTE]
+> The majority of the UI reflects the custom theme; however, there are still areas in the app that don't use modern theming, such as legacy grids, row summaries, focus view, and sales pipeline.
 
 ### Overview of the custom theme XML resource
 
