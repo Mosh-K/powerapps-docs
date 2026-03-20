@@ -4,7 +4,7 @@ description: Learn how to use AI code generation tools like Claude Code to creat
 author: jasongre
 ms.author: jasongre
 ms.reviewer: matp
-ms.date: 02/24/2026
+ms.date: 03/19/2026
 ms.topic: how-to
 ms.service: powerapps
 ms.subservice: mda-maker
@@ -106,7 +106,7 @@ Once installed, you can use the plugin by either:
 
 ### Using other AI code generation tools
 
-For other AI code generation tools, ensure your tool has access to the generative page resources from the [Power Platform skills](https://github.com/microsoft/power-platform-skills/tree/main/plugins/model-apps) GitHub repository. The model-apps plugin folder includes component documentation, sample code, PAC CLI command reference, and workflow instructions necessary to create code adhering to generative page requirements. Consult the repository [readme](https://github.com/microsoft/power-platform-skills/blob/main/plugins/model-apps/README.md) for information on accessing and using these resources with your preferred tool.
+For other AI code generation tools, ensure your tool has access to the generative page resources from the [Power Platform skills](https://github.com/microsoft/power-platform-skills/tree/main/plugins/model-apps) GitHub repository. The model-apps plugin folder includes component documentation, sample code, PAC CLI command reference, and workflow instructions necessary to create code adhering to generative page requirements, including how to create pages that support multiple languages and regions. Consult the repository [readme](https://github.com/microsoft/power-platform-skills/blob/main/plugins/model-apps/README.md) for information about accessing and using these resources with your preferred tool.
 
 ## Skills overview
 
@@ -153,6 +153,19 @@ Use this workflow to update a page that already exists in your environment.
 
 1. Review, publish, test, and iterate. The AI tool generates updated TypeScript code based on your requested changes. Follow the same review, publish, and test process described in the "Create a new generative page" section. Continue iterating with natural language instructions until the page meets your requirements.
 
+## Localization
+
+When you create a generative page using the Power Apps plugin for Claude Code or GitHub Copilot CLI, localization is handled automatically. The agent detects all languages enabled in your environment and generates code so that the page works with all of those languages. The page respects each user's preferred language and regional formatting preferences for dates, numbers, and currency.
+
+If you want to target a different set of languages than those enabled in your environment, you can ask the agent to adjust, for example:
+
+> "Update this page to support English, French, and Spanish only."
+
+> [!NOTE]
+> The sitemap entry for a generative page isn't localized by default. To localize sitemap entries, update them separately in the app designer.
+
+For more information, go to the [localization instructions](https://github.com/microsoft/power-platform-skills/blob/main/plugins/model-apps/references/genpage-rules-reference.md#localization) in the Power Platform Skills repository.
+
 ## Troubleshooting
 
 ### Page fails to load in Power Apps
@@ -197,7 +210,6 @@ The AI tool then:
 The limitations for generative pages created with AI code generation tools are the same as those for generative pages created in the Power Apps maker portal:
 
 - Your page can connect to only Dataverse tables.
-- Currently, only US English is supported.
 - Collaboration isn't supported—ensure only one maker is working on a generative page at a time.
 - Only these data types are supported: Choice, Currency, Customer, Date and Time, Date Only, Decimal Number, Floating Point Number, Image, Lookup, Multiline Text, Status, Status Reason, Text, Whole Number, Yes/No, Unique Identifier.
 
