@@ -28,7 +28,18 @@ The FetchXML editor offers several advantages over the visual expression builder
 
 - **Support for hierarchical conditions**:
 The FetchXML editor supports building complex, hierarchical conditions such as `under`, `eq-or-under`, `above`, and `eq-or-above` on hierarchy-enabled lookups. 
-<fetch latematerialize="true"> <entity name="account"> <filter type="and"> <condition attribute="statecode" operator="eq" value="0" /> </filter> <link-entity name="businessunit" from="businessunitid" to="owningbusinessunit" link-type="any"> <filter type="and"> <condition attribute="businessunitid" operator="eq-or-under" value="{YOUR-PARENT-BU-GUID}" /> </filter> </link-entity> </entity> </fetch>
+
+  ```xml
+  <fetch latematerialize="true"> <entity name="account"> 
+   <filter type="and"> <condition attribute="statecode" operator="eq" value="0" /> 
+    </filter> 
+    <link-entity name="businessunit" from="businessunitid" to="owningbusinessunit" link-type="any"> 
+    <filter type="and"> <condition attribute="businessunitid" operator="eq-or-under" value="{YOUR-PARENT-BU-GUID}" /> 
+    </filter> 
+    </link-entity> 
+    </entity> 
+    </fetch>
+  ```
  
 - **Support for checks against unrelated tables**:
 The FetchXML editor allows linking to tables that aren't directly related to the primary entity, as long as valid from and to attributes exist. This capability is especially useful in complex offline scenarios where multiple entities share a common foreign key but aren't directly related.
