@@ -88,13 +88,14 @@ If the chart colors were customized, the new look overrides the custom colors. T
 ```
 
 ## Header and navigation refresh (preview)
+]
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)
 
 > [!IMPORTANT]
 >
 > - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+> - [!INCLUDE [cc-preview-features-definition](../includes/cc-preview-features-definition.md)]
 
 The refreshed header and navigation make apps easier to use with a modern app header, streamlined sitemap, and condensed page headers with compact commands. This experience enhances productivity by reducing time spent navigating pages, finding commands, and learning layouts.
 
