@@ -68,7 +68,7 @@ The FetchXML editor allows linking to tables that aren't directly related to the
 ``` 
 
 - **Query optimization support by using late materialization and query hints**:
-The editor exposes advanced optimization controls directly on the <fetch> element, including:
+The editor exposes advanced optimization controls directly on the `<fetch>` element, including:
  - ⁠`latematerialize="true"`:  By using `latematerialize="true"`, you optimize query performance by narrowing down matching records before retrieving all their column data. This attribute reduces the load when syncing large tables during offline sync.
 
     ```xml
