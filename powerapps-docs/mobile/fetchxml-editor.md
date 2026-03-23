@@ -30,14 +30,16 @@ The FetchXML editor offers several advantages over the visual expression builder
 The FetchXML editor supports building complex, hierarchical conditions such as `under`, `eq-or-under`, `above`, and `eq-or-above` on hierarchy-enabled lookups. 
 
   ```xml
-  <fetch latematerialize="true"> <entity name="account"> 
-   <filter type="and"> <condition attribute="statecode" operator="eq" value="0" /> 
-    </filter> 
-    <link-entity name="businessunit" from="businessunitid" to="owningbusinessunit" link-type="any"> 
-    <filter type="and"> <condition attribute="businessunitid" operator="eq-or-under" value="{YOUR-PARENT-BU-GUID}" /> 
-    </filter> 
-    </link-entity> 
-    </entity> 
+   <fetch latematerialize="true"> 
+     <entity name="account"> 
+       <filter type="and"> 
+            <condition attribute="statecode" operator="eq" value="0" /> 
+       </filter> 
+         <link-entity name="businessunit" from="businessunitid" to="owningbusinessunit" link-type="any"> 
+           <filter type="and"> <condition attribute="businessunitid" operator="eq-or-under" value="{YOUR-PARENT-BU-GUID}" /> 
+           </filter> 
+         </link-entity> 
+     </entity> 
     </fetch>
   ```
  
