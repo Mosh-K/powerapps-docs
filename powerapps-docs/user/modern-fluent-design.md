@@ -24,7 +24,7 @@ contributors:
 Model-driven apps have updated styling including fonts, colors, borders, and shadows that align with the latest [Microsoft Fluent design system](https://react.fluentui.dev/?path=/docs/concepts-introduction--page). The updated look makes model-driven apps easier to use so that users can accomplish their goals quickly and efficiently. The Fluent design system provides consistency, quality, and Microsoft-wide platform coherence. It also provides a solid foundation for extensibility and allows support for dark mode in the future.
 
 > [!IMPORTANT]
-> With the **2026 Wave 1** release, the **New Look** is mandatory for all users. Makers will no longer be able to switch a model-driven app to the classic look. 
+> With the **2026 Wave 1** release, the **New Look** is mandatory for all users. Makers will no longer be able to switch a model-driven app to the classic look. This does NOT include the **Header and navigation refresh (preview)**.  
 >
 > The **New look** toggle was removed for users with the **2025 Wave 1** release. 
 
