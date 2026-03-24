@@ -44,7 +44,7 @@ The FetchXML editor supports building complex, hierarchical conditions such as `
   ```
  
 - **Support for checks against unrelated tables**:
-The FetchXML editor allows linking to tables that aren't directly related to the primary entity, as long as valid from and to attributes exist. This capability is especially useful in complex offline scenarios where multiple entities share a common foreign key but aren't directly related.
+The FetchXML editor lets you link to other tables even if they don’t have a direct relationship with the primary entity, provided you specify valid **from** and **to** attributes. This capability is especially useful in complex offline scenarios where multiple entities share a common foreign key but aren't directly related.
 
 ```xml
 <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false" latematerialize="true" options="DisableRowGoal, EnableOptimizerHotfixes"> 
