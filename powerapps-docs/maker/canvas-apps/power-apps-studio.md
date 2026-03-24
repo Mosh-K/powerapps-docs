@@ -173,7 +173,7 @@ Select **Upload** to upload images to set as the background image.
 
 #### Settings
 
-Configure the app's settings from the [General](#general), [Display](#display), [Copilot](#copilot), [Updates](#updates), or [Support](#support) tab.
+Configure the app's settings from the [General](#general), [Display](#display), [Updates](#updates), or [Support](#support) tab.
 
 :::image type="content" source="media/studio/pa-studio-general-settings.png" alt-text="Screenshot that shows where to choose settings from the command bar."  lightbox="media/studio/pa-studio-general-settings.png":::
 
@@ -203,10 +203,6 @@ For example, to edit the app **Name**, go to the **General** tab of **Settings**
 
 For more information, see [Change screen size and orientation](set-aspect-ratio-portrait-landscape.md).
 
-##### Copilot
-
-You can [add a custom Copilot to a canvas app (preview)](/power-apps/maker/canvas-apps/add-custom-copilot).
-
 ##### Updates
 
 Allows you to configure advanced settings for the app that include features under preview, experimental or retired features.
@@ -225,9 +221,7 @@ To perform app-specific actions, use the options such as **Properties**, **Comme
 
 #### Share
 
-When you select the **Share** app action, you see a new tab or window open where you can share the app. You can share with other users or add them as co-owners of your app.
-
-:::image type="content" source="media/studio/pa-studio-share-app.png" alt-text="Screenshot that shows the Share app action selected, opening in a new window or tab, where you can share the app with users and co-owners." lightbox="media/studio/pa-studio-share-app.png":::
+When you select the **Share** app action, you see a new window open where you can share the app. You can share with other users or add them as co-owners of your app. For more information, see [Share an app](share-app.md#share-an-app-from-power-apps).
 
 > [!TIP]
 > You must save the app before you can share it.
@@ -236,7 +230,7 @@ When you select the **Share** app action, you see a new tab or window open where
 
 Select **App checker** to run a check.
 
-For more information, see [PowerApps checker now includes App checker results for Canvas apps in solutions](https://powerapps.microsoft.com/blog/powerapps-checker-now-includes-app-checker-results-for-canvas-apps-in-solutions/).
+For more information, see [PowerApps checker now includes App checker results for canvas apps in solutions](https://powerapps.microsoft.com/blog/powerapps-checker-now-includes-app-checker-results-for-canvas-apps-in-solutions/).
 
 :::image type="content" source="media/studio/pa-studio-app-checker.png" alt-text="Screenshot that shows where the App checker app action is located and its menu contents." lightbox="media/studio/pa-studio-app-checker.png":::
 
@@ -256,7 +250,7 @@ Select **Preview the app** to go into preview mode. Here you can view and intera
 
 You can save your app in different ways, such as **Save**, **Save with version notes**, **Save as**, or **Download a copy**. The save options dropdown is located next to the **Save** app action.
 
-:::image type="content" source="media/studio/pa-studio-save-options.png" alt-text="Screenshot that shows where save options are located.":::
+:::image type="content" source="media/studio/pa-studio-save-option.png" alt-text="Screenshot that shows where save options are located.":::
 
 **Save options include**:
 
@@ -281,11 +275,9 @@ When you select an object in your canvas, you can choose one of the object's pro
 
 The formula bar lets you add, edit, or remove functions of a property from your selected object. For example, select the app screen to update the background color by using the [RGBA function](/power-platform/power-fx/reference/function-colors).
 
-:::image type="content" source="media/studio/pa-studio-formula-bar.png" alt-text="Screenshot that shows the formula bar." lightbox="media/studio/pa-studio-formula-bar.png":::
-
 The formula bar is IntelliSense-enabled. When you start entering text that matches one or more functions, the formula bar shows a list of functions.
 
-:::image type="content" source="media/studio/pa-studio-formula-bar-1.png" alt-text="Screenshot that shows the formula bar with IntelliSense in action as you type." lightbox="media/studio/pa-studio-formula-bar-1.png":::
+:::image type="content" source="media/studio/pa-studio-formula-bar.png" alt-text="Screenshot that shows the formula bar." lightbox="media/studio/pa-studio-formula-bar.png":::
 
 When you select a function, the formula bar shows inline function help and highlights help text relevant to the cursor position.
 
@@ -329,8 +321,6 @@ Select the tree view to show the screens available in the app.
 > Select **App** in the tree view to work with app-specific controls. You can change app behavior, such as adding a formula for the *OnStart* event of the app.
 
 Switch to the **Components** tab of **Tree view** to work with component library features. You can add new components or reuse ones from the published component libraries. For more information, see [Component library](component-library.md).
-
-:::image type="content" source="media/studio/pa-studio-components-tab.png" alt-text="Screenshot showing the Components tab of the Tree view pane.":::
 
 For more information on adding components by selecting **+ New component**, see the [Insert](#insert) section.
 
