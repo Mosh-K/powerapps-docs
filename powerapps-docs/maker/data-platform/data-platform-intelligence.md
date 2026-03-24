@@ -6,7 +6,7 @@ ms.reviewer: matp
 ms.topic: how-to
 author: prithvi-khosla
 ms.subservice: dataverse-maker
-ms.author: pkhosla
+ms.author: pkhosla; paulliew
 ms.service: powerapps
 search.audienceType: 
   - maker
@@ -23,15 +23,26 @@ With Dataverse intelligence, you can define reusable business context that agent
 
 ## Prerequistes
 
-- Power Platform administrator role to access Dataverse intelligence environment settings. 
+- Power Platform administrator role to access Dataverse intelligence environment settings.
+- Microsoft 365 admin role (AI administrator, Global administrator) to access Microsoft 365 admin center Copilot settings. 
 - The environment where you use Dataverse intelligence must be a Managed Environment.
 - The environment must be enabled and configured for Dataverse MCP server preview. Business skills are only available for use with the preview version of Dataverse MCP server. More information: [Use preview tools and upcoming features in Dataverse MCP server](data-platform-mcp-preview-tools.md)   
 
-## Enable Dataverse intelligence
+## Enable Microsoft 365 admin center Copilot Dataverse settings (Preview)
+
+1. Go to [Microsoft 365 admin center](https://admin.cloud.microsoft/?#/homepage). Select **Copilot** >**Settings**.
+1. Select **All users**, or
+2. Select **Specific groups** and enter the list of Entra security groups in the list. 
+1. Select **Save** to save the setting changes.
+
+## Next steps
+
+## Enable Dataverse intelligence (Preview)
 
 1. Go to [Power Platform admin center](https://admin.powerplatform.microsoft.com/). Select **Manage** >**Environments**.
 1. Open the environment where you want to turn on the Dataverse MCP server, and then select **Settings** > **Product** > **Features**.  
-1. Scroll down to locate **Dataverse intelligence**.  
+1. Scroll down to locate **Dataverse intelligence**.
+1. Turn on **Allow data availability in M365 copilot**, and/or. 
 1. Turn on **Enable Dataverse intelligence (Work IQ) for agents and AI experiences**. 
 1. Make sure **Allow MCP clients to interact with Dataverse MCP server (Preview version)** is enabled. If it's not, enable it. 
 1. Select **Save** to save the setting changes.
