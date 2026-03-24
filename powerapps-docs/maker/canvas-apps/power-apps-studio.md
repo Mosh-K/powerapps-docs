@@ -5,7 +5,7 @@ author: lancedMicrosoft
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 02/26/2026
+ms.date: 03/24/2026
 ms.subservice: canvas-maker
 ms.author: mkaur
 search.audienceType: 
@@ -145,13 +145,19 @@ For more information, see [List of all Power Apps connectors](/connectors/connec
 
 #### New screen layouts
 
-You can add a new screen to your app from the **New screen** option in the command bar or the **+ New screen** option in **Tree view**.
+You can add a new screen to your app from the **New screen** option in the command bar.
 
 :::image type="content" source="media/studio/new-screen-from-command-bar.png" alt-text="Screenshot that shows the location of the New screen menu from the command bar.":::
 
-Select from the list of available screen layouts such as **Sidebar**, new layouts in preview such as **Header and form**, or templates like **Email**.
+You can also add a new screen from the tree view.
+ 
+1. From the **Screens** tab, select **+ New screen**.
 
-:::image type="content" source="media/studio/pa-add-screen.png" alt-text="Screenshot that shows how to choose a layout from the New screen menu":::
+    :::image type="content" source="media/studio/pa-add-screen.png" alt-text="Screenshot that shows how to choose a layout from the New screen menu":::
+
+1. Select from the list of available screen layouts such as **Sidebar**, new layouts in preview such as **Header and form**, or templates like **Email**.
+
+
 
 #### Background color
 
