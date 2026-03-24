@@ -88,9 +88,9 @@ If you customize the chart colors, the new look overrides your custom colors. To
 ```
 
 ## Header and navigation refresh (preview)
-]
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
 > [!IMPORTANT]
 >
@@ -154,7 +154,7 @@ You can change the color of the app header to match your organization while usin
 
 #### Can I turn on Header and navigation refresh without turning on the New look?
  
-No, you need to turn on [New look](#whats-included-with-the-modern-refreshed-look) in addition to turning on Header and navigation refresh to see the refreshed header and navigation experience in the app.
+No, you need to turn on [New look](#whats-included-in-the-modern-refreshed-look) in addition to turning on Header and navigation refresh to see the refreshed header and navigation experience in the app.
 
 #### How do I enable the Header and navigation refresh for existing apps? 
 
