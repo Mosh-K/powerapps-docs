@@ -1,11 +1,11 @@
 ---
-title: Understand Power Apps Studio
-description:  Learn the components inside Power Apps Studio.
+title: "Understand Power Apps Studio: Components and Features"
+description: "Discover the key components and features of Power Apps Studio. Learn how to use the command bar, formula bar, canvas, and authoring tools to build canvas apps effectively."
 author: lancedMicrosoft
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 03/24/2026
+ms.date: 03/25/2026
 ms.subservice: canvas-maker
 ms.author: mkaur
 search.audienceType: 
@@ -17,7 +17,7 @@ contributors:
 
 # Understand Power Apps Studio
 
-You can use Power Apps Studio to design, build, and manage your canvas app.
+Power Apps Studio is the integrated development environment where you design, build, and manage canvas apps. Learn about its key components including the command bar, formula bar, canvas, and authoring tools to create effective business applications.
 
 ## Overview of Power Apps Studio
 
@@ -33,7 +33,7 @@ You can use Power Apps Studio to design, build, and manage your canvas app.
 
 1. [App authoring menu](#5--app-authoring-menu): Selection pane to switch between data sources and allows you to insert options.
 
-1. [App authoring options](#6--app-authoring-options): This pane reveals the corresonding authoring feature when a feature is selected from the app authoring menu.
+1. [App authoring options](#6--app-authoring-options): This pane reveals the corresponding authoring feature when a feature is selected from the app authoring menu.
 
 1. [Canvas/screen](#7--canvasscreen): Primary canvas for composing the app structure.
 
@@ -49,32 +49,32 @@ Let's understand each option in Power Apps Studio in detail.
 
 ### 1 – Power Apps Studio modern command bar
 
-Power Apps Studio options are available on the command bar. The options are relevant to the current session and app-related settings.
+The command bar provides Power Apps Studio options. These options are relevant to the current session and app-related settings.
 
 :::image type="content" source="media/studio/pa-studio-options.png" alt-text="Screenshot that shows the command bar menu with lots of development options." lightbox="media/studio/pa-studio-options.png":::
 
 #### Modern command bar
 
-The modern command bar displays the relevant set of commands depending on the control that is selected. For example, if you select an item to *insert* like a text label, you see the modern command bar change to accommodate your selection. The bar now has font type, size, color, and other text label controls.
+The modern command bar displays the relevant set of commands depending on the control that you select. For example, if you select an item to *insert* like a text label, you see the modern command bar change to accommodate your selection. The bar now has font type, size, color, and other text label controls.
 
 :::image type="content" source="media/studio/pa-studio-command-bar.png" alt-text="Moving image that shows how the command bar changes depending on which control is selected." lightbox="media/studio/pa-studio-command-bar.png":::
 
-The command bar changes when one of the following controls or objects is selected:
+The command bar changes when you select one of the following controls or objects:
 
 1. App object
-2. Screen
-3. Button
-4. Shape
-5. Icon
-6. Blank form
-7. Form with data
-8. Blank gallery
-9. Gallery with data
-10. Label
-11. Text input
-12. Date picker
+1. Screen
+1. Button
+1. Shape
+1. Icon
+1. Blank form
+1. Form with data
+1. Blank gallery
+1. Gallery with data
+1. Label
+1. Text input
+1. Date picker
 
-When more than one type of control is selected, the command bar shows the common commands between the selected controls.
+When you select more than one type of control, the command bar shows the common commands between the selected controls.
 
 #### Back
 
@@ -88,7 +88,7 @@ Takes you back to the build hub, closing the current Power Apps Studio session.
 - **Redo**: Repeat the last action.
 
  > [!NOTE]
- > You can't undo or redo data operations, such as insert or delete a datasource.
+ > You can't undo or redo data operations, such as insert or delete a data source.
 
 #### Cut, copy, and paste
 
@@ -102,11 +102,11 @@ Takes you back to the build hub, closing the current Power Apps Studio session.
 
 :::image type="content" source="media/studio/pa-insert-controls.png" alt-text="Screenshot that shows where the two insert controls are located. One is in the command bar and the other control (plus sign) is in the navigation menu.":::
 
-The **Insert** menu is available from the command bar and from the app authoring menu.
+You can access the **Insert** menu from the command bar and from the app authoring menu.
 
-Insert shows all the popular objects or controls that you can add on the selected screen in your canvas app. You can also expand other choices or use the components option to insert controls from a component library.
+**Insert** shows all the popular objects or controls that you can add on the selected screen in your canvas app. You can also expand other choices or use the components option to insert controls from a component library.
 
-To insert controls on the canvas, you can drag the control to the canvas or select the control.
+To insert controls on the canvas, drag the control to the canvas or select the control.
 
 ##### Popular controls to insert
 
@@ -115,12 +115,12 @@ To insert controls on the canvas, you can drag the control to the canvas or sele
 | *Form* | Display, edit, or create a record in a data source. |
 | *Input* > *Button* | A control that the user can select to interact with the app. |
 | *Input* > *Date picker* | A control that the user can select to specify a date. |
-| *Input* > *Text input* | A text box that allows user input |
+| *Input* > *Text input* | A text box that allows user input. |
 | *Shapes* > *Rectangle* | A rectangular shape to configure the canvas appearance. |
 | *Text* | A box that displays data such as text, numbers, dates, or currency. |
-| *Vertical gallery* | A control that allows you to add other controls and display a set of data. For example, list items made up of an image, title, and description is contained within a vertical gallery. <br> :::image type="content" source="media/studio/vertical-gallery-example.png" alt-text="Screenshot showing what the vertical gallery template looks like."::: |
+| *Vertical gallery* | A control that you can add other controls to and display a set of data. For example, list items made up of an image, title, and description is contained within a vertical gallery. <br> :::image type="content" source="media/studio/vertical-gallery-example.png" alt-text="Screenshot showing what the vertical gallery template looks like."::: |
 
-For more information about the controls you can insert, including their properties and definitions, go to [Controls and properties in canvas apps](reference-properties.md).
+For more information about the controls you can insert, including their properties and definitions, see [Controls and properties in canvas apps](reference-properties.md).
 
 #### Add data
 
@@ -131,13 +131,13 @@ Add, refresh, or remove data sources from your canvas app. You can add one or mo
 From the **Add data** menu, you can:
 
 - Select any other existing tables from the current environment.
-- Search and select a connector, such as **SharePoint** or **SQL Server**.
+- Search for and select a connector, such as **SharePoint** or **SQL Server**.
 
 ##### Connectors
 
-In addition to data stored within tables, there are many connectors available to interact with data in popular software as a service (SaaS), services, and systems.
+In addition to data stored within tables, many connectors are available to interact with data in popular software as a service (SaaS), services, and systems.
 
-To choose other connectors such as SharePoint, OneDrive, or SQL Server, you can enter text in the data source search box or select from the list of connectors.
+To choose other connectors such as SharePoint, OneDrive, or SQL Server, enter text in the data source search box or select from the list of connectors.
 
 :::image type="content" source="media/studio/pa-studio-data-source-connector.png" alt-text="Screenshot that shows how to select a data source by choosing the Add data dropdown.":::
 
@@ -145,7 +145,7 @@ For more information, see [List of all Power Apps connectors](/connectors/connec
 
 #### New screen layouts
 
-You can add a new screen to your app from the **New screen** option in the command bar.
+Add a new screen to your app from the **New screen** option in the command bar.
 
 :::image type="content" source="media/studio/new-screen-from-command-bar.png" alt-text="Screenshot that shows the location of the New screen menu from the command bar.":::
 
@@ -180,7 +180,7 @@ Configure the app's settings from the [General](#general), [Display](#display), 
 ##### General
 
 - Edit the app **Name** and **Description**.
-- Add or update the **App icon**. Add a custom icon with **+ Add image**.
+- Add or update the **App icon**. Add a custom icon by selecting **+ Add image**.
 - Select an **Icon background fill** or **Icon fill** color.
 - Toggle **Auto save** to save every two minutes automatically.
 - Configure offline use.
@@ -189,7 +189,7 @@ Configure the app's settings from the [General](#general), [Display](#display), 
 - Enable autocreation of environment variables.
 - Enable the `App.OnStart` property.
 
-For example, to edit the app **Name**, go to the **General** tab of **Settings**.
+To edit the app **Name**, go to the **General** tab in **Settings**.
 
 :::image type="content" source="media/studio/pa-studio-app-name-editor.png" alt-text="Screenshot where you edit your app name in the Settings popup.":::
 
@@ -205,7 +205,7 @@ For more information, see [Change screen size and orientation](set-aspect-ratio-
 
 ##### Updates
 
-Allows you to configure advanced settings for the app that include features under preview, experimental or retired features.
+Configure advanced settings for the app that include features under preview, experimental, or retired features.
 
 For more information, see [Understand experimental, preview, and retired features in Power Apps](working-with-experimental-preview.md).
 
@@ -221,7 +221,7 @@ To perform app-specific actions, use the options such as **Properties**, **Comme
 
 #### Share
 
-When you select the **Share** app action, you see a new window open where you can share the app. You can share with other users or add them as co-owners of your app. For more information, see [Share an app](share-app.md#share-an-app-from-power-apps).
+When you select the **Share** app action, a new window opens where you can share the app. You can share with other users or add them as co-owners of your app. For more information, see [Share an app](share-app.md#share-an-app-from-power-apps).
 
 > [!TIP]
 > You must save the app before you can share it.
@@ -298,14 +298,14 @@ Switch between various authoring options while working with the app.
 :::image type="content" source="media/studio/pa-studio-app-authoring-menu.png" alt-text="Screenshot that shows the app authoring menu.":::
 
 - **Tree view**: Shows a tree view of all screens and controls in the current app.
-- [Insert](#insert): Allows you to add different controls to the screen.
+- [Insert](#insert): Add different controls to the screen.
 - **Data**: [Add data](#add-data) and other [connectors](#connectors), such as tables that connect to your app.
 - **Variables**: Work with [variables](working-with-variables.md) and [collections](create-update-collection.md) while editing your app.
 - **Search**: Select to search for media, formulas, text, and more in your app.
 - **Themes**: Choose a colored theme for the Power Apps UI.
 - **Media**: Insert or remove media from the app.
-- **Power Automate**: Add a flow using the [Power Automate pane](working-with-flows.md).
-- **Advanced tools**: Allows you to access the [Monitor](../monitor-canvasapps.md) and [Test](test-studio.md) tools to debug and test your app.
+- **Power Automate**: Add a flow by using the [Power Automate pane](working-with-flows.md).
+- **Advanced tools**: Access the [Monitor](../monitor-canvasapps.md) and [Test](test-studio.md) tools to debug and test your app.
 
 The options for working with canvas apps change depending on your selection from the authoring menu. For example, when you select the **Tree view** menu option, you see a **Tree view** pane appear.
 
@@ -369,7 +369,7 @@ For more information, see [Use Power Automate pane](working-with-flows.md).
 
 #### Advanced tools
 
-Advanced tools include **Monitor** and **Tests** where you can track and test your app.
+Advanced tools include **Monitor** and **Tests**, where you can track and test your app.
 
 :::image type="content" source="media/studio/pa-studio-advanced-tools.png" alt-text="Screenshot that shows where the Advanced tools section is located.":::
 
@@ -377,23 +377,23 @@ Advanced tools include **Monitor** and **Tests** where you can track and test yo
 
 The canvas shows the currently selected screen in the **Tree view** from the authoring menu.
 
-You can [Use inline actions in Power Apps Studio](inline-actions.md) when you're editing a canvas app so you don't have to leave your current view. Inline actions help the development process to be more efficient.
+When you edit a canvas app, you can [Use inline actions in Power Apps Studio](inline-actions.md) so you don't have to leave your current view. Inline actions make the development process more efficient.
 
 ### 8 – Properties pane
 
-The properties pane shows properties and options available for the currently selected object on the canvas.
+The properties pane shows properties and options for the currently selected object on the canvas.
 
 - The **Display** tab shows generic options such as the name, description, exit or exit message, and more.
 - The **Advanced** tab shows options for customization with key value pairs in areas of action, data, and design in your app.
 
   > [!TIP]
-  > The advanced properties might be locked for editing, such as when working with data cards. You can select [Unlock to change properties](working-with-cards.md#unlock-a-card) in such situations.
+  > The advanced properties might be locked for editing, such as when working with data cards. Select [Unlock to change properties](working-with-cards.md#unlock-a-card) in such situations.
 
-:::image type="content" source="media/studio/pa-studio-prop-pane.png" alt-text="Screenshot that shows the properties pane that appears when you select an object in your canvas. You see two tabs in this pane: **Display** and **Advanced**.":::
+:::image type="content" source="media/studio/pa-studio-prop-pane.png" alt-text="Screenshot that shows the properties pane that appears when you select an object in your canvas. You see two tabs in this pane: Display and Advanced.":::
 
 ### 9 – Settings
 
-You can access [Settings](#settings) at the bottom of the app authoring menu or from the command bar as previously described.
+Access [Settings](#settings) at the bottom of the app authoring menu or from the command bar as previously described.
 
 
 ### 10 – Screen selector
@@ -411,4 +411,4 @@ The following image shows what the canvas looks like when *fit to window*. You c
 :::image type="content" source="media/studio/pa-studio-fit-canvas-to-window.png" alt-text="Screnshot that shows what a canvas fit to window looks like. This image also shows the zoom controls for your canvas." lightbox="media/studio/pa-studio-fit-canvas-to-window.png":::
 
 > [!NOTE]
-> The zoom percentage or screen size used in authoring a canvas app has no effect on the aspect ratio configured for the app. When you preview your app or play a published app, your screen size is temporary.
+> The zoom percentage or screen size you use when authoring a canvas app doesn't affect the aspect ratio you configure for the app. When you preview your app or play a published app, your screen size is temporary.
