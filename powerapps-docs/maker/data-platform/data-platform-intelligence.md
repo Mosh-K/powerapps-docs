@@ -31,8 +31,9 @@ With Dataverse intelligence, you can define reusable business context that agent
 ## Enable Microsoft 365 admin center Copilot Dataverse settings (preview)
 
 1. Go to [Microsoft 365 admin center](https://admin.cloud.microsoft/?#/homepage). Select **Copilot** >**Settings**.
+1. Locate and select **Dataverse data available in Microsoft 365 Copilot**.
 1. Select **All users**, or
-2. Select **Specific groups** and enter the list of Entra security groups in the list. 
+1. Select **Specific groups** and enter the list of Entra security groups. 
 1. Select **Save** to save the setting changes.
 
 ## Next steps
