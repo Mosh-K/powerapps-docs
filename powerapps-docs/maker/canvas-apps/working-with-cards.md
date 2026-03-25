@@ -1,12 +1,12 @@
 ---
-title: Understand data cards in canvas apps
-description: Learn about how to use cards to collect and display information from a data source in canvas apps.
+title: "Understand data cards in Power Apps canvas apps"
+description: Learn how to use data cards in Power Apps canvas app forms to collect and display information. Customize card types, unlock cards for advanced layouts, and understand data flow between forms and data sources.
 author: gregli-msft
 
 ms.topic: how-to
 ms.custom: canvas
 ms.reviewer: mkaur
-ms.date: 01/13/2026
+ms.date: 03/25/2026
 ms.subservice: canvas-maker
 ms.author: gregli
 search.audienceType: 
@@ -17,12 +17,7 @@ contributors:
 ---
 # Understand data cards in canvas apps
 
-Data cards are the pieces inside a form that show and collect values for individual fields, such as Name, Title, or Security Code. If you're new to Power Apps forms, this article explains what a data card is, how to change the control users type into, when to unlock a card, and how the form saves changes back to Dataverse.
-
-- Identify the parts of a data card, including the label, input, required indicator, and error message.
-- Reorder fields and change a card's control type, such as from single-line to multi-line text.
-- Unlock a card to customize the layout or add extra controls, like icons and labels.
-- Understand how data flows into the form (defaults) and out of the form (submit).
+Data cards are the essential components inside Power Apps forms that show and collect values for individual fields, such as Name, Title, or Security Code. If you're new to Power Apps forms, this article explains what a data card is, how to change the control users type into, when to unlock a card, and how the form saves changes back to Dataverse.
 
 A **Display form** shows one record, and an **Edit form** lets users update or create a record. Inside the form, each **data card** connects to **one field** (one column) in your data source, which is often a Dataverse table. The card is the "wrapper" that handles the field's label, required and validation behavior, and the input control that users interact with.
 
@@ -39,7 +34,7 @@ If you're new to forms, start by reading [add-form.md](add-form.md) and [working
 
 You can immediately try customizing cards in any app. Power Apps offers predefined cards for strings, numbers, and other data types.
 
-**Tip: Rearrange fields in the form**. Select the **Edit form**, then in the **Properties** pane select **Edit fields** and drag fields into the order you want. This changes the layout without unlocking any cards.
+**Tip: Rearrange fields in the form**. Select the **Edit form**, then in the **Properties** pane select **Edit fields** and drag fields into the order you want. This action changes the layout without unlocking any cards.
 
 :::image type="content" source="./media/working-with-cards/selected-card.png" alt-text="Screenshot of a selected card in Power Apps.":::
 
@@ -94,11 +89,11 @@ Select the banner at the top to unlock the card so that you can modify these pro
 
 :::image type="content" source="./media/working-with-cards/unlocked-card.png" alt-text="Screenshot of an unlocked data card in Power Apps.":::
 
-For example, after unlocking, you can change **DisplayName** so the label reads **Asset ID** instead of **AssetID**. This small change shows that the card is now under your control and not fully managed by the form.
+For example, after unlocking, you can change **DisplayName** so the label reads **Asset ID** instead of **AssetID**. This small change shows that the card is now under your control and isn't fully managed by the form.
 
 :::image type="content" source="./media/working-with-cards/change-display-name.png" alt-text="Screenshot of changing the DisplayName property in a data card in Power Apps.":::
 
-After you unlock and start editing the generated formulas and controls, the card becomes a **custom card**. That means you gain flexibility, but you might lose some "one-click" features, such as switching the card back and forth between predefined card types such as single-line vs. multi-line in the right pane.
+After you unlock and start editing the generated formulas and controls, the card becomes a **custom card**. That means you gain flexibility, but you might lose some "one-click" features, such as switching the card back and forth between predefined card types like single-line versus multi-line in the right pane.
 
 > [!IMPORTANT]
 > You can't relock a card after you unlock it. To get a card back to a locked state, remove it, and reinsert it in the right-hand pane.
@@ -137,11 +132,11 @@ The card's **DataField** property is the "this card edits this field" setting. I
 
 ### Information flowing in
 
-When a form shows a record, it exposes that record as **ThisItem**. Think of **ThisItem** as the current row you're editing. Tt contains every field for that record.
+When a form shows a record, it exposes that record as **ThisItem**. Think of **ThisItem** as the current row you're editing. It contains every field for that record.
 
-In Dataverse-backed forms, the card's **DataField** typically matches the field's logical name. The card's **Default** formula commonly references the current record for example, **ThisItem.FieldName**, and the input control inside the card usually reads that value through **Parent.Default**. This pattern keeps the input control independent of the data source and lets the card encapsulate how the field value flows in.
+In Dataverse-backed forms, the card's **DataField** typically matches the field's logical name. The card's **Default** formula commonly references the current record, for example, **ThisItem.FieldName**, and the input control inside the card usually reads that value through **Parent.Default**. This pattern keeps the input control independent of the data source and lets the card encapsulate how the field value flows in.
 
-Most cards set their **Default** property to the current record's value, like **ThisItem.FieldName**. You can optionally transform that value for example, format text before it shows in the input.
+Most cards set their **Default** property to the current record's value, like **ThisItem.FieldName**. You can optionally transform that value, for example, format text before it shows in the input.
 
 Inside the card, the input control usually uses **Parent.Default** so it always shows whatever value the card provides. This approach keeps the card "self-contained". If you later change the card's default formula, you don't have to rewrite formulas inside the card.
 
@@ -149,13 +144,13 @@ By default, the data source's metadata sets the **DefaultValue** and **controls/
 
 ### Information flowing out
 
-When the user selects **Save**, you typically call **SubmitForm**. The form then gathers values from each data card and writes them back to the data source. It uses each card’s **DataField** to know *which* field to update.
+When the user selects **Save**, this typically call **SubmitForm**. The form gathers values from each data card and writes them back to the data source. It uses each card’s **DataField** to know *which* field to update.
 
-To save changes from an **Edit form**, trigger **SubmitForm(FormName)**. For example, from a **Save** button). If you want to clear the inputs after a successful submit, follow with **ResetForm(FormName)**. To create a new record instead of editing an existing one, set the form’s **DefaultMode** property to **FormMode.New** before the user starts entering data.
+To save changes from an **Edit form**, trigger **SubmitForm(FormName)** (for example, from a **Save** button). If you want to clear the inputs after a successful submit, follow with **ResetForm(FormName)**. To create a new record instead of editing an existing one, set the form’s **DefaultMode** property to **FormMode.New** before the user starts entering data.
 
-The form also reads each card’s **Update** property - this is the value that gets saved for that field. If you need to clean up a value before saving. For example, remove extra spaces, convert text to a number, or reverse a formatting change you made in **Default**. **Update** is usually the right place to do it.
+The form also reads each card’s **Update** property - this is the value that gets saved for that field. If you need to clean up a value before saving, such as removing extra spaces, converting text to a number, or reversing a formatting change you made in **Default**, **Update** is usually the right place to do it.
 
-**Valid** is basically "is this field okay to submit?" Power Apps uses the data source rules and the card’s **Required** setting to decide this. If the value isn't valid, the card's **Error** property contains a message that you can show to the user often through the **Error Message** label in the card.
+**Valid** is basically "is this field okay to submit?" Power Apps uses the data source rules and the card’s **Required** setting to decide this. If the value isn't valid, the card's **Error** property contains a message that you can show to the user, often through the **Error Message** label in the card.
 
 If a card’s **DataField** is blank, the card isn't tied to any field - it's just a container you can use for layout. In that case, its **Update** and **Valid** values don't affect what gets saved when you submit the form.
 
@@ -174,11 +169,11 @@ Here are the main controls you usually see inside a card:
 | Name | Type | What it does |
 |---|---|---|
 | **TextRequiredStar** | **Label** control | Shows a star or asterisk when the field is required. |
-| **TextFieldDisplayName** | **Label** control | Shows the friendly field name the user sees. This is often different from the internal schema name. |
+| **TextFieldDisplayName** | **Label** control | Shows the friendly field name the user sees. This name often differs from the internal schema name. |
 | **InputText** | Text input control | Shows the current value and lets the user type a new one. |
-| **TextErrorMessage** | **Label** control | Shows a message if the value can’t be submitted such as missing required data). |
+| **TextErrorMessage** | **Label** control | Shows a message if the value can't be submitted, such as missing required data. |
 
-These controls usually don't connect to Dataverse directly. Instead, they read simple values from the **parent card** using **Parent**, and the card handles the connection to the data source. The following formulas are common examples.
+These controls usually don't connect to Dataverse directly. Instead, they read simple values from the **parent card** by using **Parent**, and the card handles the connection to the data source. The following formulas are common examples.
 
 | Control property | Formula | Beginner explanation |
 |---|---|---|
