@@ -4,7 +4,7 @@ description: Learn how the FetchXML Editor in Power Apps helps you create advanc
 author: Murugesh1985
 ms.author: murugeshs
 ms.reviewer: smurkute
-ms.date: 03/10/2026
+ms.date: 03/24/2026
 ms.topic: feature-guide
 ---
 
@@ -12,7 +12,7 @@ ms.topic: feature-guide
 
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
-FetchXML is Dataverse's native query language that lets makers write data filters as XML code, similar to writing a formula, but more powerful. It lets makers optimize their complex profiles for better performance and avoid sync timeouts on large tables (100K+ records).
+FetchXML is Dataverse's native query language that lets makers write data filters as XML code, similar to writing a formula, but more powerful. Use the  FetchXML editor to optimize complex profiles for better performance and avoid sync timeouts on large tables (100K+ records).
 
 This feature is best suited for advanced makers and developers who are comfortable working with XML and need more control than what the visual filter builder provides.
 
@@ -26,44 +26,222 @@ This feature is best suited for advanced makers and developers who are comfortab
 
 The FetchXML editor offers several advantages over the visual expression builder for defining offline data filters.
 
-- **Advanced filtering capabilities**: FetchXML lets you join unrelated tables. The visual expression builder handles simple filters well but doesn't support complex queries or all Dataverse condition operators. The FetchXML editor removes those limitations, giving you access to the full range of FetchXML capabilities. Operators supported exclusively through FetchXML include aggregates such as `sum`, `count`, `max`, and `min`, and hierarchical conditions such as `above`, `eq-or-above`, `under`, and `eq-or-under`.
-- **Improved offline sync performance**: FetchXML supports special attributes and query hints that optimize large queries. For example, applying `latematerialize="true"` or `hint="union"` can significantly speed up offline synchronization and help prevent timeouts when working with datasets of 100,000 or more records. Applying `latematerialize="true"` optimizes query performance by narrowing down matching records before retrieving all their column data. This attribute reduces the load when syncing large tables during offline sync. Applying `hint="union"` improves performance on lookups where a record can relate to multiple entity types by querying each related entity type separately and combining the results, rather than scanning across all of them at once. For example, when syncing tasks that can be linked to either a contact or an account, `hint="union"` queries contacts and accounts independently and merges the results, instead of scanning both tables together.
-
-  Example for `latematerialize`:
+- **Support for hierarchical conditions**:
+The FetchXML editor supports building complex, hierarchical conditions such as `under`, `eq-or-under`, `above`, and `eq-or-above` on hierarchy-enabled lookups. 
 
   ```xml
-  <fetch latematerialize="true" count="500">
-    <entity name="contact">
-      <filter type="and">
-        <condition attribute="statecode" operator="eq" value="0" />
-      </filter>
-    </entity>
-  </fetch>
+   <fetch latematerialize="true"> 
+     <entity name="account"> 
+       <filter type="and"> 
+            <condition attribute="statecode" operator="eq" value="0" /> 
+       </filter> 
+         <link-entity name="businessunit" from="businessunitid" to="owningbusinessunit" link-type="any"> 
+           <filter type="and"> <condition attribute="businessunitid" operator="eq-or-under" value="{YOUR-PARENT-BU-GUID}" /> 
+           </filter> 
+         </link-entity> 
+     </entity> 
+    </fetch>
   ```
+ 
+- **Support for checks against unrelated tables**:
+The FetchXML editor lets you link to other tables even if they don’t have a direct relationship with the primary entity, provided you specify valid **from** and **to** attributes. This capability is especially useful in complex offline scenarios where multiple entities share a common foreign key but aren't directly related.
 
-  Example for `hint="union"`:
+```xml
+<fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false" latematerialize="true" options="DisableRowGoal, EnableOptimizerHotfixes"> 
+      <entity name="cr57f_producttranslation"> 
 
-  ```xml
-  <fetch latematerialize="true" count="500">
-    <entity name="task">
-      <filter type="and">
-        <condition attribute="statecode" operator="eq" value="0" />
-      </filter>
-      <link-entity name="contact" from="contactid" to="regardingobjectid" link-type="any" hint="union">
+            <filter type="and"> 
+
+                  <link-entity name="cr57f_userlanguagepreference" from="cr57f_language_id" to="cr57f_language_id" link-type="any"> 
+
+                        <filter type="and"> 
+
+                            <condition attribute="cr57f_user_id" operator="eq" value="user_002"/> 
+
+                        </filter> 
+
+                  </link-entity> 
+
+            </filter> 
+
+      </entity> 
+
+</fetch> 
+``` 
+
+- **Query optimization support by using late materialization and query hints**:
+The editor exposes advanced optimization controls directly on the `<fetch>` element, including:
+ - ⁠`latematerialize="true"`:  By using `latematerialize="true"`, you optimize query performance by narrowing down matching records before retrieving all their column data. This attribute reduces the load when syncing large tables during offline sync.
+
+    ```xml
+    <fetch version="1.0" mapping="logical"
+           distinct="false"
+    
+           latematerialize="true"
+    
+           options="OptimizeForUnknown,ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS">
+    
+      <entity name="msdyn_workorder">
+    
         <filter type="and">
+    
           <condition attribute="statecode" operator="eq" value="0" />
+    
+          <condition attribute="msdyn_systemstatus" operator="in">
+    
+            <value>690970000</value>
+    
+            <value>690970001</value>
+    
+          </condition>
+    
         </filter>
-      </link-entity>
-      <link-entity name="account" from="accountid" to="regardingobjectid" link-type="any" hint="union">
-        <filter type="and">
-          <condition attribute="statecode" operator="eq" value="0" />
-        </filter>
-      </link-entity>
-    </entity>
-  </fetch>
-  ```
+    
+        <!-- Booking chain -->
+    
+        <link-entity name="bookableresourcebooking"
+    
+                     from="msdyn_workorder"
+    
+                     to="msdyn_workorderid"
+    
+                     link-type="any">
+    
+          <filter type="and">
+    
+            <condition attribute="statecode" operator="eq" value="0" />
+    
+            <filter type="or">
+    
+              <condition attribute="starttime" operator="today" />
+    
+              <condition attribute="starttime" operator="next-seven-days" />
+    
+            </filter>
+    
+          </filter>
+    
+          <link-entity name="bookingstatus"
+    
+                       from="bookingstatusid"
+    
+                       to="bookingstatus"
+    
+                       link-type="any">
+    
+            <filter type="and">
+    
+              <condition attribute="statecode" operator="eq" value="0" />
+    
+            </filter>
+    
+          </link-entity> 
+    
+          <link-entity name="bookableresource"
+    
+                       from="bookableresourceid"
+    
+                       to="resource"
+    
+                       link-type="any">
+    
+            <filter type="and">
+    
+              <condition attribute="userid" operator="eq-userid" />
+    
+            </filter>
+    
+          </link-entity>
+    
+        </link-entity>
+    
+        <!-- Customer asset -->
+    
+        <link-entity name="msdyn_customerasset"
+    
+                     from="msdyn_customerassetid"
+    
+                     to="msdyn_customerasset"
+    
+                     link-type="any">
+    
+          <filter type="and">
+    
+            <condition attribute="statecode" operator="eq" value="0" />
+    
+          </filter>
+    
+          <!-- Account -->
+    
+          <link-entity name="account"
+    
+                       from="accountid"
+    
+                       to="msdyn_account"
+    
+                       link-type="any">
+    
+            <filter type="and">
+    
+              <condition attribute="statecode" operator="eq" value="0" />
+    
+            </filter>
+    
+          </link-entity>
+    
+        </link-entity>
+    
+      </entity>
+    
+    </fetch>
+    ```
+    
+  - The `options` attribute passes SQL Server query hints, such as `OptimizeForUnknown`, `ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS`, or `NO_PERFORMANCE_SPOOL`. These options improve execution plans for frequently running or deeply nested queries.
 
-- **Better maintainability**: Because FetchXML filter definitions are stored as XML text, it is easier to share and track changes.
+    ```xml
+    <fetch version="1.0"
+           mapping="logical"
+    
+           distinct="false"
+    
+           options="OptimizeForUnknown">
+    
+      <entity name="bookableresourcebooking">
+    
+        <filter type="and">
+    
+          <condition attribute="statecode" operator="eq" value="0" />
+    
+          <filter type="or">
+    
+            <condition attribute="starttime" operator="today" />
+    
+            <condition attribute="starttime" operator="next-seven-days" />
+    
+          </filter>
+    
+        </filter>
+    
+        <link-entity name="bookableresource"
+    
+                     from="bookableresourceid"
+    
+                     to="resource"
+    
+                     link-type="any">
+    
+          <filter type="and">
+    
+            <condition attribute="userid" operator="eq-userid" />
+    
+          </filter>
+    
+        </link-entity>
+    
+      </entity>
+    
+    </fetch>
+    ```
 
 ## How the FetchXML editor works
 
@@ -73,7 +251,7 @@ You access the FetchXML editor through the offline profile configuration experie
 1. In the offline profile editor, add or select the table whose data you want to filter for offline use.
 1. Under **Filter**, choose **Custom** or **Related rows**, and then select **Edit filter**.
 1. In the filter editor, scroll down and select **View/Edit FetchXML** to open the FetchXML code editor.
-    :::image type="content" source="media/fetchxml-editor.png" alt-text="Screenshot showing fetchXML code editor.":::
+    :::image type="content" source="media/fetchxml-editor.png" alt-text="Screenshot of the FetchXML code editor in the offline profile filter editor.":::
 1. Modify the existing FetchXML query or paste a new one. The editor automatically validates syntax and structure as you edit, checking for:
 
     - A required `<fetch>` root element with at least one `<entity>` element
