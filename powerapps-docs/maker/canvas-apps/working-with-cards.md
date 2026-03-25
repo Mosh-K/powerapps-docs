@@ -41,7 +41,7 @@ You can immediately try customizing cards in any app. Power Apps offers predefin
 
 **Tip: Rearrange fields in the form**. Select the **Edit form**, then in the **Properties** pane select **Edit fields** and drag fields into the order you want. This changes the layout without unlocking any cards.
 
-![Screenshot of a selected card in Power Apps.](./media/working-with-cards/selected-card.png)
+:::image type="content" source="./media/working-with-cards/selected-card.png" alt-text="Screenshot of a selected card in Power Apps.":::
 
 **To change a card’s control type**
 
@@ -52,11 +52,11 @@ You can immediately try customizing cards in any app. Power Apps offers predefin
 
 In the right pane, you see the available types and can change the card for a field.
 
-![Screenshot of an Edit form control in an app built from a list named Assets. The form displays several fields that you can customize.](./media/working-with-cards/first-screen.png)
+:::image type="content" source="./media/working-with-cards/first-screen.png" alt-text="Screenshot of an Edit form control in an app built from a list named Assets. The form displays several fields that you can customize.":::
 
 In this example, a single-line text card is selected, but the value is longer than what fits on one line. Change this card to a multiline text card so users have more space to edit (for example, when capturing longer job titles or descriptions).
 
-![Screenshot of a multiline text card edit in Power Apps.](./media/working-with-cards/multiline-edit.png)
+:::image type="content" source="./media/working-with-cards/multiline-edit.png" alt-text="Screenshot of a multiline text card edit in Power Apps.":::
 
 Several fields in this data source aren't shown, but you can show or hide a field by selecting its checkbox. This example shows how to show the **SecurityCode** field.
 
@@ -68,11 +68,11 @@ Next, you practice editing the controls inside a card (without changing what fie
 
 1. In your form, select the data card for the **SecurityCode** field (select the card once so the whole card is selected).
 
-   ./media/working-with-cards/select-security-code.png "Select security code"
+   :::image type="content" source="./media/working-with-cards/select-security-code.png" alt-text="Screenshot of selecting the SecurityCode data card in Power Apps.":::
 
 1. Inside the card, select the **Text input** control.
 
-   ./media/working-with-cards/select-text-input.png "Select text input"
+   :::image type="content" source="./media/working-with-cards/select-text-input.png" alt-text="Screenshot of selecting the Text input control inside a data card in Power Apps.":::
 
 1. Drag to move the text input within the card, and use the handles to resize it. This method improves spacing and readability without unlocking the card.
 
@@ -82,21 +82,21 @@ You can move and resize controls in a locked card, but some changes (like deleti
 
 When you add a field to a form, Power Apps creates a data card for you and sets up the basic formulas that connect the card to the data source. By default, Power Apps locks these cards so you don't accidentally break that connection. If you need more control, such as a custom layout, extra controls, or different formulas, you can unlock the card.
 
-![Advanced locked](./media/working-with-cards/advanced-locked.png)
+:::image type="content" source="./media/working-with-cards/advanced-locked.png" alt-text="Screenshot of the Advanced tab showing a locked data card in Power Apps.":::
 
 The key setting is **DataField**. It tells Power Apps which field (column) this card is responsible for. When the form submits, Power Apps uses the card's **DataField** value to know what field to update.
 
 To unlock a card, select the card, go to the **Advanced** tab in the right pane, and then select the lock banner or the lock icon next to properties such as **DataField**, **DisplayName**, or **Required**. After you unlock the card, you can edit the generated formulas and add or remove controls inside the card.
 
-![Lock icons](./media/working-with-cards/lock-icons.png)
+:::image type="content" source="./media/working-with-cards/lock-icons.png" alt-text="Screenshot of lock icons in the Power Apps card properties pane.":::
 
 Select the banner at the top to unlock the card so that you can modify these properties:
 
-![Unlocked card](./media/working-with-cards/unlocked-card.png)
+:::image type="content" source="./media/working-with-cards/unlocked-card.png" alt-text="Screenshot of an unlocked data card in Power Apps.":::
 
 For example, after unlocking, you can change **DisplayName** so the label reads **Asset ID** instead of **AssetID**. This small change shows that the card is now under your control and not fully managed by the form.
 
-![Change display name](./media/working-with-cards/change-display-name.png)
+:::image type="content" source="./media/working-with-cards/change-display-name.png" alt-text="Screenshot of changing the DisplayName property in a data card in Power Apps.":::
 
 After you unlock and start editing the generated formulas and controls, the card becomes a **custom card**. That means you gain flexibility, but you might lose some "one-click" features, such as switching the card back and forth between predefined card types (like single-line vs. multi-line) in the right pane.
 
@@ -105,7 +105,7 @@ After you unlock and start editing the generated formulas and controls, the card
 
 Example: Add a custom required indicator. After unlocking, you can insert extra controls into the card. For instance, go to **Insert** > **Icons** and add a star shape, then position it where you want.
 
-![Add star](./media/working-with-cards/add-star.png)
+:::image type="content" source="./media/working-with-cards/add-star.png" alt-text="Screenshot of adding a star icon to a data card in Power Apps.":::
 
 After you unlock a card, you can insert additional controls directly inside it, such as icons, labels, or other UI elements. These custom elements become part of the card, so if you later reorder fields or move the card, the added controls move with it.
 
@@ -113,17 +113,17 @@ The star is now a part of the card and travels with it if, for example, you reor
 
 Another example: show an image preview. Unlock the **ImageURL** card, and then insert an **Image** control into the card (from the **Insert** tab).
 
-![Add image](./media/working-with-cards/add-image.png)
+:::image type="content" source="./media/working-with-cards/add-image.png" alt-text="Screenshot of adding an image control to a data card in Power Apps.":::
 
 Then set the Image control's **Image** property to *TextBox*.**Text** in the formula bar, where *TextBox* is the name of the text input that contains the URL. This setting makes the Image control display whatever URL the user types.
 
-![Show image](./media/working-with-cards/show-image.png)
+:::image type="content" source="./media/working-with-cards/show-image.png" alt-text="Screenshot of a data card showing an image preview in Power Apps.":::
 
 Now the user can edit the URL and immediately see the image update. If you used **Parent.Default** for the Image property, it would show the starting value but might not refresh as the user types a new URL.
 
 You can use the same idea in a **Display form** (read-only) screen. Because users aren't editing the URL there, you might hide the label by setting the label control's **Visible** property to **false** (hide the label, not the whole card).
 
-![Show image display](./media/working-with-cards/show-image-display.png)
+:::image type="content" source="./media/working-with-cards/show-image-display.png" alt-text="Screenshot of a display form showing an image in Power Apps.":::
 
 ## Interact with a form
 
@@ -163,11 +163,11 @@ If a card’s **DataField** is blank, the card isn't tied to any field - it's ju
 
 Take a closer look at what's inside a typical data-entry card. The following screenshots spread the controls out so you can see each piece clearly.
 
-![Dissect card](./media/working-with-cards/dissect-card1.png)
+:::image type="content" source="./media/working-with-cards/dissect-card1.png" alt-text="Screenshot of a data-entry card in Power Apps with controls spread out for clarity.":::
 
 In the next image, the controls inside the card are labeled so you can match what you see on the canvas to what’s in the tree view.
 
-![Dissect cards](./media/working-with-cards/dissect-card2.png)
+:::image type="content" source="./media/working-with-cards/dissect-card2.png" alt-text="Screenshot of labeled controls inside a data card in Power Apps.":::
 
 Here are the main controls you usually see inside a card:
 
