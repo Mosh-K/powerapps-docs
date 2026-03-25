@@ -28,7 +28,7 @@ With Dataverse intelligence, you can define reusable business context that agent
 - The environment where you use Dataverse intelligence must be a Managed Environment.
 - The environment must be enabled and configured for Dataverse MCP server preview. Business skills are only available for use with the preview version of Dataverse MCP server. More information: [Use preview tools and upcoming features in Dataverse MCP server](data-platform-mcp-preview-tools.md)   
 
-## Enable Microsoft 365 admin center Copilot Dataverse settings (Preview)
+## Enable Microsoft 365 admin center Copilot Dataverse settings (preview)
 
 1. Go to [Microsoft 365 admin center](https://admin.cloud.microsoft/?#/homepage). Select **Copilot** >**Settings**.
 1. Select **All users**, or
@@ -37,7 +37,7 @@ With Dataverse intelligence, you can define reusable business context that agent
 
 ## Next steps
 
-## Enable Dataverse intelligence (Preview)
+## Enable Dataverse intelligence (preview)
 
 1. Go to [Power Platform admin center](https://admin.powerplatform.microsoft.com/). Select **Manage** >**Environments**.
 1. Open the environment where you want to turn on the Dataverse MCP server, and then select **Settings** > **Product** > **Features**.  
