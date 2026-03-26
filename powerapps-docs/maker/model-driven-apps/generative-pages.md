@@ -105,7 +105,7 @@ This section covers common scenarios and tasks when working with generative page
 
 ### Set up a page to accept input parameters
 
-Generative pages can be configured to accept input parameters, enabling them to receive contextual data when navigated to from other pages or code. You configure this by telling the agent which parameters the page should accept when creating or iterating on the page. The agent then wires up the appropriate initialization code so the page reads and uses those parameters when it loads.
+Generative pages can be configured to accept input parameters, enabling them to receive contextual data when navigated to from other pages or code. You configure this by telling the agent which parameters the page should accept. The agent then wires up the appropriate initialization code so the page reads and uses those parameters when it loads.
 
 The following input parameters are supported:
 
@@ -118,7 +118,7 @@ The following input parameters are supported:
 To configure a page to accept input parameters, describe the desired parameters in your prompt:
 
 ```
-Set up the page to accept a recordId (the GUID of an Account record) and an entityName parameter. When the page loads, use these to fetch and display the corresponding account details.
+Set up the page to accept an Account recordId. When the page loads, use these to fetch and display the corresponding account details.
 ```
 
 ```
@@ -154,35 +154,16 @@ Xrm.Navigation.navigateTo({
 });
 ```
 
-##### Open in a dialog
-
-Use `target` and `position` to open the page as a dialog:
-
-```javascript
-Xrm.Navigation.navigateTo(
-    {
-        pageType: "generative",
-        pageId: "<genPageID>",
-        recordId: "00aa00aa-bb11-cc22-dd33-44ee44ee44ee",
-        entityName: "account"
-    },
-    {
-        target: 2,   // 1 = inline, 2 = dialog
-        position: 1  // 1 = center, 2 = side
-    }
-);
-```
-
-For the full API reference, see [navigateTo (Client API reference)](../../../developer/model-driven-apps/clientapi/reference/Xrm-Navigation/navigateTo.md).
+For the full API reference including how to open the page in a dialog instead of inline, see [navigateTo (Client API reference)](../../../developer/model-driven-apps/clientapi/reference/Xrm-Navigation/navigateTo.md).
 
 #### Navigating via URL
 
 You can also navigate to a generative page by constructing a URL with parameters. This approach is particularly useful when launching generative pages from Canvas Apps, external sources, or when building multi-page workflows where generative pages pass context forward.
 
-The URL structure is:
+The URL structure is similar to the navigateTo API:
 
 ```
-https://<your-org>.crm.dynamics.com/main.aspx?appid={app-id}&pagetype=genux&id={page-id}&data={encoded-json}
+https://<your-org>.crm.dynamics.com/main.aspx?appid={app-id}&pagetype=genux&id={page-id}&recordid={recordID}&entityname={entityName}&data={encoded-json}
 ```
 
 Pass context using the `data` parameter with JSON-encoded values. For example, to pass an enrollment ID from one generative page to another:
@@ -201,7 +182,7 @@ There are three approaches to using specific images in your generative pages:
 
 #### Store images in a Dataverse table
 
-Include the image in a Dataverse table that's referenced by your generative page, and instruct the agent to retrieve the image from there. When creating your page, tell the agent to display images from a specific column in your table.
+Include the image in a Dataverse table that's referenced by your generative page, and instruct the agent to retrieve the image from there. When creating your page, tell the agent how to get the right image from your table. 
 
 ```
 Build a product catalog page showing products from the Product table. Display the product image from the ProductImage column, along with the name, description, and price.
