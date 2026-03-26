@@ -5,7 +5,7 @@ author: jasongre
 ms.subservice: mda-maker
 ms.author: jasongre
 ms.reviewer: matp
-ms.date: 03/19/2026
+ms.date: 03/26/2026
 ms.topic: how-to
 applies_to:
   - PowerApps
@@ -98,6 +98,112 @@ After generating your page, you have several options to refine and finalize it:
 
 > [!IMPORTANT]
 > While the agent makes a best-effort attempt to generate complete, production-ready code, including considerations for accessibility and security best practices, you're ultimately responsible for validating the code. Ensure the generated code meets your organization's standards and compliance requirements.
+
+## Common tasks with generative pages
+
+This section covers common scenarios and tasks when working with generative pages in your model-driven apps.
+
+### Set up a page to accept input parameters
+
+Generative pages can be configured to accept input parameters, enabling them to receive contextual data when navigated to from other pages or code. You configure this by telling the agent which parameters the page should accept when creating or iterating on the page. The agent then wires up the appropriate initialization code so the page reads and uses those parameters when it loads.
+
+The following input parameters are supported:
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `recordId` | String | (Optional) The GUID of a specific record to load or display in the page. |
+| `entityName` | String | (Optional) The logical name of the Dataverse table corresponding to the `recordId`. |
+| `data` | Object | (Optional) A JSON object containing additional custom parameters to pass to the page. |
+
+To configure a page to accept input parameters, describe the desired parameters in your prompt:
+
+```
+Set up the page to accept a recordId (the GUID of an Account record) and an entityName parameter. When the page loads, use these to fetch and display the corresponding account details.
+```
+
+```
+Configure this page to accept a data parameter containing a custom filter object. Use it to filter the displayed records when the page loads.
+```
+
+### Navigate to a generative page
+
+You can navigate to a generative page programmatically using the `Xrm.Navigation.navigateTo` API. If the target page is [set up to accept input parameters](#set-up-a-page-to-accept-input-parameters), you can pass those parameters when navigating.
+
+#### Basic navigation
+
+```javascript
+Xrm.Navigation.navigateTo({
+    pageType: "generative",
+    pageId: "<genPageID>"
+});
+```
+
+#### Navigate with input parameters
+
+Include `recordId`, `entityName`, and/or `data` to provide context to the page:
+
+```javascript
+Xrm.Navigation.navigateTo({
+    pageType: "generative",
+    pageId: "<genPageID>",
+    recordId: "00aa00aa-bb11-cc22-dd33-44ee44ee44ee",
+    entityName: "account",
+    data: { status: "active", category: "premium" }
+});
+```
+
+#### Open in a dialog
+
+Use `target` and `position` to open the page as a dialog:
+
+```javascript
+Xrm.Navigation.navigateTo(
+    {
+        pageType: "generative",
+        pageId: "<genPageID>",
+        recordId: "00aa00aa-bb11-cc22-dd33-44ee44ee44ee",
+        entityName: "account"
+    },
+    {
+        target: 2,   // 1 = inline, 2 = dialog
+        position: 1  // 1 = center, 2 = side
+    }
+);
+```
+
+For the full API reference, see [navigateTo (Client API reference)](../../../developer/model-driven-apps/clientapi/reference/Xrm-Navigation/navigateTo.md).
+
+### Use specific images in a page
+
+There are three approaches to using specific images in your generative pages:
+
+#### Store images in a Dataverse table
+
+Include the image in a Dataverse table that's referenced by your generative page, and instruct the agent to retrieve the image from there. When creating your page, tell the agent to display images from a specific column in your table.
+
+```
+Build a product catalog page showing products from the Product table. Display the product image from the ProductImage column, along with the name, description, and price.
+```
+
+#### Host images externally and reference by URL
+
+Host your images on an external server or content delivery network (CDN) and provide the agent with the URL to the image:
+
+```
+Display the company logo using this URL: https://example.com/images/logo.png at the top of the page.
+```
+
+#### Add images as web resources
+
+Upload the image as a web resource in your solution and reference it by its web resource URL:
+
+1. Add the image as a web resource in your solution.
+1. Note the web resource name (for example, `new_/images/banner.png`).
+1. Reference it in your prompt or code using the web resource URL format:
+
+```
+Use the banner image from web resource new_/images/banner.png as the page header background.
+```
 
 ## Adding generative pages to solutions
 
