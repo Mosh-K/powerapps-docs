@@ -43,6 +43,8 @@
     href: ../user/app-source.md
   - name: Use canvas apps
     items:
+    - name:  Use Microsoft 365 Copilot in canvas apps (preview)
+      href: ../user/use-microsoft-365-copilot-canvas-apps.md
     - name: On a SharePoint Online page
       href: ../user/powerapps-web-part.md
     - name: In Microsoft Teams 
