@@ -25,7 +25,7 @@ All queries are based on a single table. Use the `QueryExpression` class to sele
 
 ### Object initialization style
 
-The following example represents a simple `QueryExpression` query that returns the [Name column](../../reference/entities.account.md#BKMK_Name) of the first five rows from the [Account table](../../reference/entities.account.md) by using the [object initializer](/dotnet/csharp/programming-guide/classes-and-structs/object-and-collection-initializers#object-initializers) so that the query is defined in a single assignment.
+The following example represents a simple `QueryExpression` query that returns the [Name column](../../reference/entities/account.md#BKMK_Name) of the first five rows from the [Account table](../../reference/entities/account.md) by using the [object initializer](/dotnet/csharp/programming-guide/classes-and-structs/object-and-collection-initializers#object-initializers) so that the query is defined in a single assignment.
 
 ```csharp
 public static EntityCollection SimpleExample(IOrganizationService service) {
