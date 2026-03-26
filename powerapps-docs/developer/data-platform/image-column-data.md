@@ -247,7 +247,7 @@ The following table shows two examples.
 
 ## Primary images
 
-Each table can have multiple image columns, but you can only define one image column as the *primary image*. You can only set the primary image by using a create operation. For more information, see [Only primary images can be set for create](#only-primary-images-can-be-set-for-create).
+Each table can have multiple image columns, but you can only define one image column as the *primary image*. You can only set the primary image by using a create operation. For more information, see [Set only primary images for create operation](#set-only-primary-images-for-create-operation).
 
 The [ImageAttributeMetadata.IsPrimaryImage property](xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata.IsPrimaryImage) controls which image column represents the primary image for the table.
 
@@ -475,9 +475,9 @@ More information:
 
 When you create a record, set only the value of the current primary image column. If you try to set the value of any other image column, you get this error message:
 
-> Name: `CannotUploadNonPrimaryImageAttributeOnCreate`<br />
-> Code: `0x80090487`<br />
-> Number: `-2146892665`<br />
+> Name: `CannotUploadNonPrimaryImageAttributeOnCreate`   
+> Code: `0x80090487`   
+> Number: `-2146892665`   
 > Message: `Non-primary image attribute <image column logical name> of entity <table logical name> is not allowed to upload during Create operation.`
 
 For more information, see [Primary Images](#primary-images).
