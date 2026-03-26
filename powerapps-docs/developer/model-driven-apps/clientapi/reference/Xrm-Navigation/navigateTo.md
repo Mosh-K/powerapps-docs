@@ -3,7 +3,7 @@ title: "navigateTo (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the navigateTo method.
 author: sriharibs-msft
 ms.author: srihas
-ms.date: 01/12/2026
+ms.date: 03/26/2026
 ms.reviewer: jdaly
 ms.topic: reference
 search.audienceType: 
@@ -128,11 +128,9 @@ The generative page object contains the following values.
 | --- | --- | --- |
 | `pageType` | String | Specify `generative`. |
 | `pageId` | String | The ID of the generative page to open. |
-
-> [!NOTE]
-> Navigating to a generative page by using `navigateTo` currently **doesn't support passing initialization or contextual data** (such as table name, record ID, or custom parameters). The generative page opens without context.
-
-
+| `recordId` | String | (Optional) The GUID of a record to pass to the page. The generative page must be [set up to accept this parameter](../../../../../maker/model-driven-apps/generative-pages.md#set-up-a-page-to-accept-input-parameters). |
+| `entityName` | String | (Optional) The logical name of the Dataverse table corresponding to the `recordId`. |
+| `data` | Object | (Optional) A JSON object containing additional custom parameters to pass to the page. |
 
 ### `navigationOptions` parameter
 
@@ -258,9 +256,37 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions).then(
 );
 ```
 
+### Example 5: Open a generative page with input parameters in a dialog
+
+Opens a generative page as a centered dialog, passing a record ID, entity name, and custom data parameters. The generative page must be [set up to accept these parameters](../../../../../maker/model-driven-apps/generative-pages.md#set-up-a-page-to-accept-input-parameters).
+
+```javascript
+var pageInput = {
+    pageType: "generative",
+    pageId: "<genPageID>", // replace with the ID of your generative page
+    recordId: "00aa00aa-bb11-cc22-dd33-44ee44ee44ee", // replace with actual record GUID
+    entityName: "account",
+    data: { status: "active", category: "premium" }
+};
+var navigationOptions = {
+    target: 2,
+    height: {value: 80, unit: "%"},
+    width: {value: 70, unit: "%"},
+    position: 1
+};
+Xrm.Navigation.navigateTo(pageInput, navigationOptions).then(
+    function success() {
+            // Run code on success
+    },
+    function error() {
+            // Handle errors
+    }
+);
+```
+
 ### Related articles
 
 [Xrm.Navigation](../xrm-navigation.md)   
 [Navigating to and from a custom page (preview)](../../navigate-to-custom-page-examples.md)
 
-[!INCLUDE[footer-include](../../../../../includes/footer-banner.md)]
+[!INCLUDE[footer-include](../../../../../includes/footer-include.md)]
