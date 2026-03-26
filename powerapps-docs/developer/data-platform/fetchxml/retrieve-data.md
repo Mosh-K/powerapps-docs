@@ -62,7 +62,7 @@ static EntityCollection RetrieveMultipleRequestExample(IOrganizationService serv
 Pass your FetchXml query as a URL-encoded string value to the entity set collection by using the `fetchXml` query parameter.
 
 > [!NOTE]
-> Unlike queries that use the OData syntax, FetchXML queries sent using Web API don't return properties with null values. [Learn more about this behavior](#null-column-values-are-not-returned)
+> Unlike queries that use the OData syntax, FetchXML queries sent using Web API don't return properties with null values. [Learn more about this behavior](#null-column-values-arent-returned)
 
 For example, if you want to retrieve data from the [account entity set](xref:Microsoft.Dynamics.CRM.account), compose a fetchXml query that sets the [entity element](reference/entity.md) `name` parameter to `account`.
 
