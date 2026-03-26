@@ -2,7 +2,7 @@
 title: "Use modern themes in Power Apps"
 description: Learn how to change the colors and font of apps including the app header in model-driven apps with the modern look in Power Apps.
 ms.custom: ""
-ms.date: 03/19/2026
+ms.date: 03/26/2026
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -30,7 +30,7 @@ Users of model-driven apps with the modern, refreshed look for model-driven apps
 With the [modern, refreshed look enabled](../../user/modern-fluent-design.md) in the app, makers can create a custom theme that helps align to their organizational branding. With a custom theme you can change the app header, hyperlinks, lookups, primary buttons,  active tab indicators, row selection, and hover effects. The custom theme also lets you change the font that is used in the application. To accomplish this, you encapsulate the desired theme information into an XML resource, use an app setting to point to this web resource, and then verify the new modern theme matches your expectations.  
 
 > [!NOTE]
-> The majority of the UI reflects the custom theme; however, there are still areas in the app that don't use modern theming, such as legacy grids, row summaries, focus view, and sales pipeline.
+> Most of the UI uses your custom theme. However, some areas don’t use modern theming yet for example, legacy grids, row summaries, focus view, and the sales pipeline.
 
 ### Overview of the custom theme XML resource
 
