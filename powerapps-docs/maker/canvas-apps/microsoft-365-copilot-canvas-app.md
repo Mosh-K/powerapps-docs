@@ -90,4 +90,4 @@ During the transition period, makers can enable either one or both chat experien
 
 ## Related information
 
-[Customize Microsoft 365 Copilot chat with an agent (preview)](customize-microsoft-365-copilot-chat.md)
+- [Customize Microsoft 365 Copilot with an agent (preview)](../model-driven-apps/customize-microsoft-365-copilot-chat.md)
