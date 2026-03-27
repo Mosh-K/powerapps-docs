@@ -16,7 +16,7 @@ This article shows you how to use PowerShell and Visual Studio Code with the Dat
 - [Create reusable functions](#create-reusable-functions)
 - [Handle exceptions](#handle-exceptions)
 - [Manage Dataverse service protection limits](#manage-dataverse-service-protection-limits)
-- [Debug using Fiddler](#debug-using-fiddler)
+- [Debug by using Fiddler](#debug-by-using-fiddler)
 - [Download the Dataverse Web API CSDL $metadata document](#download-the-dataverse-web-api-csdl-metadata-document)
 
 > [!NOTE]
