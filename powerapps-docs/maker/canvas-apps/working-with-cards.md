@@ -17,14 +17,20 @@ contributors:
 ---
 # Understand data cards in canvas apps
 
-Data cards are the essential components inside Power Apps forms that show and collect values for individual fields, such as Name, Title, or Security Code. If you're new to Power Apps forms, this article explains what a data card is, how to change the control users type into, when to unlock a card, and how the form saves changes back to Dataverse.
+Data cards are the building blocks of Power Apps forms. Each data card displays and collects a value for a single field—for example, Name, Job Title, or Phone Number. If you re new to forms, this article explains what a data card is, how to change the control users enter data into, when to unlock a card, and how the form saves changes back to Dataverse.
 
-A **Display form** shows one record, and an **Edit form** lets users update or create a record. Inside the form, each **data card** connects to **one field** (one column) in your data source, which is often a Dataverse table. The card is the "wrapper" that handles the field's label, required and validation behavior, and the input control that users interact with.
+The following screenshot shows a form with a data card selected.
 
-- **Required indicator (asterisk or star)**: visually shows when a value is mandatory.
-- **Title**: the field label shown to the user.
-- **Data card value**: the input control, such as a text box or dropdown, where the user enters or edits data.
-- **Error message**: displays validation errors, typically when the form is submitted.
+:::image type="content" source="media/working-with-cards/form-with-data-card-selected.png" alt-text="Screenshot show a form with the data card selected":::
+
+ **Display form** show one record. **Edit forms** let users update an existing record or create a new one. In either type of form, each data card is connected to exactly one field (one column) in your data source—often a Dataverse table.
+
+A data card is a container that includes the field label, required/validation behavior, and the control that users interact with.
+
+- **Required indicator (asterisk or star)**: Shows that the field must have a value.
+- **Title**: The label shown to users for the field.
+- **Data card value**: The input control (for example, a text box or dropdown) where users enter or edit the value
+- **Error message**: Displays validation errors, usually after the form is submitted.
 
 ## Prerequisites
 
