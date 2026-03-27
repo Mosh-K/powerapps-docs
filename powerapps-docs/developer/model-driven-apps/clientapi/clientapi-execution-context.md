@@ -35,7 +35,7 @@ You can pass the execution context in the following ways:
 
 - **Defining event handlers using code**: The system automatically passes the execution context as the first parameter to functions set by using code. For a list of methods that you can use to define event handlers in code, see [Add or remove functions to events using code](events-forms-grids.md#add-or-remove-event-handler-function-to-event-using-code).
 
-The execution context object provides many methods to work with the context. For more information, see [Execution context (Client API reference)](reference/execution-context.md).
+The execution context object provides methods to work with the context. For more information, see [Client API execution context methods reference](reference/execution-context.md).
 
 ## Using context objects asynchronously
 
