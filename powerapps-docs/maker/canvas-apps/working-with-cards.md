@@ -36,30 +36,27 @@ A data card is a container that includes the field label, required/validation be
 
 If you're new to forms, start by reading [add-form.md](add-form.md) and [working-with-forms.md](working-with-forms.md).
 
-## Change a card type
+### Reorder fields on a form
 
-You can immediately try customizing cards in any app. Power Apps offers predefined cards for strings, numbers, and other data types.
-
-**Tip: Rearrange fields in the form**. Select the **Edit form**, then in the **Properties** pane select **Edit fields** and drag fields into the order you want. This action changes the layout without unlocking any cards.
-
-:::image type="content" source="./media/working-with-cards/selected-card.png" alt-text="Screenshot of a selected card in Power Apps.":::
-
-**To change a card’s control type**
+Power Apps offers predefined cards for strings, numbers, and other data types. You edit the form and rearrange fields letting you change the layout without unlocking any cards. 
 
 1. Open your app for editing in [Power Apps Studio](power-apps-studio.md).
-1. In the tree view, select the **Edit form** control that contains the field you want to change.
-1. In the right pane, select **Edit fields**, and then select the field you want.
-1. Change the **Control type**. For example, switch from **Edit single-line text** to **Edit multi-line text**.
+1. Select the form then select **Fields**.
+1. Select **More actions** and then selet **Move up** or **Move down**. You can also select and then drag fields into the order you want. 
 
-In the right pane, you see the available types and can change the card for a field.
+:::image type="content" source="media/working-with-cards/reorder-fields-on-form.png" alt-text="Screenshot of how to reoder fields on a form ":::
 
-:::image type="content" source="./media/working-with-cards/first-screen.png" alt-text="Screenshot of an Edit form control in an app built from a list named Assets. The form displays several fields that you can customize.":::
+### Change a card’s control type
 
-In this example, a single-line text card is selected, but the value is longer than what fits on one line. Change this card to a multiline text card so users have more space to edit. For example, when capturing longer job titles or descriptions.
+In this example, a single-line text card is selected, but the value might be longer than what fits on one line. Change this card to a multiline text card so users have more space to enter information. .
 
-:::image type="content" source="./media/working-with-cards/multiline-edit.png" alt-text="Screenshot of a multiline text card edit in Power Apps.":::
+1. Open your app for editing in [Power Apps Studio](power-apps-studio.md).
+1. Select the form then select **Fields**.
+1. Select **Expand field details** which is the down arrow next to the field that you want to edit.
+1. Change the **Control type**. For example, switch from **Edit text** to **Edit multi-line text**.
 
-Several fields in this data source aren't shown, but you can show or hide a field by selecting its checkbox. This example shows how to show the **SecurityCode** field.
+:::image type="content" source="media/working-with-cards/edit-control-type.png" alt-text="Screenshot show how to edit a cards's control type":::
+
 
 ## Customize a card
 
