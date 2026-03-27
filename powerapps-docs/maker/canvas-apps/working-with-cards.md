@@ -17,15 +17,17 @@ contributors:
 ---
 # Understand data cards in canvas apps
 
-Data cards are the building blocks of Power Apps forms. Each data card displays and collects a value for a single field—for example, Name, Job Title, or Phone Number. If you re new to forms, this article explains what a data card is, how to change the control users enter data into, when to unlock a card, and how the form saves changes back to Dataverse.
+This article explains what a data card is, how to change the control users enter data into, when to unlock a card, and how the form saves changes back to Dataverse.
 
-The following screenshot shows a form with a data card selected.
+Data cards are the building blocks of Power Apps forms. Each data card displays and collects a value for a single field such as Name, Job Title, or Phone Number. 
+
+The following screenshot shows a form with a data card  for **Account name** selected.
 
 :::image type="content" source="media/working-with-cards/form-with-data-card-selected.png" alt-text="Screenshot show a form with the data card selected":::
 
- **Display form** show one record. **Edit forms** let users update an existing record or create a new one. In either type of form, each data card is connected to exactly one field (one column) in your data source—often a Dataverse table.
+ A **Display form** shows one record. **Edit forms** let users update an existing record or create a new one. In either type of form, each data card is connected to exactly one field (one column) in your data source—often a Dataverse table.
 
-A data card is a container that includes the field label, required/validation behavior, and the control that users interact with.
+A data card is a container that includes the field label, required validation behavior, and the control that users interact with. A data card contains the following:
 
 - **Required indicator (asterisk or star)**: Shows that the field must have a value.
 - **Title**: The label shown to users for the field.
@@ -35,6 +37,10 @@ A data card is a container that includes the field label, required/validation be
 ## Prerequisites
 
 If you're new to forms, start by reading [add-form.md](add-form.md) and [working-with-forms.md](working-with-forms.md).
+
+## Customize a card
+
+A data card contains the controls that users see - usually a label such as the title, an input control like text input or dropdown, and an error message label. To customize how a field looks, select the control *inside* the card for example, the text input and adjust its size, position, or properties.
 
 ### Reorder fields on a form
 
@@ -48,23 +54,21 @@ Power Apps offers predefined cards for strings, numbers, and other data types. Y
 
 ### Change a card’s control type
 
-In this example, a single-line text card is selected, but the value might be longer than what fits on one line. Change this card to a multiline text card so users have more space to enter information. .
+You can easly change a card's control type. For exmaple you might want to change a single-line text card  to a multiline text card so users have more space to enter information.
 
 1. Open your app for editing in [Power Apps Studio](power-apps-studio.md).
 1. Select the form then select **Fields**.
 1. Select **Expand field details** which is the down arrow next to the field that you want to edit.
-1. Change the **Control type**. For example, switch from **Edit text** to **Edit multi-line text**.
+1. Select the dropdown for **Control type** and then select a different control type. For example, switch from **Edit text** to **Edit multi-line text**.
 
     :::image type="content" source="media/working-with-cards/edit-control-type.png" alt-text="Screenshot show how to edit a cards's control type":::
 
 
-## Customize a card
+### Resize a card
 
-A data card contains the controls that users see - usually a label such as the title, an input control such as a text input or dropdown, and an error message label. To customize how a field looks, select the control *inside* the card for example, the text input and adjust its size, position, or properties.
+You can move and resize controls in a locked card.
 
-You can move and resize controls in a locked card, but some changes like deleting a control or adding a brand-new one require [unlocking the card](working-with-cards.md#unlock-a-card) first.
-
-Next, you practice editing the controls inside a card without changing what field the card connects to.
+You editing the controls inside a card without changing what field the card connects to.
 
 1. In the form, select the data card that you want to resize such as **Account Name**.
 1. Drag to move the text input within the card, and use the handles to resize it. This improves spacing and readability without unlocking the card.
@@ -72,8 +76,9 @@ Next, you practice editing the controls inside a card without changing what fiel
     :::image type="content" source="media/working-with-cards/resize-field.png" alt-text="Screenshot of how to select a card and resize a field in the card":::
 
 
-
 ## Unlock a card
+
+To make changes like deleting a control or adding a new control requires unlocking the card.
 
 When you add a field to a form, Power Apps creates a data card for you and sets up the basic formulas that connect the card to the data source. By default, Power Apps locks these cards so you don't accidentally break that connection. If you need more control, such as a custom layout, extra controls, or different formulas, you can unlock the card.
 
