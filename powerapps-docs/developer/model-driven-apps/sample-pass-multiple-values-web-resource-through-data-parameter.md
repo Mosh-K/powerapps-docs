@@ -12,26 +12,27 @@ search.audienceType:
 ---
 # Pass multiple values to a web resource through the data parameter
 
-
 An (HTML) web resource page can only accept a single query parameter called `data`. To pass more than one value in the data parameter, you need to encode the parameters and decode the parameters in your page.  
   
- The page here represents a technique to pass the additional values within a single parameter and then process them within your web resource.
+The [HTML web resource sample](#html-web-resource-sample) demonstrates a technique to pass the additional values within a single parameter and then process them within your web resource.
  
 > [!NOTE]
 > Only alphanumeric characters are supported as parameters to web resources. All characters included in the query string go through validation to ensure the validity of the parameters passed. If the validation process finds any invalid parameters, the request fails. For example, passing text values enclosed in angular brackets is considered an invalid parameter type.
   
 ## HTML web resource sample
 
- The following HTML code represents a webpage (HTML) web resource that includes a script that defines three functions:  
+ The following HTML code represents a webpage (HTML) web resource that includes a script that defines four functions:  
   
-- **getDataParam**: Called from the `body.onload` event, this function retrieves any query string parameters passed to the page and locates one named `data`.  
+- **displayDataParameters**: Called when the DOM is ready, this function uses the URLSearchParams API to extract and parse the `data` parameter from the query string, then displays the results.  
   
-- **parseDataValue**: Receives the data parameter from `getDataParam` and builds a DHTML table to display any values passed within the `data` parameter.  
+- **showMessage**: Creates and displays informational messages to the user, such as error messages or status updates.  
+  
+- **createParametersTable**: Receives parsed parameters and generates an HTML table using template literals and modern array methods to display the parameter name-value pairs.  
+  
+- **escapeHtml**: A security helper function that prevents XSS attacks by safely escaping HTML content in parameter values before rendering them in the table.  
   
   > [!NOTE]
   >  All characters included in the query string are encoded by using the [encodeURIComponent function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent). This function uses the JavaScript [decodeURIComponent function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent) to decode the values passed.  
-  
-- **noParams**: Displays a message when no parameters are passed to the page.  
   
 ```html  
 <!DOCTYPE html>  
