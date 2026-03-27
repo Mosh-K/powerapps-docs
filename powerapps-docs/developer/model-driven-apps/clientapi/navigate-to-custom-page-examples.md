@@ -97,7 +97,7 @@ App.OnStart=Set(RecordItem,
 
 ## Open as a centered dialog
 
-Within a model-driven app client API event handler, call the following code and update the **name** parameter to be the logical name of the custom page.  This mode supports the sizing parameters similar to the [Main form dialogs](../../../developer/model-driven-apps/customize-entity-forms.md#open-main-form-in-a-dialog-using-client-api).
+Within a model-driven app client API event handler, call the following code and update the **name** parameter to be the logical name of the custom page.  This mode supports the sizing parameters similar to the [Main form dialogs](../../../developer/model-driven-apps/customize-entity-forms.md#open-main-form-in-a-dialog-by-using-client-api).
 
 ```javascript
 // Centered Dialog

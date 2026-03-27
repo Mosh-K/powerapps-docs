@@ -17,7 +17,7 @@ contributors:
 [!INCLUDE[./includes/openForm-description.md](./includes/openForm-description.md)]
 
 > [!NOTE]
-> To open a main form as a dialog, use the [navigateTo](navigateTo.md) method instead. More information: [Open main form in a dialog using client API](../../../customize-entity-forms.md#open-main-form-in-a-dialog-using-client-api)
+> To open a main form as a dialog, use the [navigateTo](navigateTo.md) method instead. More information: [Open main form in a dialog using client API](../../../customize-entity-forms.md#open-main-form-in-a-dialog-by-using-client-api)
 
 ## Syntax
 
