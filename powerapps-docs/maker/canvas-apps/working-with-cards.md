@@ -44,7 +44,7 @@ Power Apps offers predefined cards for strings, numbers, and other data types. Y
 1. Select the form then select **Fields**.
 1. Select **More actions** and then selet **Move up** or **Move down**. You can also select and then drag fields into the order you want. 
 
-:::image type="content" source="media/working-with-cards/reorder-fields-on-form.png" alt-text="Screenshot of how to reoder fields on a form ":::
+    :::image type="content" source="media/working-with-cards/reorder-fields-on-form.png" alt-text="Screenshot of how to reoder fields on a form ":::
 
 ### Change a card’s control type
 
@@ -55,26 +55,23 @@ In this example, a single-line text card is selected, but the value might be lon
 1. Select **Expand field details** which is the down arrow next to the field that you want to edit.
 1. Change the **Control type**. For example, switch from **Edit text** to **Edit multi-line text**.
 
-:::image type="content" source="media/working-with-cards/edit-control-type.png" alt-text="Screenshot show how to edit a cards's control type":::
+    :::image type="content" source="media/working-with-cards/edit-control-type.png" alt-text="Screenshot show how to edit a cards's control type":::
 
 
 ## Customize a card
 
 A data card contains the controls that users see - usually a label such as the title, an input control such as a text input or dropdown, and an error message label. To customize how a field looks, select the control *inside* the card for example, the text input and adjust its size, position, or properties.
 
+You can move and resize controls in a locked card, but some changes like deleting a control or adding a brand-new one require [unlocking the card](working-with-cards.md#unlock-a-card) first.
+
 Next, you practice editing the controls inside a card without changing what field the card connects to.
 
-1. In your form, select the data card for the **SecurityCode** field.
+1. In the form, select the data card that you want to resize such as **Account Name**.
+1. Drag to move the text input within the card, and use the handles to resize it. This improves spacing and readability without unlocking the card.
 
-   :::image type="content" source="./media/working-with-cards/select-security-code.png" alt-text="Screenshot of selecting the SecurityCode data card in Power Apps.":::
+    :::image type="content" source="media/working-with-cards/resize-field.png" alt-text="Screenshot of how to select a card and resize a field in the card":::
 
-1. Inside the card, select the **Text input** control.
 
-   :::image type="content" source="./media/working-with-cards/select-text-input.png" alt-text="Screenshot of selecting the Text input control inside a data card in Power Apps.":::
-
-1. Drag to move the text input within the card, and use the handles to resize it. This method improves spacing and readability without unlocking the card.
-
-You can move and resize controls in a locked card, but some changes like deleting a control or adding a brand-new one require unlocking the card first.
 
 ## Unlock a card
 
