@@ -123,6 +123,13 @@ Dataverse retention policies are solution aware. Dataverse retention policies ad
 
 When you include your retention policies in a solution, their definitions become portable, making it easier to move them from one environment to another, saving time required to create the retention policy. For example, you first develop a solution containing a retention policy in a development or sandbox environment. You then move that retention policy to a preproduction environment to test and validate that the solution works well and is ready for production. After testing is completed, the admin imports the solution into the production environment.
 
+To add a retention policy to a solution, go to the Power Apps maker portal, create or open a solution, and then follow these steps:
+
+1. Select **Add existing** > **More** > **Other** > **Data Life Cycle Config** (display name renamed from RetentionConfig to Data Life Cycle Config to support both retention and deletion scenarios).
+2. Select one or more retention policies to add to the solution.
+
+The **Data Life Cycle Config** supports addition of both archival and deletion policies in a solution.
+
 > [!NOTE]
 > - The data retained by retention policies isn't portable as part of solutions, only the retention policy definitions are. You must run the retention policy in an environment to retain the data in Dataverse long term storage.
 > - Only retention policies created in Power Platform environments can be solution-aware.
