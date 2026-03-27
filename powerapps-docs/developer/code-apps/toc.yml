@@ -32,6 +32,8 @@ items:
             href: how-to/connect-to-azure-sql.md
           - name: SharePoint operations
             href: how-to/sharepoint-operations.md
+          - name: Use environment variables
+            href: how-to/use-environment-variables.md
           - name: Create a basic asset management API with Azure Functions
             href: how-to/create-basic-asset-management-api-azure-functions.md
           - name: Analyze data requests and responses

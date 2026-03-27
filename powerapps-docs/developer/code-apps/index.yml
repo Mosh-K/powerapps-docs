@@ -62,6 +62,8 @@ landingContent:
             url: how-to/connect-to-azure-sql.md
           - text: SharePoint operations
             url: how-to/sharepoint-operations.md
+          - text: Use environment variables
+            url: how-to/use-environment-variables.md
           - text: Create a basic asset management API with Azure Functions
             url: how-to/create-basic-asset-management-api-azure-functions.md
           - text: Analyze data requests and responses
