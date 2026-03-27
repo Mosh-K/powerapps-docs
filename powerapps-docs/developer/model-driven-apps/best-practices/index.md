@@ -49,7 +49,7 @@ Each guidance article includes most or all of the following sections:
 
 ## Categories
 
-Classify each guidance article with one or more of the following categories:
+Each guidance article is classified with one or more of the following categories:
 
 - Usage – improper usage of a particular API, pattern, or configuration
 - Design – design flaws in a customization
