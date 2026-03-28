@@ -24,15 +24,13 @@ ms.collection: bap-ai-copilot
 [This article is prerelease documentation and is subject to change.]
 
 Microsoft 365 Copilot makes it easier for users to work with canvas apps by offering AI-powered insights through natural language conversations. With this feature, users can quickly find information, navigate apps more easily, and get help to boost their productivity.
-App makers can enable Microsoft 365 Copilot to give users access to conversational AI that understands app data and provides helpful, contextual answers. Users can ask questions about their Microsoft Dataverse table data in plain language and receive immediate, relevant responses.
-
-> [!VIDEO https://learn-video.azurefd.net/vod/player?id=843f065d-4ee4-4006-b09b-e97da24b7393]
+App makers can enable Microsoft 365 Copilot to give users access to conversational AI that understands app data and provides helpful, contextual answers. Users can ask questions about their Microsoft Dataverse table or SharePoint list data in plain language and receive immediate, relevant responses.
 
 This article shows you how to enable and configure Microsoft 365 Copilot for your canvas apps, both at the environment level and for individual apps.
 
-When enabled, users can open Microsoft 365 Copilot in their canvas app by selecting **Copilot** > **Chat** on the upper-right corner. For more information, see [Use Microsoft 365 Copilot in canvas apps](../../user/use-microsoft-365-copilot-model-driven-apps.md).
+When enabled, users can open Microsoft 365 Copilot in their canvas app by selecting **Copilot** on the upper-right corner. For more information, see [Use Microsoft 365 Copilot in canvas apps](../../user/use-microsoft-365-copilot-canvas-apps.md).
 
-:::image type="content" source="media/microsoft-365-chat-model-driven-apps/copilot-chat-in-model-driven-apps.png" alt-text="Screenshot of Microsoft 365 Copilot in a model-driven app":::
+:::image type="content" source="../../user/media/microsoft-365-copilot-button-canvas.png" alt-text="Screenshot of Microsoft 365 Copilot in the canvas app":::
 
 > [!IMPORTANT]
 >
@@ -41,11 +39,11 @@ When enabled, users can open Microsoft 365 Copilot in their canvas app by select
 
 ## Prerequisites
 
-- To use Microsoft 365 Copilot with Power Apps, Dataverse Search must be set to **Default** or **On** for the environment. More information: [Know what this means for generative AI experiences](/power-platform/admin/configure-relevance-search-organization#what-dataverse-search-means-for-generative-ai-enabled-experiences)
+- To use Microsoft 365 Copilot in canvas apps with Dataverse, Dataverse Search must be set to **Default** or **On** for the environment. More information: [Know what this means for generative AI experiences](/power-platform/admin/configure-relevance-search-organization#what-dataverse-search-means-for-generative-ai-enabled-experiences)
 
 > [!NOTE]
 >
-> Microsoft 365 Copilot for model‑driven apps relies on Dataverse Search indexes. Enabling this feature might increase your environment’s Dataverse capacity consumption. More information: [What actions can makers or admins take to manage Dataverse Search efficiently?](/power-apps/user/relevance-search-benefits?branch=main&branchFallbackFrom=pr-en-us-11552#what-actions-can-makers-or-admins-take-to-manage-dataverse-search-efficiently)
+> Microsoft 365 Copilot for canvas apps with Dataversse relies on Dataverse Search indexes. Enabling this feature might increase your environment’s Dataverse capacity consumption. More information: [What actions can makers or admins take to manage Dataverse Search efficiently?](/power-apps/user/relevance-search-benefits?branch=main&branchFallbackFrom=pr-en-us-11552#what-actions-can-makers-or-admins-take-to-manage-dataverse-search-efficiently)
 >
 > Sufficient Dataverse database capacity must be available to support indexing, semantic search, and Copilot operations. More information [Capacity page details](/power-platform/admin/capacity-storage#capacity-page-details)
 
@@ -53,13 +51,13 @@ When enabled, users can open Microsoft 365 Copilot in their canvas app by select
 
 To manage Microsoft 365 Copilot for canvas apps, start by learning [how to manage Microsoft 365 Copilot](/copilot/manage).
 
-Power Platform administrators can set up and configure the Microsoft 365 Copilot feature for users in their environment. 
+Power Platform administrators can set up and configure the Microsoft 365 Copilot feature for users in their environment.
 
 1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
 
 1. In the navigation pane, go to **Copilot** > **Settings**. Under **Power Apps**, expand **Chat Agent** and choose **M365 Copilot**.
 
-    :::image type="content" source="media/microsoft-365-chat-model-driven-apps/enable-chat-in-admin-center.png" alt-text="Screenshot of admin setting to enable Microsoft 365 Copilot for model-driven apps":::
+    :::image type="content" source="../../model-driven-apps/media/microsoft-365-chat-model-driven-apps/enable-chat-in-admin-center.png" alt-text="Screenshot of admin setting to enable Microsoft 365 Copilot for canvas apps":::
 
 1. Select an environment group or an environment name, then select **Edit Setting**.
 
@@ -72,27 +70,20 @@ Makers can enable or disable Microsoft 365 Copilot for a specific canvas app.
 1. Sign in to [Power Apps](https://make.powerapps.com).
 1. Open a canvas app for editing.
 1. Select **Settings** in the command bar.
-1. On the left, select **Upcoming**.
-1. To enable Microsoft 365 Copilot, set **M365 Copilot in canvas apps** to **On**. To disable it, set the option to **Off**.
+1. On the left, select **General**.
+1. To enable Microsoft 365 Copilot, set **M365 Copilot in canvas apps (Preview)** to **On**. To disable it, set the option to **Off**.
 
-    :::image type="content" source="media/microsoft-365-chat-model-driven-apps/microsoft-365-copilot-app-setting.png" alt-text="Screenshot that shows how to turn Microsoft 365 Copilot on or off in a model-driven app.":::
+    :::image type="content" source="media/microsoft-365-canvas-apps/microsoft-365-copilot-app-setting.png" alt-text="Screenshot that shows how to turn Microsoft 365 Copilot on or off in a canvas app.":::
 
 1. Select **Save** and then publish the app for the changes to take effect.
 
 ## Microsoft 365 Copilot vs. Copilot chat
 
- Microsoft 365 Copilot is gradually replacing [Copilot chat in canvas apps](add-ai-copilot.md).
-
-During the transition period, makers can enable either one or both chat experiences. When both options are available, the **Copilot** dropdown menu shows the following options:
-
-- **Chat** button opens [Microsoft 365 Copilot](../../user/use-microsoft-365-copilot-model-driven-apps.md)
-- **App Skills** button opens [Copilot chat in canvas apps](../../user/use-copilot-model-driven-apps.md).
-
-    :::image type="content" source="media/microsoft-365-chat-model-driven-apps/both-chat-experiences.png" alt-text="Screenshot show both chat experiences in a model-driven app":::
+ Microsoft 365 Copilot is replacing [Copilot chat in canvas apps](add-ai-copilot.md).
 
 ### Known limitations
 
-- Microsoft 365 Copilot for canvas apps allows users to view Dataverse data by using read-only operations. This capability means that users can only view data that matches their queries and can't make any changes. To make changes, customization with an agent is required.
+- Microsoft 365 Copilot for canvas apps allows users to view Dataverse and SharePoint data by using read-only operations. This capability means that users can only view data that matches their queries and can't make any changes. To make changes, customization with an agent is required.
 - Creating, updating, or performing other actions isn't supported unless you customize with an agent.
 - Microsoft 365 Copilot for canvas apps isn't available in the Power Apps mobile app.
 - As this feature is being gradually deployed, certain settings in the Power Platform Admin Center might not be accessible yet, depending on the geographic location of your tenant.
@@ -100,4 +91,4 @@ During the transition period, makers can enable either one or both chat experien
 
 ## Related information
 
-- [Customize Microsoft 365 Copilot with an agent (preview)](../model-driven-apps/customize-microsoft-365-copilot-chat.md)
+- [Customize Microsoft 365 Copilot with an agent](../model-driven-apps/customize-microsoft-365-copilot-chat.md)
