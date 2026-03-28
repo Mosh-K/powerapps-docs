@@ -62,7 +62,7 @@ Use the **Perform Action** activity to execute any custom actions or the followi
       `SetProcess`
    :::column-end:::
    :::column:::
-      Se`tWordTemplate
+      `SetWordTemplate`
    :::column-end:::
    :::column:::
    :::column-end:::
