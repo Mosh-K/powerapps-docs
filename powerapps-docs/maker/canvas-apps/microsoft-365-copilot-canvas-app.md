@@ -88,7 +88,7 @@ Makers can enable or disable Microsoft 365 Copilot for a specific canvas app.
 - Microsoft 365 Copilot for canvas apps isn't available in the Power Apps mobile app.
 - As this feature is being gradually deployed, certain settings in the Power Platform Admin Center might not be accessible yet, depending on the geographic location of your tenant.
 
-
 ## Related information
 
 - [Customize Microsoft 365 Copilot with an agent](../model-driven-apps/customize-microsoft-365-copilot-chat.md)
+- [Use Microsoft 365 Copilot in canvas apps](../../user/use-microsoft-365-copilot-canvas-apps.md)

@@ -83,4 +83,5 @@ One of the benefits of @ mentioning an agent is that you can add or remove it fr
 
 ## Related information
 
+- [Customize Microsoft 365 Copilot with an agent](../maker/model-driven-apps/customize-microsoft-365-copilot-chat.md)
 - [Add Microsoft 365 Copilot for app users in canvas apps (preview)](../maker/canvas-apps/microsoft-365-copilot-canvas-app.md)
