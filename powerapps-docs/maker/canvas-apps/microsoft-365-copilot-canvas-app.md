@@ -67,6 +67,9 @@ Power Platform administrators can set up and configure the Microsoft 365 Copilot
 
 Makers can enable or disable Microsoft 365 Copilot for a specific canvas app.
 
+> [!NOTE]
+> To use the Microsoft 365 Copilot feature in your app, users must have a Microsoft 365 Copilot license.
+
 1. Sign in to [Power Apps](https://make.powerapps.com).
 1. Open a canvas app for editing.
 1. Select **Settings** in the command bar.
