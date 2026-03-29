@@ -38,6 +38,7 @@ When enabled, users can open Microsoft 365 Copilot in their model-driven app by 
 - To use Microsoft 365 Copilot with Power Apps, Dataverse Search must be set to **Default** or **On** for the environment. More information: [Know what this means for generative AI experiences](/power-platform/admin/configure-relevance-search-organization#what-dataverse-search-means-for-generative-ai-enabled-experiences)
 
 > [!NOTE]
+> To use the Microsoft 365 Copilot feature in your app, users must have both a Power Apps premium license and a Microsoft 365 Copilot license.
 >
 > Microsoft 365 Copilot for model‑driven apps relies on Dataverse Search indexes. Enabling this feature might increase your environment’s Dataverse capacity consumption. More information: [What actions can makers or admins take to manage Dataverse Search efficiently?](/power-apps/user/relevance-search-benefits?branch=main&branchFallbackFrom=pr-en-us-11552#what-actions-can-makers-or-admins-take-to-manage-dataverse-search-efficiently)
 >
@@ -62,9 +63,6 @@ Power Platform administrators can set up and configure the Microsoft 365 Copilot
 ## Enable Microsoft 365 Copilot in a model-driven app
 
 Makers can enable or disable Microsoft 365 Copilot for a specific model-driven app.
-
-> [!NOTE]
-> To use the Microsoft 365 Copilot feature in your app, users must have both a Power Apps premium license and a Microsoft 365 Copilot license.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 1. Open a model-driven app for editing.
