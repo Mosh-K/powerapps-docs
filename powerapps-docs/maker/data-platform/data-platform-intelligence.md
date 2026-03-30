@@ -6,9 +6,8 @@ ms.reviewer: matp
 ms.topic: how-to
 author: prithvi-khosla
 ms.subservice: dataverse-maker
-ms.author: 
-  - pkhosla
-  - paulliew
+ms.author: pkhosla
+ms.contributors: paulliew
 ms.service: powerapps
 search.audienceType: 
   - maker
