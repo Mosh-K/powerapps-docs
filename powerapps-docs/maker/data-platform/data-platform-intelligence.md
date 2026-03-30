@@ -1,7 +1,7 @@
 ---
 title: "What is Dataverse intelligence?" 
 description: Learn how to use Microsoft Dataverse intelligence to bring business data understanding to AI agents and Copilot.
-ms.date: 03/06/2026
+ms.date: 03/30/2026
 ms.reviewer: matp
 ms.topic: how-to
 author: prithvi-khosla
@@ -21,12 +21,12 @@ With Dataverse intelligence, you can define reusable business context that agent
 
 [!INCLUDE [cc-preview-features-definition](../../../shared/preview-includes/preview-note-pp.md)]
 
-## Prerequistes
+## Prerequisites
 
-- Power Platform administrator role to access Dataverse intelligence environment settings.
-- Microsoft 365 admin role (AI administrator, Global administrator) to access Microsoft 365 admin center Copilot settings. 
+- Microsoft 365 admin role (AI administrator, Global administrator) to access Microsoft 365 admin center Copilot settings. More information: [Enable Microsoft 365 admin center Copilot Dataverse settings](#enable-microsoft-365-admin-center-copilot-dataverse-settings-preview)
+- Power Platform administrator role to access Dataverse intelligence environment settings. More information: [Enable Dataverse intelligence](#enable-dataverse-intelligence-preview)
 - The environment where you use Dataverse intelligence must be a Managed Environment.
-- The environment must be enabled and configured for Dataverse MCP server preview. Business skills are only available for use with the preview version of Dataverse MCP server. More information: [Use preview tools and upcoming features in Dataverse MCP server](data-platform-mcp-preview-tools.md)   
+- The environment must be enabled and configured for Dataverse MCP server preview. Business skills are only available for use with the preview version of Dataverse MCP server. More information: [Use preview tools and upcoming features in Dataverse MCP server](data-platform-mcp-preview-tools.md)
 
 ## Enable Microsoft 365 admin center Copilot Dataverse settings (preview)
 
@@ -36,16 +36,14 @@ With Dataverse intelligence, you can define reusable business context that agent
 1. Select **Specific groups** and enter the list of Entra security groups. 
 1. Select **Save** to save the setting changes.
 
-## Next steps
-
 ## Enable Dataverse intelligence (preview)
 
 1. Go to [Power Platform admin center](https://admin.powerplatform.microsoft.com/). Select **Manage** >**Environments**.
 1. Open the environment where you want to turn on the Dataverse MCP server, and then select **Settings** > **Product** > **Features**.  
 1. Scroll down to locate **Dataverse intelligence**.
-1. Turn on **Allow data availability in M365 copilot**, and/or. 
-1. Turn on **Enable Dataverse intelligence (Work IQ) for agents and AI experiences**. 
-1. Make sure **Allow MCP clients to interact with Dataverse MCP server (Preview version)** is enabled. If it's not, enable it. 
+   - Turn on **Allow data availability in M365 copilot**, and/or...
+   - Turn on **Enable Dataverse intelligence (Work IQ) for agents and AI experiences**. 
+1. Make sure **Allow MCP clients to interact with Dataverse MCP server (Preview version)** is enabled. If it's not, enable it.
 1. Select **Save** to save the setting changes.
 
 ## Next steps
