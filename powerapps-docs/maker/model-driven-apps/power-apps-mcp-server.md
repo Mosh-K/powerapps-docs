@@ -1,7 +1,7 @@
 ---
 title: "Work with Power Apps MCP Server" 
 description: Learn about the tools available with the Power Apps MCP Server.
-ms.date: 02/10/2026
+ms.date: 03/19/2026
 ms.reviewer: matp
 ms.topic: how-to
 author: HemantGaur
@@ -33,9 +33,23 @@ The Power Apps MCP Server equips your agent with two types of capabilities:
 
 :::image type="content" source="media/add-agents-to-app/power-apps-mcp-server.png" alt-text="Power Apps MCP server" lightbox="media/add-agents-to-app/power-apps-mcp-server.png":::
 
-The Power Apps MCP tools improve the more you use them. For example, when you make corrections to suggestions in the agent canvas, the data entry tool improves based on your corrections. To use the enhanced agent feed capabiltities, enable and configure the Power Apps MCP Server from the Microsoft Copilot Studio agent. Once configured, you can invoke Power Apps MCP Server tools from agent instructions using natural language.
+> [!NOTE]
+> Access to the agent feed and supervision capabilities is limited by default to the System Administrator and System Customizer security roles. To allow additional users to view the agent feed, grant organization‑level read/write permissions on the tables listed here. You can create a new security role with these permissions and assign the role to multiple users as needed.
+>
+> - Agent Hub Goal(agenthubgoal)
+> - Agent Hub Insight(agenthubinsight)
+> - Agent Hub Metric(agenthubmetric)
+> - Agent Task(agenttask)
+> - Copilot(bot)
 
-More information: [Create an autonomous agent connected to Power Apps MCP Server](add-agents-to-app.md#create-an-autonomous-agent-connected-to-power-apps-mcp-server)
+The Power Apps MCP tools improve the more you use them. For example, when you make corrections to suggestions in the agent canvas, the data entry tool improves based on your corrections. To use the enhanced agent feed capabilities, enable and configure the Power Apps MCP server from the Microsoft Copilot Studio agent. Once configured, you can invoke Power Apps MCP server tools from agent instructions using natural language.
+
+More information: [Create an autonomous agent connected to Power Apps MCP server](add-agents-to-app.md#create-an-autonomous-agent-connected-to-power-apps-mcp-server)
+
+> [!IMPORTANT]
+>
+> For autonomous agent scenarios where an agent runs via a trigger, the Power Apps MCP server must be configured to run using "Maker-provided credentials" as seen in the details section of the tool. Go to [Control maker-provided credentials for authentication](/microsoft-copilot-studio/configure-no-maker-authentication#scope-of-enforcement-and-experience) for more details if this option is disabled.
+> :::image type="content" source="media/add-agents-to-app/copilot-studio-configure-maker-credentials.png" alt-text="Maker-provided credentials selection":::  
 
 ## List of tools
 
@@ -49,31 +63,33 @@ Once connected to the Power Apps MCP Server, the agent can choose from various t
 
 ## log_for_review
 
-Records completed agent work to the agent feed for human review. The `log_for-review` tool is intended for scenarios where an agent has sufficient information to act autonomously but needs human validation before the result is finalized or trusted. It is best suited for decisions that can be easily revised or rolled back. Besides title and description, you can also ask the tool to add a link to the Dataverse record. It could be the link to the record the agent created using the Dataverse MCP server or a record link present in context like the record that triggered the agent execution. These tasks are shown in the agent feed's **Completed** tab.
+Records completed agent work to the agent feed for review. The `log_for_review` tool is intended for scenarios where an agent has sufficient information to act autonomously but the user should still be made aware of what the agent has done. This tool can be thought of as a way to passively oversee the high-confidence or low-risk actions performed by agents. It is best suited for decisions that can be easily revised or rolled back if the agent happens to perform the action incorrectly. Besides title, description, and steps you can also ask the tool to add a link to either the relevant Dataverse record or to an app-external URL. If an agent action touches multiple Dataverse records, you can instruct the agent which record it should navigate to in connection with the created task. It could be the link to the record the agent created using the Dataverse MCP server or a record link present in context like the record that triggered the agent execution. These tasks are shown in the agent feed's **Completed** tab.
 
 ### Sample instruction
 
-When the customer makes a booking from the portal this agent must log the details for human review. The review item title should be based on the booking reference number and must use the exact prefix “Review Web Booking: ”. In the review description, write a concise, natural‑language summary of the booking that includes main fields like Booking Reference, Booking Date, Seat Number, and Status, so a reviewer can quickly understand what was processed without opening the record. Ensure the description reads as a short paragraph and accurately reflects the current values from the booking record.
+When the customer makes a booking from the portal this agent must log the details for review. The review item title should be based on the booking reference number and must use the exact prefix “Review Web Booking: ”. In the review description, write a concise summary of the booking that includes main fields like Booking Reference, Booking Date, Seat Number, and Status, so a reviewer can quickly understand what was processed without opening the record. Ensure the description reads as a short paragraph and accurately reflects the current values from the booking record. Include your reasoning as steps. Also, include a link to the booking record.
 
 :::image type="content" source="media/add-agents-to-app/log-for-review-example.png" alt-text="Log for review example":::
 
 ## request_assistance
 
-The `request_assistance` tool creates an agent feed task to reach out to a human. This is an asynchronous operation that calls the Microsoft Copilot Studio agent that waits until the human completes the action. For details on completing the action feed acivity, go to [Supervise agents in model-driven apps with agent feed (preview)](../../user/supervise-agents-with-agent-feed.md#supervise-agents-in-model-driven-apps-with-agent-feed-preview) 
+The intended purpose of the `request_assistance` tool is to enable agents to surface errors, escalations, or exceptions to users, so they can take appropriate action. As a maker, you can define the scenarios for when to have your agent use the `request_assistance` tool. It creates an agent feed task that is populated in the **Needs Attention** section of the agent feed. This is an asynchronous operation that calls the Microsoft Copilot Studio agent that waits until the human completes the action. For details on completing the action feed activity, go to [Supervise agents in model-driven apps with agent feed (preview)](../../user/supervise-agents-with-agent-feed.md#supervise-agents-in-model-driven-apps-with-agent-feed-preview) 
 
-You can observe the **In progress** status for the agent run in the activity tab when viewing the agent in Copilot Studio. Once the user completes the activity from agent feed, control comples back to agent via callback and agent can complete the task. 
+You can observe the **In progress** status for the agent run in the activity tab when viewing the agent in Copilot Studio. Once the user completes the activity from agent feed, control comes back to agent via callback and agent can complete the task. 
 
 :::image type="content" source="media/add-agents-to-app/copilot-studio-agent-in-progress.png" alt-text="In progress status in Copilot Studio":::
 
+Like with the `log_for_review` tool, you can control the task output for title, description, and steps and can be specific when telling the agent which link to associate with a given task.
+
 ### Sample instruction
 
-When this agent is triggered by the creation of a new support case, it should request human assistance. For the request assistance set the title by prefixing the value of issue1 with “Assistance needed: ”. In the task description includes the issue type, issue description, date reported, and the Resolved value as steps. Also include a navigation link to the Dataverse issue record.
+When this agent is triggered by the creation of a new support case, it should request assistance. In the request, set the title by prefixing the value of issue with “Assistance needed: ”. In the task description include the issue type, issue description, date reported, and the resolved value. Include your reasoning steps. Also include a link to the related Dataverse issue record. Once the user completes the task, continue processing by setting the case status to Closed.
 
 :::image type="content" source="media/add-agents-to-app/request-assistance-with-nav-example.png" alt-text="Request user assistance example":::
 
 ## invoke_data_entry
 
-The `invoke_data_entry` tool streamlines the creation of Dataverse records by extracting structured information from unstructured inputs such as emails, messages, or documents. When invoked from a Copilot Studio agent, it automatically analyzes incoming content, fills out the appropriate form with the extracted data, and presents the completed entry as a task in the agent feed for user review and approval. This enables fast, reliable data capture with minimal manual effort.
+The `invoke_data_entry` tool streamlines the creation of Dataverse records by extracting structured information from unstructured inputs such as emails, messages, or documents. When invoked from a Copilot Studio agent, it automatically analyzes incoming content, fills out the appropriate form with the extracted data, and presents the proposed entry as a task in the agent feed for user review and approval. It requires review of the proposed entry by a user before creating the record. This enables fast, reliable data capture with minimal manual effort.
 
 ### Sample instruction - shared email triggered agent
 
