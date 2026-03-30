@@ -4,7 +4,7 @@ description: Learn how to use Microsoft 365 Copilot to gain insights about the d
 author: devkeydet
 ms.component: pa-user
 ms.topic: overview
-ms.date: 03/26/2026
+ms.date: 03/30/2026
 ms.update-cycle: 180-days
 ms.subservice: end-user
 ms.author: marcsc
@@ -24,11 +24,11 @@ ms.collection:
 > [!IMPORTANT]
 >
 > - This feature is in preview.  
-> - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so that customers can get early access and provide feedback.
+> - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520). They're available before an official release so that customers can get early access and provide feedback.
 
 ## Prerequisites
 
-An administrator must enable Microsoft 365 Copilot in your application before it becomes visible in your app. For more information, see [Add Microsoft 365 Copilot for app users](/power-apps/maker/canvas-apps/add-microsoft-365-copilot).
+An administrator must enable Microsoft 365 Copilot in your application before it becomes visible in your app. For more information, see [Add Microsoft 365 Copilot for app users](/power-apps/maker/canvas-apps/microsoft-365-copilot-canvas-app).
 
 > [!NOTE]
 > To use the Microsoft 365 Copilot feature in your app, you must have a Microsoft 365 Copilot license.
@@ -66,7 +66,7 @@ To help you get started, Microsoft 365 Copilot suggests questions to ask. Many s
 
 > [!IMPORTANT]
 >
-> When you explicitly select an agent in Microsoft 365 Copilot in apps, the agent no longer answers questions about the Dataverse table or SharePoint list data in the app unless you explicitly configure your agent to do so. However, the agent uses information from the chat history. To get the side chat to answer questions about the Dataverse table or SharePoint lst data in the app again, you need to remove the explicit agent selection.
+> When you explicitly select an agent in Microsoft 365 Copilot in apps, the agent no longer answers questions about the Dataverse table or SharePoint list data in the app unless you explicitly configure your agent to do so. However, the agent uses information from the chat history. To get the side chat to answer questions about the Dataverse table or SharePoint list data in the app again, you need to remove the explicit agent selection.
 
 Microsoft 365 Copilot in apps lets you use any agent available in Microsoft 365 Copilot right from the side pane. Once an agent is available within Microsoft 365 Copilot, you can interact with your agent by either choosing it from the navigation panel or @ mentioning it.
 
@@ -78,7 +78,7 @@ One of the benefits of @ mentioning an agent is that you can add or remove it fr
 
 ## Limitations
 
-- Agents you author can’t yet use in‑app user context to optimize their responses.
+- Agents you author can't yet use in‑app user context to optimize their responses.
 - M365 Copilot in canvas apps supports apps that use either SharePoint or Dataverse as a data source but not both within the same app.
 
 ## Related information

@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.subservice: canvas-maker
 ms.author: marcsc
 ms.reviewer: mkaur
-ms.date: 02/06/2026
+ms.date: 03/30/2026
 ms.update-cycle: 180-days
 ms.topic: how-to
 applies_to: 
@@ -23,7 +23,7 @@ ms.collection: bap-ai-copilot
 
 [This article is prerelease documentation and is subject to change.]
 
-Microsoft 365 Copilot makes it easier for users to work with canvas apps by offering AI-powered insights through natural language conversations. With this feature, users can quickly find information, navigate apps more easily, and get help to boost their productivity.
+Microsoft 365 Copilot makes it easier for users to work with canvas apps by offering AI-powered insights through natural language conversations. By using this feature, users can quickly find information, navigate apps more easily, and get help to boost their productivity.
 App makers can enable Microsoft 365 Copilot to give users access to conversational AI that understands app data and provides helpful, contextual answers. Users can ask questions about their Microsoft Dataverse table or SharePoint list data in plain language and receive immediate, relevant responses.
 
 This article shows you how to enable and configure Microsoft 365 Copilot for your canvas apps, both at the environment level and for individual apps.
@@ -35,18 +35,18 @@ When enabled, users can open Microsoft 365 Copilot in their canvas app by select
 > [!IMPORTANT]
 >
 > - This feature is in preview.  
-> - Preview features aren't meant for production use and might have restricted functionality These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so that customers can get early access and provide feedback.
+> - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520). They're available before an official release so that customers can get early access and provide feedback.
 
 ## Prerequisites
 
-- To use Microsoft 365 Copilot in canvas apps with Dataverse, Dataverse Search must be set to **Default** or **On** for the environment. More information: [Know what this means for generative AI experiences](/power-platform/admin/configure-relevance-search-organization#what-dataverse-search-means-for-generative-ai-enabled-experiences)
+- To use Microsoft 365 Copilot in canvas apps with Dataverse, Dataverse Search must be set to **Default** or **On** for the environment. For more information, see [Know what this means for generative AI experiences](/power-platform/admin/configure-relevance-search-organization#what-dataverse-search-means-for-generative-ai-enabled-experiences).
 
 > [!NOTE]
 > To use the Microsoft 365 Copilot feature in your app, users must have a Microsoft 365 Copilot license.
 >
-> Microsoft 365 Copilot for canvas apps with Dataversse relies on Dataverse Search indexes. Enabling this feature might increase your environment’s Dataverse capacity consumption. More information: [What actions can makers or admins take to manage Dataverse Search efficiently?](/power-apps/user/relevance-search-benefits?branch=main&branchFallbackFrom=pr-en-us-11552#what-actions-can-makers-or-admins-take-to-manage-dataverse-search-efficiently)
+> Microsoft 365 Copilot for canvas apps with Dataverse relies on Dataverse Search indexes. Enabling this feature might increase your environment’s Dataverse capacity consumption. For more information, see [What actions can makers or admins take to manage Dataverse Search efficiently?](/power-apps/user/relevance-search-benefits?branch=main&branchFallbackFrom=pr-en-us-11552#what-actions-can-makers-or-admins-take-to-manage-dataverse-search-efficiently)
 >
-> Sufficient Dataverse database capacity must be available to support indexing, semantic search, and Copilot operations. More information [Capacity page details](/power-platform/admin/capacity-storage#capacity-page-details)
+> Sufficient Dataverse database capacity must be available to support indexing, semantic search, and Copilot operations. For more information, see [Capacity page details](/power-platform/admin/capacity-storage#capacity-page-details).
 
 ## Enable Microsoft 365 Copilot for your environment
 
@@ -58,9 +58,7 @@ Power Platform administrators can set up and configure the Microsoft 365 Copilot
 
 1. In the navigation pane, go to **Copilot** > **Settings**. Under **Power Apps**, expand **Chat Agent** and choose **M365 Copilot**.
 
-    :::image type="content" source="../../model-driven-apps/media/microsoft-365-chat-model-driven-apps/enable-chat-in-admin-center.png" alt-text="Screenshot of admin setting to enable Microsoft 365 Copilot for canvas apps":::
-
-1. Select an environment group or an environment name, then select **Edit Setting**.
+1. Select an environment group or an environment name, and then select **Edit Setting**.
 
 1. Select **On** and then select **Save** to enable Microsoft 365 Copilot for your canvas apps in the selected environment group or environment.
 

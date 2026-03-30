@@ -1,5 +1,5 @@
 ---
-title: Use Microsoft 365 Copilot in model-driven apps (preview)
+title: Use Microsoft 365 Copilot in model-driven apps
 description: Learn how to use Microsoft 365 Copilot to gain insights about the data in your model-driven apps.
 author: devkeydet
 ms.component: pa-user

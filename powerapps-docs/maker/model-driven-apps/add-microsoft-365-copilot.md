@@ -1,5 +1,5 @@
 ---
-title: Add Microsoft 365 Copilot for app users in model-driven apps (preview)
+title: Add Microsoft 365 Copilot for app users in model-driven apps
 description: Learn how to enable Microsoft 365 Copilot in model-driven apps to provide AI-powered insights and enhance productivity for your app users.
 author: Mattp123
 ms.service: powerapps
