@@ -39,7 +39,7 @@ Environment admins use the Power Platform admin center to select the channel for
 
 To allow gradually switching the default from semi-annual channel to monthly channel, the default value for both environment release channel and app release channel were renamed to **Auto**. There's an explicit choice for **Semi-annual** and **Monthly**. More information: [Changing release channels](channel-change.md).
 
-With 2024 release wave 1, the Power Platform environments were changed to treat **Auto** app release channel as **Monthly** and newly created model-driven apps default to **Monthly**. With 2024 release wave 2, the Dynamics 365 environments changed to treat **Auto** app release channel as **Monthly**. Admins and makers can select **Semi-annual** if they need the slower cadence. More information: [Keeping semi-annual release channel](channel-change.md#keeping-semi-annual-release-channel).
+With 2024 release wave 1, the Power Platform environments were changed to treat **Auto** app release channel as **Monthly** and newly created model-driven apps default to **Monthly**. With 2024 release wave 2, the Dynamics 365 environments changed to treat **Auto** app release channel as **Monthly**. Admins and makers can select **Semi-annual** if they need the slower cadence. More information: [Keeping semi-annual release channel](channel-change.md#keep-semi-annual-release-channel).
 
 ## Monthly release schedule
 
