@@ -42,6 +42,20 @@ landingContent:
             url: how-to/npm-quickstart.md
 
   # Card
+  - title: Configure & Setup
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: System configuration
+            url: system-limits-configuration.md
+      - linkListType: how-to-guide
+        links:
+          - text: Use environment variables
+            url: how-to/use-environment-variables.md
+          - text: Get context data
+            url: how-to/retrieve-context.md
+
+  # Card
   - title: Connect to Data
     linkLists:
       - linkListType: how-to-guide
@@ -58,20 +72,6 @@ landingContent:
             url: how-to/connect-to-copilot-studio.md
           - text: Get Dataverse tables metadata
             url: how-to/get-table-metadata.md
-
-  # Card
-  - title: Configure & Setup
-    linkLists:
-      - linkListType: concept
-        links:
-          - text: System configuration
-            url: system-limits-configuration.md
-      - linkListType: how-to-guide
-        links:
-          - text: Use environment variables
-            url: how-to/use-environment-variables.md
-          - text: Get context data
-            url: how-to/retrieve-context.md
 
   # Card
   - title: Develop & Deploy
