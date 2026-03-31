@@ -3,8 +3,9 @@ title: "How to: Use environment variables in code app data sources"
 description: "Learn how to reference Power Platform environment variables when adding data sources to a code app"
 ms.author: pakempar
 author: pavankm
-ms.date: 03/27/2026
+ms.date: 03/31/2026
 ms.topic: how-to
+ms.reviewer: jdaly
 ---
 # How to: Use environment variables in code app data sources
 
@@ -12,7 +13,7 @@ Use environment variables in your data source configuration so your code app can
 
 ## Why use environment variables?
 
-When you reference environment variables in `pac code add-data-source`, the variable reference is stored in your app configuration. The app then resolves actual values from the target environment.
+When you reference environment variables in `pac code add-data-source`, your app configuration stores the variable reference. The app then resolves actual values from the target environment.
 
 This approach helps with application lifecycle management (ALM) across Dev, Test, and Prod.
 
@@ -39,6 +40,6 @@ In this example:
 
 ## Verify the result
 
-After you run the command, open `power.config.json` in your code app.
+After running the command, open `power.config.json` in your code app.
 
-You should see the `@envvar:` references persisted in the data source configuration. This behavior means that when the app is moved to another environment, it uses the values configured for those environment variables in that environment.
+You should see the `@envvar:` references persisted in the data source configuration. This behavior means that when you move the app to another environment, it uses the values configured for those environment variables in that environment.
