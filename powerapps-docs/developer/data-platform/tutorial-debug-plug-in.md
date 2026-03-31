@@ -138,7 +138,7 @@ Follow these steps to debug your plug-in code.
     ![Attach to process dialog.](media/tutorial-debug-plug-in-attach-to-process-dialog.png)
 
     > [!NOTE]
-        > The Plug-in Registration tool now runs in debug mode.
+    > The Plug-in Registration tool now runs in debug mode.
 
 1. In the **Replay Plug-in Execution** dialog, click **Start Execution**.
 
