@@ -1,7 +1,7 @@
 ---
 title: "Debug Workflow Activities (Microsoft Dataverse) | Microsoft Docs"
 description: "Describes how to debug workflow activities using the Plug-in Registration tool." 
-ms.date: 04/06/2022
+ms.date: 03/31/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
@@ -12,9 +12,7 @@ contributors:
 ---
 # Debug Workflow Activities
 
-
-
-Because custom workflow extensions are .NET Framework assemblies you can debug them using methods very similar to how you debug plug-ins. 
+Because custom workflow extensions are .NET Framework assemblies you can debug them using methods very similar to how you debug plug-ins.
 
 ## Use the Plug-in Registration Tool
 
@@ -26,7 +24,7 @@ Once you have downloaded the PRT, click the `PluginRegistration.exe` to run it.
 
 From the PRT you can install the Plug-in profiler solution by clicking the **Install Profiler** button.
 
-![The install profiler button in the plug-in registration tool.](../media/tutorial-debug-plug-in-install-profiler.md.png)
+![The install profiler button in the plug-in registration tool.](../media/tutorial-debug-plug-in-install-profiler.png)
 
 This solution add the capability to capture the context that is passed to your workflow activity and enables replay that you can use to debug the logic in your code locally using Visual Studio.
 
@@ -56,11 +54,11 @@ Click **OK** to save your settings.
 
 > [!NOTE]
 > At the time of this writing you may see the following error:
-> 
+>
 > ![Error when setting workflow activity profiler settings.](media/error-setting-profiler-settings-workflow-activity.png)
-> 
+>
 > The details of this error will include the message: `Automatic workflow cannot be published if no activation parameters have been specified.`
-> 
+>
 > The profile settings are successfully saved. This error occurs because the process of profiling a custom workflow activity will create a copy of the workflow and will disable both the original workflow and the copy. You will need to re-configure the profiled copy and activate it to capture a profile.  See the following steps for more information.
 
 ## Capture a profile
@@ -143,12 +141,9 @@ This will delete the copy of the workflow that was made.
 
 You should now be able to step through your code and debug your workflow activity using Visual Studio.
 
-
-
 ### More information
 
 [Debug Plug-ins](../debug-plug-in.md)<br />
 [Tutorial: Debug a plug-in](../tutorial-debug-plug-in.md)
-
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]
