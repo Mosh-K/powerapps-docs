@@ -19,7 +19,7 @@ contributors:
 - fafuxa-ms
 ---
 
-# Use Copilot's form fill assistance feature in model-driven apps
+# Use Copilot's form fill assistance feature for model-driven apps
 
 [!INCLUDE [form-filling-assistance](~/../shared/dynamics365-core/form-filling-assistance.md)]
 
