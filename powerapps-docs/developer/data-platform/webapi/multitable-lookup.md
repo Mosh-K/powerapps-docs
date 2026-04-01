@@ -1,7 +1,7 @@
 ---
 title: "Use multi-table lookup columns"
 description: "Learn how to use a single lookup type column to refer to data in multiple other tables. This type of column is sometimes called a polymorphic lookup."
-ms.date: 03/02/2026
+ms.date: 03/26/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 author: MsSQLGirl
@@ -26,6 +26,8 @@ Customer, which connects to [Account](../reference/entities/account.md) and [Con
 > [!NOTE]
 > You can create and modify custom multi-table lookups through the SDK for .NET or Dataverse Web API.
 > Interactive user interface support will be available in a future release.
+> 
+> If you don't want to write code, try using the [Power Platform Toolbox](https://www.powerplatformtoolbox.com/) [Polymorphic Lookups](https://www.powerplatformtoolbox.com/tools/fad82c74-54a2-4973-a707-ab0fafb9cce9) tool. Learn more about [Community tools for Microsoft Dataverse](../community-tools.md)
 > 
 > [Sample: Web API multi-table lookup sample (PowerShell)](samples/multi-table-lookup-powershell.md) contains the sample code that demonstrates the [Example](#example) presented in this article.
 
@@ -329,7 +331,6 @@ Accept: application/json
 ```http
 HTTP/1.1 204 NoContent
 OData-Version: 4.0
-OData-EntityId: [Organization Uri]/api/data/v9.2/sample_medias(00000000-0000-0000-0000-000000000007)
 ```
 
 
@@ -338,7 +339,7 @@ OData-EntityId: [Organization Uri]/api/data/v9.2/sample_medias(00000000-0000-000
 > [!NOTE]
 > The following example shows how to use the Dataverse Web API. You can also use the SDK for .NET with the <xref:Microsoft.Crm.Sdk.Messages.CreatePolymorphicLookupAttributeRequest> and <xref:Microsoft.Crm.Sdk.Messages.CreatePolymorphicLookupAttributeResponse> classes.
 
-Use the [CreatePolymorphicLookupAttribute action](xref:Microsoft.Dynamics.CRM.CreatePolymorphicLookupAttribute) to create a multi-table lookup. This example creates the column as part of a solution with the unique name `polymorphiclookupexamplesolution` by using the [MSCRM.SolutionUniqueName optional parameter](../optional-parameters.md#associate-a-solution-component-with-a-solution).
+Use the [CreatePolymorphicLookupAttribute action](xref:Microsoft.Dynamics.CRM.CreatePolymorphicLookupAttribute) to create a multi-table lookup. This example creates the column as part of a solution with the unique name `polymorphiclookupexamplesolution` by using the `SolutionUniqueName` parameter.
 
 **Request**
 
@@ -348,7 +349,6 @@ Consistency: Strong
 Accept: application/json
 OData-MaxVersion: 4.0
 Authorization: Bearer [REDACTED]
-MSCRM.SolutionUniqueName: polymorphiclookupexamplesolution
 OData-Version: 4.0
 
 {
@@ -412,13 +412,20 @@ OData-Version: 4.0
       "@odata.type": "Microsoft.Dynamics.CRM.Label"
     },
     "@odata.type": "Microsoft.Dynamics.CRM.ComplexLookupAttributeMetadata"
-  }
+  },
+ "SolutionUniqueName": "polymorphiclookupexamplesolution"
 }
 ```
 
-The following JSON is an example of the [CreatePolymorphicLookupAttributeResponse ComplexType](xref:Microsoft.Dynamics.CRM.CreatePolymorphicLookupAttributeResponse). It contains the ID of the polymorphic attribute and all the relationships created.
+The following response contains an example of the [CreatePolymorphicLookupAttributeResponse ComplexType](xref:Microsoft.Dynamics.CRM.CreatePolymorphicLookupAttributeResponse). It contains the ID of the polymorphic attribute and all the relationships created.
 
-```json
+**Response**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; odata.metadata=minimal
+OData-Version: 4.0
+
 {
     "@odata.context":
       "http://<organization URL>/api/data/v9.2/$metadata#Microsoft.Dynamics.CRM.CreatePolymorphicLookupAttributeResponse",
