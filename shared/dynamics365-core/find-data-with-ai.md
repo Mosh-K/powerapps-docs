@@ -24,6 +24,9 @@ When users interact with agents in Copilot chat, the agents can search and retri
 Copilot interprets the user's request and applies the appropriate filters, sorting, and text search against the underlying view data. The agent returns the results in Copilot chat, presented in a structured, tabular format that reflects the view data.
 Users can continue to work with the returned results in the conversation, iterating with natural language to refine the output until it reflects the exact results they’re looking for.
 
+:::image type="content" source="/power-apps/user/media/find-data-grid-in-copilot.png" alt-text="A screenshot showing how data can be fetched using agent in Microsoft 365 Copilot":::
+
+
 ## Supported features
 
 - Filtering of records
@@ -44,5 +47,5 @@ These capabilities aren't supported:
 - If Copilot doesn't give the desired results, consider modifying your query by:
   - Refer to data columns by the names shown in the grid header.
   - Separate multiple conditions with commas or periods.
-- If your search string has two words or fewer, Copilot does a text search. To do a Copilot search, use more than two words. To do a text search with more than two words, put the search term in single or double quotes.
+- In model-driven app for grids, if your search string has two words or fewer, Copilot does a text search. To do a Copilot search, use more than two words. To do a text search with more than two words, put the search term in single or double quotes. This behavior doesn't apply to Copilot chat.
 
