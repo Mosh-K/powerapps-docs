@@ -4,6 +4,7 @@ Dynamics 365 apps such as Sales, Customer Service, and Customer Insights are [mo
 > Some AI features might not appear in every model-driven app or need to be enabled.
 
 The following table lists the Copilot and AI features in Dynamics 365 apps inherited from model-driven apps.
+
 | Feature | Description | Learn more |
 |------------|-------------|------------|
 | **Microsoft 365 Copilot (preview)** | Helps you get summaries, suggestions, and guided actions within your app. It streamlines tasks and boosts productivity by providing contextual assistance based on your organization's data. <br> This feature is also available in the following products: <ul><li>[Dynamics 365 Customer Insights]</li><li>[Dynamics 365 Customer Service and Dynamics 365 Contact Center](/dynamics365/customer-service/use/use-microsoft-365-copilot)</li><li>[Dynamics 365 Field Service](/dynamics365/field-service/use-microsoft-365-copilot-model-driven-apps) </li><li>[Dynamics 365 Project Operations]( /dynamics365/project-operations/pro/ai-capabilities/use-microsoft-365-copilot-model-driven-apps) </li>li>[Microsoft Sustainability Manager](/industry/sustainability/microsoft-sustainability-manager/use-microsoft-365-copilot-model-driven-apps)</li></ul>  | [Microsoft 365 Copilot (preview)](/power-apps/user/use-microsoft-365-copilot-model-driven-apps) |
