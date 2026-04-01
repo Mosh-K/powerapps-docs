@@ -1,18 +1,4 @@
-Copilot provides form fill assistance for apps. This feature suggests AI-generated content for fields in the main and quick create forms. The app provides suggestions in three ways:
-
-1. Based on the user's usage of the app, what information is already available in the form, and their frequently used data.
-2. Based on the copied text the user provides through the **Smart paste (Preview)** capability.
-3. Based on the file contents the user provides through the **Files (Preview)** capability.
-
-This feature makes it easier and faster to enter data in forms. The suggestions are entirely optional and don't get saved until the user explicitly reviews and accepts them.
-
-
-> [!IMPORTANT]
->
-> - This feature is generally available in Dynamics 365 apps.
-> - This feature is in production ready preview in Power Apps.
->   - Preview features are available before an official release so that customers can get early access and provide feedback.
-> - Due to high demand, this feature might be unavailable intermittently. If the feature is unavailable, try again later.
+Copilot provides form fill assistance for apps. This feature suggests AI-generated content for fields, making it easier and faster to enter data in forms. The suggestions are entirely optional and don't get saved until the user explicitly reviews and accepts them.
 
 ## Prerequisites
 
@@ -22,13 +8,18 @@ This feature makes it easier and faster to enter data in forms. The suggestions 
 
 ## Limitations
 
-- Suggestions are generated for fields only in main forms and quick create forms.
-- The currently supported field types are text, numeric, choice, and date.
+- Inside model-driven apps, suggestions are provided for fields only in main forms and quick create forms. In Microsoft 365 Copilot chat, suggestions are provided for fields based on main forms only.
+- The currently supported field types inside model-driven apps are text, numeric, choice, and date. The currently supported field types inside Microsoft 365 Copilot chat are text, numeric, choice, date, and lookup.
 - Fields that have column security aren't currently supported.
 
-## Use form fill assistance
+## Use form fill assistance in model-driven apps
+Form fill assistance in model-driven apps (Power Apps and Dynamics 365) provides suggestions for blank form fields in three ways:
 
-Copilot assistance for filling forms generates suggestions for blank form fields in apps. The feature generates suggestions only for the open tab. It presents suggestions inline in the form.
+1. Based on the user's usage of the app, what information is already available in the form, and their frequently used data.
+2. Based on the copied text the user provides through the **Smart paste (Preview)** capability.
+3. Based on the file contents the user provides through the **Files (Preview)** capability.
+
+The feature generates suggestions only for the open tab. It presents suggestions inline in the form.
 
 :::image type="content" source="/power-apps/user/media/formfill_suggestions.png" alt-text="Screenshot that shows form fill suggestions being presented in a form.":::
 
@@ -54,23 +45,14 @@ To provide feedback about the feature, select the thumbs up or down button on th
 
 :::image type="content" source="/power-apps/user/media/formfill_feedback.png" alt-text="Screenshot that shows the feedback survey for the form fill feature.":::
 
-## Use form fill assistance with agents in Microsoft 365 Copilot chat
-
 > [!IMPORTANT]
-> This feature is being gradually rolled out across regions and might not be available yet in your region.
+>
+> - This feature is generally available in Dynamics 365 apps.
+> - This feature is in production ready preview in Power Apps.
+>   - Preview features are available before an official release so that customers can get early access and provide feedback.
+> - Due to high demand, this feature might be unavailable intermittently. If the feature is unavailable, try again later.
 
-With Microsoft 365 Copilot you have ability to bring app-based experiences to agents, the app experience can leverage the form fill assistance right in the chat. 
-
-> [!NOTE]
-> To use this capability, you need to [set up an apps agent in Microsoft 365 Copilot](/power-apps/maker/model-driven-apps/app-properties#upcoming).
-
-When you interact with agents in Copilot chat, agents can surface forms from apps directly in the conversation. Form fill assistance helps populate these forms by suggesting values based on relevant context available, such as existing data you have access to from emails, chats, or any document.
-
-The suggestions appear inline in the chat-based form and can be reviewed or edited before submission. All suggestions are optional and aren't saved until you explicitly accept and save the input.
-
-After submission, the data is saved to the connected app and is available, just as if you complete the form directly in the app.
-
-## Use smart paste (preview)
+### Use smart paste (preview)
 
 Smart paste (preview) is a capability that analyzes the form and the text or image you copy to your clipboard. It suggests what text could fill specific fields and provides suggestions inline in the form. To use smart paste (preview):
 
@@ -83,7 +65,7 @@ You can continue to paste directly, without smart paste (preview), into a specif
 
 :::image type="content" source="/power-apps/user/media/formfill_smartpaste.png" alt-text="Screenshot that shows the smart paste icon in the form's command bar.":::
 
-## Use toolbar and files (preview)
+### Use toolbar and files (preview)
 
 Files (preview) is a capability that can reason over the form and the file you provide to suggest what text could fill specific fields. It provides suggestions inline in the form. Supported file types are .txt, .docx, .csv, .pdf, .png, .jpg, .jpeg, and .bmp. Files classified with sensitivity labels aren't supported.
 
@@ -102,5 +84,20 @@ To use files (preview):
 
 :::image type="content" source="/power-apps/user/media/formfill_files.png" alt-text="Screenshot that shows the files capability in the form fill assist toolbar.":::
  
+## Use form fill assistance with agents in Microsoft 365 Copilot chat
 
+> [!IMPORTANT]
+> This feature is being gradually rolled out across regions and might not be available yet in your region.
 
+With Microsoft 365 Copilot you have ability to bring app-based experiences to agents, the app experience can leverage the form fill assistance right in the chat. 
+
+:::image type="content" source="/power-apps/user/media/formfill_m365copilotchat.png" alt-text="Screenshot that shows form fill assistance inside Microsoft 365 Copilot chat.":::
+
+> [!NOTE]
+> To use this capability, you need to [set up an apps agent in Microsoft 365 Copilot](/power-apps/maker/model-driven-apps/app-properties#upcoming).
+
+When you interact with agents in Copilot chat, agents can surface forms from apps directly in the conversation. Form fill assistance helps populate these forms by suggesting values based on relevant context available, such as existing data you have access to from emails, chats, or any document.
+
+The suggestions appear inline in the chat-based form and can be reviewed or edited before submission. All suggestions are optional and aren't saved until you explicitly accept and save the input.
+
+After submission, the data is saved to the connected app and is available, just as if you complete the form directly in the app.
