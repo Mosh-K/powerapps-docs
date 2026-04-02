@@ -84,7 +84,7 @@ To use files (preview):
 
 :::image type="content" source="/power-apps/user/media/formfill_files.png" alt-text="Screenshot that shows the files capability in the form fill assist toolbar.":::
  
-## Use form fill assistance with agents in Microsoft 365 Copilot chat
+## Use form fill assistance with agents in Microsoft 365 Copilot chat (preview)
 
 > [!IMPORTANT]
 > This feature is being gradually rolled out across regions and might not be available yet in your region.
