@@ -25,6 +25,7 @@ For more information about profile cards, see [Profile cards in Office 365](http
 > [!NOTE]
 >  - Profile cards are available on contacts and users in any Unified Interface app. For information, see [Enable viewing profile cards (for admins)](/power-platform/admin/enable-profile-card).
 >  - The profile card in Microsoft Dataverse is not displayed if multi-factor authentication is turned on for Office Delve service in Azure Active Directory.
+>  - Profile cards are not supported for Azure Active Directory (Azure AD) guest users.
 
 ## View a contact's profile
 
@@ -52,6 +53,10 @@ Currently, the list of columns displayed on the profile card is not open for cus
 
 ### Why is the **Start chat** option on the profile card disabled (greyed out)?
 The **Start chat** and the **Send Email** options on the profile card will open your default instant message and email apps. The **Start chat** option is enabled if the person you are trying to contact is in the same Azure Active Directory environment as you or is a federated contact.
+
+### Why isn't the profile card opening for a user?
+
+If a profile card is not appearing when hovering over a user's name, the user may be an Azure Active Directory (Azure AD) guest user. Profile cards are not supported for guest users.
 
 
   
