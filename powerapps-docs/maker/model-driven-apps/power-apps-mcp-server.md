@@ -13,6 +13,10 @@ search.audienceType:
 ---
 # Work with Power Apps MCP Server
 
+> [!IMPORTANT]
+>
+> Starting May 1st, 2026, Agent Feed will only support agents that use the Power Apps MCP Server to create tasks. Please ensure your agents are properly onboarded to the [Power Apps MCP server](power-apps-mcp-server.md) by then to continue using the Agent Feed. If your agents do not use the Power Apps MCP Server, the Agent Feed will not appear in you model-driven app.
+
 The model context protocol (MCP) is an open protocol that enables seamless integration between large language model (LLM) applications and external data sources and tools. Your agent can use the Power Apps MCP Server to communicate with your Power Apps, providing right human-in-the-loop supervision or agentic workflows.
 
 > [!IMPORTANT]
@@ -89,7 +93,7 @@ When this agent is triggered by the creation of a new support case, it should re
 
 ## invoke_data_entry
 
-The `invoke_data_entry` tool streamlines the creation of Dataverse records by extracting structured information from unstructured inputs such as emails, messages, or documents. When invoked from a Copilot Studio agent, it automatically analyzes incoming content, fills out the appropriate form with the extracted data, and presents the proposed entry as a task in the agent feed for user review and approval. It requires review of the proposed entry by a user before creating the record. This enables fast, reliable data capture with minimal manual effort.
+The `invoke_data_entry` tool streamlines the creation of Dataverse records by extracting structured information from unstructured inputs such as emails, messages, or documents. When invoked from a Copilot Studio agent, it automatically analyzes incoming content, fills out the appropriate form with the extracted data, and presents the proposed entry as a task in the agent feed for user review and approval. It requires review of the proposed entry by a user before creating the record. **Records are never created automatically using the `invoke_data_entry` tool.** This enables fast, reliable data capture with minimal manual effort.
 
 ### Sample instruction - shared email triggered agent
 
