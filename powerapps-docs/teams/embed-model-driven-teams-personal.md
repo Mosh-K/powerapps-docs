@@ -13,14 +13,17 @@ search.audienceType:
   - maker
 contributors:
 ---
-# Embed a model-driven app as personal app in Teams (preview - retiring May 2026)
+# Embed a model-driven app as personal app in Teams (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
 You can share an app you've created by embedding it directly into Microsoft Teams. When completed, users can select **+** to add your app to any of **your** team channels or conversations in the team you are in. The app appears as a tile under **Tabs for your team**.
 
 > [!IMPORTANT]
-> This feature is being removed. New model-driven apps can no longer be added to Teams. Model-driven apps that have already been embedded in Teams will continue to function until May 1, 2026. After that date, these apps will no longer work within the Teams experience, but users can continue to use them through a web browser or other supported clients.
+>
+> - This feature is deprioritized and will not be delivered. 
+> - New model-driven apps can no longer be added to Teams.
+> - Model-driven apps that are embedded in Teams will continue to function until May 1, 2026. After that date, these apps will no longer work within the Teams experience. Users can continue to use these apps through a web browser or other supported clients.
 
 ## Prerequisites
 

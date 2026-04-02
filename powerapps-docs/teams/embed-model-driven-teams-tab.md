@@ -14,13 +14,15 @@ contributors: sriharibs-msft
   - mattp123
 ---
 
-# Embed a model-driven app as tab app in Teams (preview - retiring May 2026)
+# Embed a model-driven app as tab app in Teams (preview)
 
-You can customize the Teams experience by adding Power Apps model-driven apps to your channels in Teams using the **Power Apps** tab. 
+You can customize the Teams experience by adding Power Apps model-driven apps to your channels in Teams using the **Power Apps** tab.
 
 > [!IMPORTANT]
-> This feature is being removed. New model-driven apps can no longer be added to Teams. Model-driven apps that have already been embedded in Teams will continue to function until May 1, 2026. After that date, these apps will no longer work within the Teams experience, but users can continue to use them through a web browser or other supported clients.
 >
+> - This feature is deprioritized and will not be delivered. 
+> - New model-driven apps can no longer be added to Teams.
+> - Model-driven apps that are embedded in Teams will continue to function until May 1, 2026. After that date, these apps will no longer work within the Teams experience. Users can continue to use these apps through a web browser or other supported clients.
 > - Running model-driven apps on the Microsoft Teams mobile app is currently not supported.
 > - Opening or downloading file attachments in a model-driven app when the app is embedded in Teams as a tab isn't supported.
 
