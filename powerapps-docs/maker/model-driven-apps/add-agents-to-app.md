@@ -16,6 +16,10 @@ search.audienceType:
 
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
+> [!IMPORTANT]
+>
+> Starting May 1st, 2026, Agent Feed will only support agents that use the Power Apps MCP Server to create tasks. Please ensure your agents are properly onboarded to the [Power Apps MCP server](power-apps-mcp-server.md) by then to continue using the Agent Feed. If your agents do not use the Power Apps MCP Server, the Agent Feed will not appear in you model-driven app.
+
 Model-driven apps support the use of agents to enhance user productivity and automate tasks. There are two types of agents available in model-driven apps: 
 
 - *Autonomous agents*, created in Microsoft Copilot Studio, collaborate with users through the new Power Apps model context protocol (MCP) server, allowing agents to generate actionable agent feed tasks for users to review results or step in with inputs to unblock and complete human‑in‑the‑loop flows.
