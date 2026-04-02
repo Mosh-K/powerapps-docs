@@ -15,7 +15,8 @@ search.audienceType:
 
 > [!IMPORTANT]
 >
-> Starting May 1st, 2026, Agent Feed will only support agents that use the Power Apps MCP Server to create tasks. Please ensure your agents are properly onboarded to the [Power Apps MCP server](power-apps-mcp-server.md) by then to continue using the Agent Feed. If your agents do not use the Power Apps MCP Server, the Agent Feed will not appear in you model-driven app.
+> Starting May 1st, 2026, Agent Feed will only support agents that use the Power Apps MCP Server to create tasks. Please ensure your agents are properly onboarded to the [Power Apps MCP server](power-apps-mcp-server.md) by then to continue using the Agent Feed.
+> If your agents do not use the Power Apps MCP Server, the Agent Feed will not appear in you model-driven app.
 
 The model context protocol (MCP) is an open protocol that enables seamless integration between large language model (LLM) applications and external data sources and tools. Your agent can use the Power Apps MCP Server to communicate with your Power Apps, providing right human-in-the-loop supervision or agentic workflows.
 
@@ -49,6 +50,12 @@ The Power Apps MCP Server equips your agent with two types of capabilities:
 The Power Apps MCP tools improve the more you use them. For example, when you make corrections to suggestions in the agent canvas, the data entry tool improves based on your corrections. To use the enhanced agent feed capabilities, enable and configure the Power Apps MCP server from the Microsoft Copilot Studio agent. Once configured, you can invoke Power Apps MCP server tools from agent instructions using natural language.
 
 More information: [Create an autonomous agent connected to Power Apps MCP server](add-agents-to-app.md#create-an-autonomous-agent-connected-to-power-apps-mcp-server)
+
+To use the Power Apps MCP Server, you must do the following:
+1. Add the Power Apps MCP Server to your agent
+1. Update your agent instructions to use each of the tools in the Power Apps MCP Server at the proper times in it's orchestration.
+   > There are examples of how to do this in the remainder of this document.
+1. Save and publish your agent.
 
 > [!IMPORTANT]
 >
