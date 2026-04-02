@@ -2,7 +2,7 @@
 title: Manage model-driven app settings in the Power Apps app designer
 description: Learn how to manage the settings for your app using the app designer
 keywords: ""
-ms.date: 03/03/2026
+ms.date: 04/02/2026
 ms.custom: 
 ms.topic: how-to
 applies_to:
@@ -89,7 +89,7 @@ The **Upcoming** tab displays preview features currently available:
 
 - A model-driven app. Currently, this feature is only available with model-driven apps.
 - Microsoft 365 Copilot license. Required for both the maker deploying the agent and end users interacting with it.
-- Permission to upload custom apps in Microsoft Teams. Your Microsoft 365 admin may need to enable this. Check your Teams admin settings if the upload option is not visible.
+- Permission to upload custom apps in Microsoft Teams. Your Microsoft 365 admin might need to enable this. Check your Teams admin settings if the upload option is not visible.
 
 #### Steps to set up Power Apps in Copilot
 
