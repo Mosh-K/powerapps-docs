@@ -1,9 +1,10 @@
 ---
-title: add-flows-to-code-apps-doc
-source: main
-source_type: main
-tags: [docs, code-apps, power-automate, flows, markdown]
-created_at: 2026-04-02T18:20:38.720Z
+title: "Add Power Automate flows to a code app (preview)"
+description: "Learn how to discover, add, invoke, and remove Power Automate cloud flows from a Power Apps code app by using the npm CLI."
+author: eschavez
+ms.author: eschavez
+ms.date: 04/02/2026
+ms.topic: how-to
 ---
 # Add Power Automate flows to a code app (preview)
 
@@ -12,7 +13,7 @@ This article shows you how to discover, add, invoke, and remove Power Automate c
 ## Prerequisites
 
 - A Power Apps code app initialized with `npx power-apps init`. See [Quickstart: Create a code app by using the npm CLI](./npm-quickstart.md).
-- A Power Automate flow that is **solution-aware**. If your flow isn't in a solution yet, see [Add an existing flow to a solution](https://learn.microsoft.com/power-automate/create-flow-solution).
+- A Power Automate flow that is **solution-aware**. If your flow isn't in a solution yet, see [Add an existing flow to a solution](/power-automate/create-flow-solution).
 - The npm CLI package `@microsoft/power-apps` version **1.1.0** or later.
 
 > [!NOTE]
@@ -217,18 +218,18 @@ During `push`, the CLI automatically constructs the full connection references p
 
 | Limitation | Details |
 | --- | --- |
-| **Solution-aware flows only** | Only flows that belong to a solution appear in `list-flows`. To add a non-solution flow, [add it to a solution first](https://learn.microsoft.com/power-automate/create-flow-solution). |
+| **Solution-aware flows only** | Only flows that belong to a solution appear in `list-flows`. To add a non-solution flow, [add it to a solution first](/power-automate/create-flow-solution). |
 | **Maker access required** | The maker running `add-flow` must have access to the flow **and** to the flow's underlying connections. If access to a required connection is missing, the command fails. |
-| **Dataverse permissions required at runtime** | End-users must have sufficient Dataverse permissions to invoke flows. Assign the **App Opener** security role (or equivalent). See [Configure user security in an environment](https://learn.microsoft.com/power-platform/admin/database-security). |
+| **Dataverse permissions required at runtime** | End-users must have sufficient Dataverse permissions to invoke flows. Assign the **App Opener** security role (or equivalent). See [Configure user security in an environment](/power-platform/admin/database-security). |
 | **Manual refresh required for flow changes** | If the flow's definition changes, re-run `add-flow` with the same flow ID. The app doesn't automatically detect flow changes. |
 | **npm CLI only** | These commands are not available in `pac code`. |
 
 ## Related articles
 
 - [Quickstart: Create a code app by using the npm CLI](./npm-quickstart.md)
-- [Add a data source to a code app](./add-data-source.md)
-- [Add an existing flow to a solution](https://learn.microsoft.com/power-automate/create-flow-solution)
-- [Configure user security in an environment](https://learn.microsoft.com/power-platform/admin/database-security)
+- [Add a data source to a code app](../overview.md)
+- [Add an existing flow to a solution](/power-automate/create-flow-solution)
+- [Configure user security in an environment](/power-platform/admin/database-security)
 
 ---
 
