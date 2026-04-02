@@ -3,10 +3,9 @@ title: "View the profile card for a contact or user | MicrosoftDocs"
 description: View a contact's or user profile card
 ms.custom: ""
 author: shwetamurkute
-
 ms.component: pa-user
 ms.topic: article
-ms.date: 09/14/2020
+ms.date: 04/02/2026
 ms.subservice: end-user
 ms.author: smurkute
 ms.reviewer: smurkute
@@ -25,7 +24,7 @@ For more information about profile cards, see [Profile cards in Office 365](http
 > [!NOTE]
 >  - Profile cards are available on contacts and users in any Unified Interface app. For information, see [Enable viewing profile cards (for admins)](/power-platform/admin/enable-profile-card).
 >  - The profile card in Microsoft Dataverse is not displayed if multi-factor authentication is turned on for Office Delve service in Azure Active Directory.
->  - Profile cards are not available when the signed-in user is an Azure Active Directory (Azure AD) guest user.
+>  - Profile cards are not available when the signed-in user is a Microsoft Entra ID guest user.
 
 ## View a contact's profile
 
@@ -56,7 +55,7 @@ The **Start chat** and the **Send Email** options on the profile card will open 
 
 ### Why isn't the profile card opening for a user?
 
-If profile cards are not appearing when hovering over any user's name, the signed-in user may be an Azure Active Directory (Azure AD) guest user. Profile cards are not supported for signed-in guest users.
+If profile cards are not appearing when hovering over any user's name, the signed-in user might be a Microsoft Entra ID guest user. Profile cards aren't supported for signed-in guest users.
 
 
   
