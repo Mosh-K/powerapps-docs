@@ -97,7 +97,7 @@ The **Upcoming** tab displays preview features currently available:
 1. Upload the compressed file that is named similar to `declarative-agent-app name.zip` from Microsoft Teams or Microsoft 365 Agents:
 
    - Teams: Upload for personal use as a custom app in Teams. More information [Upload your app in Teams]( /microsoftteams/platform/concepts/deploy-and-publish/apps-upload)
-   - Microsoft 365 Agents: Publish the package for a team or group from the Microsoft 365 admin center. More information: [Publish agents](/microsoft-365/admin/manage/agent-registry?view=o365-worldwide#publish-agents)
+   - Microsoft 365 Agents: Publish the package for a team or group from the Microsoft 365 admin center. More information: [Publish agents](/microsoft-365/admin/manage/agent-registry?view=o365-worldwide&preserve-view=true#publish-agents)
   
 > [!NOTE]
 > You can customize the declarative agent included in the app package at you own discretion. To reduce the possibility of unexpected behavior when using AI agents, use caution when you customize the declarative agent code. More information: [Declarative Agents for Microsoft 365 Copilot](/microsoft-365-copilot/extensibility/overview-declarative-agent#building-declarative-agents)
