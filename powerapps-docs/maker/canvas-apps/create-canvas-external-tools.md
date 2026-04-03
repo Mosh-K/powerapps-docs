@@ -34,14 +34,13 @@ Using AI code generation tools with canvas apps provides an alternative developm
 
 - *Create new canvas apps* using plain-language requirements
 - *Update existing canvas apps* by requesting changes or enhancements through your AI tool
-- *Validate your app yaml* in real time using the Canvas Authoring MCP server
 - *Work locally* with your preferred IDE and development tools, syncing with live coauthoring sessions
 
 ### How it works
 
 1. You describe what you want to build in natural language, for example, "Create a canvas app for tracking expense reports with an approval workflow."
 2. The AI code generation tool uses installed canvas app skills to discover available controls, connectors, and data sources, and asks clarifying questions about your requirements.
-3. The tool generates production-ready `.pa.yaml` files defining your app screens, controls, and Power Fx formulas.
+3. The tool generates `.pa.yaml` files defining your app screens, controls, and Power Fx formulas.
 4. The tool validates the generated code using the Canvas Authoring MCP server and fixes any errors.
 5. Your canvas app is synced with Power Apps Designer through the coauthoring session.
 
@@ -116,9 +115,6 @@ Follow this workflow when building a new app from scratch.
 3. Review code and validate. The AI tool generates `.pa.yaml` files for each screen and validates them using the Canvas Authoring MCP server. The tool fixes any validation errors automatically. Your changes sync with the live coauthoring session in Power Apps Designer.
 
 4. Test and iterate. Open your canvas app in Power Apps Designer to preview and test. If you need to make changes, return to your AI tool and describe the updates using natural language.
-
-> [!NOTE]
-> The AI tool validates each screen by calling the Canvas Authoring MCP server compile tool after generating the YAML. This catches errors early and ensures your app code is valid before syncing.
 
 ## Edit an existing canvas app
 
