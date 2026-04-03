@@ -3,7 +3,7 @@ title: Create and edit Canvas Apps with AI code generation tools
 description: Learn how to use AI code generation tools like Github Copilot and Claude Code to create and edit canvas apps in Power Apps.
 author: shivanichander
 ms.author: shivanichander
-ms.reviewer: tapanmsft
+ms.reviewer: tapan-MSFT
 ms.date: 04/03/2026
 ms.topic: how-to
 ms.service: powerapps
@@ -179,5 +179,5 @@ The AI tool then:
 
 ## Related content
 
-- [Create a canvas app from scratch](/power-apps/maker/canvas-apps/create-blank-app)
-- [Power Apps canvas app overview](/power-apps/maker/canvas-apps/getting-started)
+- [Create a canvas app from scratch](create-blank-app.md)
+- [Power Apps canvas app overview](getting-started.md)
