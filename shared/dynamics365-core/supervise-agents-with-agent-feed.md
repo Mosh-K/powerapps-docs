@@ -2,7 +2,7 @@
 
 > [!IMPORTANT]
 >
-> Starting May 01, 2026, agent feed will support those agents only that use the Power Apps MCP server to create tasks. Make sure that your agents are properly onboarded to the [Power Apps MCP server](../../powerapps-docs/maker/model-driven-apps/power-apps-mcp-server.md) by then to continue using the agent feed. If your agents don't use the Power Apps MCP server, the agent feed won'tt appear in your model-driven app.
+> Starting May 01, 2026, agent feed will support those agents only that use the Power Apps MCP server to create tasks. Make sure that your agents are properly onboarded to the [Power Apps MCP server](../../powerapps-docs/maker/model-driven-apps/power-apps-mcp-server.md) by this date to continue using the agent feed. If your agents don't use the Power Apps MCP server, the agent feed won't appear in your model-driven app.
 
 Agent feed enables human-agent collaboration in apps by surfacing agent-generated, actionable tasks that users can review, validate, and complete. By using agent feed, apps act as a collaboration surface where users supervise and interact with agent work through a unified, task-based feed.
 
