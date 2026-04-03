@@ -1,7 +1,7 @@
 ---
 title: "Add agents to your model-driven app" 
 description: Learn how to add agents to your model-driven app in Power Apps.
-ms.date: 03/19/2026
+ms.date: 04/02/2026
 ms.reviewer: matp
 ms.topic: how-to
 author: HemantGaur
@@ -18,7 +18,7 @@ search.audienceType:
 
 > [!IMPORTANT]
 >
-> Starting May 1st, 2026, Agent Feed will only support agents that use the Power Apps MCP Server to create tasks. Please ensure your agents are properly onboarded to the [Power Apps MCP server](power-apps-mcp-server.md) by then to continue using the Agent Feed. If your agents do not use the Power Apps MCP Server, the Agent Feed will not appear in you model-driven app.
+> Starting May 1st, 2026, agent feed only supports agents that use the Power Apps MCP Server to create tasks. Ensure your agents are properly onboarded to the [Power Apps MCP server](power-apps-mcp-server.md) by then to continue using the agent feed. If your agents don't use the Power Apps MCP Server, the agent feed doesn't appear in you model-driven app.
 
 Model-driven apps support the use of agents to enhance user productivity and automate tasks. There are two types of agents available in model-driven apps: 
 
