@@ -3,9 +3,9 @@ title: "How to: Add a Dataverse action or function to your code app"
 description: "Learn how to add Dataverse actions and functions to a Power Apps code app using the CLI"
 ms.author: pakempar
 author: pavankm
-ms.date: 03/31/2026
+ms.date: 04/03/2026
 ms.topic: how-to
-ms.reviewer: jdaly
+ms.reviewer: 
 ---
 
 # How to: Add a Dataverse action or function to your code app
