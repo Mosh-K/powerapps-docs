@@ -515,7 +515,7 @@
               href: ./canvas-apps/controls/modern-controls/modern-controls-badge.md
             - name: Button
               href: ./canvas-apps/controls/modern-controls/modern-control-button.md
-            - name: Card (preview)
+            - name: Card
               href: ./canvas-apps/controls/modern-controls/modern-control-card.md
             - name: Checkbox
               href: ./canvas-apps/controls/modern-controls/modern-control-checkbox.md
@@ -1523,7 +1523,7 @@
           items: 
           - name: Create a generative page
             href: ./model-driven-apps/generative-pages.md
-          - name: Create generative pages with AI code generation tools (preview)
+          - name: Create generative pages with AI code generation tools
             href: ./model-driven-apps/generative-page-external-tools.md
         - name: Create, add, or remove forms and views
           href: ./model-driven-apps/create-add-remove-forms-views-dashboards.md
@@ -2566,6 +2566,8 @@
     href: ./common/responsible-ai-overview.md
   - name: FAQ about Power Apps vibe
     href: ./common/faq-vibe.md
+  - name: FAQ for Power Apps in agents
+    href: ./common/faq-apps-in-agents.md
   - name: FAQ about building apps through conversation
     href: ./common/faqs-build-apps-conversation.md
   - name: FAQ about generating app descriptions with Copilot
