@@ -123,7 +123,7 @@ def find_referencing_topics(
 def update_ms_date(file_path: str, new_date: str) -> bool:
     """
     Replace the ms.date value in a file's YAML frontmatter.
-    Returns True if the field was found and updated.
+    Returns True if the field was found and the content actually changed.
     """
     path = Path(file_path)
     content = path.read_text(encoding="utf-8", errors="replace")
@@ -135,7 +135,7 @@ def update_ms_date(file_path: str, new_date: str) -> bool:
         flags=re.MULTILINE,
     )
 
-    if count == 0:
+    if count == 0 or new_content == content:
         return False
 
     path.write_text(new_content, encoding="utf-8")
