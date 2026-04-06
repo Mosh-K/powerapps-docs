@@ -1,5 +1,5 @@
 ---
-title: Use AI fill assistance in model-driven apps 
+title: Use AI form fill assistance in model-driven apps 
 description: Learn how to use AI-generated optional suggestions for fields in a form.
 ms.date: 04/06/2026
 ms.update-cycle: 180-days
@@ -23,10 +23,8 @@ contributors:
 
 [!INCLUDE [form-filling-assistance](~/../shared/dynamics365-core/form-filling-assistance.md)]
 
-
 ### Related information
 
-[Manage feature settings](/power-platform/admin/settings-features#ai-form-fill-assistance)  
 [Manage model-driven app settings in the app designer](/power-apps/maker/model-driven-apps/app-properties#features)  
 [Create and edit columns in Dataverse using Power Apps](/power-apps/maker/data-platform/create-edit-field-portal)  
 [Responsible AI FAQ about form fill assistance](/power-apps/maker/common/faq-from-filling-assistance)  
