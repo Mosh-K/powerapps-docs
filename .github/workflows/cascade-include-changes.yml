@@ -30,10 +30,13 @@ jobs:
     # For workflow_dispatch: always run.
     if: github.event_name == 'workflow_dispatch' || github.event.pull_request.merged == true
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
 
     steps:
       - name: Checkout source repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       # For automatic runs: fetch the file list from the merged PR.
       # For manual runs: use the value typed into the dispatch form.
@@ -51,10 +54,10 @@ jobs:
           fi
           echo "files=$FILES" >> "$GITHUB_OUTPUT"
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.CASCADE_PAT }}
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.11"
 
@@ -77,4 +80,4 @@ jobs:
             --repo "${{ github.repository }}" \
             --body-file cascade-summary.md
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.CASCADE_PAT }}
