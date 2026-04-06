@@ -1,10 +1,10 @@
 ---
 title: AI features overview
 description: Learn how to incorporate AI into your model-driven apps
-ms.date: 12/08/2025
+ms.date: 04/06/2026
 ms.reviewer: smurkute
 ms.topic: "how-to"
-author: anuitz
+author: aorth
 ms.subservice: end-user
 ms.author: smurkute
 contributors: 
@@ -37,7 +37,7 @@ Built-in agents help you enter, explore, and summarize data faster and better.
 **Data entry agent**
 
 - [Get assistance filling forms](form-filling-assistance.md)
-- [Smart paste into forms](form-filling-assistance.md#use-smart-paste-preview)
+- [Smart paste into forms](form-filling-assistance.md#use-smart-paste)
 - [Draft richer text](../maker/model-driven-apps/use-copilot-email-assist.md)
 
 **Data exploration agent**
