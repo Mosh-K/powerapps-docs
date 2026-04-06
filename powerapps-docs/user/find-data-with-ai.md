@@ -1,5 +1,5 @@
 ---
-title: Find data in a view with AI (preview)
+title: Find data in a view with AI
 description: Learn how to find, filter, and sort data in a view using AI
 ms.date: 04/02/2026
 ms.reviewer: smurkute
@@ -13,6 +13,6 @@ search.audienceType:
   - enduser
 ---
 
-# Find data in a view with AI (preview)
+# Find data in a view with AI
 
 [!INCLUDE [find-data-with-ai](~/../shared/dynamics365-core/find-data-with-ai.md)]
