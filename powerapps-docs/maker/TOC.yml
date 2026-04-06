@@ -281,6 +281,8 @@
     items:
     - name: Create a blank canvas app
       href: ./canvas-apps/create-blank-app.md
+    - name: Create a canvas app with AI code generation tools (preview)
+      href: ./canvas-apps/create-canvas-external-tools.md
     - name: Create an app using Copilot
       items:
       - name: Create an app from conversations
