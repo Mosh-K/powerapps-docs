@@ -1,11 +1,24 @@
 
 Users can quickly find, filter, and sort their data by using natural language, so they don't need to use complicated advanced filters. See If your administrator turns on **Natural Language Grid and View Search**, you see the natural language search box.
 
-## Natural language search
+## Natural language search in model-driven apps
 
 Use smart grid natural language search to ask data-related questions in natural language. For example, request “cases with high priority with overdue follow-up by date” to filter your view and display only those relevant cases.
 
 :::image type="content" source="/power-apps/user/media/smart_grid_search.png" alt-text="A screenshot of the natural language search box on grid page":::
+
+### Licensing requirements
+
+The Natural Language Grid and View Search requires specific user licenses based on the product. If the user does not have the license, the feature will be hidden. This license enforcement will gradually rollout following the feature general availability.
+
+- **Power Apps model driven app**: the user must have a Power Apps premium license with details in the [Power Platform License Guide](go.microsoft.com/fwlink/?linkid=2085130)
+- **Dynamics 365 model driven app**: the user must have a Dynamics 365 enterprise or premium license as outlined in [Dynamics 365 License Guide](go.microsoft.com/fwlink/?linkid=2085130) 
+
+### Admin control
+
+The primary admin control for Natural Language Grid and View Search is moving to the Power Platform admin center under Copilot > Settings > Power Apps > Data Exploration Agent. Learn more about the Copilot hub [here](/power-platform/admin/copilot/copilot-hub). This is gradually rolling out over the next coming weeks.
+
+The existing feature control in Power Platform admin center environment Settings > Feature [link](/power-platform/admin/settings-features) leverages the app setting **Natural Language grid and view search** (NLGridSearchSetting). This app setting will be removed from the Settings > Product> Feature page and rely on the app setting in either the [Model App Designer Setting](/power-apps/maker/model-driven-apps/app-properties) or [Solution Explorer App Settings](/power-apps/maker/data-platform/create-edit-configure-settings#updating-a-setting-definition).
 
 
 ## Explore data with agents in Microsoft 365 Copilot chat (preview)
@@ -50,15 +63,3 @@ These capabilities aren't supported:
   - Separate multiple conditions with commas or periods.
 - In model-driven app for grids, if your search string has two words or fewer, the search does a text search. To do a natural language search, use more than two words. To do a text search with more than two words, put the search term in single or double quotes. This behavior doesn't apply to Copilot chat.
 
-## Licensing requirements
-
-The Natural Language Grid and View Search requires specific user licenses based on the product. If the user does not have the license, the feature will be hidden. This license enforcement will gradually rollout following the feature general availability.
-
-- **Power Apps model driven app**: the user must have a Power Apps premium license with details in the [Power Platform License Guide](go.microsoft.com/fwlink/?linkid=2085130)
-- **Dynamics 365 model driven app**: the user must have a Dynamics 365 enterprise or premium license as outlined in [Dynamics 365 License Guide](go.microsoft.com/fwlink/?linkid=2085130) 
-
-## Admin control
-
-The primary admin control for Natural Language Grid and View Search is moving to the Power Platform admin center under Copilot > Settings > Power Apps > Data Exploration Agent. Learn more about the Copilot hub [here](/power-platform/admin/copilot/copilot-hub). This is gradually rolling out over the next coming weeks.
-
-The existing feature control in Power Platform admin center environment Settings > Feature [link](/power-platform/admin/settings-features) leverages the app setting **Natural Language grid and view search** (NLGridSearchSetting). This app setting will be removed from the Settings > Product> Feature page and rely on the app setting in either the [Model App Designer Setting](/power-apps/maker/model-driven-apps/app-properties) or [Solution Explorer App Settings](/power-apps/maker/data-platform/create-edit-configure-settings#updating-a-setting-definition).
