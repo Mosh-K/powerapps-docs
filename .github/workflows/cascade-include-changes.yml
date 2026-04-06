@@ -9,19 +9,18 @@ on:
     paths:
       - "shared/dynamics365-core/**"
 
-  # Manual: trigger from the Actions tab to test without merging a real PR.
+  # Manual: re-run a cascade when the automatic trigger fails or needs to be retried.
   workflow_dispatch:
     inputs:
       changed_files:
         description: >
-          Space-separated list of include file paths to simulate, e.g.
+          Space-separated list of include file paths, e.g.
           "shared/dynamics365-core/file-a.md shared/dynamics365-core/file-b.md"
         required: true
         type: string
       pr_number:
-        description: "Fake PR number to use in branch names and PR body (e.g. 999)"
+        description: "Source PR number or URL (e.g. 11830 or https://github.com/.../pull/11830)"
         required: true
-        default: "test-1"
         type: string
 
 jobs:
@@ -30,9 +29,6 @@ jobs:
     # For workflow_dispatch: always run.
     if: github.event_name == 'workflow_dispatch' || github.event.pull_request.merged == true
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pull-requests: read
 
     steps:
       - name: Checkout source repo
