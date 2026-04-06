@@ -1,9 +1,9 @@
 
-Copilot visualization enables you to visualize the data in the view in the form of a chart to help you understand trends, patterns and relations in your data easily. The visualization is interactive, based on the visible columns in the view, and can be personalized to support further data exploration.
+Chart visualization enables you to visualize the data in the view in the form of a chart to help you understand trends, patterns and relations in your data easily. The visualization is interactive, based on the visible columns in the view, and can be personalized to support further data exploration.
 
 ## Prerequisites
 
-- Copilot visualization is available for all apps on the web where the [modern, refreshed look](/power-apps/user/modern-fluent-design) is turned on.
+- Chart visualization is available for all apps on the web where the [modern, refreshed look](/power-apps/user/modern-fluent-design) is turned on.
 - See [License requirements](#license-requirements) and [Admin control](#admin-control) for addition settings
 
 ## Visualize data in a view
