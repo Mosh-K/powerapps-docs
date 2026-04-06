@@ -50,12 +50,16 @@ The Power Apps MCP tools improve the more you use them. For example, when you ma
 
 More information: [Create an autonomous agent connected to Power Apps MCP server](add-agents-to-app.md#create-an-autonomous-agent-connected-to-power-apps-mcp-server)
 
-## Onboard your agent feed to use the Power Apps MCP server
+## Onboard your agent to use the Power Apps MCP server
 
-To configure the previous version agent feed to use the Power Apps MCP server, you must do the following:
+To configure an existing agent that was in the previous version of agent feed to use the Power Apps MCP server, you must do the following:
 
 1. Add the Power Apps MCP server to your agent. To do this, open the agent in Copilot Studio and then select **Add tool**.
+> :::image type="content" source="media/power-apps-mcpp-server/copilot-studio-add-tool.png" alt-text="Add a tool to your agent":::  
 1. Search for **Power Apps MCP Server** and select it.
+> :::image type="content" source="media/power-apps-mcpp-server/copilot-studio-power-apps-mcp-search.png" alt-text="Find the Power Apps MCP Server":::
+> :::image type="content" source="media/power-apps-mcpp-server/copilot-studio-add-power-apps-mcp.png" alt-text="Add Power Apps MCP Server":::
+
 1. Update your agent instructions to use each of the tools in the Power Apps MCP Server at the proper times in it's orchestration.
 
    There are examples of how to do this in the remainder of this document.
@@ -101,6 +105,47 @@ Like with the `log_for_review` tool, you can control the task output for title, 
 When this agent is triggered by the creation of a new support case, it should request assistance. In the request, set the title by prefixing the value of issue with “Assistance needed: ”. In the task description include the issue type, issue description, date reported, and the resolved value. Include your reasoning steps. Also include a link to the related Dataverse issue record. Once the user completes the task, continue processing by setting the case status to Closed.
 
 :::image type="content" source="media/add-agents-to-app/request-assistance-with-nav-example.png" alt-text="Request user assistance example":::
+
+## Design your user-in-the-loop
+
+Before writing your agent's instructions, decide where human oversight belongs in your workflow. Use the following questions to identify which moments should use `request_assistance`, which should use
+`log_for_review`, and which the agent can handle autonomously.
+
+| Question | Guidance | Tool |
+|---|---|---|
+| **Where are the stakes high?** | High-stakes outcomes require oversight regardless of agent confidence. Give the agent explicit instructions to pause. | `request_assistance` |
+| **When is user intervention always needed?** | If you can state it as a rule, encode it directly in the agent's instructions. | `request_assistance` |
+| **Which inputs vary unpredictably?** | Unstructured data, edge cases, and novel situations can't always be anticipated. Instruct the agent to surface these dynamically. | `request_assistance` |
+| **Does the agent need an answer to keep going?** | If the agent is blocked without human input, it should wait for a response. If it can proceed and a human audits later, it shouldn't. | `request_assistance` if yes, `log_for_review` if no |
+| **Does a user own the outcome?** | Compliance requirements, high-value approvals, or policy decisions may require a human sign-off even when the agent is confident. | `log_for_review` |
+
+> [!TIP]
+> A well-designed agent doesn't ask for help constantly. Instead, it asks at the right moments. Use `request_assistance` sparingly for genuine decision points, and let `log_for_review` handle the rest.
+
+### Example instructions by pattern
+
+**Explicit rule:**
+> *"For any claim with an estimated loss amount over $5,000, use `request_assistance` to route the claim to the assigned adjuster before proceeding."*
+
+**Dynamic judgment:**
+> *"If the cause of loss is ambiguous or claim documents conflict with each other, use `request_assistance` to flag the claim for adjuster review."*
+
+**Passive oversight:**
+> *"After completing the coverage determination, use `log_for_review` to record the outcome and confirm the claim has been cleared to advance."*
+
+---
+
+## Example: Homeowner's insurance coverage determination agent
+
+The following example shows how these patterns apply to a complete, real-world workflow.
+
+The agent triggers automatically when a new claim is submitted. It pulls the relevant policy, endorsements, and supporting documents from Dataverse, then reasons over them to produce a coverage determination, checking whether the policy was active, whether the claimed peril is covered, and whether any document conflicts affect confidence in the outcome.
+
+From there, the agent uses the Power Apps MCP Server to surface results in Agent Feed based on what it found. If the claim is ambiguous, conflicted, or requires adjuster judgment, the agent uses
+`request_assistance` to create a task for the assigned adjuster with the context they need to act. If the claim is clear-cut, the agent uses `log_for_review` to record the outcome passively and no action is
+required. When an adjuster completes a task, the agent resumes, reads the decision, updates the claim record, and logs a completion notice back to the feed.
+
+The result is a workflow where the agent handles the routine volume autonomously and pulls a human in only at genuine decision points with enough context that the adjuster can act immediately.
 
 ## invoke_data_entry
 
