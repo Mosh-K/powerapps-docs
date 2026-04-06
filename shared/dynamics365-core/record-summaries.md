@@ -7,16 +7,10 @@ Summaries can be accessed in two ways:
 
 The feature enhances user efficiency by delivering context-rich insights directly within the form. Users can interact with summaries to copy content, regenerate updated information, and provide feedback on their relevance, improving both usability and accuracy.
 
-> [!IMPORTANT]
-> - This feature is in public preview for Dynamics 365 apps.
-> - Preview features aren't meant for production use and might have restricted functionality.
-> - Preview features are available before an official release so that customers can get early access and provide feedback.
-
 ## Prerequisite
 
 Each of the following settings must be turned on to see the row summaries for model-driven apps.
 
-- Copilot is turned on for the tenant.
 - The [AI insight cards](/power-platform/admin/settings-features#ai-insight-cards-preview) toggle is turned on for the Power Platform environment. 
 
 ## Limitations
@@ -46,4 +40,17 @@ Here are some actions you can take with summaries:
 - **Feedback**: Use the thumbs up or thumbs down icons to rate the summary's usefulness. Your feedback helps improve future summaries so they better meet your expectations and needs.
 - **Refresh** (forms only): Select the **Refresh** button to regenerate the summary so it reflects the latest updates to the record.
 - **Expand/Collapse** (forms only): In forms, the insights bar is collapsed by default and shows a one-line peek of the summary. Expand the insights bar to see more details.
-  :::image type="content" source="/power-apps/user/media/row_summary_collapsed.png" alt-text="Screenshot that shows a collapsed row summary." lightbox="/power-apps/user/media/row_summary_collapsed.png"::: 
+  :::image type="content" source="/power-apps/user/media/row_summary_collapsed.png" alt-text="Screenshot that shows a collapsed row summary." lightbox="/power-apps/user/media/row_summary_collapsed.png":::
+
+## Licensing requirements
+
+The Row summary feature requires specific user licenses based on the product. If the user does not have the license, the feature will be hidden. This license enforcement will gradually rollout following the feature general availability.
+
+- **Power Apps model driven app**: the user must have a Power Apps premium license with details in the [Power Platform License Guide](go.microsoft.com/fwlink/?linkid=2085130)
+- **Dynamics 365 model driven app**: the user must have a Dynamics 365 enterprise or premium license as outlined in [Dynamics 365 License Guide](go.microsoft.com/fwlink/?linkid=2085130)
+- 
+## Admin control
+
+The primary admin control for row summary is moving to the Power Platform admin center under Copilot > Settings > Power Apps > Summary Agent > Row summaries. Learn more about the Copilot hub [here](/power-platform/admin/copilot/copilot-hub). 
+
+The existing feature control in Power Platform admin center environment Settings > Feature [link](/power-platform/admin/settings-features) leverages the app setting **AI insight cards on forms** (EnableFormInsights) and **AI insight cards on view pages** (EnableGridInsights). These app setting will be removed from the Settings > Product > Feature page and rely on the app setting in either the [Model App Designer Setting](/power-apps/maker/model-driven-apps/app-properties) or [Solution Explorer App Settings](/power-apps/maker/data-platform/create-edit-configure-settings#updating-a-setting-definition).
