@@ -13,10 +13,6 @@ Each of the following settings must be turned on to see the row summaries for mo
 
 - The [AI insight cards](/power-platform/admin/settings-features#ai-insight-cards-preview) toggle is turned on for the Power Platform environment. 
 
-## Limitations
-
-Summaries are only currently supported in the English language.
-
 ## Feature details
 
 ### Accessing record summaries
