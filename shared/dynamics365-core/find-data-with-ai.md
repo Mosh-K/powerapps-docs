@@ -16,7 +16,7 @@ The primary admin control for natural language grid and view search is moving to
 
 In Power Platform admin center, you can't manage **Natural language grid and view search** app setting from **Settings** > **Product** > **Feature** page. You can manage this setting in [model app designer setting](/power-apps/maker/model-driven-apps/app-properties) or [solution explorer app settings](/power-apps/maker/data-platform/create-edit-configure-settings#updating-a-setting-definition).
 
-## Explore data with agents in Microsoft 365 Copilot chat
+## Explore data with agents in Microsoft 365 Copilot
 
 > [!IMPORTANT]
 > This feature is being gradually rolled out across regions and might not be available yet in your region.
@@ -26,8 +26,8 @@ With Microsoft 365 Copilot you have the ability to bring app-based experiences t
 > [!NOTE]
 > To use this capability, you need to [set up an apps agent in Microsoft 365 Copilot](/power-apps/maker/model-driven-apps/app-properties#upcoming).
 
-When users interact with agents in Copilot chat, the agents can search and retrieve data from apps view directly within the conversation. By using natural language, users can find, filter, and review app data without switching to the app experience.
-Copilot interprets the user's request and applies the appropriate filters, sorting, and text search against the underlying view data. The agent returns the results in Copilot chat, presented in a structured, tabular format that reflects the view data.
+When users interact with agents in Copilot, the agents can search and retrieve data from apps view directly within the conversation. By using natural language, users can find, filter, and review app data without switching to the app experience.
+Copilot interprets the user's request and applies the appropriate filters, sorting, and text search against the underlying view data. The agent returns the results in Copilot, presented in a structured, tabular format that reflects the view data.
 Users can continue to work with the returned results in the conversation, iterating with natural language to refine the output until it reflects the exact results they’re looking for.
 
 :::image type="content" source="/power-apps/user/media/find-data-grid-in-copilot.png" alt-text="A screenshot showing how data can be fetched using agent in Microsoft 365 Copilot":::

@@ -91,19 +91,19 @@ The primary admin control for form fill assistance in apps is moving to the Powe
 In Power Platform admin center, you can't manage **Smart paste** or **form fill assist toolbar** from **Settings** > **Product** > **Feature** page. You can manage this setting in [model app designer setting](/power-apps/maker/model-driven-apps/app-properties) or [solution explorer app settings](/power-apps/maker/data-platform/create-edit-configure-settings#updating-a-setting-definition).
 
 
-## Use form fill assistance with agents in Microsoft 365 Copilot chat (preview)
+## Use form fill assistance with agents in Microsoft 365 Copilot (preview)
 
 > [!IMPORTANT]
 > This feature is being gradually rolled out across regions and might not be available yet in your region.
 
 With Microsoft 365 Copilot, you have ability to bring app-based experiences to agents. The app experience can leverage the form fill assistance right in the chat.  
 
-:::image type="content" source="/power-apps/user/media/formfill-in-microsoft365.png" alt-text="Screenshot that shows form fill assistance inside Microsoft 365 Copilot chat.":::
+:::image type="content" source="/power-apps/user/media/formfill-in-microsoft365.png" alt-text="Screenshot that shows form fill assistance inside Microsoft 365 Copilot.":::
 
 > [!NOTE]
 > To use this capability, you need to [set up an apps agent in Microsoft 365 Copilot](/power-apps/maker/model-driven-apps/app-properties#upcoming).
 
-When you interact with agents in Copilot chat, agents can surface forms from apps directly in the conversation. Form fill assistance helps populate these forms by suggesting values based on relevant context, such as existing data you have access to from emails, chats, or any document.
+When you interact with agents in Copilot, agents can surface forms from apps directly in the conversation. Form fill assistance helps populate these forms by suggesting values based on relevant context, such as existing data you have access to from emails, chats, or any document.
 
 The suggestions appear inline in the chat-based form and you can review or edit them before submission. All suggestions are optional and aren't saved until you explicitly accept and save the input.
 
