@@ -1,7 +1,7 @@
 ---
-title: Visualize data in a view with Copilot (preview)
+title: Visualize data in a view with Copilot
 description: Learn how to visualize your data in a view using Copilot in Power Apps.
-ms.date: 02/04/2026
+ms.date: 04/05/2026
 ms.update-cycle: 180-days
 ms.topic: how-to
 ms.subservice: end-user
@@ -16,7 +16,7 @@ search.audienceType:
   - enduser
 ---
 
-# Visualize data in a view with Copilot (preview)
+# Visualize data in a view with Copilot
 
 [!INCLUDE [visualize-data-in-copilot](~/../shared/dynamics365-core/visualize-data-in-copilot.md)]
 
