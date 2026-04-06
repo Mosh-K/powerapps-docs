@@ -16,12 +16,17 @@ The feature enhances user efficiency by delivering context-rich insights directl
 
 Each of the following settings must be turned on to see the row summaries for model-driven apps.
 
-- Copilot is turned on for the tenant.
 - The [AI insight cards](/power-platform/admin/settings-features#ai-insight-cards-preview) toggle is turned on for the Power Platform environment. 
 
 ## Limitations
 
 Summaries are only currently supported in the English language.
+
+## Admin control
+
+The primary admin control for row summary is moving to the Power Platform admin center under Copilot > Settings > Power Apps > Summary Agent > Row summaries. Learn more about the Copilot hub [here](/power-platform/admin/copilot/copilot-hub). 
+
+The existing feature control in Power Platform admin center environment Settings > Feature [link](/power-platform/admin/settings-features) leverages the app setting **AI insight cards on forms** (EnableFormInsights) and **AI insight cards on view pages** (EnableGridInsights). These app setting will be removed from the Settings > Product > Feature page and rely on the app setting in either the [Model App Designer Setting](/power-apps/maker/model-driven-apps/app-properties) or [Solution Explorer App Settings](/power-apps/maker/data-platform/create-edit-configure-settings#updating-a-setting-definition).
 
 ## Feature details
 
