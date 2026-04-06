@@ -5,7 +5,7 @@ ms.date: 04/05/2026
 ms.update-cycle: 180-days
 ms.topic: how-to
 ms.subservice: end-user
-author: aorth-msft
+author: aorth
 ms.author: aorth
 reviewer: shwetamurkute
 ms.reviewer: smurkute
