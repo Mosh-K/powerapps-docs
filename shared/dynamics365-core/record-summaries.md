@@ -1,4 +1,4 @@
-The **Row summary** feature in model-driven apps provides users with a concise, AI-generated overview of key details about a record. Summaries help users quickly understand essential information without manually scanning fields, related records, or activity timelines. You see summaries as a paragraph or bullet points, so they're easy to read.
+The **Row summary** feature in apps provides users with a concise, AI-generated overview of key details about a record. Summaries help users quickly understand essential information without manually scanning fields, related records, or activity timelines. You see summaries as a paragraph or bullet points, so they're easy to read.
 
 Summaries can be accessed in two ways:
 
@@ -9,7 +9,7 @@ The feature enhances user efficiency by delivering context-rich insights directl
 
 ## Prerequisite
 
-Each of the following settings must be turned on to see the row summaries for model-driven apps.
+Each of the following settings must be turned on to see the row summaries for apps.
 
 - The [AI insight cards](/power-platform/admin/settings-features#ai-insight-cards-preview) toggle is turned on for the Power Platform environment. 
 
@@ -17,7 +17,7 @@ Each of the following settings must be turned on to see the row summaries for mo
 
 ### Accessing record summaries
 
-View the record summary from a form or a view when a [table is configured to display summaries](/power-apps/maker/data-platform/configure-form-row-summary#create-a-row-summary).
+View the record summary from a form or view when a [table is configured to display summaries](/power-apps/maker/data-platform/configure-form-row-summary#create-a-row-summary).
 
 - **Forms**: When viewing a record in a main form, the summary appears in the insights bar at the top of the main form.
   :::image type="content" source="/power-apps/user/media/row_summary_expanded.png" alt-text="Screenshot that shows a row summary card in the insights bar on a form." lightbox="/power-apps/user/media/row_summary_expanded.png":::
@@ -44,9 +44,9 @@ The Row summary feature requires specific user licenses based on the product. If
 
 - **Power Apps model driven app**: the user must have a Power Apps premium license with details in the [Power Platform License Guide](https://go.microsoft.com/fwlink/?linkid=2085130)
 - **Dynamics 365 model driven app**: the user must have a Dynamics 365 enterprise or premium license as outlined in [Dynamics 365 License Guide](https://go.microsoft.com/fwlink/?LinkId=866544)
-- 
+
 ## Admin control
 
 The primary admin control for row summary is moving to the Power Platform admin center under Copilot > Settings > Power Apps > Summary Agent > Row summaries. Learn more about the Copilot hub [here](/power-platform/admin/copilot/copilot-hub). 
 
-The existing feature control in Power Platform admin center environment Settings > Feature [link](/power-platform/admin/settings-features) leverages the app setting **AI insight cards on forms** (EnableFormInsights) and **AI insight cards on view pages** (EnableGridInsights). These app setting will be removed from the Settings > Product > Feature page and rely on the app setting in either the [Model App Designer Setting](/power-apps/maker/model-driven-apps/app-properties) or [Solution Explorer App Settings](/power-apps/maker/data-platform/create-edit-configure-settings#updating-a-setting-definition).
+The existing feature control in Power Platform admin center environment **Settings** > **Product** > **Feature** [link](/power-platform/admin/settings-features) leverages the app setting **AI insight cards on forms** (EnableFormInsights) and **AI insight cards on view pages** (EnableGridInsights). These app setting will be removed from the Settings > Product > Feature page and rely on the app setting in either the [Model App Designer Setting](/power-apps/maker/model-driven-apps/app-properties) or [Solution Explorer App Settings](/power-apps/maker/data-platform/create-edit-configure-settings#updating-a-setting-definition).
