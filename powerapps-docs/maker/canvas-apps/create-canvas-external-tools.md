@@ -4,7 +4,7 @@ description: Learn how to use AI code generation tools like Github Copilot and C
 author: shivanichander
 ms.author: shivchan
 ms.reviewer: mduelae
-ms.date: 04/03/2026
+ms.date: 04/06/2026
 ms.topic: how-to
 ms.service: powerapps
 ms.subservice: canvas-maker
@@ -15,6 +15,9 @@ ms.collection:
 - bap-ai-copilot
 applies_to:
 - PowerApps
+ms.contributors:
+  - mikehung
+  - lesaltzm
 ---
 
 # Create and edit canvas apps with AI code generation tools (preview)
