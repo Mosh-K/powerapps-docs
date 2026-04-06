@@ -2,13 +2,19 @@
 
 Users can quickly find, filter, and sort their data by using natural language, so they don't need to use complicated advanced filters. If your administrator turns on **Natural Language Grid and View Search**, you see the natural language search box.
 
-## Natural language search
+## Natural language search in model-driven apps
 
 Use smart grid natural language search to ask data-related questions in natural language. For example, request “cases with high priority with overdue follow-up by date” to filter your view and display only those relevant cases.
 
 :::image type="content" source="/power-apps/user/media/smart_grid_search.png" alt-text="A screenshot of the natural language search box on grid page":::
 
 [!INCLUDE [preview-note-pp](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
+
+### Admin control
+
+The primary admin control for Natural Language Grid and View Search is moving to the Power Platform admin center under Copilot > Settings > Power Apps > Data Exploration Agent. Learn more about the Copilot hub [here](/power-platform/admin/copilot/copilot-hub). This is gradually rolling out over the next coming weeks.
+
+The existing feature control in Power Platform admin center environment Settings > Feature [link](/power-platform/admin/settings-features) leverages the app setting **Natural Language grid and view search** (NLGridSearchSetting). This app setting will be removed from the Settings > Product> Feature page and rely on the app setting in either the [Model App Designer Setting](/power-apps/maker/model-driven-apps/app-properties) or [Solution Explorer App Settings](/power-apps/maker/data-platform/create-edit-configure-settings#updating-a-setting-definition).
 
 ## Explore data with agents in Microsoft 365 Copilot chat
 
@@ -44,8 +50,8 @@ These capabilities aren't supported:
 ## Considerations
 
 - After you run a query, check the generated filter tags to make sure that the filter conditions were correctly interpreted from your natural language query. If any part of your query is missing from the filter tags, the results aren't filtered by that condition.
-- If Copilot doesn't give the desired results, consider modifying your query by:
+- If search doesn't give the desired results, consider modifying your query by:
   - Refer to data columns by the names shown in the grid header.
   - Separate multiple conditions with commas or periods.
-- In model-driven app for grids, if your search string has two words or fewer, Copilot does a text search. To do a Copilot search, use more than two words. To do a text search with more than two words, put the search term in single or double quotes. This behavior doesn't apply to Copilot chat.
+- In model-driven app for grids, if your search string has two words or fewer, the search does a text search. To do a natural language search, use more than two words. To do a text search with more than two words, put the search term in single or double quotes. This behavior doesn't apply to Copilot chat.
 
