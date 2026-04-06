@@ -1,5 +1,5 @@
 
-Users can quickly find, filter, and sort their data by using natural language, so they don't need to use complicated advanced filters. See If your administrator turns on **Natural Language Grid and View Search**, you see the natural language search box.
+Users can quickly find, filter, and sort their data by using natural language, so they don't need to use complicated advanced filters. If your administrator turns on **Natural Language Grid and View Search**, you see the natural language search box.
 
 ## Natural language search in apps
 
