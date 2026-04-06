@@ -11,7 +11,7 @@ Chart visualization enables you to visualize the data in the view in the form of
 
 ## Visualize data in a view
 
-To use this Chart visualization, your administrator must enable it. For more information on how to enable Chart visualization, see [Manage feature settings](/power-platform/admin/settings-features).
+To use this chart visualization, your administrator must enable it. For more information on how to enable chart visualization, see [Manage feature settings](/power-platform/admin/settings-features).
 
 When you navigate to a grid page, you can see the **Visualize** option on top of the page.
 
@@ -23,7 +23,7 @@ When you select **Visualize**, the chart pane opens next to the grid, complement
 
 :::image type="content" source="/power-apps/user/media/visualize-data/visualize-data-chart-highlighted.png" alt-text="Screenshot showing highlighted chart to visualize the data on the page." lightbox="/power-apps/user/media/visualize-data/visualize-data-chart-highlighted.png":::
 
-If Chart visualization generates a visualization for the view, you can edit the chart by changing the chart type, the columns that are visualized, or both. If you add or remove columns from the view, Chart visualization regenerates the chart based on the updated set of columns for the visualization. If you add or remove filters, Chart visualization refreshes the chart without changing the visualization. The asterisk (*) next to the chart name shows that the chart isn't saved yet.
+If chart visualization generates a visualization for the view, you can edit the chart by changing the chart type, the columns that are visualized, or both. If you add or remove columns from the view, chart visualization regenerates the chart based on the updated set of columns for the visualization. If you add or remove filters, chart visualization refreshes the chart without changing the visualization. The asterisk (*) next to the chart name shows that the chart isn't saved yet.
 
 :::image type="content" source="/power-apps/user/media/visualize-data/visualize-data-chart-top.png" alt-text="Screenshot showing three dots in the data visualization chart.":::
 
@@ -78,7 +78,6 @@ To provide feedback about the feature, select the thumbs up or down button on th
 
 ## Admin control
 
-The primary admin control for Visualize data in a view is moving to the Power Platform admin center under Copilot > Settings > Power Apps > Data Exploration Agent > 
-Chart Visualization. Learn more about the Copilot hub [here](/power-platform/admin/copilot/copilot-hub). This is gradually rolling out over the next coming weeks.
-
-The existing feature control in Power Platform admin center environment Settings > Feature [link](/power-platform/admin/settings-features) leverages the app setting **Allow AI to generate charts to visualize the data in a view** (NLChartDataVisualizationSetting). This app setting will be removed from the Settings > Product> Feature page and rely on the app setting in either the [Model App Designer Setting](/power-apps/maker/model-driven-apps/app-properties) or [Solution Explorer App Settings](/power-apps/maker/data-platform/create-edit-configure-settings#updating-a-setting-definition).
+The primary admin control for visualize data in a view is moving to the Power Platform admin center under **Copilot** > **Settings** > **Power Apps** > **Data Exploration Agent** > **Chart Visualization**. Learn more in [Copilot hub](/power-platform/admin/copilot/copilot-hub). This is gradually rolling out over the next coming weeks.
+ 
+In Power Platform admin center, you can't manage **Allow AI to generate charts to visualize the data in a view** app setting from **Settings** > **Product** > **Feature** page. You can manage this setting in [model app designer setting](/power-apps/maker/model-driven-apps/app-properties) or [solution explorer app settings](/power-apps/maker/data-platform/create-edit-configure-settings#updating-a-setting-definition).

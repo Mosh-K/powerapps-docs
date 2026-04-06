@@ -8,12 +8,12 @@ Form fill assistance for suggests AI-generated content for fields, making it eas
 
 ## Limitations
 
-- Inside model-driven apps, suggestions are provided for fields only in main forms and quick create forms. In Microsoft 365 Copilot chat, suggestions are provided for fields based on main forms only.
-- The currently supported field types inside model-driven apps are text, numeric, choice, and date. The currently supported field types inside Microsoft 365 Copilot chat are text, numeric, choice, date, and lookup.
+- Inside apps, suggestions are provided for fields only in main forms and quick create forms. In Microsoft 365 Copilot chat, suggestions are provided for fields based on main forms only.
+- The currently supported field types inside apps are text, numeric, choice, and date. The currently supported field types inside Microsoft 365 Copilot chat are text, numeric, choice, date, and lookup.
 - Fields that have column security aren't currently supported.
 
-## Use form fill assistance in model-driven apps
-Form fill assistance in model-driven apps (Power Apps and Dynamics 365) provides suggestions for blank form fields in three ways:
+## Use form fill assistance in apps
+Form fill assistance in apps (Power Apps and Dynamics 365) provides suggestions for blank form fields in three ways:
 
 1. Based on the user's usage of the app, what information is already available in the form, and their frequently used data.
 1. Based on the copied text the user provides through the **Smart paste (Preview)** capability.
@@ -86,10 +86,11 @@ To use files (preview):
 
 ### Admin control
 
-The primary admin control for form fill assistance in model-driven apps is moving to the Power Platform admin center under Copilot > Settings > Power Apps > Data Entry Agent. Learn more about the Copilot hub [here](/power-platform/admin/copilot/copilot-hub). This is gradually rolling out over the next coming weeks.
-
-The existing feature control in Power Platform admin center environment Settings > Product > Feature [Manage feature settings](/power-platform/admin/settings-features#ai-form-fill-assistance) leverages the app setting "Smart Paste" (FormPredictSmartPasteEnabled) and "Form fill assist toolbar" (FormFileUploadEnabled). These app setting will be removed from the Settings > Product > Feature page and rely on the app setting in either the [Model App Designer Setting](/power-apps/maker/model-driven-apps/app-properties) or [Solution Explorer App Settings](/power-apps/maker/data-platform/create-edit-configure-settings#updating-a-setting-definition).
+The primary admin control for form fill assistance in apps is moving to the Power Platform admin center under **Copilot** > **Settings** > **Power Apps** > **Data Entry Agent**. Learn more in [Copilot hub](/power-platform/admin/copilot/copilot-hub). This is gradually rolling out over the next coming weeks.
  
+In Power Platform admin center, you can't manage **Smart paste** or **form fill assist toolbar** from **Settings** > **Product** > **Feature** page. You can manage this setting in [model app designer setting](/power-apps/maker/model-driven-apps/app-properties) or [solution explorer app settings](/power-apps/maker/data-platform/create-edit-configure-settings#updating-a-setting-definition).
+
+
 ## Use form fill assistance with agents in Microsoft 365 Copilot chat (preview)
 
 > [!IMPORTANT]
