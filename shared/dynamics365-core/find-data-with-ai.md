@@ -59,6 +59,6 @@ The Natural Language Grid and View Search requires specific user licenses based 
 
 ## Admin control
 
-The primary admin control for Natural Language Grid and View Search is Power Platform admin center under Copilot > Settings > Power Apps > Data Exploration Agent. Learn more about the Copilot hub [here](/power-platform/admin/copilot/copilot-hub). This is gradually rolling out over the next coming weeks.
+The primary admin control for Natural Language Grid and View Search is moving to the Power Platform admin center under Copilot > Settings > Power Apps > Data Exploration Agent. Learn more about the Copilot hub [here](/power-platform/admin/copilot/copilot-hub). This is gradually rolling out over the next coming weeks.
 
 The existing feature control in Power Platform admin center environment Settings > Feature [link](/power-platform/admin/settings-features) leverages the app setting **Natural Language grid and view search** (NLGridSearchSetting). This app setting will be removed from the Settings > Product> Feature page and rely on the app setting in either the [Model App Designer Setting](/power-apps/maker/model-driven-apps/app-properties) or [Solution Explorer App Settings](/power-apps/maker/data-platform/create-edit-configure-settings#updating-a-setting-definition).
