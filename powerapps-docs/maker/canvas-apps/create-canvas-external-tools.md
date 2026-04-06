@@ -39,7 +39,7 @@ Using AI code generation tools with canvas apps provides an alternative developm
 1. The AI code generation tool uses installed canvas app skills to discover available controls, connectors, and data sources. It asks clarifying questions about your requirements.
 1. The tool generates `.pa.yaml` files that define your app screens, controls, and Power Fx formulas.
 1. The tool validates the generated code by using the canvas app authoring MCP server and fixes any errors.
-1. Your canvas app syncs with Power Apps Designer through the coauthoring session.
+1. Your canvas app syncs with Power Apps Studio through the coauthoring session.
 
 ## Prerequisites
 
@@ -55,8 +55,8 @@ Before you start, make sure you have the required software and permissions descr
 ### Additional requirements
 
 - A Power Platform environment with a canvas app.
-- Power Apps Designer open with **coauthoring enabled** for your canvas app.
-   - To enable coauthoring, open your app in Power Apps Designer, go to **Settings** > **Updates**, and turn on **Coauthoring**.
+- Power Apps Studio open with **coauthoring enabled** for your canvas app.
+   - To enable coauthoring, open your app in Power Apps Studio, go to **Settings** > **Updates**, and turn on **Coauthoring**.
 
 ## Install the canvas apps plugin
 
@@ -83,8 +83,8 @@ After you install the plugin, you need to configure the canvas app authoring MCP
 
 The canvas apps plugin uses an MCP (Model Context Protocol) server to communicate with Power Apps. Before creating or editing apps, you need to configure this server connection:
 
-1. Open your canvas app in Power Apps Designer and ensure **coauthoring** is enabled.
-1. Copy the Power Apps Designer URL from your browser.
+1. Open your canvas app in Power Apps Studio and ensure **coauthoring** is enabled.
+1. Copy the Power Apps Studio URL from your browser.
 1. Run `/configure-canvas-mcp` in your AI tool, or ask the tool to configure the MCP server.
 1. Provide the Designer URL when prompted. The tool extracts your environment ID, app ID, and cluster information automatically.
 
@@ -104,7 +104,7 @@ The canvas apps plugin provides these skills for working with canvas apps.
 | Edit canvas app | `/edit-canvas-app` | Edit an existing canvas app from a natural language description |
 | Configure Canvas MCP | `/configure-canvas-mcp` | Register the canvas app authoring MCP server with your AI tool |
 
-These skills enable you to describe what you want to build and have the AI tool generate complete `.pa.yaml` files for your canvas app, validate them against the Canvas Authoring server, and sync changes with your live Power Apps Designer session.
+These skills enable you to describe what you want to build and have the AI tool generate complete `.pa.yaml` files for your canvas app, validate them against the Canvas Authoring server, and sync changes with your live Power Apps Studio session.
 
 ## Create a new canvas app
 
@@ -118,9 +118,9 @@ Follow this workflow when building a new app from scratch.
 
 2. Answer clarifying questions. The AI tool discovers available controls and data sources using the MCP server and asks questions to understand your requirements. Be specific about business needs and data requirements and mention any specific UI components or layout preferences.
 
-3. Review code and validate. The AI tool generates `.pa.yaml` files for each screen and validates them using the canvas app authoring MCP server. The tool fixes any validation errors automatically. Your changes sync with the live coauthoring session in Power Apps Designer.
+3. Review code and validate. The AI tool generates `.pa.yaml` files for each screen and validates them using the canvas app authoring MCP server. The tool fixes any validation errors automatically. Your changes sync with the live coauthoring session in Power Apps Studio.
 
-4. Test and iterate. Open your canvas app in Power Apps Designer to preview and test. If you need to make changes, return to your AI tool and describe the updates using natural language.
+4. Test and iterate. Open your canvas app in Power Apps Studio to preview and test. If you need to make changes, return to your AI tool and describe the updates using natural language.
 
 ## Edit an existing canvas app
 
@@ -140,10 +140,10 @@ Use this workflow to update an app that already exists in your coauthoring sessi
 
 ### App doesn't reflect changes
 
-If your changes don't appear in Power Apps Designer:
+If your changes don't appear in Power Apps Studio:
 
 1. Verify the connection to the canvas app authoring MCP server by asking the tool to list available controls.
-1. Ensure coauthoring is enabled in your Power Apps Designer session (**Settings** > **Updates** > **Coauthoring**).
+1. Ensure coauthoring is enabled in your Power Apps Studio session (**Settings** > **Updates** > **Coauthoring**).
 1. Check that the MCP server is configured with the correct environment ID and app ID by running `/configure-canvas-mcp` again.
 
 ### MCP server connection problems
@@ -151,7 +151,7 @@ If your changes don't appear in Power Apps Designer:
 If the canvas app authoring MCP server isn't responding:
 
 1. Verify that the .NET 10 SDK is installed by running `dotnet --version` in your terminal.
-1. Ensure your Power Apps Designer session is still active and coauthoring is enabled.
+1. Ensure your Power Apps Studio session is still active and coauthoring is enabled.
 1. Re-run `/configure-canvas-mcp` with a fresh Designer URL.
 
 ### Revert to a working version
