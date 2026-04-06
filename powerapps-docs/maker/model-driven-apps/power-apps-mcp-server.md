@@ -1,7 +1,7 @@
 ---
-title: "Work with Power Apps MCP Server" 
+title: "Work with Power Apps MCP server" 
 description: Learn about the tools available with the Power Apps MCP Server.
-ms.date: 03/19/2026
+ms.date: 04/02/2026
 ms.reviewer: matp
 ms.topic: how-to
 author: HemantGaur
@@ -11,7 +11,11 @@ ms.service: powerapps
 search.audienceType: 
   - maker
 ---
-# Work with Power Apps MCP Server
+# Work with Power Apps MCP server
+
+> [!IMPORTANT]
+>
+> Starting May 1st, 2026, agent feed only supports agents that use the Power Apps MCP Server to create tasks. Ensure your agents are properly onboarded to the [Power Apps MCP server](power-apps-mcp-server.md) by then to continue using the agent feed. If your agents don't use the Power Apps MCP Server, the agent feed doesn't appear in you model-driven app. More information: [Onboard your agent feed to use the Power Apps MCP server](#onboard-your-agent-feed-to-use-the-power-apps-mcp-server)
 
 The model context protocol (MCP) is an open protocol that enables seamless integration between large language model (LLM) applications and external data sources and tools. Your agent can use the Power Apps MCP Server to communicate with your Power Apps, providing right human-in-the-loop supervision or agentic workflows.
 
@@ -45,6 +49,17 @@ The Power Apps MCP Server equips your agent with two types of capabilities:
 The Power Apps MCP tools improve the more you use them. For example, when you make corrections to suggestions in the agent canvas, the data entry tool improves based on your corrections. To use the enhanced agent feed capabilities, enable and configure the Power Apps MCP server from the Microsoft Copilot Studio agent. Once configured, you can invoke Power Apps MCP server tools from agent instructions using natural language.
 
 More information: [Create an autonomous agent connected to Power Apps MCP server](add-agents-to-app.md#create-an-autonomous-agent-connected-to-power-apps-mcp-server)
+
+## Onboard your agent feed to use the Power Apps MCP server
+
+To configure the previous version agent feed to use the Power Apps MCP server, you must do the following:
+
+1. Add the Power Apps MCP server to your agent. To do this, open the agent in Copilot Studio and then select **Add tool**.
+1. Search for **Power Apps MCP Server** and select it.
+1. Update your agent instructions to use each of the tools in the Power Apps MCP Server at the proper times in it's orchestration.
+
+   There are examples of how to do this in the remainder of this document.
+1. Save and publish your agent.
 
 > [!IMPORTANT]
 >
@@ -89,7 +104,7 @@ When this agent is triggered by the creation of a new support case, it should re
 
 ## invoke_data_entry
 
-The `invoke_data_entry` tool streamlines the creation of Dataverse records by extracting structured information from unstructured inputs such as emails, messages, or documents. When invoked from a Copilot Studio agent, it automatically analyzes incoming content, fills out the appropriate form with the extracted data, and presents the proposed entry as a task in the agent feed for user review and approval. It requires review of the proposed entry by a user before creating the record. This enables fast, reliable data capture with minimal manual effort.
+The `invoke_data_entry` tool streamlines the creation of Dataverse records by extracting structured information from unstructured inputs such as emails, messages, or documents. When invoked from a Copilot Studio agent, it automatically analyzes incoming content, fills out the appropriate form with the extracted data, and presents the proposed entry as a task in the agent feed for user review and approval. It requires review of the proposed entry by a user before creating the record. **Records are never created automatically using the `invoke_data_entry` tool.** This enables fast, reliable data capture with minimal manual effort.
 
 ### Sample instruction - shared email triggered agent
 
@@ -143,8 +158,6 @@ To provide feedback about the invoke_data_entry tool:
 1. Choose to give a compliment, report an issue, or make a suggestion.
 
 :::image type="content" source="media/add-agents-to-app/agent-feed-feedback.png" alt-text="Agent feed feedback button":::
-
-
 
 ## Related articles
 
