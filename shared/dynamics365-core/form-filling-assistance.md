@@ -1,4 +1,4 @@
-Copilot provides form fill assistance for apps. This feature suggests AI-generated content for fields, making it easier and faster to enter data in forms. The suggestions are entirely optional and aren't saved until the user explicitly reviews and accepts them.
+Form fill assistance suggests AI-generated content for fields, making it easier and faster to enter data in forms. The suggestions are entirely optional and aren't saved until the user explicitly reviews and accepts them.
 
 ## Prerequisites
 
@@ -16,8 +16,8 @@ Copilot provides form fill assistance for apps. This feature suggests AI-generat
 Form fill assistance in model-driven apps (Power Apps and Dynamics 365) provides suggestions for blank form fields in three ways:
 
 1. Based on the user's usage of the app, what information is already available in the form, and their frequently used data.
-1. Based on the copied text the user provides through the **Smart paste (Preview)** capability.
-1. Based on the file contents the user provides through the **Files (Preview)** capability.
+1. Based on the copied text the user provides through the **Smart paste** capability.
+1. Based on the file contents the user provides through the **Files** capability.
 
 The feature generates suggestions only for the open tab. It presents suggestions inline in the form.
 
@@ -52,9 +52,9 @@ To provide feedback about the feature, select the thumbs up or down button on th
 >   - Preview features are available before an official release so that customers can get early access and provide feedback.
 > - Due to high demand, this feature might be unavailable intermittently. If the feature is unavailable, try again later.
 
-### Use smart paste (preview)
+### Use smart paste
 
-Smart paste (preview) is a capability that analyzes the form and the text or image you copy to your clipboard. It suggests what text could fill specific fields and provides suggestions inline in the form. To use smart paste (preview):
+Smart paste is a capability that analyzes the form and the text or image you copy to your clipboard. It suggests what text could fill specific fields and provides suggestions inline in the form. To use smart paste (preview):
 
 1. Copy the text or image you want to use to fill in the form.
 1. Select the **smart paste** icon in the command bar. Alternatively, make sure you don't select any specific fields in the form, and then use the regular paste keyboard shortcut (Ctrl+V or Cmd+V).
@@ -65,9 +65,9 @@ You can continue to paste directly, without smart paste (preview), into a specif
 
 :::image type="content" source="/power-apps/user/media/formfill_smartpaste.png" alt-text="Screenshot that shows the smart paste icon in the form's command bar.":::
 
-### Use toolbar and files (preview)
+### Use toolbar and files
 
-Files (preview) is a capability that can reason over the form and the file you provide to suggest what text could fill specific fields. It provides suggestions inline in the form. Supported file types are .txt, .docx, .csv, .pdf, .png, .jpg, .jpeg, and .bmp. Files classified with sensitivity labels aren't supported.
+Files is a capability that can reason over the form and the file you provide to suggest what text could fill specific fields. It provides suggestions inline in the form. Supported file types are .txt, .docx, .csv, .pdf, .png, .jpg, .jpeg, and .bmp. Files classified with sensitivity labels aren't supported.
 
 The form fill assist toolbar 
 1. Show or hide the form fill assist toolbar by using the show/hide button.
@@ -76,15 +76,30 @@ The form fill assist toolbar
 
 :::image type="content" source="/power-apps/user/media/formfill_toolbar.png" alt-text="Screenshot that shows the form fill assist toolbar.":::
 
-To use files (preview):
+To use files:
 1. Use the file selector button to select the file you want to use to fill in the form. Alternatively, drag and drop the file in the toolbar.
 1. Hover over the file's source tag to identify which fields are suggested based on the file's contents.
 1. To accept all suggestions from the sources listed in the toolbar, select the accept all button located to the right of the toolbar. This button identifies the number of open suggestions in the form that it accepts.
 1. To clear suggestions from the file, select the clear button in the tag. If the toolbar lists multiple sources, clear all suggestions by using the clear all button in the toolbar.
 
 :::image type="content" source="/power-apps/user/media/formfill_files.png" alt-text="Screenshot that shows the files capability in the form fill assist toolbar.":::
- 
+
+### Licensing requirements
+
+The form fill assistance in model-driven apps requires specific user licenses based on the product. If the user does not have the license, the feature will be hidden. This license enforcement will gradually rollout following the feature general availability.
+
+- **Power Apps model driven app**: the user must have a Power Apps premium license with details in the [Power Platform License Guide](go.microsoft.com/fwlink/?linkid=2085130)
+- **Dynamics 365 model driven app**: the user must have a Dynamics 365 enterprise or premium license as outlined in [Dynamics 365 License Guide](go.microsoft.com/fwlink/?linkid=2085130) 
+
+### Admin control
+
+The primary admin control for form fill assistance in model-driven apps is moving to the Power Platform admin center under Copilot > Settings > Power Apps > Data Entry Agent. Learn more about the Copilot hub [here](/power-platform/admin/copilot/copilot-hub). This is gradually rolling out over the next coming weeks.
+
+The existing feature control in Power Platform admin center environment Settings > Product > Feature [Manage feature settings](/power-platform/admin/settings-features#ai-form-fill-assistance) leverages the app setting "Smart Paste" (FormPredictSmartPasteEnabled) and "Form fill assist toolbar" (FormFileUploadEnabled). These app setting will be removed from the Settings > Product > Feature page and rely on the app setting in either the [Model App Designer Setting](/power-apps/maker/model-driven-apps/app-properties) or [Solution Explorer App Settings](/power-apps/maker/data-platform/create-edit-configure-settings#updating-a-setting-definition).
+
 ## Use form fill assistance with agents in Microsoft 365 Copilot chat (preview)
+
+[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
 > [!IMPORTANT]
 > This feature is being gradually rolled out across regions and might not be available yet in your region.
@@ -101,3 +116,7 @@ When you interact with agents in Copilot chat, agents can surface forms from app
 The suggestions appear inline in the chat-based form and you can review or edit them before submission. All suggestions are optional and aren't saved until you explicitly accept and save the input.
 
 After submission, the data is saved to the connected app and is available, just as if you complete the form directly in the app.
+
+[!INCLUDE [preview-note-pp](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
+
+
