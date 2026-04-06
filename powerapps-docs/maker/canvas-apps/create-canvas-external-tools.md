@@ -19,14 +19,11 @@ applies_to:
 
 # Create and edit canvas apps with AI code generation tools (preview)
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
 This article describes how to use AI code generation tools, such as GitHub Copilot CLI and Claude Code, to create and edit canvas apps in Power Apps. By using this approach, you can integrate advanced code generation capabilities directly into your development workflow. You can create new canvas apps or iterate on existing ones by using natural language instructions.
 
-> [!IMPORTANT]
->
-> - This is a preview feature.
-> - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
+[!INCLUDE [preview-note-pp](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
 
 Using AI code generation tools with canvas apps provides an alternative development approach that complements the UI-based experience in Power Apps (make.powerapps.com). 
 
