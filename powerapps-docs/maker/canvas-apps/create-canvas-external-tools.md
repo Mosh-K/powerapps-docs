@@ -90,7 +90,7 @@ The canvas apps plugin uses an MCP (Model Context Protocol) server to communicat
 
 By using the MCP server, your AI tool can list and describe available controls, discover APIs and data sources, validate app YAML, and sync app state from live coauthoring sessions.
 
-The canvas-apps plugin [repository](https://aka.ms/canvas-authoring-mcp) includes control documentation, design guidance, technical reference, and workflow instructions necessary to create code adhering to canvas app requirements. Consult the repository [readme](https://aka.ms/canvas-authoring-mcp/README.md) for information on accessing and using these resources with your preferred tool.
+The canvas-apps plugin [repository](https://aka.ms/canvas-authoring-mcp) includes control documentation, design guidance, technical reference, and workflow instructions necessary to create code adhering to canvas app requirements. Refer to the repository for information on accessing and using these resources with your preferred tool.
 
 ## Skills overview
 
