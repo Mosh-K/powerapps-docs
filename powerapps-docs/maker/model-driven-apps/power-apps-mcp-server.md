@@ -55,13 +55,13 @@ More information: [Create an autonomous agent connected to Power Apps MCP server
 To configure an existing agent that was in the previous version of agent feed to use the Power Apps MCP server, you must do the following:
 
 1. Add the Power Apps MCP server to your agent. To do this, open the agent in Copilot Studio and then select **Add tool**.
-> :::image type="content" source="media/power-apps-mcp-server/copilot-studio-add-tool.png" alt-text="Add a tool to your agent":::  
-1. Search for **Power Apps MCP Server** and select it.
-> :::image type="content" source="media/power-apps-mcp-server/copilot-studio-power-apps-mcp-search.png" alt-text="Find the Power Apps MCP Server":::
-> :::image type="content" source="media/power-apps-mcp-server/copilot-studio-add-power-apps-mcp.png" alt-text="Add Power Apps MCP Server":::
+   :::image type="content" source="media/power-apps-mcp-server/copilot-studio-add-tool.png" alt-text="Add a tool to your agent" lightbox="media/power-apps-mcp-server/copilot-studio-add-tool.png":::  
+1. Search for **Power Apps MCP Server**.
+   :::image type="content" source="media/power-apps-mcp-server/copilot-studio-power-apps-mcp-search.png" alt-text="Find the Power Apps MCP Server" lightbox="media/power-apps-mcp-server/copilot-studio-add-tool.png":::
+1. Select **Add and configure**.
+   :::image type="content" source="media/power-apps-mcp-server/copilot-studio-add-power-apps-mcp.png" alt-text="Add Power Apps MCP Server lightbox="media/power-apps-mcp-server/copilot-studio-add-tool.png"":::
 
 1. Update your agent instructions to use each of the tools in the Power Apps MCP Server at the proper times in it's orchestration.
-
    There are examples of how to do this in the remainder of this document.
 1. Save and publish your agent.
 
@@ -141,7 +141,7 @@ The following example shows how these patterns apply to a complete, real-world w
 
 The agent triggers automatically when a new claim is submitted. It pulls the relevant policy, endorsements, and supporting documents from Dataverse, then reasons over them to produce a coverage determination, checking whether the policy was active, whether the claimed peril is covered, and whether any document conflicts affect confidence in the outcome.
 
-From there, the agent uses the Power Apps MCP Server to surface results in Agent Feed based on what it found. If the claim is ambiguous, conflicted, or requires adjuster judgment, the agent uses
+From there, the agent uses the Power Apps MCP server to surface results in the agent feed based on what it found. If the claim is ambiguous, conflicted, or requires adjuster judgment, the agent uses
 `request_assistance` to create a task for the assigned adjuster with the context they need to act. If the claim is clear-cut, the agent uses `log_for_review` to record the outcome passively and no action is
 required. When an adjuster completes a task, the agent resumes, reads the decision, updates the claim record, and logs a completion notice back to the feed.
 
