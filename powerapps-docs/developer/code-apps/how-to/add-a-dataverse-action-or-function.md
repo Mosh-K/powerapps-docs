@@ -14,13 +14,13 @@ This guide walks you through discovering and adding Dataverse operations (action
 to a Power Apps code app using the `find-dataverse-api` and `add-dataverse-api` CLI commands.
 
 > [!NOTE]
-> This is a new feature that is available only in the latest version of the new npm CLI (preview) and not in the classic Power Apps CLI (pac CLI).
-> Refer to [Quickstart with npm CLI](npm-quickstart.md) for more information.
+> This feature is available only in the latest npm CLI (preview), not in the classic Power Apps CLI (pac CLI).
+> For more information, see [Quickstart with npm CLI](npm-quickstart.md).
 
 ## Prerequisites
 
 - A Power Apps code app initialized with `npx power-apps init`
-- Authenticated CLI session (`npx power-apps` will prompt if needed)
+- Authenticated CLI session (`npx power-apps` prompts if needed)
 - Access to the Dataverse environment containing the operation you want to use
 
 ## Step 1: Discover available operations
@@ -73,7 +73,7 @@ npx power-apps add-dataverse-api --api-name WinOpportunity
 npx power-apps add-dataverse-api -n WinOpportunity
 ```
 
-The command will:
+The command:
 
 1. Fetch the operation definition from your environment's Dataverse `$metadata`.
 2. Write a schema file at `<schemaPath>/dataverse/WinOpportunity.Schema.json`.
@@ -85,7 +85,7 @@ The command will:
 5. Regenerate `dataSourcesInfo.ts` to include the new operation.
 6. Generate a TypeScript model and service class under `<codeGenPath>/generated/`.
 
-On success you will see:
+On success, you see:
 
 ```
 Dataverse API 'WinOpportunity' added successfully.
@@ -117,31 +117,31 @@ Parameter and return types are derived from the Dataverse schema:
 - GUID parameters are typed as `string`.
 - Lookup parameters that reference a Dataverse entity are typed as `Record<string, unknown>`.
 - Operations with no return value produce `Promise<IOperationResult<void>>`.
-- Operations that return a scalar (e.g. `boolean`, `number`) produce
+- Operations that return a scalar (for example, `boolean`, `number`) produce
   `Promise<IOperationResult<T>>` with the corresponding TypeScript type.
 - Operations that return an entity or collection produce `Promise<IOperationResult<Record<string, unknown>>>`.
 
-## Re-running for the same operation
+## Rerunning for the same operation
 
 Running `add-dataverse-api` again with the same `--api-name` is safe and idempotent:
 
 - The schema file is overwritten with the latest definition from Dataverse.
 - `dataSourcesInfo.ts` is regenerated.
-- `power.config.json` entries are deduped — no duplicates are written.
+- `power.config.json` entries are deduped—no duplicates are written.
 - Entity schema files that already exist are **not** overwritten.
 
-Use this to pick up changes to an operation's signature after it has been updated in the
+Use this command to pick up changes to an operation's signature after an update in the
 environment.
 
 ## Files created or modified
 
 | File                                                   | What changes                                                           |
 | ------------------------------------------------------ | ---------------------------------------------------------------------- |
-| `<schemaPath>/dataverse/<ApiName>.Schema.json`         | Created or overwritten — operation schema                              |
-| `<schemaPath>/dataverse/<EntityName>.Schema.json`      | Created (skipped if already exists) — schemas for referenced entities  |
+| `<schemaPath>/dataverse/<ApiName>.Schema.json`         | Created or overwritten—operation schema                                |
+| `<schemaPath>/dataverse/<EntityName>.Schema.json`      | Created (skipped if already exists)—schemas for referenced entities    |
 | `<schemaPath>/appschemas/dataSourcesInfo.ts`           | Regenerated to include the new operation                               |
 | `power.config.json`                                    | Updated with `default.cds` reference and (if bound) the binding entity |
-| `<codeGenPath>/generated/models/<EntityName>Model.ts`  | Generated TypeScript model(s) for referenced entity data sources       |
+| `<codeGenPath>/generated/models/<EntityName>Model.ts`  | Generated TypeScript models for referenced entity data sources         |
 | `<codeGenPath>/generated/services/<ApiName>Service.ts` | Generated service class (one file per operation)                       |
 
 ## Bound vs. unbound operations
@@ -152,26 +152,26 @@ environment.
 **Unbound operations** are environment-wide and do not require a record ID. Their methods take
 only the declared parameters.
 
-Both kinds are added with the same command — the CLI detects the operation type automatically.
+Both kinds are added with the same command—the CLI detects the operation type automatically.
 
 ## Troubleshooting
 
-**"No operations found"** — the search is substring-based and case-insensitive, but only matches
+**"No operations found"**—the search is substring-based and case-insensitive, but only matches
 the operation name. Try a shorter or different term. Use `--json` to confirm the raw response.
 
-**Stale generated files** — if you renamed or removed an operation and the old generated files
-remain, delete them manually and re-run `add-dataverse-api` to regenerate.
+**Stale generated files**—if you renamed or removed an operation and the old generated files
+remain, delete them manually and rerun `add-dataverse-api` to regenerate.
 
-**`pac code add-data-source` skips the action or function** — the schema files
+**`pac code add-data-source` skips the action or function**—the schema files
 generated by `add-dataverse-api` use a `Microsoft.PowerApps/dataverseOperation` type that is not
-recognized by the PAC CLI. If any operation schema files are present in the dataverse schema
-folder, `pac code add-data-source` will skip these with:
+recognized by the PAC CLI. If any operation schema files are present in the Dataverse schema
+folder, `pac code add-data-source` skips them with:
 
 ```
 Skipping unsupported Dataverse operation schema '...AddRecurrence.Schema.json':
 ```
 
-This just means that the PAC CLI doesn't support the `Microsoft.PowerApps/dataverseOperation`
+This behavior means the PAC CLI doesn't support the `Microsoft.PowerApps/dataverseOperation`
 schema type, so it skips these files instead of failing.
-The other schema files that represent Dataverse entity data sources or connectors are still
-supported by the PAC CLI and can be added using `pac code add-data-source`.
+The PAC CLI still supports the other schema files that represent Dataverse entity data sources or
+connectors, and you can add them by using `pac code add-data-source`.
