@@ -3,7 +3,7 @@ title: "How to: Connect your code app to Dataverse"
 description: "Learn how to connect your code app to Dataverse"
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 03/05/2026
+ms.date: 04/07/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
@@ -35,10 +35,11 @@ This guide helps developers use the [Power Apps client library for code apps](ht
 
 The following scenarios are supported when connecting to Dataverse using the [Power Apps client library for code apps](https://www.npmjs.com/package/@microsoft/power-apps):
 
-- Add Dataverse entities to code apps using the PAC CLI
+- Add Dataverse entities to code apps
 - Retrieve formatted values/display names for option sets
 - [Get metadata for Dataverse tables](get-table-metadata.md)
 - Lookups. Currently, you'll need to use the guidance to [associate with a single-valued navigation property](../../data-platform/webapi/associate-disassociate-entities-using-web-api.md#associate-with-a-single-valued-navigation-property) or [associate records on create](../../data-platform/webapi/create-entity-web-api.md#associate-table-rows-on-create) when working with lookups. A dedicated how-to guide is coming soon, and we're actively working to make lookups easier to use in code apps.
+- Image and file upload and download (preview). Functions are generated as part of `src/generated/services` when adding Dataverse as a data source via the [npm-based cli](/power-apps/developer/code-apps/how-to/npm-quickstart).
 - Perform CRUD operations:
 
   - Create
@@ -56,7 +57,7 @@ The following scenarios are supported when connecting to Dataverse using the [Po
 - Paging support
 
 > [!TIP]
-> Looking for a complete working example? The [Dataverse demo app](https://github.com/microsoft/PowerAppsCodeApps/tree/main/samples/Dataverse) demonstrates all the patterns covered in this article — CRUD operations, lookup fields, and generated services — in a React/TypeScript app you can explore and extend. To run the app yourself, follow the setup instructions in [PowerAppsCodeApps/samples/Dataverse/DEVELOPMENT.md](https://github.com/microsoft/PowerAppsCodeApps/blob/main/samples/Dataverse/DEVELOPMENT.md) to configure it for your environment.
+> Looking for a complete working example? The [Dataverse demo app](https://github.com/microsoft/PowerAppsCodeApps/tree/main/samples/Dataverse) demonstrates all the patterns covered in this article — CRUD operations, lookup fields, image/file upload/download, and generated services — in a React/TypeScript app you can explore and extend. To run the app yourself, follow the setup instructions in [PowerAppsCodeApps/samples/Dataverse/DEVELOPMENT.md](https://github.com/microsoft/PowerAppsCodeApps/blob/main/samples/Dataverse/DEVELOPMENT.md) to configure it for your environment.
 
 ## Set up your code app
 
