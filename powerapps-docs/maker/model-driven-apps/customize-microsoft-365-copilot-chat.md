@@ -47,7 +47,7 @@ Use the following information to find the best solution for your organization:
 
 ## Related information
 
-- [Add Microsoft 365 Copilot for app users in model-driven apps (preview)](add-microsoft-365-copilot.md)
+- [Add Microsoft 365 Copilot for app users in model-driven apps](add-microsoft-365-copilot.md)
 - [Use Microsoft 365 Copilot in model-driven apps](../../user/use-microsoft-365-copilot-model-driven-apps.md)
 - [Add Microsoft 365 Copilot for app users in canvas apps (preview)](../../maker/canvas-apps/microsoft-365-copilot-canvas-app.md)
-- [Use Microsoft 365 Copilot in canvas apps](../../user//use-microsoft-365-copilot-canvas-apps.md)
+- [Use Microsoft 365 Copilot in canvas apps (preview)](../../user//use-microsoft-365-copilot-canvas-apps.md)
