@@ -39,7 +39,9 @@ When enabled, users can open Microsoft 365 Copilot in their canvas app by select
 
 ## Prerequisites
 
-- To use Microsoft 365 Copilot in canvas apps with Dataverse, Dataverse Search must be set to **Default** or **On** for the environment. For more information, see [Know what this means for generative AI experiences](/power-platform/admin/configure-relevance-search-organization#what-dataverse-search-means-for-generative-ai-enabled-experiences).
+To use Microsoft 365 Copilot in canvas apps:
+- Your tenant must be set to allow **Dataverse data available in Microsoft 365 Copilot**. More information: [Enable Microsoft 365 admin center Copilot Dataverse settings](https://learn.microsoft.com/power-apps/maker/data-platform/data-platform-intelligence#enable-microsoft-365-admin-center-copilot-dataverse-settings-preview) 
+- Dataverse Search must be set to **Default** or **On** for the environment. More information: [Know what this means for generative AI experiences](/power-platform/admin/configure-relevance-search-organization#what-dataverse-search-means-for-generative-ai-enabled-experiences)
 
 > [!NOTE]
 > To use the Microsoft 365 Copilot feature in your app, users must have a Microsoft 365 Copilot license.
