@@ -44,6 +44,9 @@ If the default value is `'none'`, your custom values replace the default value.
 If your environment has a Dataverse instance, you can configure the CSP settings in the [Power Platform admin center](#configure-csp-by-using-power-platform-admin-center).
 Otherwise, see the instructions for configuring CSP by using the [REST API](#configure-csp-by-using-rest-api).
 
+> [!NOTE]
+> For management at scale, you can configure this setting for multiple environments at once by using [environment groups and rules](/power-platform/admin/environment-groups?branch=main).
+
 ## Prerequisites
 
 - You must be an administrator of the environment to configure CSP settings.
