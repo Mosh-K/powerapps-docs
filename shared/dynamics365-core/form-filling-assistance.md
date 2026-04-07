@@ -91,6 +91,8 @@ The form fill assistance in model-driven apps requires specific user licenses ba
 - **Power Apps model driven app**: the user must have a Power Apps premium license with details in the [Power Platform License Guide](https://go.microsoft.com/fwlink/?linkid=2085130)
 - **Dynamics 365 model driven app**: the user must have a Dynamics 365 enterprise or premium license as outlined in [Dynamics 365 License Guide](https://go.microsoft.com/fwlink/?LinkId=866544) 
 
+Usage may be subject to service limits or throttling. Microsoft reserves the right to update the limits.
+
 ### Admin control
 
 The primary admin control for form fill assistance in apps is moving to the Power Platform admin center under **Copilot** > **Settings** > **Power Apps** > **Data Entry Agent**. Learn more in [Copilot hub](/power-platform/admin/copilot/copilot-hub). This is gradually rolling out over the next coming weeks.
