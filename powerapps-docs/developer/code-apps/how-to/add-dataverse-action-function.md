@@ -11,8 +11,8 @@ ms.reviewer:
 
 # How to: Add a Dataverse action or function to your code app
 
-This guide walks you through discovering and adding Dataverse operations (actions and functions)
-to a Power Apps code app using the `find-dataverse-api` and `add-dataverse-api` CLI commands.
+This guide shows you how to discover and add Dataverse operations (actions and functions)
+to a Power Apps code app by using the `find-dataverse-api` and `add-dataverse-api` CLI commands.
 
 > [!NOTE]
 > This feature is available only in the latest npm CLI (preview), not in the classic Power Apps CLI (pac CLI).
@@ -66,7 +66,7 @@ The search is a case-insensitive substring match on the operation name.
 
 ## Step 2: Add the operation to your app
 
-Once you know the operation name, run:
+After you find the operation name, run the following command:
 
 ```bash
 npx power-apps add-dataverse-api --api-name WinOpportunity
@@ -76,15 +76,15 @@ npx power-apps add-dataverse-api -n WinOpportunity
 
 The command:
 
-1. Fetch the operation definition from your environment's Dataverse `$metadata`.
-2. Write a schema file at `<schemaPath>/dataverse/WinOpportunity.Schema.json`.
-3. Save schema files for any Dataverse entities referenced by the operation's parameters or return
-   type (skipped if they already exist).
-4. Update `power.config.json`:
-   - Add `databaseReferences["default.cds"]` if not already present.
-   - For bound operations, add the binding entity to `dataSources` if not already present.
-5. Regenerate `dataSourcesInfo.ts` to include the new operation.
-6. Generate a TypeScript model and service class under `<codeGenPath>/generated/`.
+1. Fetches the operation definition from your environment's Dataverse `$metadata`.
+1. Writes a schema file at `<schemaPath>/dataverse/WinOpportunity.Schema.json`.
+1. Saves schema files for any Dataverse entities referenced by the operation's parameters or return
+   type (skips if they already exist).
+1. Updates `power.config.json`:
+   - Adds `databaseReferences["default.cds"]` if not already present.
+   - For bound operations, adds the binding entity to `dataSources` if not already present.
+1. Regenerates `dataSourcesInfo.ts` to include the new operation.
+1. Generates a TypeScript model and service class under `<codeGenPath>/generated/`.
 
 On success, you see:
 
@@ -113,7 +113,7 @@ const result = await WinOpportunityService.WinOpportunity(
 );
 ```
 
-Parameter and return types are derived from the Dataverse schema:
+Parameter and return types come from the Dataverse schema:
 
 - GUID parameters are typed as `string`.
 - Lookup parameters that reference a Dataverse entity are typed as `Record<string, unknown>`.
@@ -128,8 +128,8 @@ Running `add-dataverse-api` again with the same `--api-name` is safe and idempot
 
 - The schema file is overwritten with the latest definition from Dataverse.
 - `dataSourcesInfo.ts` is regenerated.
-- `power.config.json` entries are deduped—no duplicates are written.
-- Entity schema files that already exist are **not** overwritten.
+- `power.config.json` entries are deduped - no duplicates are written.
+- Entity schema files that already exist aren't overwritten.
 
 Use this command to pick up changes to an operation's signature after an update in the
 environment.
@@ -138,8 +138,8 @@ environment.
 
 | File                                                   | What changes                                                           |
 | ------------------------------------------------------ | ---------------------------------------------------------------------- |
-| `<schemaPath>/dataverse/<ApiName>.Schema.json`         | Created or overwritten—operation schema                                |
-| `<schemaPath>/dataverse/<EntityName>.Schema.json`      | Created (skipped if already exists)—schemas for referenced entities    |
+| `<schemaPath>/dataverse/<ApiName>.Schema.json`         | Created or overwritten - operation schema                                |
+| `<schemaPath>/dataverse/<EntityName>.Schema.json`      | Created (skipped if already exists) - schemas for referenced entities    |
 | `<schemaPath>/appschemas/dataSourcesInfo.ts`           | Regenerated to include the new operation                               |
 | `power.config.json`                                    | Updated with `default.cds` reference and (if bound) the binding entity |
 | `<codeGenPath>/generated/models/<EntityName>Model.ts`  | Generated TypeScript models for referenced entity data sources         |
