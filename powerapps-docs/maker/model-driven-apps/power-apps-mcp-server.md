@@ -59,7 +59,7 @@ To configure an existing agent that was in the previous version of agent feed to
 1. Search for **Power Apps MCP Server**.
    :::image type="content" source="media/power-apps-mcp-server/copilot-studio-power-apps-mcp-search.png" alt-text="Find the Power Apps MCP Server" lightbox="media/power-apps-mcp-server/copilot-studio-add-tool.png":::
 1. Select **Add and configure**.
-   :::image type="content" source="media/power-apps-mcp-server/copilot-studio-add-power-apps-mcp.png" alt-text="Add Power Apps MCP Server lightbox="media/power-apps-mcp-server/copilot-studio-add-tool.png":::
+   :::image type="content" source="media/power-apps-mcp-server/copilot-studio-add-power-apps-mcp.png" alt-text="Add Power Apps MCP Server" lightbox="media/power-apps-mcp-server/copilot-studio-add-tool.png":::
 
 1. Update your agent instructions to use each of the tools in the Power Apps MCP Server at the proper times in it's orchestration.
    There are examples of how to do this in the remainder of this document.
