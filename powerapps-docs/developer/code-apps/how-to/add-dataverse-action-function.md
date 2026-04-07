@@ -136,6 +136,8 @@ environment.
 
 ## Files created or modified
 
+The `add-dataverse-api` command creates or updates the following files in your project:
+
 | File                                                   | What changes                                                           |
 | ------------------------------------------------------ | ---------------------------------------------------------------------- |
 | `<schemaPath>/dataverse/<ApiName>.Schema.json`         | Created or overwritten - operation schema                                |
@@ -176,3 +178,8 @@ This behavior means the PAC CLI doesn't support the `Microsoft.PowerApps/dataver
 schema type, so it skips these files instead of failing.
 The PAC CLI still supports the other schema files that represent Dataverse entity data sources or
 connectors, and you can add them by using `pac code add-data-source`.
+
+## Related articles
+
+[Use Web API actions](../../data-platform/webapi/use-web-api-actions.md)   
+[Use Web API functions](../../data-platform/webapi/use-web-api-functions.md)
