@@ -1,7 +1,7 @@
 ---
 title: "Work with Power Apps MCP server" 
 description: Learn about the tools available with the Power Apps MCP Server.
-ms.date: 04/02/2026
+ms.date: 04/07/2026
 ms.reviewer: matp
 ms.topic: how-to
 author: HemantGaur
@@ -15,7 +15,7 @@ search.audienceType:
 
 > [!IMPORTANT]
 >
-> Starting May 1st, 2026, agent feed only supports agents that use the Power Apps MCP Server to create tasks. Ensure your agents are properly onboarded to the [Power Apps MCP server](power-apps-mcp-server.md) by then to continue using the agent feed. If your agents don't use the Power Apps MCP Server, the agent feed doesn't appear in you model-driven app. More information: [Onboard your agent feed to use the Power Apps MCP server](#onboard-your-agent-feed-to-use-the-power-apps-mcp-server)
+> Starting May 1st, 2026, agent feed only supports agents that use the Power Apps MCP Server to create tasks. Ensure your agents are properly onboarded to the [Power Apps MCP server](power-apps-mcp-server.md) by then to continue using the agent feed. If your agents don't use the Power Apps MCP Server, the agent feed doesn't appear in you model-driven app. More information: [Onboard your agent feed to use the Power Apps MCP server](#onboard-your-agent-to-use-the-power-apps-mcp-server)
 
 The model context protocol (MCP) is an open protocol that enables seamless integration between large language model (LLM) applications and external data sources and tools. Your agent can use the Power Apps MCP Server to communicate with your Power Apps, providing right human-in-the-loop supervision or agentic workflows.
 
@@ -55,10 +55,10 @@ More information: [Create an autonomous agent connected to Power Apps MCP server
 To configure an existing agent that was in the previous version of agent feed to use the Power Apps MCP server, you must do the following:
 
 1. Add the Power Apps MCP server to your agent. To do this, open the agent in Copilot Studio and then select **Add tool**.
-> :::image type="content" source="media/power-apps-mcpp-server/copilot-studio-add-tool.png" alt-text="Add a tool to your agent":::  
+> :::image type="content" source="media/power-apps-mcp-server/copilot-studio-add-tool.png" alt-text="Add a tool to your agent":::  
 1. Search for **Power Apps MCP Server** and select it.
-> :::image type="content" source="media/power-apps-mcpp-server/copilot-studio-power-apps-mcp-search.png" alt-text="Find the Power Apps MCP Server":::
-> :::image type="content" source="media/power-apps-mcpp-server/copilot-studio-add-power-apps-mcp.png" alt-text="Add Power Apps MCP Server":::
+> :::image type="content" source="media/power-apps-mcp-server/copilot-studio-power-apps-mcp-search.png" alt-text="Find the Power Apps MCP Server":::
+> :::image type="content" source="media/power-apps-mcp-server/copilot-studio-add-power-apps-mcp.png" alt-text="Add Power Apps MCP Server":::
 
 1. Update your agent instructions to use each of the tools in the Power Apps MCP Server at the proper times in it's orchestration.
 
