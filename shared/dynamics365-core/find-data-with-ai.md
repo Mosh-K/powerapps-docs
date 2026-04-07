@@ -12,7 +12,9 @@ Use smart grid natural language search to ask data-related questions in natural 
 The Natural Language Grid and View Search requires specific user licenses based on the product. If the user does not have the license, the feature will be hidden. This license enforcement will gradually rollout following the feature general availability.
 
 - **Power Apps model driven app**: the user must have a Power Apps premium license with details in the [Power Platform License Guide](https://go.microsoft.com/fwlink/?linkid=2085130)
-- **Dynamics 365 model driven app**: the user must have a Dynamics 365 enterprise or premium license as outlined in [Dynamics 365 License Guide](https://go.microsoft.com/fwlink/?LinkId=866544) 
+- **Dynamics 365 model driven app**: the user must have a Dynamics 365 enterprise or premium license as outlined in [Dynamics 365 License Guide](https://go.microsoft.com/fwlink/?LinkId=866544)
+
+Usage may be subject to service limits or throttling. Microsoft reserves the right to update the limits.
 
 ### Admin control
 
