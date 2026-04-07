@@ -41,13 +41,13 @@ When enabled, users can open Microsoft 365 Copilot in their canvas app by select
 
 To use Microsoft 365 Copilot in canvas apps, make sure the following prerequisites are met:
 
-- Your tenant must be set to allow **Dataverse data available in Microsoft 365 Copilot**. For more information, see [Enable Microsoft 365 admin center Copilot Dataverse settings](../data-platform/data-platform-intelligence.md#enable-microsoft-365-admin-center-copilot-dataverse-settings-preview)
-- Dataverse Search must be set to **Default** or **On** for the environment. For more information, see [Understand what this means for generative AI experiences](/power-platform/admin/configure-relevance-search-organization#what-dataverse-search-means-for-generative-ai-enabled-experiences)
+- Your tenant must be set to allow **Dataverse data available in Microsoft 365 Copilot**. For more information, see [Enable Microsoft 365 admin center Copilot Dataverse settings](../data-platform/data-platform-intelligence.md#enable-microsoft-365-admin-center-copilot-dataverse-settings-preview).
+- Dataverse Search must be set to **Default** or **On** for the environment. For more information, see [Understand what this means for generative AI experiences](/power-platform/admin/configure-relevance-search-organization#what-dataverse-search-means-for-generative-ai-enabled-experiences).
 - To use the Microsoft 365 Copilot feature in your app, users must have a Microsoft 365 Copilot license.
 
 > [!NOTE]
 >
-> - Microsoft 365 Copilot for canvas apps with Dataverse relies on Dataverse Search indexes. Enabling this feature might increase your environment’s Dataverse capacity consumption. For more information, see [What actions can makers or admins take to manage Dataverse Search efficiently?](../../user/relevance-search-benefits?branch=main&branchFallbackFrom=pr-en-us-11552#what-actions-can-makers-or-admins-take-to-manage-dataverse-search-efficiently)
+> - Microsoft 365 Copilot for canvas apps with Dataverse relies on Dataverse Search indexes. Enabling this feature might increase your environment’s Dataverse capacity consumption. For more information, see [What actions can makers or admins take to manage Dataverse Search efficiently](../../user/relevance-search-benefits?branch=main&branchFallbackFrom=pr-en-us-11552#what-actions-can-makers-or-admins-take-to-manage-dataverse-search-efficiently).
 > - Sufficient Dataverse database capacity must be available to support indexing, semantic search, and Copilot operations. For more information, see [Capacity page details](/power-platform/admin/capacity-storage#capacity-page-details).
 
 ## Enable Microsoft 365 Copilot for your environment
