@@ -20,7 +20,7 @@ Usage may be subject to service limits or throttling. Microsoft reserves the rig
 
 The primary admin control for natural language grid and view search is moving to the Power Platform admin center under **Copilot** > **Settings** > **Power Apps** > **Data Exploration Agent**. Learn more in [Copilot hub](/power-platform/admin/copilot/copilot-hub). This is gradually rolling out over the next coming weeks.
 
-The existing feature control in Power Platform admin center environment **Settings** > **Product** > **Feature** [link](/power-platform/admin/settings-features) leverages the app setting **Natural Language grid and view search** (NLGridSearchSetting). This app setting will be removed from the **Settings** > **Product** > **Feature** page and rely on the app setting in either the [Model App Designer Setting](/power-apps/maker/model-driven-apps/app-properties) or [Solution Explorer App Settings](/power-apps/maker/data-platform/create-edit-configure-settings#updating-a-setting-definition).
+The **Natural language grid and view search** app setting (NLGridSearchSetting), previously available in Power Platform admin center **Settings** > **Product** > **Features** is being moved and you can configure this setting at the app level either by using the [Model App Designer Setting](/power-apps/maker/model-driven-apps/app-properties) or [Solution Explorer App Settings](/power-apps/maker/data-platform/create-edit-configure-settings#updating-a-setting-definition).
 
 ## Explore data with agents in Microsoft 365 Copilot chat (preview)
 
