@@ -78,6 +78,8 @@ The Visualize data in a view requires specific user licenses based on the produc
 - **Power Apps model driven app**: the user must have a Power Apps premium license with details in the [Power Platform License Guide](https://go.microsoft.com/fwlink/?linkid=2085130)
 - **Dynamics 365 model driven app**: the user must have a Dynamics 365 enterprise or premium license as outlined in [Dynamics 365 License Guide](https://go.microsoft.com/fwlink/?LinkId=866544) 
 
+Usage may be subject to service limits or throttling. Microsoft reserves the right to update the limits.
+
 ## Admin control
 
 The primary admin control for visualize data in a view is moving to the Power Platform admin center under **Copilot** > **Settings** > **Power Apps** > **Data Exploration Agent** > **Chart Visualization**. Learn more in [Copilot hub](/power-platform/admin/copilot/copilot-hub). This is gradually rolling out over the next coming weeks.
