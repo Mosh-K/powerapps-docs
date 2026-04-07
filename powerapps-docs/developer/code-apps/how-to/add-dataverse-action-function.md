@@ -29,7 +29,7 @@ to a Power Apps code app by using the `find-dataverse-api` and `add-dataverse-ap
 Use `find-dataverse-api` to search for operations in your environment by name:
 
 ```bash
-npx power-apps find-dataverse-api --search "opportunity"
+npx power-apps find-dataverse-api --search "WhoAmI"
 ```
 
 The output lists matching operations with their kind (Action or Function), parameters, binding
@@ -40,26 +40,42 @@ entity (if any), and return type:
 Dataverse Operations
 ====================================================================================================
 
-  WinOpportunity  (Action)
-  Bound to: mscrm.opportunity
-  Parameters:
-    - Status: Edm.Int32
-    - Target: mscrm.opportunity
-
-  RetrieveOpportunities  (Function)
-  Parameters:
-    - OpportunityId?: Edm.Guid
-  Returns: Collection(mscrm.opportunity)
+  WhoAmI  (Function)
+  Returns: mscrm.WhoAmIResponse
 
 ----------------------------------------------------------------------------------------------------
-Total: 2 operation(s)
+Total: 1 operation(s)
+====================================================================================================
+```
+
+You can also search for actions. For example, to find the `AddToQueue` action:
+
+```bash
+npx power-apps find-dataverse-api --search "AddToQueue"
+```
+
+```
+====================================================================================================
+Dataverse Operations
+====================================================================================================
+
+  AddToQueue  (Action)
+  Bound to: mscrm.queue
+  Parameters:
+    - Target: mscrm.crmbaseentity
+    - SourceQueue?: mscrm.queue
+    - QueueItemProperties?: mscrm.queueitem
+  Returns: mscrm.AddToQueueResponse
+
+----------------------------------------------------------------------------------------------------
+Total: 1 operation(s)
 ====================================================================================================
 ```
 
 To get the raw JSON (useful for scripting and for coding agents), add `--json`:
 
 ```bash
-npx power-apps find-dataverse-api --search "opportunity" --json
+npx power-apps find-dataverse-api --search "WhoAmI" --json
 ```
 
 The search is a case-insensitive substring match on the operation name.
@@ -69,15 +85,15 @@ The search is a case-insensitive substring match on the operation name.
 After you find the operation name, run the following command:
 
 ```bash
-npx power-apps add-dataverse-api --api-name WinOpportunity
+npx power-apps add-dataverse-api --api-name WhoAmI
 # or using the short alias:
-npx power-apps add-dataverse-api -n WinOpportunity
+npx power-apps add-dataverse-api -n WhoAmI
 ```
 
 The command:
 
 1. Fetches the operation definition from your environment's Dataverse `$metadata`.
-1. Writes a schema file at `<schemaPath>/dataverse/WinOpportunity.Schema.json`.
+1. Writes a schema file at `<schemaPath>/dataverse/WhoAmI.Schema.json`.
 1. Saves schema files for any Dataverse entities referenced by the operation's parameters or return
    type (skips if they already exist).
 1. Updates `power.config.json`:
@@ -89,28 +105,39 @@ The command:
 On success, you see:
 
 ```
-Dataverse API 'WinOpportunity' added successfully.
+Dataverse API 'WhoAmI' added successfully.
 Hint: Run 'npx power-apps run' to test locally, or 'npx power-apps push' to deploy.
 ```
 
 ## Step 3: Use the generated service in your app code
 
 The command generates a dedicated `<ApiName>Service` class for the operation. For example,
-after adding `WinOpportunity`, import `WinOpportunityService` from the generated services
-directory:
+after adding `WhoAmI`, import `WhoAmIService` from the generated services directory:
 
 ```typescript
-import { WinOpportunityService } from './generated/services/WinOpportunityService';
+import { WhoAmIService } from './generated/services/WhoAmIService';
 ```
 
 The service exposes a typed static method named after the operation. For example:
 
 ```typescript
-const result = await WinOpportunityService.WinOpportunity(
-  opportunityId,   // string (GUID of the bound opportunity record)
-  status,          // number
-  target           // Record<string, unknown>
+const result = await WhoAmIService.WhoAmI();
+// result.value contains: { BusinessUnitId: string, UserId: string, OrganizationId: string }
+```
+
+For a bound action such as `AddToQueue`, the first argument is always the GUID of the record
+to operate on:
+
+```typescript
+import { AddToQueueService } from './generated/services/AddToQueueService';
+
+const result = await AddToQueueService.AddToQueue(
+  queueId,    // string (GUID of the destination queue)
+  target,     // Record<string, unknown> (the activity to add)
+  sourceQueue,         // Record<string, unknown> | undefined
+  queueItemProperties  // Record<string, unknown> | undefined
 );
+// result.value contains: { QueueItemId: string }
 ```
 
 Parameter and return types come from the Dataverse schema:
@@ -120,7 +147,7 @@ Parameter and return types come from the Dataverse schema:
 - Operations with no return value produce `Promise<IOperationResult<void>>`.
 - Operations that return a scalar (for example, `boolean`, `number`) produce
   `Promise<IOperationResult<T>>` with the corresponding TypeScript type.
-- Operations that return an entity or collection produce `Promise<IOperationResult<Record<string, unknown>>>`.
+- Operations that return a complex type or entity produce `Promise<IOperationResult<Record<string, unknown>>>`.
 
 ## Rerunning for the same operation
 
