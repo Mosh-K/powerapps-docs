@@ -58,4 +58,6 @@ One of the benefits of @ mentioning an agent is that you can add or remove it fr
 
 ## Limitations
 
-- Agents you author can’t yet use in‑app user context to optimize their responses.
+- Microsoft 365 Copilot for model-driven apps allows users to view data by using read-only operations. This capability means that users can only view data that matches their queries and can't make any changes. To make changes, customization with an agent is required.
+- Microsoft 365 Copilot for model-driven apps isn't available in the Power Apps mobile app.
+- As this feature is being gradually deployed, certain settings in the Power Platform Admin Center might not be accessible yet, depending on the geographic location of your tenant.
