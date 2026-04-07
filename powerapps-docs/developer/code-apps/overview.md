@@ -56,6 +56,9 @@ Admins can enable code apps by setting an environment option. Power Platform adm
 
 1. Select **Save** in the settings experience.
 
+> [!NOTE]
+> For management at scale, you can configure this setting for multiple environments at once by using [environment groups and rules](/power-platform/admin/environment-groups?branch=main).
+
 ### License end-users with Power Apps Premium
 
 End-users that run code apps need a [Power Apps Premium license](https://www.microsoft.com/power-platform/products/power-apps/pricing).
