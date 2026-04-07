@@ -19,7 +19,7 @@ contributors:
 ms.collection: bap-ai-copilot
 ---
 
-# Add Microsoft 365 Copilot chat for app users in canvas apps (preview)
+# Add Microsoft 365 Copilot for app users in canvas apps (preview)
 
 [This article is prerelease documentation and is subject to change.]
 
