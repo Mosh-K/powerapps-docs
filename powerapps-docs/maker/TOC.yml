@@ -1255,8 +1255,6 @@
         href: ./common/wrap/code-sign-aab-file.md
       - name: Azure key vault for wrap
         href: ./common/wrap/create-key-vault-for-code-signing.md
-      - name: Set up push notification for wrap apps
-        href: ./common/wrap/push-notifications-for-wrap.md
       - name: Use deep links with wrapped mobile apps
         href: ./common/wrap/wrap-deep-links.md
       - name: Benefits and limitations of wrap

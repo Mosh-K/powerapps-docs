@@ -247,7 +247,6 @@ try {
 The following features aren't yet supported:
 
 - Polymorphic lookups
-- Dataverse actions and functions
 - Deleting Dataverse datasources through PAC CLI
 - Schema definition (entity metadata) CRUD
 - FetchXML support
