@@ -127,24 +127,16 @@ Configure this page to accept a data parameter containing a custom filter object
 
 ### Navigate to a generative page
 
-You can navigate to a generative page programmatically using the `Xrm.Navigation.navigateTo` API or by constructing a URL with parameters. If the target page is [set up to accept input parameters](#set-up-a-page-to-accept-input-parameters), you can pass those parameters when navigating.
-
-#### Using the XRM NavigateTo API
-
-##### Basic navigation
+You can navigate to a generative page programmatically using the `Xrm.Navigation.navigateTo` API. If the target page is [set up to accept input parameters](#set-up-a-page-to-accept-input-parameters), you can pass a record ID, entity name, and custom data when navigating.
 
 ```javascript
+// Basic navigation
 Xrm.Navigation.navigateTo({
     pageType: "generative",
     pageId: "<genPageID>"
 });
-```
 
-##### Navigate with input parameters
-
-Include `recordId`, `entityName`, and/or `data` to provide context to the page:
-
-```javascript
+// Navigation with input parameters
 Xrm.Navigation.navigateTo({
     pageType: "generative",
     pageId: "<genPageID>",
@@ -154,27 +146,7 @@ Xrm.Navigation.navigateTo({
 });
 ```
 
-For the full API reference including how to open the page in a dialog instead of inline, see [navigateTo (Client API reference)](../../../developer/model-driven-apps/clientapi/reference/Xrm-Navigation/navigateTo.md).
-
-#### Navigating via URL
-
-You can also navigate to a generative page by constructing a URL with parameters. This approach is particularly useful when launching generative pages from Canvas Apps, external sources, or when building multi-page workflows where generative pages pass context forward.
-
-The URL structure is similar to the navigateTo API:
-
-```
-https://<your-org>.crm.dynamics.com/main.aspx?appid={app-id}&pagetype=genux&id={page-id}&recordid={recordID}&entityname={entityName}&data={encoded-json}
-```
-
-Pass context using the `data` parameter with JSON-encoded values. For example, to pass an enrollment ID from one generative page to another:
-
-```
-https://<your-org>.crm.dynamics.com/main.aspx?appid={app-id}&pagetype=genux&id={page-id}&data={"enrollmentid":"12345"}
-```
-
-The receiving generative page can extract these values from the URL to query Dataverse and display relevant information.
-
-For more details on using URL parameters with generative pages, including examples and additional scenarios, see [Enhancing Canvas Apps with Generative Pages in Model Driven Apps](https://www.linkedin.com/pulse/enhancing-canvas-apps-generative-pages-model-driven-rasika-chaudhary-fc00c/).
+For full examples including inline navigation, dialog options, and navigating from within a generative page, see [Navigate to and from a generative page using Client API](../../developer/model-driven-apps/clientapi/navigate-to-generative-page-examples.md).
 
 ### Use specific images in a page
 
