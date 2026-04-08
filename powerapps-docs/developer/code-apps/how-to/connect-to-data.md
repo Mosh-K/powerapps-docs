@@ -3,7 +3,7 @@ title: "How to: Connect your code app to data"
 description: "Learn how to connect your code app to data"
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 02/05/2026
+ms.date: 04/08/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 contributors:
@@ -117,7 +117,7 @@ Use the same PAC CLI [pac code add-data-source](/power-platform/developer/cli/re
 pac code add-data-source -a <apiName> -c <connectionId> -t <tableId> -d <datasetName> 
 ```
 
-For SQL example:
+#### SQL example
 
 ```powershell
 pac code add-data-source `
@@ -133,7 +133,9 @@ pac code add-data-source `
 -d "paconnectivitysql0425.database.windows.net,paruntimedb" 
 ```
 
-For SharePoint example, `-t` is the **List** name and `-d` is the SharePoint site:
+#### SharePoint example
+
+SharePoint, `-t` is the **List** name and `-d` is the SharePoint site:
 
 ```powershell
 pac code add-data-source `
