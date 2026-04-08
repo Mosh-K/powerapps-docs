@@ -117,7 +117,7 @@ Use the same PAC CLI [pac code add-data-source](/power-platform/developer/cli/re
 pac code add-data-source -a <apiName> -c <connectionId> -t <tableId> -d <datasetName> 
 ```
 
-For example:
+For SQL example:
 
 ```powershell
 pac code add-data-source `
@@ -131,6 +131,16 @@ pac code add-data-source `
 -c "aaaaaaaa000011112222bbbbbbbbbbbb" `
 -t "[dbo].[EmployeeInformation]" `
 -d "paconnectivitysql0425.database.windows.net,paruntimedb" 
+```
+
+For SharePoint example, `-t` is the **List** name and `-d` is the SharePoint site:
+
+```powershell
+pac code add-data-source `
+-a "shared_sharepointonline" `
+-c "aaaaaaaa000011112222bbbbbbbbbbbb" `
+-t "Travel%20Request" `
+-d "https://contoso.sharepoint.com/sites/TravelPolicies"
 ```
 
 #### Discover available datasets and tables
