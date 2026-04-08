@@ -23,7 +23,6 @@ contributors:
 
 [!INCLUDE [form-filling-assistance](~/../shared/dynamics365-core/form-filling-assistance.md)]
 
-
 ### Related information
 
 [Manage feature settings](/power-platform/admin/settings-features#ai-form-fill-assistance)  

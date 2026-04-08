@@ -16,4 +16,4 @@ search.audienceType:
 
 # Find data in a view with AI (preview)
 
-[!INCLUDE [find-data-with-ai](~/../shared/dynamics365-core/find-data-with-ai.md)]
+[!INCLUDE [find-data-with-ai](~/../shared/dynamics365-core/find-data-with-ai.md)] 

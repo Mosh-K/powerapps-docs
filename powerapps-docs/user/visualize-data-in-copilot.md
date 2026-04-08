@@ -24,4 +24,3 @@ search.audienceType:
 
 [Manage feature settings](/power-platform/admin/settings-features)  
 [Responsible AI FAQ about Copilot visualizations on a view](/power-apps/maker/common/faq-visualize-view)  
-

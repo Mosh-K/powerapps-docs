@@ -18,7 +18,6 @@ contributors:
 
 # Use row summaries in model-driven apps
 
-
 [!INCLUDE [record-summaries](~/../shared/dynamics365-core/record-summaries.md)]
 
 ### Related information
