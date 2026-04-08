@@ -1,7 +1,7 @@
 ---
 title: Use Copilot's form fill assistance feature in model-driven apps 
 description: Learn how to use AI-generated optional suggestions for fields in a form.
-ms.date: 04/06/2026
+ms.date: 04/08/2026
 ms.update-cycle: 180-days
 ms.custom: 
   - responsible-ai-faqs
@@ -22,7 +22,6 @@ contributors:
 # Use Copilot's form fill assistance feature for model-driven apps
 
 [!INCLUDE [form-filling-assistance](~/../shared/dynamics365-core/form-filling-assistance.md)]
-
 
 ### Related information
 
