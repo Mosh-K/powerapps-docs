@@ -44,7 +44,7 @@ A data card contains the controls that users see - usually a label such as the t
 
 ### Reorder fields on a form
 
-Power Apps offers predefined cards for strings, numbers, and other data types. You edit the form and rearrange fields letting you change the layout without unlocking any cards. 
+Power Apps offers predefined cards for strings, numbers, and other data types. You edit the form and rearrange fields letting you change the layout without unlocking any cards.
 
 1. Open your app for editing in [Power Apps Studio](power-apps-studio.md).
 1. Select the form then select **Fields**.
@@ -82,17 +82,24 @@ To make changes like deleting a control or adding a new control requires unlocki
 
 When you add a field to a form, Power Apps creates a data card for you and sets up the basic formulas that connect the card to the data source. By default, Power Apps locks these cards so you don't accidentally break that connection. If you need more control, such as a custom layout, extra controls, or different formulas, you can unlock the card.
 
+The following screenshot shows a form with a data card that is locked.
+
 :::image type="content" source="./media/working-with-cards/advanced-locked.png" alt-text="Screenshot of the Advanced tab showing a locked data card in Power Apps.":::
 
 The key setting is **DataField**. It tells Power Apps which field (column) this card is responsible for. When the form submits, Power Apps uses the card's **DataField** value to know what field to update.
 
-To unlock a card, select the card, go to the **Advanced** tab in the right pane, and then select the lock banner or the lock icon next to properties such as **DataField**, **DisplayName**, or **Required**. After you unlock the card, you can edit the generated formulas and add or remove controls inside the card.
+1. To unlock a card, select the card
+1. In the **Properties** pane, select the **Advanced**.
+1. Select lock icon or select **Unlock to change properties** to unlock properties such as  **DataField**, **DisplayName**, or **Required**. 
+1. After you unlock the card, edit the generated formulas and add or remove controls inside the card.
 
-:::image type="content" source="./media/working-with-cards/lock-icons.png" alt-text="Screenshot of lock icons in the Power Apps card properties pane.":::
 
-Select the banner at the top to unlock the card so that you can modify these properties:
 
-:::image type="content" source="./media/working-with-cards/unlocked-card.png" alt-text="Screenshot of an unlocked data card in Power Apps.":::
+|Locked properties  |Unlocked properties  |
+|-------------------|---------------------|
+|:::image type="content" source="media/working-with-cards/locked-properties.png" alt-text="Screenshot of locked properties on a data card":::               |  :::image type="content" source="media/working-with-cards/unlocked-properties.png" alt-text="Screenshot of unlocked properties on a data card":::                   |
+
+
 
 For example, after unlocking, you can change **DisplayName** so the label reads **Asset ID** instead of **AssetID**. This small change shows that the card is now under your control and isn't fully managed by the form.
 
