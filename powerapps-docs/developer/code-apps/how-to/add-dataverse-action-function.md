@@ -149,14 +149,14 @@ Parameter and return types come from the Dataverse schema:
   `Promise<IOperationResult<T>>` with the corresponding TypeScript type.
 - Operations that return a complex type or entity produce `Promise<IOperationResult<Record<string, unknown>>>`.
 
-## Rerunning for the same operation
+## Rerun for the same operation
 
 Running `add-dataverse-api` again with the same `--api-name` is safe and idempotent:
 
-- The schema file is overwritten with the latest definition from Dataverse.
-- `dataSourcesInfo.ts` is regenerated.
-- `power.config.json` entries are deduped - no duplicates are written.
-- Entity schema files that already exist aren't overwritten.
+- The command overwrites the schema file with the latest definition from Dataverse.
+- It regenerates `dataSourcesInfo.ts`.
+- It removes duplicate entries in `power.config.json` - it doesn't add duplicates.
+- It doesn't overwrite entity schema files that already exist.
 
 Use this command to pick up changes to an operation's signature after an update in the
 environment.
