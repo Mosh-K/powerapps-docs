@@ -21,6 +21,7 @@ to a Power Apps code app by using the `find-dataverse-api` and `add-dataverse-ap
 ## Prerequisites
 
 - A Power Apps code app initialized with `npx power-apps init`
+- `@microsoft/power-apps` version `1.1.1` or later in your `package.json`
 - Authenticated CLI session (`npx power-apps` prompts if needed)
 - Access to the Dataverse environment containing the operation you want to use
 
