@@ -113,7 +113,7 @@ For other AI code generation tools, ensure your tool has access to the generativ
 The Power Apps plugin provides this skill for working with generative pages.
 
 | Skill | Command | Description | 
-|-------|-------------|---------|
+|-------|-------------|---------| 
 | Generative pages |  `/genpage` | Create code for generative pages (for creation or editing scenarios) |
 
 This skill enables you to describe what you want to build and have the AI tool generate complete TypeScript and React code for your generative page, then deploy it directly to your Power Apps environment.
@@ -152,6 +152,17 @@ Use this workflow to update a page that already exists in your environment.
    - "Update the form to include the new custom field for pet temperament"
 
 1. Review, publish, test, and iterate. The AI tool generates updated TypeScript code based on your requested changes. Follow the same review, publish, and test process described in the "Create a new generative page" section. Continue iterating with natural language instructions until the page meets your requirements.
+
+## Set up a page to accept input parameters
+
+Generative pages can accept input parameters — `recordId`, `entityName`, and `data` — enabling them to receive contextual data when navigated to from other pages or code. When you instruct the AI tool to configure input parameters, it generates the appropriate initialization code so the page reads and uses those values when it loads.
+
+Describe the parameters you want in your prompt:
+
+- "Set up the page to accept an Account recordId and entityName. When the page loads, use these to fetch and display the corresponding account details."
+- "Configure this page to accept a data parameter containing a custom filter object. Use it to filter the displayed records when the page loads."
+
+To navigate to the page and pass these parameters, see [Navigate to and from a generative page using Client API](../../developer/model-driven-apps/clientapi/navigate-to-generative-page-examples.md).
 
 ## Localization
 
@@ -216,5 +227,6 @@ The limitations for generative pages created with AI code generation tools are t
 ## Related content
 
 - [Generate a page using natural language with model-driven apps](/power-apps/maker/model-driven-apps/generative-pages)
+- [Navigate to and from a generative page using Client API](../../developer/model-driven-apps/clientapi/navigate-to-generative-page-examples.md)
 - [dataApi object methods for generative pages](/power-apps/developer/model-driven-apps/generative-page/data-api/)
 - [Power Platform CLI reference](/power-platform/developer/cli/reference/index)
