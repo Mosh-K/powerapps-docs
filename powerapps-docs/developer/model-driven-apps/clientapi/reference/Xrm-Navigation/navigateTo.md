@@ -134,6 +134,8 @@ The generative page object contains the following values.
 | `entityName` | String | (Optional) The logical name of the Dataverse table corresponding to the `recordId`. |
 | `data` | Object | (Optional) A JSON object containing additional custom parameters to pass to the page. |
 
+[See examples showing how to navigate to and from a generative page using client API](../../navigate-to-generative-page-examples.md)
+
 ### `navigationOptions` parameter
 
 The `navigationOptions` object contains the following values.
