@@ -44,6 +44,7 @@ The following is a list of known limitations for virtual tables created using th
 - The **Microsoft Entra ID** virtual table provided by Microsoft only allows read access.
 - Dataverse virtual tables can display values in fields that exceed the normal maximum values of Dataverse. This behavior is because the values being presented aren't stored locally. For example, the Dataverse integer maximum value is 100,000,000,000, but it could retrieve and display 9,000,000,000,000 from SharePoint. However, if the user attempts to edit the number to a size larger than the max accepted size in Dataverse an error is provided indicating the record can't be saved because it exceeds the maximum size.
 - Import and export functionality of table data isn't supported for virtual tables.
+- Queries against Virtual Tables that use negative filter operators (e.g., Does Not Equal, Does Not Contain) may result in incorrect paging behavior beyond the first page. There is currently no supported workaround. Please avoid using negative filters
 
 ## For each data source limitations
 
