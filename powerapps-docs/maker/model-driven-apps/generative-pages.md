@@ -105,17 +105,7 @@ This section covers common scenarios and tasks when working with generative page
 
 ### Set up a page to accept input parameters
 
-Generative pages can be configured to accept input parameters, enabling them to receive contextual data when navigated to from other pages or code. You configure this by telling the agent which parameters the page should accept. The agent then wires up the appropriate initialization code so the page reads and uses those parameters when it loads.
-
-The following input parameters are supported:
-
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `recordId` | String | (Optional) The GUID of a specific record to load or display in the page. |
-| `entityName` | String | (Optional) The logical name of the Dataverse table corresponding to the `recordId`. |
-| `data` | Object | (Optional) A JSON object containing additional custom parameters to pass to the page. |
-
-To configure a page to accept input parameters, describe the desired parameters in your prompt:
+Generative pages can accept input parameters — `recordId`, `entityName`, and `data` — enabling them to receive contextual data when navigated to. To configure a page to accept parameters, describe what the page should accept in your prompt and the agent wires up the initialization code automatically. For example:
 
 ```
 Set up the page to accept an Account recordId. When the page loads, use these to fetch and display the corresponding account details.
@@ -127,26 +117,7 @@ Configure this page to accept a data parameter containing a custom filter object
 
 ### Navigate to a generative page
 
-You can navigate to a generative page programmatically using the `Xrm.Navigation.navigateTo` API. If the target page is [set up to accept input parameters](#set-up-a-page-to-accept-input-parameters), you can pass a record ID, entity name, and custom data when navigating.
-
-```javascript
-// Basic navigation
-Xrm.Navigation.navigateTo({
-    pageType: "generative",
-    pageId: "<genPageID>"
-});
-
-// Navigation with input parameters
-Xrm.Navigation.navigateTo({
-    pageType: "generative",
-    pageId: "<genPageID>",
-    recordId: "00aa00aa-bb11-cc22-dd33-44ee44ee44ee",
-    entityName: "account",
-    data: { status: "active", category: "premium" }
-});
-```
-
-For full examples including inline navigation, dialog options, and navigating from within a generative page, see [Navigate to and from a generative page using Client API](../../developer/model-driven-apps/clientapi/navigate-to-generative-page-examples.md).
+You can navigate to a generative page programmatically using `Xrm.Navigation.navigateTo`, passing input parameters if the target page is set up to receive them. For examples and full API details, see [Navigate to and from a generative page using Client API](../../developer/model-driven-apps/clientapi/navigate-to-generative-page-examples.md).
 
 ### Use specific images in a page
 
