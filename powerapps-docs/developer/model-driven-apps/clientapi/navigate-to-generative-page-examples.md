@@ -3,8 +3,8 @@ title: Navigate to and from a generative page using Client API
 description: Learn how to use Client API to navigate to generative pages in model-driven apps, including inline, dialog, and input parameter examples.
 author: jasongre
 ms.author: jasongre
-ms.reviewer: matp
-ms.date: 04/08/2026
+ms.reviewer: jdaly
+ms.date: 04/09/2026
 ms.topic: how-to
 ms.subservice: mda-developer
 applies_to:
@@ -15,9 +15,9 @@ ms.collection:
   - bap-ai-copilot
 ---
 
-# Navigate to and from a generative page using Client API
+# Navigate to and from a generative page by using Client API
 
-This article provides examples of navigating to generative pages in model-driven apps using the [navigateTo (Client API reference)](reference/Xrm-Navigation/navigateTo.md) method. Learn how to open generative pages inline or in a dialog, and how to pass input parameters such as a record ID or custom data.
+This article provides examples of navigating to generative pages in model-driven apps by using the [navigateTo (Client API reference)](reference/Xrm-Navigation/navigateTo.md) method. Learn how to open generative pages inline or in a dialog, and how to pass input parameters such as a record ID or custom data.
 
 > [!NOTE]
 > This method is supported only on Unified Interface.
@@ -166,10 +166,10 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions)
 ## Unsupported: Opening in a side pane
 
 > [!IMPORTANT]
-> Opening a generative page using `Xrm.App.sidePanes.createPane()` is not currently supported. 
+> Opening a generative page by using `Xrm.App.sidePanes.createPane()` isn't currently supported. 
 >
 > ```javascript
-> // Not supported — page content does not render
+> // Not supported — page content doesn't render
 > const pane = await Xrm.App.sidePanes.createPane({
 >     title: "My Generative Page",
 >     paneId: "GenPage",
@@ -183,7 +183,7 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions)
 
 ## Navigate from within a generative page
 
-When navigating from inside a generative page component, use `(window as any).Xrm` to access the Xrm object, since it isn't directly available in the React component scope.
+When you navigate from inside a generative page component, use `(window as any).Xrm` to access the Xrm object, since the React component scope doesn't provide direct access to it.
 
 ### Navigate to another generative page with record context and custom data
 
@@ -199,7 +199,7 @@ xrm.Navigation.navigateTo({
 ```
 
 > [!NOTE]
-> When navigating within model-driven apps, avoid constructing raw URLs or manipulating `window.location`.
+> When you navigate within model-driven apps, avoid constructing raw URLs or manipulating `window.location`.
 
 ## Navigate via URL (from external callers only)
 
@@ -209,17 +209,15 @@ You can navigate to a generative page by constructing a URL with the following s
 https://<your-org>.crm.dynamics.com/main.aspx?appid={app-id}&pagetype=genux&id={page-id}&recordid={recordId}&entityname={entityName}&data={encoded-json}
 ```
 
-The `data` parameter must be URL-encoded JSON. For example, to pass a custom filter object:
+You must URL-encode the `data` parameter as JSON. For example, to pass a custom filter object:
 
 ```
 https://<your-org>.crm.dynamics.com/main.aspx?appid={app-id}&pagetype=genux&id={page-id}&data=%7B%22status%22%3A%22active%22%7D
 ```
 
-The target generative page must be [set up to accept these parameters](../../../maker/model-driven-apps/generative-pages.md#set-up-a-page-to-accept-input-parameters).
+You must [set up the target generative page to accept these parameters](../../../maker/model-driven-apps/generative-pages.md#set-up-a-page-to-accept-input-parameters).
 
 ## Related articles
 
 - [Generate a page using natural language](../../../maker/model-driven-apps/generative-pages.md)
 - [navigateTo (Client API reference)](reference/Xrm-Navigation/navigateTo.md)
-
-[!INCLUDE[footer-include](../../../../includes/footer-include.md)]

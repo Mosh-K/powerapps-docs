@@ -3,13 +3,13 @@ title: "navigateTo (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the navigateTo method.
 author: sriharibs-msft
 ms.author: srihas
-ms.date: 03/26/2026
+ms.date: 04/09/2026
 ms.reviewer: jdaly
 ms.topic: reference
 search.audienceType: 
   - developer
 contributors:
-  - JimDaly
+  - jasongre
 ---
 # navigateTo (Client API reference)
 
@@ -140,9 +140,9 @@ The `navigationOptions` object contains the following values.
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `target` | Number | Specify `1` to open the page inline. Specify `2` to open the page in a dialog.<br /> Also, rest of the values (width, height, and position) are valid only if you specify `2` in this value (open page in a dialog).<br />**Note**: You can only open entity lists inline. You can open entity records, web resources, and generative pages either inline or in a dialog. |
-| `width` | Number or Object | (Optional) The width of dialog. To specify the width in pixels, just type a numeric value. To specify the width in percentage, specify an object of type SizeValue with the following properties:<br />- `value`: The numerical value of type Number.<br />- `unit`: The unit of measurement of type String. Specify `%` or `px`. Default value is `px`.|
-| `height` | Number or Object | (Optional) The height of dialog. To specify the height in pixels, just type a numeric value. To specify the width in percentage, specify an object of type SizeValue with the following properties:<br />- value: The numerical value of type Number.<br />- `unit`: The unit of measurement of type String. Specify `%` or `px`. Default value is `px`.|
+| `target` | Number | Specify `1` to open the page inline. Specify `2` to open the page in a dialog.<br /> Also, the rest of the values (width, height, and position) are valid only if you specify `2` in this value (open page in a dialog).<br />**Note**: You can only open entity lists inline. You can open entity records, web resources, and generative pages either inline or in a dialog. |
+| `width` | Number or Object | (Optional) The width of dialog. To specify the width in pixels, type a numeric value. To specify the width in percentage, specify an object of type SizeValue with the following properties:<br />- `value`: The numerical value of type Number.<br />- `unit`: The unit of measurement of type String. Specify `%` or `px`. Default value is `px`.|
+| `height` | Number or Object | (Optional) The height of dialog. To specify the height in pixels, type a numeric value. To specify the width in percentage, specify an object of type SizeValue with the following properties:<br />- value: The numerical value of type Number.<br />- `unit`: The unit of measurement of type String. Specify `%` or `px`. Default value is `px`.|
 | `position` | Number | (Optional) Specify `1` to open the dialog in center; `2` to open the dialog on the far side. Default is `1` (center). |
 | `title` | String | (Optional) The dialog title on top of the center or side dialog. |
 
@@ -291,5 +291,3 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions).then(
 [Xrm.Navigation](../xrm-navigation.md)   
 [Navigate to and from a generative page](../../navigate-to-generative-page-examples.md)   
 [Navigating to and from a custom page (preview)](../../navigate-to-custom-page-examples.md)
-
-[!INCLUDE[footer-include](../../../../../includes/footer-include.md)]
