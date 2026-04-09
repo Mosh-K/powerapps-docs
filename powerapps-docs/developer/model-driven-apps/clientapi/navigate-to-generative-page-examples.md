@@ -1,6 +1,6 @@
 ---
-title: Navigate to and from a generative page using Client API
-description: Learn how to use Client API to navigate to generative pages in model-driven apps, including inline, dialog, and input parameter examples.
+title: Navigate to and from a generative page using client API
+description: "Learn how to use client API to navigate to and from generative pages in model-driven apps. Explore inline, dialog, and side dialog examples with input parameters like record IDs and custom data."
 author: jasongre
 ms.author: jasongre
 ms.reviewer: jdaly
@@ -15,9 +15,9 @@ ms.collection:
   - bap-ai-copilot
 ---
 
-# Navigate to and from a generative page by using Client API
+# Navigate to and from a generative page using client API
 
-This article provides examples of navigating to generative pages in model-driven apps by using the [navigateTo (Client API reference)](reference/Xrm-Navigation/navigateTo.md) method. Learn how to open generative pages inline or in a dialog, and how to pass input parameters such as a record ID or custom data.
+This article provides examples of navigating to generative pages in model-driven apps by using the client API [navigateTo](reference/Xrm-Navigation/navigateTo.md) method. Learn how to open generative pages inline or in a dialog, and how to pass input parameters such as a record ID or custom data.
 
 > [!NOTE]
 > This method is supported only on Unified Interface.
@@ -30,7 +30,7 @@ Each of the following examples requires the ID of the target generative page. To
 1. Select the generative page in the pages list.
 1. In the properties pane, copy the GUID shown in the **Generative page** field.
 
-## Open inline without parameters
+## Open a generative page inline without parameters
 
 Opens a generative page as a full-page inline view with no input parameters.
 
@@ -54,7 +54,7 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions)
     );
 ```
 
-## Open inline with record context
+## Open a generative page inline with record context
 
 Passes a `recordId` and `entityName` to the generative page so the page can load and display a specific record. The target generative page must be [set up to accept these parameters](../../../maker/model-driven-apps/generative-pages.md#set-up-a-page-to-accept-input-parameters).
 
@@ -80,7 +80,7 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions)
     );
 ```
 
-## Open inline with custom data
+## Open a generative page inline with custom data
 
 Passes a `data` object containing custom key-value pairs to the generative page. The target generative page must be [set up to accept these parameters](../../../maker/model-driven-apps/generative-pages.md#set-up-a-page-to-accept-input-parameters).
 
@@ -105,7 +105,7 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions)
     );
 ```
 
-## Open as a centered dialog
+## Open a generative page as a centered dialog
 
 Opens a generative page in a centered dialog, passing both record context and custom data. Adjust `width` and `height` as needed.
 
@@ -136,7 +136,7 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions)
     );
 ```
 
-## Open as a side dialog
+## Open a generative page as a side dialog
 
 Opens a generative page as a side dialog using `position: 2`.
 
@@ -163,7 +163,7 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions)
     );
 ```
 
-## Unsupported: Opening in a side pane
+## Unsupported: Open a generative page in a side pane
 
 > [!IMPORTANT]
 > Opening a generative page by using `Xrm.App.sidePanes.createPane()` isn't currently supported. 
@@ -181,7 +181,7 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions)
 >
 > Use a centered or side dialog via `Xrm.Navigation.navigateTo` instead.
 
-## Navigate from within a generative page
+## Navigate from within a generative page using client API
 
 When you navigate from inside a generative page component, use `(window as any).Xrm` to access the Xrm object, since the React component scope doesn't provide direct access to it.
 
@@ -201,7 +201,7 @@ xrm.Navigation.navigateTo({
 > [!NOTE]
 > When you navigate within model-driven apps, avoid constructing raw URLs or manipulating `window.location`.
 
-## Navigate via URL (from external callers only)
+## Navigate to a generative page via URL (external callers only)
 
 You can navigate to a generative page by constructing a URL with the following structure:
 

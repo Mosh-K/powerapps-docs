@@ -1523,6 +1523,8 @@
             href: ./model-driven-apps/generative-pages.md
           - name: Create generative pages with AI code generation tools (preview)
             href: ./model-driven-apps/generative-page-external-tools.md
+          - name: Navigating to and from a generative page
+            href: ../developer/model-driven-apps/clientapi/navigate-to-generative-page-examples.md
         - name: Create, add, or remove forms and views
           href: ./model-driven-apps/create-add-remove-forms-views-dashboards.md
       - name: Work with views

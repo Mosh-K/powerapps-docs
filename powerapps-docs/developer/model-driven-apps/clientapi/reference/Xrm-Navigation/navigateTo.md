@@ -1,6 +1,6 @@
 ---
 title: "navigateTo (Client API reference) in model-driven apps"
-description: Includes description and supported parameters for the navigateTo method.
+description: "Learn how to use Xrm.Navigation.navigateTo to open entity records, lists, dashboards, and custom pages in model-driven apps. See syntax, parameters, and examples."
 author: sriharibs-msft
 ms.author: srihas
 ms.date: 04/09/2026
