@@ -28,7 +28,7 @@ Each of the following examples requires the ID of the target generative page. To
 
 1. Open the model-driven app containing the generative page in the app designer.
 1. Select the generative page in the pages list.
-1. In the properties pane, copy the value shown in the **Page ID** field.
+1. In the properties pane, copy the GUID shown in the **Generative page** field.
 
 ## Open inline without parameters
 
@@ -166,7 +166,7 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions)
 ## Unsupported: Opening in a side pane
 
 > [!IMPORTANT]
-> Opening a generative page using `Xrm.App.sidePanes.createPane()` is not currently supported. The pane renders with the correct title but the page content does not load.
+> Opening a generative page using `Xrm.App.sidePanes.createPane()` is not currently supported. 
 >
 > ```javascript
 > // Not supported — page content does not render
@@ -185,40 +185,6 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions)
 
 When navigating from inside a generative page component, use `(window as any).Xrm` to access the Xrm object, since it isn't directly available in the React component scope.
 
-### Navigate to an entity record
-
-```typescript
-const xrm = (window as any).Xrm;
-xrm.Navigation.navigateTo({
-    pageType: "entityrecord",
-    entityName: "account",
-    entityId: recordId
-});
-```
-
-### Navigate to another generative page with record context
-
-```typescript
-const xrm = (window as any).Xrm;
-xrm.Navigation.navigateTo({
-    pageType: "generative",
-    pageId: targetPageId,
-    entityName: "account",
-    recordId: selectedRecordId
-});
-```
-
-### Navigate to another generative page with custom data
-
-```typescript
-const xrm = (window as any).Xrm;
-xrm.Navigation.navigateTo({
-    pageType: "generative",
-    pageId: targetPageId,
-    data: { customParam1: "value1", customParam2: 42 }
-});
-```
-
 ### Navigate to another generative page with record context and custom data
 
 ```typescript
@@ -233,12 +199,9 @@ xrm.Navigation.navigateTo({
 ```
 
 > [!NOTE]
-> Never construct raw URLs or manipulate `window.location` for in-app navigation. This breaks the generative page hosting context and isn't supported.
+> When navigating within model-driven apps, avoid constructing raw URLs or manipulating `window.location`.
 
-## Navigate via URL (external callers only)
-
-> [!WARNING]
-> URL-based navigation must not be used from within a generative page. It breaks the hosting context. This approach is only appropriate when launching a generative page from an external caller such as a Canvas App or external web page.
+## Navigate via URL (from external callers only)
 
 You can navigate to a generative page by constructing a URL with the following structure:
 
