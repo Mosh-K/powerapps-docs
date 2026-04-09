@@ -49,6 +49,6 @@ Usage may be subject to service limits or throttling. Microsoft reserves the rig
 
 ## Admin control
 
-The primary admin control for row summary is moving to the Power Platform admin center under Copilot > Settings > Power Apps > Summary Agent > Row summaries. Learn more about the Copilot hub [here](/power-platform/admin/copilot/copilot-hub). 
+The primary admin control for row summary is moving to the Power Platform admin center under **Copilot** > **Settings** > **Power Apps** > **Summary** > **Row summaries**. Learn more about the Copilot hub [here](/power-platform/admin/copilot/copilot-hub). 
 
 The **AI insight cards** app setting (EnableFormInsights) for main forms, previously available in Power Platform admin center **Settings** > **Product** > **Features** is being moved and you can configure this setting at the app level either by using the [Model App Designer Setting](/power-apps/maker/model-driven-apps/app-properties) or [Solution Explorer App Settings](/power-apps/maker/data-platform/create-edit-configure-settings#updating-a-setting-definition).
