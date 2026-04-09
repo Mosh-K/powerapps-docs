@@ -40,7 +40,6 @@ To use Microsoft 365 Copilot in canvas apps, make sure the following prerequisit
 - Dataverse Search must be set to **Default** or **On** for the environment. Fore more information, see [Understand what this means for generative AI experiences](/power-platform/admin/configure-relevance-search-organization#what-dataverse-search-means-for-generative-ai-enabled-experiences).
 - To use the Microsoft 365 Copilot feature in your app, users must have both a Power Apps premium license and a Microsoft 365 Copilot license.
 
-
 > [!NOTE]
 >
 > - Microsoft 365 Copilot for model‑driven apps relies on Dataverse Search indexes. Enabling this feature might increase your environment’s Dataverse capacity consumption. For more information, see [What actions can makers or admins take to manage Dataverse Search efficiently](/power-apps/user/relevance-search-benefits?branch=main&branchFallbackFrom=pr-en-us-11552#what-actions-can-makers-or-admins-take-to-manage-dataverse-search-efficiently).
@@ -71,6 +70,8 @@ Makers can enable or disable Microsoft 365 Copilot for a specific model-driven a
 1. Select **Settings** in the command bar.
 1. On the left, select **Features**.
 1. To enable Microsoft 365 Copilot, set **M365 Copilot in model-driven apps** to **On**. To disable it, set the option to **Off**.
+   > [!NOTE]
+   > This feature is being gradually rolled out across regions and might not be available yet under **Features** in your region. If you do not see **M365 Copilot in model-driven apps** under **Features**, check under **Upcoming**.
 
     :::image type="content" source="media/microsoft-365-chat-model-driven-apps/microsoft-365-copilot-app-setting.png" alt-text="Screenshot that shows how to turn Microsoft 365 Copilot on or off in a model-driven app.":::
 
