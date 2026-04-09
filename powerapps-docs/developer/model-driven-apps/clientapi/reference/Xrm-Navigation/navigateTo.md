@@ -129,8 +129,8 @@ The generative page object contains the following values.
 | `pageType` | String | Specify `generative`. |
 | `pageId` | String | The ID of the generative page to open. |
 | `recordId` | String | (Optional) The GUID of a record to pass to the page. The generative page must be [set up to accept this parameter](../../../../../maker/model-driven-apps/generative-pages.md#set-up-a-page-to-accept-input-parameters). |
-| `entityName` | String | (Optional) The logical name of the Dataverse table corresponding to the `recordId`. |
-| `data` | Object | (Optional) A JSON object containing additional custom parameters to pass to the page. |
+| `entityName` | String | (Optional) The logical name of the Dataverse table corresponding to the `recordId`. The generative page must be [set up to accept this parameter](../../../../../maker/model-driven-apps/generative-pages.md#set-up-a-page-to-accept-input-parameters). |
+| `data` | Object | (Optional) A JSON object containing additional custom parameters to pass to the page. The generative page must be [set up to accept this parameter](../../../../../maker/model-driven-apps/generative-pages.md#set-up-a-page-to-accept-input-parameters). |
 
 ### `navigationOptions` parameter
 
@@ -287,6 +287,7 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions).then(
 ### Related articles
 
 [Xrm.Navigation](../xrm-navigation.md)   
+[Navigate to and from a generative page](../../navigate-to-generative-page-examples.md)   
 [Navigating to and from a custom page (preview)](../../navigate-to-custom-page-examples.md)
 
 [!INCLUDE[footer-include](../../../../../includes/footer-include.md)]
