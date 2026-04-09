@@ -122,15 +122,17 @@ The custom page object contains the following values.
 
 Use this object as the `pageInput` parameter when you want to open a [generative page](../../../../../maker/model-driven-apps/generative-pages.md).
 
+To use `recordId`, `entityName`, or `data`, the target generative page must be [set up to accept input parameters](../../../../../maker/model-driven-apps/generative-pages.md#set-up-a-page-to-accept-input-parameters).
+
 The generative page object contains the following values.
 
 | Name | Type | Description |
 | --- | --- | --- |
 | `pageType` | String | Specify `generative`. |
 | `pageId` | String | The ID of the generative page to open. |
-| `recordId` | String | (Optional) The GUID of a record to pass to the page. The generative page must be [set up to accept this parameter](../../../../../maker/model-driven-apps/generative-pages.md#set-up-a-page-to-accept-input-parameters). |
-| `entityName` | String | (Optional) The logical name of the Dataverse table corresponding to the `recordId`. The generative page must be [set up to accept this parameter](../../../../../maker/model-driven-apps/generative-pages.md#set-up-a-page-to-accept-input-parameters). |
-| `data` | Object | (Optional) A JSON object containing additional custom parameters to pass to the page. The generative page must be [set up to accept this parameter](../../../../../maker/model-driven-apps/generative-pages.md#set-up-a-page-to-accept-input-parameters). |
+| `recordId` | String | (Optional) The GUID of a record to pass to the page. |
+| `entityName` | String | (Optional) The logical name of the Dataverse table corresponding to the `recordId`. |
+| `data` | Object | (Optional) A JSON object containing additional custom parameters to pass to the page. |
 
 ### `navigationOptions` parameter
 
