@@ -135,7 +135,7 @@ pac code add-data-source `
 
 #### SharePoint example
 
-SharePoint, `-t` is the **List** name and `-d` is the SharePoint site:
+For SharePoint, `-t` is the **List** name and `-d` is the SharePoint site:
 
 ```powershell
 pac code add-data-source `
