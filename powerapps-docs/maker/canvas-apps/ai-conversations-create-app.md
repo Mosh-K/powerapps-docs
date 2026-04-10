@@ -85,7 +85,7 @@ The workspace includes the following options:
 | 4. **View data** | View the data in your tables. |
 | 5. **Create relationships** | Create relationships between tables. |
 | 6. **Remove** | Remove a table from the workspace. |
-| 7. **Save and open app** | Creates the draft tables and relationships and then opens your app in Power Apps Studio. |
+| 7. **Save and open app** | Creates draft tables and relationships, then opens your app for editing. |
 | 8. **Copilot panel** | Ask Copilot to create tables, import data, or make changes using natural language. |
 | 9. **View prompts** | See examples of what you can ask Copilot to do. |
 
