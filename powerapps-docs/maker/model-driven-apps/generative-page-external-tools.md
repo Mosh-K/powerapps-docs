@@ -4,7 +4,7 @@ description: Learn how to use AI code generation tools like Claude Code to creat
 author: jasongre
 ms.author: jasongre
 ms.reviewer: matp
-ms.date: 03/31/2026
+ms.date: 04/10/2026
 ms.topic: how-to
 ms.service: powerapps
 ms.subservice: mda-maker
@@ -148,11 +148,11 @@ Use this workflow to update a page that already exists in your environment.
 
 ## Set up a page to accept input parameters
 
-Generative pages can accept input parameters — `recordId`, `entityName`, and `data` — enabling them to receive contextual data when navigated to from other pages or code. When you instruct the AI tool to configure input parameters, it generates the appropriate initialization code so the page reads and uses those values when it loads.
+Generative pages can accept the input parameters `recordId`, `entityName`, and `data`, enabling them to receive contextual data when navigated to from other pages or code. When you instruct the AI tool to configure input parameters, it generates the appropriate initialization code so the page reads and uses those values when it loads.
 
 Describe the parameters you want in your prompt:
 
-- "Set up the page to accept an Account recordId and entityName. When the page loads, use these to fetch and display the corresponding account details."
+- "Set up the page to accept an Account recordId and entityName. When the page loads, use these parameters to fetch and display the corresponding account details."
 - "Configure this page to accept a data parameter containing a custom filter object. Use it to filter the displayed records when the page loads."
 
 To navigate to the page and pass these parameters, see [Navigate to and from a generative page using Client API](../../developer/model-driven-apps/clientapi/navigate-to-generative-page-examples.md).

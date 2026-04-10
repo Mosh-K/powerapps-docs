@@ -5,7 +5,7 @@ author: jasongre
 ms.subservice: mda-maker
 ms.author: jasongre
 ms.reviewer: matp
-ms.date: 03/26/2026
+ms.date: 04/10/2026
 ms.topic: how-to
 applies_to:
   - PowerApps
@@ -25,7 +25,7 @@ After you describe the page, the system then processes your requirements and spe
 
 You can create generative pages using two approaches:
 
-- Power Apps (make.powerapps.com): As described in this article, makers can create and iterate on generative pages directly in the browser using a conversational UI experience
+- Power Apps (make.powerapps.com): As described in this article, makers can create and iterate on generative pages directly in the browser by using a conversational UI experience.
 - AI code generation tools: Developers who prefer working with local development tools and direct access to TypeScript and React code can use external tools like Claude Code to develop generative pages locally with a code-first approach and CLI-based deployment. More information: [Create and edit generative pages with AI code generation tools](generative-page-external-tools.md)
 
 ## Prerequisites
@@ -39,7 +39,7 @@ You can create generative pages using two approaches:
 1. In the app designer, select **Add a page** > **Describe a page**.
 
    A full-page generative page experience opens.
-1. In the textbox, type a description of the type of page you want to create. The description should include functional requirements and optionally any UX specifications. For example, you could enter *Build a page showing Account records as a gallery of cards using a modern look and feel. Include name, entityimage on the top, and website, email, phone number. Make the gallery scrollable by using data from the Account table*. If you want the page to support multiple languages, follow the guidance in [Localize a generative page](#localize-a-generative-page).
+1. In the text box, type a description of the type of page you want to create. Include functional requirements and optionally any UX specifications. For example, you could enter *Build a page showing Account records as a gallery of cards using a modern look and feel. Include name, entityimage on the top, and website, email, phone number. Make the gallery scrollable by using data from the Account table*. If you want the page to support multiple languages, follow the guidance in [Localize a generative page](#localize-a-generative-page).
 1. Add tables and images as appropriate by selecting **Add data** > **Add table**. You can link up to six Dataverse tables. In the screenshot, the account table is added.
    :::image type="content" source="media/generative-page/add-table-generative-page.png" alt-text="Add a table to the generative page" lightbox="media/generative-page/add-table-generative-page.png":::
 
@@ -55,7 +55,7 @@ You can create generative pages using two approaches:
 
 1. When you're finished describing the page, select **Generate page**.
 
-The agent begins a multi-step build process that you can observe in real time:
+The agent begins a multistep build process that you can observe in real time:
 - **Thought streaming**: The agent first outlines its interpretation of your prompt, listing requirements, assumptions, and an execution plan.
 - **Code generation**: Next, it writes the underlying code for your page based on the plan.
 - **Transpilation**: The generated code is then transpiled to ensure compatibility and proper rendering.
@@ -105,10 +105,10 @@ This section covers common scenarios and tasks when working with generative page
 
 ### Set up a page to accept input parameters
 
-Generative pages can accept input parameters — `recordId`, `entityName`, and `data` — enabling them to receive contextual data when navigated to. To configure a page to accept parameters, describe what the page should accept in your prompt and the agent wires up the initialization code automatically. For example:
+Generative pages can accept the input parameters `recordId`, `entityName`, and `data` enabling them to receive contextual data when navigated to. To configure a page to accept parameters, describe what the page should accept in your prompt and the agent wires up the initialization code automatically. For example:
 
 ```
-Set up the page to accept an Account recordId. When the page loads, use these to fetch and display the corresponding account details.
+Set up the page to accept an account recordId. When the page loads, use these to fetch and display the corresponding account details.
 ```
 
 ```
@@ -121,7 +121,7 @@ You can navigate to a generative page programmatically using `Xrm.Navigation.nav
 
 ### Use specific images in a page
 
-There are three approaches to using specific images in your generative pages:
+There are three approaches to using specific images in your generative pages.
 
 #### Store images in a Dataverse table
 
@@ -145,7 +145,7 @@ Upload the image as a web resource in your solution and reference it by its web 
 
 1. Add the image as a web resource in your solution.
 1. Note the web resource name (for example, `new_/images/banner.png`).
-1. Reference it in your prompt or code using the web resource URL format:
+1. Reference it in your prompt or code using the web resource URL format described here:
 
 ```
 Use the banner image from web resource new_/images/banner.png as the page header background.
