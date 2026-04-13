@@ -58,6 +58,10 @@ Key properties for this control are **Items**, **DefaultSelectedItems**, and **S
 
 **SearchText** – (Output) The current text typed by the user in the search box. Use this to create custom filtering logic or to track search behavior.
 
+
+> [!NOTE]
+> Output properties such as **SelectedItems** in a Combo box control are read-only. The **SelectedItems** property returns a table of the currently selected records and can't be set directly in the control. Instead, other controls and formulas use this property to access the current selection. For example, you can reference `ComboBoxName.SelectedItems` in a label, gallery, or formula to work with the selected records.
+
 **MultiValueDelimiter** – The separator character used when displaying multiple selected items in the input field. Default is **", "** (comma and space).
 
 ## Validation
