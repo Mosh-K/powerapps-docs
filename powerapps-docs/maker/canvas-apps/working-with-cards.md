@@ -86,7 +86,7 @@ The following screenshot shows a form with a data card that is locked.
 
 :::image type="content" source="./media/working-with-cards/advanced-locked.png" alt-text="Screenshot of the Advanced tab showing a locked data card in Power Apps.":::
 
-The key setting is **DataField**. It tells Power Apps which field (column) this card is responsible for. When the form submits, Power Apps uses the card's **DataField** value to know what field to update.
+The key setting is [DataField](controls/control-card.md). It tells Power Apps which field (column) this card is responsible for. When the form submits, Power Apps uses the card's **DataField** value to know what field to update.
 
 1. To unlock a card, select the card
 1. In the **Properties** pane, select the **Advanced**.
@@ -94,43 +94,16 @@ The key setting is **DataField**. It tells Power Apps which field (column) this 
 1. After you unlock the card, edit the generated formulas and add or remove controls inside the card.
 
 
-
-|Locked properties  |Unlocked properties  |
-|-------------------|---------------------|
-|:::image type="content" source="media/working-with-cards/locked-properties.png" alt-text="Screenshot of locked properties on a data card":::               |  :::image type="content" source="media/working-with-cards/unlocked-properties.png" alt-text="Screenshot of unlocked properties on a data card":::                   |
-
+    |Locked properties  |Unlocked properties  |
+    |-------------------|---------------------|
+    |:::image type="content" source="media/working-with-cards/locked-properties.png" alt-text="Screenshot of locked properties on a data card":::               |  :::image type="content" source="media/working-with-cards/unlocked-properties.png" alt-text="Screenshot of unlocked properties on a data card":::                   |
 
 
-For example, after unlocking, you can change **DisplayName** so the label reads **Asset ID** instead of **AssetID**. This small change shows that the card is now under your control and isn't fully managed by the form.
-
-:::image type="content" source="./media/working-with-cards/change-display-name.png" alt-text="Screenshot of changing the DisplayName property in a data card in Power Apps.":::
-
-After you unlock and start editing the generated formulas and controls, the card becomes a **custom card**. That means you gain flexibility, but you might lose some "one-click" features, such as switching the card back and forth between predefined card types like single-line versus multi-line in the right pane.
+You now take control over this card and can modify it further to fit your needs. But you lose the ability to change the card from one representation to another (for example, single-line text to multi-line text) as you did before. You transformed the predefined card into a "custom card" that you now control.
 
 > [!IMPORTANT]
 > You can't relock a card after you unlock it. To get a card back to a locked state, remove it, and reinsert it in the right-hand pane.
 
-Example: Add a custom required indicator. After unlocking, you can insert extra controls into the card. For instance, go to **Insert** > **Icons** and add a star shape, then position it where you want.
-
-:::image type="content" source="./media/working-with-cards/add-star.png" alt-text="Screenshot of adding a star icon to a data card in Power Apps.":::
-
-After you unlock a card, you can insert additional controls directly inside it, such as icons, labels, or other UI elements. These custom elements become part of the card, so if you later reorder fields or move the card, the added controls move with it.
-
-The star is now a part of the card and travels with it if, for example, you reorder the cards within the form.
-
-Another example: show an image preview. Unlock the **ImageURL** card, and then insert an **Image** control into the card from the **Insert** tab.
-
-:::image type="content" source="./media/working-with-cards/add-image.png" alt-text="Screenshot of adding an image control to a data card in Power Apps.":::
-
-Then set the Image control's **Image** property to *TextBox*.**Text** in the formula bar, where *TextBox* is the name of the text input that contains the URL. This setting makes the Image control display whatever URL the user types.
-
-:::image type="content" source="./media/working-with-cards/show-image.png" alt-text="Screenshot of a data card showing an image preview in Power Apps.":::
-
-Now the user can edit the URL and immediately see the image update. If you used **Parent.Default** for the Image property, it would show the starting value but might not refresh as the user types a new URL.
-
-You can use the same idea in a **Display form** (read-only) screen. Because users aren't editing the URL there, you might hide the label by setting the label control's **Visible** property to **false** which hides the label but not the whole card.
-
-:::image type="content" source="./media/working-with-cards/show-image-display.png" alt-text="Screenshot of a display form showing an image in Power Apps.":::
 
 ## Interact with a form
 
