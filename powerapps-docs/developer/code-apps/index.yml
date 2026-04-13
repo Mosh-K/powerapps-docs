@@ -42,6 +42,8 @@ landingContent:
             url: how-to/npm-quickstart.md
           - text: Add a Dataverse action or function
             url: how-to/add-dataverse-action-function.md
+          - text: Add flows
+            url: how-to/add-flows.md
 
   # Card
   - title: Configure & Setup
