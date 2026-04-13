@@ -12,9 +12,9 @@ This article shows you how to discover, add, invoke, and remove Power Automate c
 
 ## Prerequisites
 
-- A Power Apps code app initialized with `npx power-apps init`. See [Quickstart: Create a code app by using the npm CLI](./npm-quickstart.md).
+- An initialized Power Apps code app. See [Quickstart: Create a code app by using the npm CLI](./npm-quickstart.md).
 - A Power Automate flow that is **solution-aware**. If your flow isn't in a solution yet, see [Add an existing flow to a solution](/power-automate/create-flow-solution).
-- The npm CLI package `@microsoft/power-apps` version **1.1.0** or later.
+- The [`@microsoft/power-apps`](https://www.npmjs.com/package/@microsoft/power-apps) npm package version **1.1.0** or later.
 
 > [!NOTE]
 > Flow commands are only available in the npm-based CLI (`npx power-apps`). They are **not** available in the Power Platform CLI (`pac code`) commands.
@@ -74,14 +74,7 @@ Flow added successfully.
 
 ### What `add-flow` does
 
-The command performs the following steps automatically:
-
-1. Fetches the flow's metadata and OpenAPI (Swagger) definition from Power Automate.
-2. Filters connection references to **invoker**-sourced dependencies only—the connections the calling app must supply.
-3. For each dependency, queries the connector and connection APIs to determine `authenticationType` and `sharedConnectionId`.
-4. Writes a `shared_logicflows` connection reference (with `workflowDetails`) and stub dependency entries into `power.config.json`.
-5. Saves the flow's OpenAPI schema under `schemas/logicflows/`.
-6. Runs code generation to produce a strongly-typed TypeScript service class and model types for the flow.
+The command downloads the flow's OpenAPI definition, generates strongly-typed TypeScript files in your project, and updates `power.config.json` with the flow's connection references.
 
 > [!IMPORTANT]
 > The person running `add-flow` must have access to **read the flow** and to the flow's **underlying connections** (for example, an Office 365 Outlook connection). If access to a required connection is missing, the command fails with an authorization error.
