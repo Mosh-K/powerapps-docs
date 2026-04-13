@@ -45,6 +45,8 @@ items:
           href: how-to/use-environment-variables.md
         - name: Get context data
           href: how-to/retrieve-context.md
+        - name: Add flows
+          href: how-to/add-flows.md
       - name: Deploy & Monitor
         items:
         - name: Application lifecycle management (ALM)

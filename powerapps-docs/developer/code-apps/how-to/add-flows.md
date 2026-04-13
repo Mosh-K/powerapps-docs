@@ -231,18 +231,3 @@ During `push`, the CLI automatically constructs the full connection references p
 - [Add an existing flow to a solution](/power-automate/create-flow-solution)
 - [Configure user security in an environment](/power-platform/admin/database-security)
 
----
-
-## Notes for docs team
-
-**Suggested file path:** `powerapps-docs/developer/code-apps/how-to/add-flows.md`
-
-**TOC entry** (insert after `add-data-source` in `toc.yml`):
-```yaml
-- name: Add flows
-  href: how-to/add-flows.md
-```
-
-**Overview page update** (`powerapps-docs/developer/code-apps/overview.md`): Add a row to the **Managed platform capability support** table or a note under "Key features" that calls out Power Automate flow invocation via `add-flow` / `remove-flow` CLI commands, linking to this article.
-
-**Source PR:** https://microsoft.ghe.com/bic/PowerPlatform-Managed-Host/pull/172 (eschavez/addFlows)

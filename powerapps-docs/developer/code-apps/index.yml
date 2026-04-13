@@ -56,6 +56,8 @@ landingContent:
             url: how-to/use-environment-variables.md
           - text: Get context data
             url: how-to/retrieve-context.md
+          - text: Add flows
+            url: how-to/add-flows.md
 
   # Card
   - title: Connect to Data
