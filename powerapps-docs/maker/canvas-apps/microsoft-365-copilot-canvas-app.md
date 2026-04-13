@@ -87,7 +87,7 @@ Makers can enable or disable Microsoft 365 Copilot for a specific canvas app.
 
 - Agents you author can't yet use in‑app user context to optimize their responses.
 - M365 Copilot in canvas apps supports apps that use either SharePoint or Dataverse as a data source but not both within the same app.
-- For SharePoint, during the early preview, only apps with a single SharePoint list are supported.
+- During the initial preview phase, for SharePoint, only applications containing a single SharePoint list will return answers to questions.
 - Microsoft 365 Copilot for canvas apps allows users to view data by using read-only operations. This capability means that users can only view data that matches their queries and can't make any changes. To make changes, customization with an agent is required.
 - Microsoft 365 Copilot for canvas apps isn't available in the Power Apps mobile app.
 - As this feature is being gradually deployed, certain settings in the Power Platform Admin Center might not be accessible yet, depending on the geographic location of your tenant.
