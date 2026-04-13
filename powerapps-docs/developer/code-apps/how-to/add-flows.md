@@ -184,13 +184,8 @@ npx power-apps remove-flow --flow-id a1b2c3d4-e5f6-7890-abcd-ef1234567890
 
 The command:
 
-- Removes the flow's connection reference from `power.config.json`.
-- Removes any dependency stub entries that are no longer referenced by another flow.
-- Deletes the flow's schema file and cleans up the `schemas/logicflows/` directory if it becomes empty.
+- Removes the flow from `power.config.json`.
 - Regenerates all model services.
-
-> [!NOTE]
-> Removing a flow does **not** remove connector connection references that are shared with other data sources in your app.
 
 ## Deploying your app
 
@@ -200,12 +195,6 @@ After adding flows and verifying the app locally with `npm run dev`, build and d
 npm run build
 npx power-apps push
 ```
-
-During `push`, the CLI automatically constructs the full connection references payload, including:
-
-- `parameterHintsV2` with `workflowEntityId`, `workflowDisplayName`, `workflowName`, and dependency UUIDs.
-- `parameterHints` with the workflow identity fields used for disambiguation.
-- Wired `dependencies` / `dependents` arrays between the flow reference and its connector references.
 
 ## Limitations and considerations
 
