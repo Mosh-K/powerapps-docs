@@ -95,9 +95,9 @@ Usage may be subject to service limits or throttling. Microsoft reserves the rig
 
 ### Admin control
 
-The primary admin control for form fill assistance in apps is moving to the Power Platform admin center under **Copilot** > **Settings** > **Power Apps** > **Data entry**. Learn more in [Copilot hub](/power-platform/admin/copilot/copilot-hub). This is gradually rolling out over the next coming weeks.
-
-The **AI form fill assistance** > **Smart paste and file suggestions** app setting (FormPredictSmartPasteEnabled) and **AI form fill assistance** > **Form fill assist toolbar** app setting (FormFileUploadEnabled), previously available in Power Platform admin center **Settings** > **Product** > **Features** is being moved and you can configure this setting at the app level either by using the [Model App Designer Setting](/power-apps/maker/model-driven-apps/app-properties) or [Solution Explorer App Settings](/power-apps/maker/data-platform/create-edit-configure-settings#updating-a-setting-definition). 
+The primary admin control for form fill assistance is moving to the Power Platform admin center under **Copilot** > **Settings** > **Power Apps** > **Data entry**. Learn more in [Copilot hub](/power-platform/admin/copilot/copilot-hub). This is gradually rolling out over the next coming weeks.
+ 
+**Smart paste** (`FormPredictSmartPasteEnabled`) or **form fill assist toolbar** (`FormFileUploadEnabled`) app settings previously available in [Power Platform admin center](/power-platform/admin/settings-features#ai-form-fill-assistance) **Environment** > **Settings** > **Product** > **Features** page is moving and you can configure this setting at the app level either by using [Manage model-driven app settings in the app designer](/power-apps/maker/model-driven-apps/app-properties) or [Updating a setting definition](/power-apps/maker/data-platform/create-edit-configure-settings#updating-a-setting-definition).
 
 ## Use form fill assistance with agents in Microsoft 365 Copilot (preview)
 
