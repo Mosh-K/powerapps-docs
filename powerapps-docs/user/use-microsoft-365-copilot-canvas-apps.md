@@ -4,7 +4,7 @@ description: Learn how to use Microsoft 365 Copilot to gain insights about the d
 author: devkeydet
 ms.component: pa-user
 ms.topic: overview
-ms.date: 03/30/2026
+ms.date: 04/15/2026
 ms.update-cycle: 180-days
 ms.subservice: end-user
 ms.author: marcsc
@@ -25,6 +25,7 @@ ms.collection:
 >
 > - This feature is in preview.  
 > - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520). They're available before an official release so that customers can get early access and provide feedback.
+> -  This feature is in the process of rolling out and might not be available in your region yet.
 
 ## Prerequisites
 
