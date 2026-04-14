@@ -14,7 +14,7 @@ This article shows you how to discover, add, invoke, and remove Power Automate c
 
 - An initialized Power Apps code app. See [Quickstart: Create a code app by using the npm CLI](./npm-quickstart.md).
 - A Power Automate flow that is **solution-aware**. If your flow isn't in a solution yet, see [Add an existing flow to a solution](/power-automate/create-flow-solution).
-- The [`@microsoft/power-apps`](https://www.npmjs.com/package/@microsoft/power-apps) npm package version **1.1.0** or later.
+- The [`@microsoft/power-apps`](https://www.npmjs.com/package/@microsoft/power-apps) npm package version **1.1.1** or later.
 
 > [!NOTE]
 > Flow commands are only available in the npm-based CLI (`npx power-apps`). They are **not** available in the Power Platform CLI (`pac code`) commands.
