@@ -60,6 +60,7 @@ When you open an app that uses the previous version of a modern control, you see
 | Radio | [Updates to Radio](modern-controls-radio-group.md#recent-updates) | Item order preserved, View mode read-only (not disabled), new styling properties |
 | Link | [Updates to Link](modern-control-link.md#recent-updates) | URL security validation (XSS protection), FontWeight fix, Wrap fix |
 | Info Button | [Updates to Info Button](modern-control-info-button.md#recent-updates) | Content flyout expansion fixed, click reliability improved, AcceptsFocus removed |
+| Button | [Updates to Button](modern-control-button.md#recent-updates) | Six property renames, enum values for Appearance/Layout/IconStyle, new Tooltip and border properties, AcceptsFocus removed |
 
 ## Property changes across modern controls
 
@@ -69,11 +70,11 @@ The following property renames apply to most or all controls:
 
 | Old name (Previous) | New name (New) | Affected controls |
 |---------------------|----------------|-------------------|
-| `FontColor` | `Color` | Text, Link, Info Button, Radio, Text Input, Tab List, Number Input, Date Picker, Combo Box |
-| `FontSize` | `Size` | Text, Link, Info Button, Radio, Text Input, Tab List, Number Input, Date Picker, Combo Box |
-| `FontItalic` | `Italic` | Text, Link, Info Button, Radio, Text Input, Tab List, Date Picker, Combo Box |
-| `FontStrikethrough` | `Strikethrough` | Text, Link, Info Button, Radio, Text Input, Date Picker, Combo Box |
-| `FontUnderline` | `Underline` | Text, Link, Info Button, Radio, Text Input, Date Picker, Combo Box |
+| `FontColor` | `Color` | Text, Link, Info Button, Radio, Text Input, Tab List, Number Input, Date Picker, Combo Box, Button |
+| `FontSize` | `Size` | Text, Link, Info Button, Radio, Text Input, Tab List, Number Input, Date Picker, Combo Box, Button |
+| `FontItalic` | `Italic` | Text, Link, Info Button, Radio, Text Input, Tab List, Date Picker, Combo Box, Button |
+| `FontStrikethrough` | `Strikethrough` | Text, Link, Info Button, Radio, Text Input, Date Picker, Combo Box, Button |
+| `FontUnderline` | `Underline` | Text, Link, Info Button, Radio, Text Input, Date Picker, Combo Box, Button |
 | `Weight` | `FontWeight` | Text only |
 | `BorderRadius` | `RadiusTopLeft`, `RadiusTopRight`, `RadiusBottomLeft`, `RadiusBottomRight` | All controls with borders |
 
