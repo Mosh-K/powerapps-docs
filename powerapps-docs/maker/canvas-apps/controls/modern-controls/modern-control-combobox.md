@@ -4,7 +4,7 @@ description: Learn about the details, properties, and examples of the Combo box 
 author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
-ms.date: 02/23/2026
+ms.date: 04/13/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
 ms.reviewer: mkaur
@@ -57,6 +57,11 @@ Key properties for this control are **Items**, **DefaultSelectedItems**, and **S
 **Selected** – (Output) When **SelectMultiple** is `false`, returns the single selected item as a record. When **SelectMultiple** is `true`, returns the first selected item.
 
 **SearchText** – (Output) The current text typed by the user in the search box. Use this to create custom filtering logic or to track search behavior.
+
+
+> [!NOTE]
+> Output properties such as **SelectedItems** in a Combo box control return a table of the currently selected records and can’t be set directly. Instead, other controls and formulas use this property to access the current selection. For example, reference `ComboBoxName.SelectedItems` in a label, gallery, or formula to work with the selected records.
+
 
 **MultiValueDelimiter** – The separator character used when displaying multiple selected items in the input field. Default is **", "** (comma and space).
 
