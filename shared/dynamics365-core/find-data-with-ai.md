@@ -9,12 +9,12 @@ Use smart grid natural language search to ask data-related questions in natural 
 
 ### Licensing requirements
 
-The Natural Language Grid and View Search requires specific user licenses based on the product. If the user does not have the license, the feature will be hidden. This license enforcement will gradually rollout following the feature general availability.
+Natural language grid and view search requires specific user licenses based on the product. If the user doesn't have the license, the feature is hidden. This license enforcement will gradually rollout following the feature's general availability.
 
-- **Power Apps model driven app**: the user must have a Power Apps premium license with details in the [Power Platform License Guide](https://go.microsoft.com/fwlink/?linkid=2085130)
-- **Dynamics 365 model driven app**: the user must have a Dynamics 365 enterprise or premium license as outlined in [Dynamics 365 License Guide](https://go.microsoft.com/fwlink/?LinkId=866544)
+- **Power Apps model driven app**: The user must have a Power Apps premium license. For details, see the [Power Platform License Guide](https://go.microsoft.com/fwlink/?linkid=2085130).
+- **Dynamics 365 model driven app**: The user must have a Dynamics 365 enterprise or premium license as outlined in [Dynamics 365 License Guide](https://go.microsoft.com/fwlink/?LinkId=866544).
 
-Usage may be subject to service limits or throttling. Microsoft reserves the right to update the limits.
+Usage might be subject to service limits or throttling. Microsoft reserves the right to update the limits.
 
 ### Admin control
 
@@ -22,12 +22,17 @@ The primary admin control for **Natural Language Grid and View Search** is movin
  
 **Natural language grid and view search** app setting (`NLGridSearchSetting`) previously available in [Power Platform admin center](/power-platform/admin/settings-features#natural-language-grid-and-view-search) **Environment** > **Settings** > **Product** > **Features** page is moving and you can configure this setting at the app level either by using [Manage model-driven app settings in the app designer](/power-apps/maker/model-driven-apps/app-properties) or [Updating a setting definition](/power-apps/maker/data-platform/create-edit-configure-settings#updating-a-setting-definition).
 
+## Explore data with agents in Microsoft 365 Copilot (preview)
+
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
-> [!IMPORTANT]
-> This feature is being gradually rolled out across regions and might not be available yet in your region.
-
 With Microsoft 365 Copilot you have the ability to bring app-based experiences to agents, the app experience can also use the AI assisted search in the grid view. 
+
+> [!IMPORTANT]
+>
+> - This is a preview feature.
+> - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2216214), and are available before an official release so that customers can get early access and provide feedback.
+> - This feature is being gradually rolled out across regions and might not be available yet in your region.
 
 > [!NOTE]
 > To use this capability, you need to [set up an apps agent in Microsoft 365 Copilot](/power-apps/maker/model-driven-apps/app-properties#upcoming).
@@ -38,7 +43,6 @@ Users can continue to work with the returned results in the conversation, iterat
 
 :::image type="content" source="/power-apps/user/media/find-data-grid-in-copilot.png" alt-text="A screenshot showing how data can be fetched using agent in Microsoft 365 Copilot":::
 
-[!INCLUDE [preview-note-pp](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
 
 ## Supported features
 

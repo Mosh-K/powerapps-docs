@@ -86,12 +86,12 @@ To use files:
 
 ### Licensing requirements
 
-The form fill assistance in model-driven apps requires specific user licenses based on the product. If the user does not have the license, the feature will be hidden. This license enforcement will gradually rollout following the feature general availability.
+The form fill assistance requires specific user licenses based on the product. If the user doesn't have the license, the feature is hidden. This license enforcement will gradually rollout following the feature's general availability.
 
-- **Power Apps model driven app**: the user must have a Power Apps premium license with details in the [Power Platform License Guide](https://go.microsoft.com/fwlink/?linkid=2085130)
-- **Dynamics 365 model driven app**: the user must have a Dynamics 365 enterprise or premium license as outlined in [Dynamics 365 License Guide](https://go.microsoft.com/fwlink/?LinkId=866544) 
+- **Power Apps model driven app**: The user must have a Power Apps premium license. For details, see the [Power Platform License Guide](https://go.microsoft.com/fwlink/?linkid=2085130).
+- **Dynamics 365 model driven app**: The user must have a Dynamics 365 enterprise or premium license as outlined in [Dynamics 365 License Guide](https://go.microsoft.com/fwlink/?LinkId=866544).
 
-Usage may be subject to service limits or throttling. Microsoft reserves the right to update the limits.
+Usage might be subject to service limits or throttling. Microsoft reserves the right to update the limits.
 
 ### Admin control
 
@@ -103,12 +103,15 @@ The primary admin control for form fill assistance is moving to the Power Platfo
 
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
-> [!IMPORTANT]
-> This feature is being gradually rolled out across regions and might not be available yet in your region.
-
 With Microsoft 365 Copilot, you have ability to bring app-based experiences to agents. The app experience can leverage the form fill assistance right in the chat.  
 
 :::image type="content" source="/power-apps/user/media/formfill-in-microsoft365.png" alt-text="Screenshot that shows form fill assistance inside Microsoft 365 Copilot.":::
+
+> [!IMPORTANT]
+>
+> - This is a preview feature.
+> - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2216214), and are available before an official release so that customers can get early access and provide feedback.
+> - This feature is being gradually rolled out across regions and might not be available yet in your region.
 
 > [!NOTE]
 > To use this capability, you need to [set up an apps agent in Microsoft 365 Copilot](/power-apps/maker/model-driven-apps/app-properties#upcoming).
@@ -119,6 +122,5 @@ The suggestions appear inline in the chat-based form and you can review or edit 
 
 After submission, the data is saved to the connected app and is available, just as if you complete the form directly in the app.
 
-[!INCLUDE [preview-note-pp](~/../shared-content/shared/preview-includes/preview-note-pp.md)]
 
 
