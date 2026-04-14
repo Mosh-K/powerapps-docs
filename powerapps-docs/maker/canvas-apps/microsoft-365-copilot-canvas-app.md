@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.subservice: canvas-maker
 ms.author: marcsc
 ms.reviewer: mkaur
-ms.date: 04/7/2026
+ms.date: 04/15/2026
 ms.update-cycle: 180-days
 ms.topic: how-to
 applies_to: 
@@ -36,6 +36,7 @@ When enabled, users can open Microsoft 365 Copilot in their canvas app by select
 >
 > - This feature is in preview.  
 > - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520). They're available before an official release so that customers can get early access and provide feedback.
+> -  This feature is in the process of rolling out and might not be available in your region yet.
 
 ## Prerequisites
 
@@ -47,7 +48,6 @@ To use Microsoft 365 Copilot in canvas apps, make sure the following prerequisit
 
 > [!NOTE]
 >
-> - This feature is being gradually rolled out across regions and might not be available yet in your region.
 > - Microsoft 365 Copilot for canvas apps with Dataverse relies on Dataverse Search indexes. Enabling this feature might increase your environment’s Dataverse capacity consumption. For more information, see [What actions can makers or admins take to manage Dataverse Search efficiently](../../user/relevance-search-benefits.md#what-actions-can-makers-or-admins-take-to-manage-dataverse-search-efficiently).
 > - Sufficient Dataverse database capacity must be available to support indexing, semantic search, and Copilot operations. For more information, see [Capacity page details](/power-platform/admin/capacity-storage#capacity-page-details).
 
