@@ -2,7 +2,7 @@
 title: "Azure Synapse Link Advance Configuration | MicrosoftDocs"
 description: "Learn about the advance configuration options and concepts in Azure Synapse Link for Dataverse."
 ms.custom: ""
-ms.date: 10/28/2024
+ms.date: 04/15/2026
 ms.reviewer: "Mattp123"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -17,6 +17,7 @@ search.audienceType:
   - maker
 contributors:
   - sama-zaki
+  - VinayMancha02
 ---
 
 # Advanced configuration options in Azure Synapse Link
@@ -63,8 +64,11 @@ This table describes how rows are handled in the lake against CUD events for eac
 
 Here are some more details on when to use either of the options.
 
-- **In place update**:  This option is the default setting and recommended only if you want to connect directly to the data in lake and need the current state (not history or incremental changes). The file contains the full data set and can be utilized via Power BI or by copying the entire dataset for ETL (Extract, Transfer, Load) pipelines.
-- **Append only**: Select this option if you aren't directly connecting to data in the lake and want to incrementally copy data to another target using ETL pipelines. This option provides a history of changes to enable AI and ML scenarios.
+- **In place update** (legacy):  This option is the default setting and recommended only if you want to connect directly to the data in lake and need the current state (not history or incremental changes). The file contains the full data set and can be utilized via Power BI or by copying the entire dataset for ETL (Extract, Transfer, Load) pipelines.
+
+  > [!IMPORTANT]
+   > **In place update** is a legacy mode and doesn't scale well with high data volumes or when changes are frequent. If your table has a large amount of data or experiences a high rate of creates, updates, or deletes, use **Append only** instead to ensure reliable and performant data export.
+- **Append only**: Select this option if you aren't directly connecting to data in the lake and want to incrementally copy data to another target using ETL pipelines. This option provides a history of changes to enable AI and ML scenarios. This is the recommended option for tables with large data volumes or frequent data changes.
 
 You can toggle the **Show advanced configuration settings** under **Advanced** in Azure Synapse Link for Dataverse to customize your data partition strategy and select options to write to the Azure data lake.
 
