@@ -60,6 +60,7 @@ When you open an app that uses the previous version of a modern control, you see
 | Radio | [Updates to Radio](modern-controls-radio-group.md#recent-updates) | Item order preserved, View mode read-only (not disabled), new styling properties |
 | Link | [Updates to Link](modern-control-link.md#recent-updates) | URL security validation (XSS protection), FontWeight fix, Wrap fix |
 | Info Button | [Updates to Info Button](modern-control-info-button.md#recent-updates) | Content flyout expansion fixed, click reliability improved, AcceptsFocus removed |
+| Icon | [Updates to Icon control](modern-control-icon.md#recent-updates) | OnSelect support, TabIndex removed, Style renamed to IconStyle, new border and padding properties |
 
 ## Property changes across modern controls
 
@@ -149,7 +150,7 @@ The previous Text control property was named `Weight` with string values (`"Regu
 
 #### BorderStyle
 
-**Used by:** Text, Text Input, Number Input, Date Picker, Combo Box, Tab List, Link, Radio
+**Used by:** Text, Text Input, Number Input, Date Picker, Combo Box, Tab List, Link, Radio, Icon
 
 | Enum value | Description |
 |------------|-------------|
@@ -157,6 +158,18 @@ The previous Text control property was named `Weight` with string values (`"Regu
 | `BorderStyle.Dashed` | Dashed line border |
 | `BorderStyle.Dotted` | Dotted line border |
 | `BorderStyle.None` | No border |
+
+
+#### IconStyle
+
+**Used by:** Icon, Button
+
+| Enum value | Description |
+|------------|-------------|
+| `IconStyle.Outline` | Renders the icon in outline (unfilled) style (default) |
+| `IconStyle.Filled` | Renders the icon in filled style |
+
+The previous string values `"Outline"` and `"Filled"` must be replaced with `IconStyle.Outline` and `IconStyle.Filled`.
 
 ### BorderRadius split into corner-specific properties
 
