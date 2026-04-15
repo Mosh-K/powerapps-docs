@@ -4,7 +4,7 @@ description: Learn about the details, properties, and examples of the Combo box 
 author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
-ms.date: 04/13/2026
+ms.date: 04/15/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
 ms.reviewer: mkaur
