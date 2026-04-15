@@ -35,7 +35,7 @@ To add custom tables as activities in a timeline, configure the following settin
 - Set the table **Type** as **Activity**.
 - Check the **Enable attachments** setting if you want app users to be able to add attachments and notes to the custom activity record.
 
-More information: [Create a custom table](../data-platform/data-platform-create-entity.md)
+Learn more in [Create a custom table](../data-platform/data-platform-create-entity.md).
 
 ### Add the timeline component to a form
 
@@ -44,7 +44,7 @@ More information: [Create a custom table](../data-platform/data-platform-create-
 1. Select the **Forms** area, and then open the form where you want to add or configure a timeline.
 1. In the form designer, select **Components** from the left navigation, and then scroll down to the **Timeline** component on the left side. Drag and drop it into a section on the form.
    ![Adding or removing a timeline from an entity form.](media\timeline-add-or-remove-entity-from-form-1b.png "Adding or removing a timeline from an entity form")
-1. Make the changes you want to the timeline settings. More information: [Configure the timeline component](#configure-the-timeline-component)
+1. Make the changes you want to the timeline settings. Learn more in [Configure the timeline component](#configure-the-timeline-component).
 1. Before you can view any configuration changes on the table form, you must save and publish your updates on the timeline component. Select **Save**, and then select **Publish** to make your form changes available on the table form for the environment.
 
 Note the following when you work with the timeline control in the form designer.
@@ -321,7 +321,7 @@ Accounts, contacts, cases, and opportunities linked to an activity are displayed
 |Form designer configuration view |  Form designer display view |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |![Configure related records](media\maker-enable-records-1.png "Enable related records to display on timeline") | ![Display related records on the timeline](media\maker-enable-records-2.png "Display related records for activities from timeline") |
-|1. Expand and view activities under the **Record settings** section using the caret (^). <br> 2. A list of records are displayed in **Regarding records**. <br> 3. To enable records, select the box next to **Enable** and select **Done**. | When the checkbox is enabled, users can view the linked records to an activity. The record linked to the activity is then displayed on the timeline. The linking of the record isn't manual and it occurs due to the rollup of the record. More information: [Set the activity rollup type in timeline](/power-apps/maker/model-driven-apps/set-up-timeline-control#set-the-activity-rollup-type-in-timeline)|
+|1. Expand and view activities under the **Record settings** section using the caret (^). <br> 2. A list of records are displayed in **Regarding records**. <br> 3. To enable records, select the box next to **Enable** and select **Done**. | When the checkbox is enabled, users can view the linked records to an activity. The record linked to the activity is then displayed on the timeline. The linking of the record isn't manual and it occurs due to the rollup of the record. Learn more in [Set the activity rollup type in timeline](/power-apps/maker/model-driven-apps/set-up-timeline-control#set-the-activity-rollup-type-in-timeline). |
 
 > [!NOTE]
 > A check mark appears next to the enabled record. Disabling the table type only disables the linked record for the Timeline records rolled up for that table.
@@ -422,7 +422,7 @@ If you select more than 10 **Activity types**, a warning message displays to ind
 |Form designer configuration view | Form designer display view|
 |----------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
 |![Notes on timeline](media\timeline-notes-1a.png "Notes on timeline") | ![Notes on timeline - Runtime](media\timeline-notes-3.png "Notes on timeline - Runtime")|
-|The **Notes** section expands when enabled and allows you to:<BR>1. **Sort notes by** date created or date modified. The **Modified On** date is the default setting. <BR>2. Add a relative web resource path in the **Rich text editor configuration URL** column for customized note capability. More information: [Add the rich text editor control to a model-driven app](/powerapps/maker/model-driven-apps/rich-text-editor-control) |1. When enabled, Notes can be access via the **Create a timeline record** ![Create a timeline record.](media\timeline-create-a-record-icon.png "Create a timeline record") icon.<BR>2. A dropdown list appears where you can access **Notes**.<BR>3. Use **Notes** to create a note to add to a record using rich text editing.<br> You can set the font and size for the notes from the timeline, without having to set it multiple times.|
+|The **Notes** section expands when enabled and allows you to:<BR>1. **Sort notes by** date created or date modified. The **Modified On** date is the default setting. <BR>2. Add a relative web resource path in the **Rich text editor configuration URL** column for customized note capability. Learn more in [Add the rich text editor control to a model-driven app](/powerapps/maker/model-driven-apps/rich-text-editor-control). |1. When enabled, Notes can be access via the **Create a timeline record** ![Create a timeline record.](media\timeline-create-a-record-icon.png "Create a timeline record") icon.<BR>2. A dropdown list appears where you can access **Notes**.<BR>3. Use **Notes** to create a note to add to a record using rich text editing.<br> You can set the font and size for the notes from the timeline, without having to set it multiple times.|
   
 #### Configure the form for notes
 
@@ -503,7 +503,7 @@ Go to your timeline configuration in [make.powerapps.com](https://make.powerapps
 To enable @mentions in notes and posts, follow the instructions provided in this article: [Use @mention for collaborating with your team using notes](/power-apps/user/use-@mentions)
 
 > [!IMPORTANT]
-> The @mentions feature doesn't work with Power Platform environments that were created with the **Enable Dynamics 365 apps** option set to **No**. For more information about this option, go to [Create an environment with a database](/power-platform/admin/create-environment#create-an-environment-with-a-database).
+> The @mentions feature doesn't work with Power Platform environments that were created with the **Enable Dynamics 365 apps** option set to **No**. Learn more in [Create an environment with a database](/power-platform/admin/create-environment#create-an-environment-with-a-database).
 > <br><br>
 > Users must have the Read privilege for the **msdyn_postconfig** entity, and the Share privilege for the entity for which they use @mentions (for example, account, contact, case, and so forth).
 
@@ -590,13 +590,13 @@ After you enable the modern Timeline control experience, the updated experience 
 
 ## Create and add custom activities to timeline
 
-You can create custom tables that display on a timeline. More information: [Display a custom table in a timeline](#display-a-custom-table-in-a-timeline) 
+You can create custom tables that display on a timeline. Learn more in [Display a custom table in a timeline](#display-a-custom-table-in-a-timeline).
 
 ## Configure blocked attachment file types
 
 Power platform administrators can configure the file types that are blocked from being added as file attachments to records, including records in a timeline.
 
-1. Find the **Set blocked file extensions for attachments** systems setting. More information: [Open the System Settings dialog box General tab](/power-platform/admin/system-settings-dialog-box-general-tab#open-the-system-settings-dialog-box)
+1. Find the **Set blocked file extensions for attachments** systems setting. Learn more in [Open the System Settings dialog box General tab](/power-platform/admin/system-settings-dialog-box-general-tab#open-the-system-settings-dialog-box).
 1. In the text box of blocked file attachments, type the file extension type you want to block for attachments (for example, ".pdf"). Separate file types with a semi-colon.
 1. Select **OK**.
   
@@ -662,7 +662,7 @@ There's a limit of 15 different tables that can be associated with a timeline. E
 
 ### When you create a note in a timeline, the character string "$&" is converted to "{3}amp;"
 
-This issue is a configuration problem with the rich text editor control. To resolve this issue, add `"removePlugins": "stickystyles" ` to your RTE config file. Learn more in [Rich text editor properties](rich-text-editor-control.md#rich-text-editor-properties).
+This issue is a configuration problem with the rich text editor control. To resolve this issue, add `"removePlugins": "stickystyles" ` to your rich text editor config file. Learn more in [Rich text editor properties](rich-text-editor-control.md#rich-text-editor-properties).
 
 ### Related information
 
