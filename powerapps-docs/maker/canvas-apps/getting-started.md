@@ -86,7 +86,7 @@ If you encounter issues while building or running canvas apps, the following res
 - **[Known issues for canvas apps](/power-apps/maker/canvas-apps/common-issues-and-resolutions)** &ndash; Solutions for common errors and known limitations.
 - **[Performance optimization](/power-apps/maker/canvas-apps/performance-tips)** &ndash; Tips for improving app load times and responsiveness, including slow site performance.
 - **[Formula reference](/power-platform/power-fx/formula-reference-canvas-apps)** &ndash; Complete reference for Power Fx formulas and functions used in canvas apps.
-- **[Coding guidelines](/power-apps/guidance/overview)** &ndash; Best practices for maintaining clean, performant canvas app code.
+- **[Coding guidelines](../guidance/coding-guidelines/overvieww)** &ndash; Best practices for maintaining clean, performant canvas app code.
 - **[Dataverse troubleshooting](/troubleshoot/power-platform/dataverse/welcome-dataverse)** &ndash; Resolve issues with Dataverse connections, including mailbox configuration and solution imports.
 
 If your issue isn't resolved through documentation, you can [create a support request](/power-platform/admin/get-help-support) through the Power Platform admin center.
