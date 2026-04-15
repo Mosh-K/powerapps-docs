@@ -43,6 +43,8 @@
     href: ../user/app-source.md
   - name: Use canvas apps
     items:
+    - name:  Use Microsoft 365 Copilot in canvas apps (preview)
+      href: ../user/use-microsoft-365-copilot-canvas-apps.md
     - name: On a SharePoint Online page
       href: ../user/powerapps-web-part.md
     - name: In Microsoft Teams 
@@ -59,7 +61,7 @@
       items:
       - name: AI in apps overview
         href: ../user/ai-in-apps.md
-      - name: Use Microsoft 365 Copilot (preview)
+      - name: Use Microsoft 365 Copilot
         href: ../user/use-microsoft-365-copilot-model-driven-apps.md
       - name: Supervise agents using agent feed (preview)
         href: ../user/supervise-agents-with-agent-feed.md
@@ -407,6 +409,10 @@
             href: ./canvas-apps/add-configure-controls.md
           - name: Add a screen
             href: ./canvas-apps/add-screen-context-variables.md
+          - name: Add Microsoft 365 Copilot to canvas apps (preview)
+            href: ./canvas-apps/microsoft-365-copilot-canvas-app.md 
+          - name: Customize Microsoft 365 Copilot with an agent (preview)  
+            href: ./model-driven-apps/customize-microsoft-365-copilot-chat.md  
           - name: Add a Copilot control (preview)
             href: ./canvas-apps/add-ai-copilot.md
           - name: Add a custom Copilot (preview)
@@ -1820,7 +1826,7 @@
     - name: Copilot chat for apps
       href:
       items:
-      - name: Add Microsoft 365 Copilot to your app (preview)
+      - name: Add Microsoft 365 Copilot to your app
         href: ./model-driven-apps/add-microsoft-365-copilot.md
       - name:  Customize Microsoft 365 Copilot with an agent (preview) 
         href: ./model-driven-apps/customize-microsoft-365-copilot-chat.md
