@@ -60,6 +60,7 @@ When you open an app that uses the previous version of a modern control, you see
 | Radio | [Updates to Radio](modern-controls-radio-group.md#recent-updates) | Item order preserved, View mode read-only (not disabled), new styling properties |
 | Link | [Updates to Link](modern-control-link.md#recent-updates) | URL security validation (XSS protection), FontWeight fix, Wrap fix |
 | Info Button | [Updates to Info Button](modern-control-info-button.md#recent-updates) | Content flyout expansion fixed, click reliability improved, AcceptsFocus removed |
+| Dropdown | [Updates to Dropdown control](modern-control-dropdown.md#recent-updates) | Fluent-themed flyout on desktop, DefaultSelectedItems renamed to Default, FontSize renamed to Size, enum format changes |
 
 ## Property changes across modern controls
 
@@ -70,7 +71,7 @@ The following property renames apply to most or all controls:
 | Old name (Previous) | New name (New) | Affected controls |
 |---------------------|----------------|-------------------|
 | `FontColor` | `Color` | Text, Link, Info Button, Radio, Text Input, Tab List, Number Input, Date Picker, Combo Box |
-| `FontSize` | `Size` | Text, Link, Info Button, Radio, Text Input, Tab List, Number Input, Date Picker, Combo Box |
+| `FontSize` | `Size` | Text, Link, Info Button, Radio, Text Input, Tab List, Number Input, Date Picker, Combo Box, Dropdown |
 | `FontItalic` | `Italic` | Text, Link, Info Button, Radio, Text Input, Tab List, Date Picker, Combo Box |
 | `FontStrikethrough` | `Strikethrough` | Text, Link, Info Button, Radio, Text Input, Date Picker, Combo Box |
 | `FontUnderline` | `Underline` | Text, Link, Info Button, Radio, Text Input, Date Picker, Combo Box |
@@ -126,7 +127,7 @@ The previous Text control property was named `Weight` with string values (`"Regu
 
 #### ValidationState
 
-**Used by:** Date Picker, Text Input, Number Input, Combo Box, Radio
+**Used by:** Date Picker, Text Input, Number Input, Combo Box, Dropdown, Radio
 
 | Enum value | Description |
 |------------|-------------|
@@ -138,7 +139,7 @@ The previous Text control property was named `Weight` with string values (`"Regu
 
 #### Appearance
 
-**Used by:** Date Picker, Text Input, Number Input, Combo Box
+**Used by:** Date Picker, Text Input, Number Input, Combo Box, Dropdown
 
 | Enum value | Description |
 |------------|-------------|
@@ -149,7 +150,7 @@ The previous Text control property was named `Weight` with string values (`"Regu
 
 #### BorderStyle
 
-**Used by:** Text, Text Input, Number Input, Date Picker, Combo Box, Tab List, Link, Radio
+**Used by:** Text, Text Input, Number Input, Date Picker, Combo Box, Tab List, Link, Radio, Dropdown
 
 | Enum value | Description |
 |------------|-------------|
