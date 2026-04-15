@@ -48,7 +48,7 @@ Key properties for this control are **Items**, **DefaultSelectedItems**, and **S
 
 **DisplayMode** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**). In **View** mode, the selection is shown but can't be changed.
 
-**DelayOutput** – When set to `true`, delays the **OnChange** event until the user clicks outside the control or presses Enter. When `false`, **OnChange** fires immediately on each selection. Default is **false**.
+**DelayOutput** – When set to `true`, delays updates to the **SearchText** output property until the user pauses typing. When `false`, **SearchText** updates immediately on each keystroke. This property does not affect when **OnChange** fires — **OnChange** fires immediately on every selection and deselection regardless of this setting. Default is **false**.
 
 ## Data
 
@@ -215,7 +215,7 @@ The following properties now require typed enum syntax instead of plain string v
 
 - **SelectMultiple defaults to true**: The **SelectMultiple** property now defaults to `true`. If your app requires single selection, explicitly set `SelectMultiple = false`.
 - **Toggle selection behavior**: Clicking a selected item now unselects it, making it easier to remove selections without clearing the entire list.
-- **Immediate OnChange firing**: The **OnChange** event now fires immediately on every selection or deselection, enabling real-time filtering and dependent dropdowns. Set `DelayOutput = true` if you need the previous delayed behavior.
+- **Immediate OnChange firing**: The **OnChange** event now fires immediately on every selection or deselection, enabling real-time filtering and dependent dropdowns. Note: **DelayOutput** controls when **SearchText** updates — it does not affect **OnChange** timing.
 - **Search text clears on selection**: When an item is selected, the search text automatically clears.
 - **Reset() includes SearchText**: The `Reset()` function now clears both the selection and the search text.
 
