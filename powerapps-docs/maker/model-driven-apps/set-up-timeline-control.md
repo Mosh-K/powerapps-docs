@@ -333,7 +333,7 @@ Records are displayed using the default setting for each activity type. To displ
 |Form designer configure view |Form designer display view|
 |------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 |![Create and use card forms in timeline](media\timeline-create-and-use-card-forms-display-options-advanced-101a.png "Create and use card forms in timeline")|![Display the option to create and use card forms in timeline](media\timeline-create-and-use-card-forms-display-options-advanced-1111b.png "Display the option to create and use card forms in timeline") |
-|You can change the default card settings to a different card form if one exists.  |If you create a new card form, you must go to the parent table and add the new form of card type there before it appears in the timeline list for configuration. If **Default** is displayed, you aren't using the card form.  You can't use the **Email card form** in a timeline unless you select and publish it first.|
+|You can change the default card settings to a different card form if one exists.  |If you create a new card form, you must go to the parent table and add the new form of card type there before it appears in the timeline list for configuration. If **Default** is displayed, you aren't using the card form. You can't use the **Email card form** in a timeline unless you select and publish it first.|
 
 > [!NOTE]
 > Not all activity types allow you to create card types, so the default selection is your only option for those records.
