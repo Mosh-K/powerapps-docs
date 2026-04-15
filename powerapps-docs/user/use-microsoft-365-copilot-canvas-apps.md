@@ -32,7 +32,8 @@ ms.collection:
 An administrator must enable Microsoft 365 Copilot in your application before it becomes visible in your app. For more information, see [Add Microsoft 365 Copilot for app users](/power-apps/maker/canvas-apps/microsoft-365-copilot-canvas-app).
 
 > [!NOTE]
-> To use the Microsoft 365 Copilot feature in your app, you must have a Microsoft 365 Copilot license.
+> - To use the Microsoft 365 Copilot feature in your app, you must have a Microsoft 365 Copilot license.
+> - You must have access to an [early release cycle environment](/power-platform/admin/early-release) to use this feature.
 
 ## Copilot pane
 
