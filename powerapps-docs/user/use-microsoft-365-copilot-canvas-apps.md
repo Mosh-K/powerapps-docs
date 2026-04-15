@@ -42,7 +42,7 @@ After Microsoft 365 Copilot is enabled, access it through the Copilot button nea
 
 ## Use Microsoft 365 Copilot to ask questions
 
-Microsoft 365 Copilot in apps answers questions about the Dataverse table or SharePoint list data in the app.
+Microsoft 365 Copilot in apps answers questions about the Dataverse tables or SharePoint list data in the app.
 
 :::image type="content" source="/power-apps/user/media/microsoft-365-copilot-question-answer-canvas.png" alt-text="Screenshot that shows a question and response in Microsoft 365 Copilot." lightbox="/power-apps/user/media/microsoft-365-copilot-question-answer-canvas.png":::
 
@@ -81,6 +81,7 @@ One of the benefits of @ mentioning an agent is that you can add or remove it fr
 
 - M365 Copilot in canvas apps supports apps that use either SharePoint or Dataverse as a data source but not both within the same app.
 - During the initial preview phase, for SharePoint, only applications containing a single SharePoint list will return answers to questions.
+- If your canvas app connects to a SharePoint list through an environment variable, Microsoft 365 Copilot responses will not reference data from that SharePoint list.
 - Microsoft 365 Copilot for canvas apps allows users to view data by using read-only operations. This capability means that users can only view data that matches their queries and can't make any changes. To make changes, customization with an agent is required.
 - Microsoft 365 Copilot for canvas apps isn't available in the Power Apps mobile app.
 - As this feature is being gradually deployed, certain settings in the Power Platform Admin Center might not be accessible yet, depending on the geographic location of your tenant.
