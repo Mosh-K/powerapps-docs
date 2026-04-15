@@ -582,7 +582,7 @@ Before you enable the modern Timeline control experience, ensure that:
 1. Set the toggle to **Yes** for **Enable a modern Timeline control experience**.
 1. Select **Save and Publish**.
 
-After you enable the modern Timeline control experience, the updated experience appears the next time users open or refresh a form that includes a timeline control.
+After you enable the modern Timeline control experience, the updated experience appears the next time users open or refresh a form that includes a Timeline control.
 
 ### Limitations
 
