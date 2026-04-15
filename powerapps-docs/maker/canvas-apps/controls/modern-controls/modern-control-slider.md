@@ -1,10 +1,10 @@
 ---
-title: Slider modern control in canvas apps - Power Apps
-description: Learn about the details, properties, and examples of the Slider modern control in Power Apps.
+title: "Slider modern control in canvas apps: Set values with draggable handle - Power Apps"
+description: "Discover how to use the Slider modern control in Power Apps to let users select numeric values by dragging a handle. Explore properties, examples, and implementation tips. Get started today."
 author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
-ms.date: 04/14/2026
+ms.date: 04/15/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
 ms.reviewer: mkaur
@@ -31,7 +31,7 @@ The **Slider** modern control lets users set a value between a minimum and maxim
 
 **Max** – The maximum value the user can set. Default is **100**.
 
-**Visible** – Whether the control appears or is hidden.
+**Visible** – Whether the control appears or is hidden. 
 
 ## Behavior
 
@@ -58,7 +58,7 @@ The **Slider** modern control lets users set a value between a minimum and maxim
 
 ## Style and theme
 
-**BasePaletteColor** – The base color used by the theme to generate the control's color palette. Change this to apply a different theme color to the slider track and handle.
+**BasePaletteColor** – The base color that the theme uses to generate the control's color palette. Change this value to apply a different theme color to the slider track and handle.
 
 **Size** – The visual size of the slider handle and track. Accepts `SliderSize` enum values:
 
@@ -70,7 +70,7 @@ The **Slider** modern control lets users set a value between a minimum and maxim
 
 ## Additional properties
 
-**AccessibleLabel** – Label read by screen readers. Describe the purpose of the slider (for example, `"Volume"`).
+**AccessibleLabel** – Label that screen readers read. Describe the purpose of the slider for example, `"Volume"`.
 
 **Tooltip** – Explanatory text that appears when the user hovers over the control.
 
@@ -78,7 +78,7 @@ The **Slider** modern control lets users set a value between a minimum and maxim
 
 ## Output properties
 
-**Value** – The current value of the slider, updated as the user drags the handle. Use this in formulas to read the slider's current position (for example, `Slider1.Value`).
+**Value** – The current value of the slider, updated as the user drags the handle. Use this value in formulas to read the slider's current position for example, `Slider1.Value`.
 
 ## Example
 
@@ -129,7 +129,7 @@ The updated version of the **Slider** modern control includes the following impr
 
 ### Bug fixes and improvements
 
-- **Separate Default and Value**: `Default` sets the initial value; `Value` is now a dedicated read-only output property. This matches the pattern used by Number Input and other modern controls, making formulas more predictable.
+- **Separate Default and Value**: `Default` sets the initial value; `Value` is now a dedicated read-only output property. This change matches the pattern used by Number Input and other modern controls, making formulas more predictable.
 - **Tooltip support**: New `Tooltip` property shows explanatory text on hover.
 - **Updated enums**: `LayoutDirection` and `Size` now use typed Power Fx enums, improving IntelliSense and reducing formula errors.
 
