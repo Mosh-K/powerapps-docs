@@ -2,7 +2,7 @@
 title: Add and configure the timeline control in Power Apps | MicrosoftDocs
 description: "Learn how to add and configure the timeline control to use in a model-driven app."
 ms.custom: ""
-ms.date: 01/09/2026
+ms.date: 04/14/2026
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -559,6 +559,36 @@ By default, notes are enabled for pinning. When you click on the activity type s
 
 :::image type="content" source="media/set-up-pin-unpin.png" alt-text="View of the Pin / Unpin checkbox":::
 
+## Enable modern Timeline control experience
+
+The modern Timeline control experience provides a refreshed, visually consistent interface for activities and posts in model-driven apps. It improves readability and aligns with the latest Power Apps design patterns while preserving existing timeline functionality.
+
+This features is disabled by default and doesn’t automatically replace the classic timeline experience.
+
+### Prerequisites
+
+Before you enable the modern Timeline control experience, ensure that:
+
+- You have the **System Administrator** or **System Customizer** security role.
+- Your environment uses model-driven apps.
+
+### Enable the modern Timeline control experience
+
+1. In Power Apps, select **Apps**.
+1. Locate your model-driven app in the list.
+1. Select **… (More commands)** next to the app, and then select **Edit**.
+1. In the app designer command bar, select **Settings**.
+1. In the **App settings** pane, select **Upcoming**.
+1. Set the toggle to **Yes** for **Enable a modern Timeline control experience**.
+1. Select **Save and Publish**.
+
+After you enable the modern Timeline control experience, the updated experience appears the next time users open or refresh a form that includes a timeline control.
+
+### Limitations
+
+- Available only in model-driven apps.
+- Some legacy customizations might not appear or behave exactly the same as in the classic timeline experience.
+
 ## Create and add custom activities to timeline
 
 You can create custom tables that display on a timeline. More information: [Display a custom table in a timeline](#display-a-custom-table-in-a-timeline) 
@@ -616,7 +646,6 @@ You can enable timeline highlights at the app level or form level, depending on 
    :::image type="content" source="media/power-apps-forms.svg" alt-text="Screenshot of the Account table in Power Apps":::  
 1. Select **Enable Timeline Highlights powered by Generative AI**.
 1. Save and publish the changes.
-
 
 ## Known issues
   
