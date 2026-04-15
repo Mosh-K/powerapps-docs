@@ -24,7 +24,7 @@ With Dataverse intelligence, you can define reusable business context that agent
 
 ## Prerequisites
 
-- Microsoft 365 admin role (AI administrator, Global administrator) to access Microsoft 365 admin center Copilot settings. More information: [Enable Microsoft 365 admin center Copilot Dataverse settings](#enable-microsoft-365-admin-center-copilot-dataverse-settings-preview)
+- Microsoft 365 admin role (AI administrator, Global administrator) to access Microsoft 365 admin center Copilot settings. More information: [Enable Microsoft 365 admin center Copilot Dataverse settings](#enable-microsoft-365-admin-center-copilot-dataverse-settings)
 - Power Platform administrator role to access Dataverse intelligence environment settings. More information: [Enable Dataverse intelligence](#enable-dataverse-intelligence-preview)
 - The environment where you use Dataverse intelligence must be a Managed Environment.
 - The environment must be enabled and configured for Dataverse MCP server preview. Business skills are only available for use with the preview version of Dataverse MCP server. More information: [Use preview tools and upcoming features in Dataverse MCP server](data-platform-mcp-preview-tools.md)
