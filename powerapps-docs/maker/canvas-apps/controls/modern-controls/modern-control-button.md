@@ -146,7 +146,6 @@ The following YAML example shows a submit button and a cancel button:
       Appearance: =ButtonAppearance.Outline
       Width: =120
       Height: =36
-      OnSelect: =Back()
 ```
 
 ## Recent updates
