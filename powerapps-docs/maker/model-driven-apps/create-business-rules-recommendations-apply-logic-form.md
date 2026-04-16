@@ -44,6 +44,8 @@ By combining conditions and actions, the following actions are possible with bus
 > To define a business rule for a table so that it applies to all forms, see [Create a business rule for a table](../data-platform/data-platform-create-business-rule.md).
 >
 > Business rules don't work with multiselect choices.
+>
+> Actions that only apply to model-driven apps will be ignored when the rule is run server-side.
   
 ## View, edit, or create a business rule in Power Apps
 
