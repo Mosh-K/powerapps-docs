@@ -46,22 +46,28 @@ The **Button** modern control provides a clickable element that triggers app log
 ## Getting started
 
 ### Setting button text
+
 To change what text appears on your button, set the **Text** property:
-1. **In the Properties pane**: Enter text directly in the Text field
-1. **Using a formula**: `Text = "Click Me"` or `Text = "Save " & TextInput1.Text`
 
-### Making buttons interactive
-Define what happens when users click the button using the **OnSelect** property:
-1. Select the button in your app
-2. In the Properties pane, find the **OnSelect** property
-3. Enter your Power Fx formula, such as `Navigate(NextScreen)`
+- **In the Properties pane**: Enter text directly in the **Text** field
+- **Using a formula**: `Text = "Click Me"` or `Text = "Save " & TextInput1.Text`
 
-### Configuring button properties
+### Make buttons interactive
+
+Define what happens when users selects the button using the **OnSelect** property:
+
+1. Select the button in your app.
+1. In the Properties pane, find the **OnSelect** property.
+1. Enter your Power Fx formula, such as `Navigate(NextScreen)`.
+
+### Configure button properties
+
 Unlike Excel macros, Power Apps doesn't use popup dialogs for editing controls. Instead:
-1. **Select the button** on the canvas
-2. **Use the Properties pane** on the right to modify basic properties
-3. **Use the formula bar** at the top for advanced formulas
-4. **Switch to Advanced properties** for detailed customization
+
+- **Select the button** on the canvas.
+- **Use the Properties pane** on the right to modify basic properties.
+- **Use the formula bar** at the top for advanced formulas.
+- **Switch to Advanced properties** for detailed customization.
 
 
 ## Size and position
