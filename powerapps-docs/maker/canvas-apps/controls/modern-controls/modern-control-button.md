@@ -64,13 +64,12 @@ Define what happens when users selects the button using the **OnSelect** propert
 
 ### Configure button properties
 
-Unlike Excel macros, Power Apps doesn't use popup dialogs for editing controls. Instead:
+Power Apps uses a streamlined approach for editing controls.
 
-- **Select the button** on the canvas.
-- **Use the Properties pane** on the right to modify basic properties.
-- **Use the formula bar** at the top for advanced formulas.
-- **Switch to Advanced properties** for detailed customization.
-
+- Select the button on the canvas:
+  - **Use the Properties pane** on the right to modify basic properties.
+  - **Use the formula bar** at the top for advanced formulas.
+  - **Switch to Advanced properties** for detailed customization.
 
 ## Size and position
 
