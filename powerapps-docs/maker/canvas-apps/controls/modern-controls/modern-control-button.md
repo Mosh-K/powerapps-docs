@@ -43,6 +43,27 @@ The **Button** modern control provides a clickable element that triggers app log
 
 **DisplayMode** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**). When **Disabled**, the button is visually dimmed and **OnSelect** doesn't fire.
 
+## Getting started
+
+### Setting button text
+To change what text appears on your button, set the **Text** property:
+1. **In the Properties pane**: Enter text directly in the Text field
+1. **Using a formula**: `Text = "Click Me"` or `Text = "Save " & TextInput1.Text`
+
+### Making buttons interactive
+Define what happens when users click the button using the **OnSelect** property:
+1. Select the button in your app
+2. In the Properties pane, find the **OnSelect** property
+3. Enter your Power Fx formula, such as `Navigate(NextScreen)`
+
+### Configuring button properties
+Unlike Excel macros, Power Apps doesn't use popup dialogs for editing controls. Instead:
+1. **Select the button** on the canvas
+2. **Use the Properties pane** on the right to modify basic properties
+3. **Use the formula bar** at the top for advanced formulas
+4. **Switch to Advanced properties** for detailed customization
+
+
 ## Size and position
 
 **[X](../properties-size-location.md)** – Distance between the left edge of the control and the left edge of its parent container (screen if no parent container).
@@ -131,13 +152,16 @@ The **Button** modern control provides a clickable element that triggers app log
 
 ## Example
 
-The following YAML example shows a submit button and a cancel button:
+The following YAML example shows a submit button and a cancel button with OnSelect actions:
 
 ```yaml
 - SubmitButton:
     Control: ModernButton@1.0.0
     Properties:
       Text: ="Submit"
+      OnSelect: |
+        SubmitForm(DataForm1);
+        Navigate(SuccessScreen)
       Appearance: =ButtonAppearance.Primary
       Icon: ="Checkmark"
       IconStyle: =IconStyle.Outline
@@ -151,9 +175,37 @@ The following YAML example shows a submit button and a cancel button:
     Control: ModernButton@1.0.0
     Properties:
       Text: ="Cancel"
+      OnSelect: =Navigate(HomeScreen)
       Appearance: =ButtonAppearance.Outline
       Width: =120
       Height: =36
+```
+
+### Common button patterns
+
+Here are typical button implementations:
+
+**Navigation button:**
+```powerfx
+OnSelect = Navigate(DetailsScreen, ScreenTransition.Fade)
+```
+
+**Data submission:**
+```powerfx
+OnSelect = SubmitForm(Form1); Notify("Data saved!", NotificationType.Success)
+```
+
+**Variable update:**
+```powerfx
+OnSelect = Set(IsVisible, !IsVisible)
+```
+
+**Confirmation dialog:**
+```powerfx
+OnSelect = If(
+    Confirm("Are you sure you want to delete this item?"),
+    Remove(Collection1, ThisItem)
+)
 ```
 
 ## Recent updates
