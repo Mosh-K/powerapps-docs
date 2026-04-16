@@ -1,10 +1,10 @@
 ---
-title: Button modern control in canvas apps - Power Apps
-description: Learn about the details, properties, and examples of the Button modern control in Power Apps.
+title: "Button Modern Control in Canvas Apps: Properties and Examples"
+description: "Discover how to use the Button modern control in Power Apps canvas apps. Learn key properties, styling options, and implementation examples to trigger actions effectively."
 author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
-ms.date: 04/14/2026
+ms.date: 04/16/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
 ms.reviewer: mkaur
@@ -14,11 +14,11 @@ search.audienceType:
 
 # Button modern control in canvas apps
 
-Trigger actions in your canvas app with a clickable button.
+The **Button** modern control provides a clickable element that triggers actions in a canvas app, offering flexible styling and comprehensive interaction capabilities.
 
 ## Description
 
-The **Button** modern control provides a clickable element that triggers app logic when selected. Use it for form submissions, navigation, confirmations, and any interaction that requires user input. The control supports icon and text combinations, full font styling, and multiple appearance styles via Fluent theming. Key properties for this control are **Text**, **Appearance**, and **OnSelect**.
+The **Button** modern control provides a clickable element that triggers app logic when selected. Use it for form submissions, navigation, confirmations, and any interaction that requires user input. The control supports icon and text combinations, full font styling, and multiple appearance styles through Fluent theming. Key properties for this control are **Text**, **Appearance**, and **OnSelect**.
 
 > [!NOTE]
 > This article describes the updated Button modern control. For information about what changed from the previous version, see [Recent updates](#recent-updates).
@@ -31,9 +31,9 @@ The **Button** modern control provides a clickable element that triggers app log
 
 ## Behavior
 
-**OnSelect** – How the app responds when the user selects (clicks or taps) the button. The control is accessible: **OnSelect** also triggers when the user presses Enter or Space while the control has keyboard focus.
+**OnSelect** – How the app responds when the user selects the button. The control is accessible: **OnSelect** also triggers when the user presses Enter or Space while the control has keyboard focus.
 
-**DisplayMode** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**). When **Disabled**, the button is visually dimmed and **OnSelect** does not fire.
+**DisplayMode** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**). When **Disabled**, the button is visually dimmed and **OnSelect** doesn't fire.
 
 ## Size and position
 
@@ -115,7 +115,7 @@ The **Button** modern control provides a clickable element that triggers app log
 
 ## Additional properties
 
-**AccessibleLabel** – Label read by screen readers. Provide a meaningful description when the button label alone is not sufficient (for example, when using an icon-only button).
+**AccessibleLabel** – Label read by screen readers. Provide a meaningful description when the button label alone isn't sufficient (for example, when using an icon-only button).
 
 **Tooltip** – Explanatory text that appears when the user hovers over the button.
 
@@ -175,8 +175,8 @@ The following properties are renamed. Update any formulas in your app that refer
 
 - **Updated enums**: `Appearance`, `Layout`, and `IconStyle` now use typed Power Fx enums (`ButtonAppearance`, `ButtonLayout`, `IconStyle`) instead of string values, improving IntelliSense and reducing formula errors.
 - **Tooltip support**: New `Tooltip` property shows explanatory text on hover.
-- **Border improvements**: Added `BorderStyle` and `BorderThickness` for more precise border control. `BorderRadius` is replaced by four corner-specific properties for independent corner control.
-- **Full font control**: Font properties are now consistent with other modern controls — use `Font`, `Size`, `Color`, `Italic`, `Underline`, and `Strikethrough`.
+- **Border improvements**: Added `BorderStyle` and `BorderThickness` for more precise border control. Four corner-specific properties replace `BorderRadius` for independent corner control.
+- **Full font control**: Font properties are now consistent with other modern controls. Use `Font`, `Size`, `Color`, `Italic`, `Underline`, and `Strikethrough`.
 
 ## See also
 
