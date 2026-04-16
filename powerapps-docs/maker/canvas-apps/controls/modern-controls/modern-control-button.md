@@ -45,6 +45,8 @@ The **Button** modern control provides a clickable element that triggers app log
 
 ## Getting started
 
+The **Button** modern control is one of the most commonly used controls in Power Apps. At its core, a button has two essential elements: the text that users see (the **Text** property) and the action that happens when selected (the **OnSelect** property). Once you understand these basics, you can create interactive apps that respond to user input.
+
 ### Set button text
 
 To change what text appears on your button, set the **Text** property:
