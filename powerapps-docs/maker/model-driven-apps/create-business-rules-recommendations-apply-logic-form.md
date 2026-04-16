@@ -2,7 +2,7 @@
 title: "Create model-driven app business rules and recommendations"
 description: Learn how to create a business rule for a specific form in Power Apps.
 ms.custom: ""
-ms.date: 03/30/2026
+ms.date: 04/16/2026
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -45,7 +45,7 @@ By combining conditions and actions, the following actions are possible with bus
 >
 > Business rules don't work with multiselect choices.
 >
-> Actions that only apply to model-driven apps will be ignored when the rule is run server-side.
+> Actions that only apply to model-driven apps are ignored when the rule is run server-side.
   
 ## View, edit, or create a business rule in Power Apps
 
