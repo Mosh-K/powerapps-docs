@@ -123,7 +123,7 @@ The **Button** modern control provides a clickable element that triggers app log
 
 ## Example
 
-The following YAML example shows a submit button that is disabled when a required field is empty, and a cancel button that navigates back:
+The following YAML example shows a submit button and a cancel button:
 
 ```yaml
 - SubmitButton:
@@ -134,12 +134,10 @@ The following YAML example shows a submit button that is disabled when a require
       Icon: ="Checkmark"
       IconStyle: =IconStyle.Outline
       Layout: =ButtonLayout.IconBefore
-      DisplayMode: =If(IsBlank(TextInput1.Value), DisplayMode.Disabled, DisplayMode.Edit)
       AccessibleLabel: ="Submit the form"
       Tooltip: ="Submit your response"
       Width: =120
       Height: =36
-      OnSelect: =Navigate(ConfirmationScreen, ScreenTransition.Fade)
 
 - CancelButton:
     Control: ModernButton@1.0.0
