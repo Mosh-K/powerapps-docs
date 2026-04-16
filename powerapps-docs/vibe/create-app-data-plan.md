@@ -122,49 +122,11 @@ Select the **Plan** focus area to access these options:
 
 :::image type="content" source="media/create-app-data-plan/edit-plan.png" alt-text="Edit the plan pivot":::
 
-Legend:
-
-1. **Plan**: Edit the plan directly in this view.
-1. **User roles**: View the generated user roles and requirements.
-1. **Data model**: See the proposed tables for the data model.
-1. **Technology**: Review the recommended technologies for your solution.
-
-### Edit the plan using chat
-
-Open the chat and enter your questions or request changes, such as:
-
-- Update the manager role
-- Add a requirement for offline access
-- Remove the Power BI report
-
-The agent analyzes your request and applies updates to the plan. You can also make targeted edits directly inline.
-
-#### Edit user requirements
-
-Select the area you want to change and select the **Edit** button or **Chat with Copilot** button to add new roles and requirements. Use inline chat while an area is selected to provide context for the agent. This approach saves you from describing the specific element.
-
-:::image type="content" source="media/create-app-data-plan/edit-user-roles.png" alt-text="Select Edit to make edits to user roles":::
-
-#### Edit the data model 
-
-In the **Data model** area, select the **Chat with Copilot** button and enter your changes.
- 
-Or, select the ellipsis for the specific table you want to edit. You can select to view the data workspace, save the proposed tables, or chat with the agents to pass in specific context about the edit you're requesting.
-
-:::image type="content" source="media/create-app-data-plan/edit-data-model.png" alt-text="Edit a data table":::
-
-#### Edit technology
-
-In the **Technology** area, select the **Chat with Copilot** button and enter your changes. You can also add new technologies or chat with the agent with specific context for the change you're requesting.
-
-Select the **Create** button to open Power Automate and create a new workflow.
-
-:::image type="content" source="media/create-app-data-plan/edit-tech-area.png" alt-text="Edit the technology area":::
+As you make edits to the app, the agent automatically updates the plan to best describe what the overview, target audience, key features, design direction, etc that best describe the app. Directly editing the plan inline is not available as of now. 
 
 ## Edit the generated data model
 
 Select **Data** and review and refine your data. The data view displays all proposed tables, their relationships, and sample data. It helps you understand the schema and how the generated app uses the data. The tables are currently in memory only and aren't published to any data source. You can modify them until they meet your business needs. For more information, see [Create and edit tables using Power Apps](../maker/data-platform/create-edit-entities-portal.md).
-
 
 
 :::image type="content" source="media/create-app-data-plan/edit-data-model-details.png" alt-text="Edit the data for your app" lightbox="media/create-app-data-plan/edit-data-model-details.png":::
@@ -250,7 +212,8 @@ Follow one of these steps to change the ownership type to **User**, **Team**, or
 
 The following [ALM](/power-platform/alm/overview-alm) features are supported: 
 
-- **Save**: AutoSave isn't currently available. To save your progress, select **Save** in the command bar at any time. This action saves all edits to every solution object in your preferred solution.
+- **Save**: For new apps created after April 9th, 2026, autosave is turned on by default. No need to manually click save. For apps created before, manual saving is still required. To save your progress, select **Save** in the command bar at any time. This action saves all edits to every solution object in your preferred solution.
+  
 - **Publish data**: To publish draft tables, select **Publish draft tables** from the data card’s context menu when you're ready to make a table available for production. You can choose Dataverse as the target data source. Once published, any apps using these draft tables automatically update to use the published versions.
 
 - **Publishing app**: When you're ready to release your app for production, select **Publish** in the app’s command bar. If your app uses any draft tables, you're prompted to publish those tables as well.
@@ -261,9 +224,7 @@ The following [ALM](/power-platform/alm/overview-alm) features are supported:
 
 1. When you're ready to publish, select **Publish**.
 
-1. Select a data source to publish and store the draft tables in your app. Then select **Publish**.
-
-    :::image type="content" source="media/create-app-data-plan/save-and-select-data-source.png" alt-text="Select a data source":::
+1. Your Dataverse tables will then be published in the same environment. 
 
 ## Known limitations
 
@@ -277,7 +238,7 @@ The new Power Apps experience has the following limitations:
 - Existing tables aren't automatically recommended during data model proposal; you can manually add existing tables to your plan.
 - Editing existing Dataverse tables via chat isn't currently supported; you can make changes to these tables through the data editor manually.
 - Direct code edits in **Code** view or **Split** view aren't supported; you can't modify code directly in these views.
-- You can't directly create proposed technologies (apart from code apps) from the plan; you must add additional technologies manually.
+
 
 ## Share your feedback 
 
