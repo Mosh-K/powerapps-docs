@@ -125,23 +125,15 @@ On desktop, the updated control opens a **Fluent-themed flyout** that matches th
 The following YAML example shows a required country dropdown with error state validation:
 
 ```yaml
-- CountryDropdown:
+- CountryDropdown_3:
     Control: ModernDropdown@1.0.0
     Properties:
-      Items: =["Australia", "Canada", "United Kingdom", "United States"]
-      Default: ="United States"
-      Required: =true
-      ValidationState: =If(IsBlank(CountryDropdown.Selected.Value), ValidationState.Error, ValidationState.None)
       AccessibleLabel: ="Select your country"
-      Width: =240
-      Height: =32
-      OnChange: =Set(varCountry, CountryDropdown.Selected.Value)
-
-- CountryLabel:
-    Control: ModernText@1.0.0
-    Properties:
-      Text: ="Selected: " & varCountry
-      Size: =14
+      ItemDisplayText: =ThisItem.Value
+      Items: =["Australia", "Canada", "United Kingdom", "United States"]
+      Required: =true
+      ValidationState: =If(IsBlank(CountryDropdown_3.Selected.Value), ValidationState.Error, ValidationState.None)
+      Width: =240   
 ```
 
 ## Recent updates
