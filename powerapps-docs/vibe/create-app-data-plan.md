@@ -32,16 +32,18 @@ Key capabilities
 
 1. Sign in to [https://vibe.powerapps.com](https://vibe.powerapps.com/).
 
-1. Enter your prompt in the text box, and then select **Enter**. Or, select **Start dictation** and use your voice to turn speech into text.
+1. Enter your prompt in the text box. Plan mode is the default mode, meaning by default, it'll start with a plan with potential clarifying questions before building the app. If you'd like to jump straight into app creation, turn off Plan mode. You can also select **Start dictation** and use your voice to turn speech into text.
 
     :::image type="content" source="media/create-app-data-plan/power-apps-prompt-text-box.png" alt-text="Screenshot of Power Apps vibe showing a prompt input box for the new experience." lightbox="media/create-app-data-plan/power-apps-prompt-text-box.png":::
 
-1. Agents start working and assets load. You see the plan, data model, and app preview generate. 
+
+1. In Plan mode, the agent will show you a proposed plan to review first before generating the app. It may also asks you some follow up questions to clarify. Once the plan looks good, click "Accept this plan and create app" to start generating your app. 
+
+1. The agent will then start working and assets load. Once finished, you will have a generated app, data model (if applicable), and a plan (if applicable). 
  
    :::image type="content" source="media/create-app-data-plan/powerapps-data-model-app-preview.png" alt-text="Screenshot of the Power Apps vibe workspace showing AI agents generating the plan, data model, and app preview simultaneously." lightbox="media/create-app-data-plan/powerapps-data-model-app-preview.png":::
 
-
-1. After the plan, data, and app generate, select **Save** in the upper-right corner. The first save stores the app, tables, and plan together in your selected solution, while your data remains in in-memory draft tables. This approach lets you iterate on the data model and app quickly without committing to a data source. When you publish the app, you select the data source.
+1. After the plan, data, and app generate, make any necessary edits to your scenario. The first save stores the app, tables, and plan together in your selected solution, while your data remains in in-memory draft tables. If you don't see a **Save** button on the top right side of the screen, that means it is auto-saved and you don't have to worry about losing progress. 
 
 
 ## Review and refine your generated app and data model
@@ -90,6 +92,7 @@ When you modify the app, plan, or data, the agent analyzes your changes to see i
 
 Use the chat input on the work surface to ask questions or request changes to the generated app. For example: "What does this button do?" or "Change theme to blue."
 
+- **Plan mode**: If you want to chat with the agent wihtout making changes until you're ready, turn on **Plan** mode by the chat input box. This allows you to plan with the agent on potential changes without making changes to your app until you're ready to do so. The agent will propose a plan. Once accepted, the agent will start executing the agreed upon plan and make necessary edits to the app. Once edits are completed, plan mode is then turned off automatically. 
 - If you ask a question, the agent provides an explanatory response.
 - If you request a change, the agent evaluates the request, outlines an implementation plan, and then applies it.
 - If the agent can't implement the change directly, you receive step-by-step guidance or instructions for retrying the request.
