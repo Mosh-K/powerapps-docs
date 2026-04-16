@@ -46,6 +46,7 @@ After watching the video, explore the detailed walkthrough in [Create apps, data
   1. In the navigation pane, go to **Settings** to open the **Tenant settings**  page. 
   1. Set the toggle for **Copilot in Power Apps (preview)** to **On**.
   1. Select **Save** to apply the changes.
+  2. Optional but strongly recommended, enable "Anthropic models" under "Enable External Models" for higher quality apps, located under Power Platform Admin Center > Environments > [Name of Environment] > Settings > Features. 
   
   For more information, see [Tenant settings](/power-platform/admin/tenant-settings).
 - This capability isn't available in a default environment.
@@ -102,7 +103,9 @@ Legend:
 
 1. **Enter prompt**: Type a description of what you want to build.
 
-1. **Enhance prompt**: (Optional) Use this button to add more detail to your prompt before generating your app.
+1. **Plan mode": Plan with agent before building.
+
+1.**Enhance prompt**: (Optional) Use this button to add more detail to your prompt before generating your app.
 
 1. **Start dictation**: Start speech to text and speak into a microphone to convert your voice into text.
 
