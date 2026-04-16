@@ -169,7 +169,7 @@ The following properties are renamed. Update any formulas in your app that refer
 
 | Removed property | Notes |
 |---|---|
-| `AcceptsFocus` | Removed. The modern Button always accepts keyboard focus. No replacement needed. |
+| `AcceptsFocus` | Removed. The modern Button control always accepts keyboard focus. No replacement needed. |
 
 ### Bug fixes and improvements
 
