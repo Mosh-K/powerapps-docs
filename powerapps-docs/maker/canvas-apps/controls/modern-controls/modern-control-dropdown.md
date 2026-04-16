@@ -23,7 +23,7 @@ The **Dropdown** modern control presents a list of choices in a compact, collaps
 > [!NOTE]
 > This article describes the updated Dropdown modern control. For information about what changed from the previous version, see [Recent updates](#recent-updates).
 
-On desktop, the updated control opens a **Fluent-themed flyout** that matches the app's visual theme. The previous version opened the browser's HTML `<select>` element, which couldn't be themed. On mobile (iOS and Android), both versions use the **device-native picker** provided by the operating system — this behavior is unchanged by the update.
+On desktop, the updated control opens a **Fluent-themed flyout** that matches the app's visual theme. The previous version opened the browser's HTML `<select>` element, which couldn't be themed. 
 
 ## General
 
