@@ -94,30 +94,18 @@ The **Icon** modern control displays a Fluent icon from the Fluent icon library.
 
 ## Example
 
-The following YAML example shows two icons: an interactive delete icon that triggers a confirmation dialog, and a status icon that reflects approval state through color and glyph:
+The following YAML example shows an interactive delete icon:
 
 ```yaml
 - DeleteIcon:
-    Control: ModernIcon@1.0.0
+    Control: ModernIcon@1.1.0
     Properties:
-      Icon: ="Delete"
-      IconStyle: =IconStyle.Filled
-      IconColor: =RGBA(176, 0, 32, 1)
       AccessibleLabel: ="Delete"
-      Tooltip: ="Delete this item"
-      Width: =32
-      Height: =32
-      OnSelect: =Set(varConfirmDelete, true)
-
-- StatusIcon:
-    Control: ModernIcon@1.0.0
-    Properties:
-      Icon: =If(varIsApproved, "CheckmarkCircle", "DismissCircle")
+      Icon: ="Delete"
+      IconColor: =RGBA(176, 0, 32, 1)
       IconStyle: =IconStyle.Filled
-      IconColor: =If(varIsApproved, RGBA(16, 124, 16, 1), RGBA(196, 49, 75, 1))
-      AccessibleLabel: =If(varIsApproved, "Approved", "Rejected")
-      Width: =24
-      Height: =24
+      OnSelect: =
+      Tooltip: ="Delete this item"
 ```
 
 ## Recent updates
