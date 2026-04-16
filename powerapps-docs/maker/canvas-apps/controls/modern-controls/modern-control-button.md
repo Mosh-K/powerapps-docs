@@ -18,20 +18,28 @@ The **Button** modern control provides a clickable element that triggers actions
 
 ## Description
 
-The **Button** modern control provides a clickable element that triggers app logic when selected. Use it for form submissions, navigation, confirmations, and any interaction that requires user input. The control supports icon and text combinations, full font styling, and multiple appearance styles through Fluent theming. Key properties for this control are **Text**, **Appearance**, and **OnSelect**.
+The **Button** modern control provides a clickable element that triggers app logic when selected. Use it for form submissions, navigation, confirmations, and any interaction that requires user input. The control supports icon and text combinations, full font styling, and multiple appearance styles through fluent theming. Key properties for this control are **Text**, **Appearance**, and **OnSelect**.
 
 > [!NOTE]
 > This article describes the updated Button modern control. For information about what changed from the previous version, see [Recent updates](#recent-updates).
 
 ## General
 
-**Text** – The label displayed on the button. Supports any text or Power Fx formula that evaluates to a string.
+**Text** – The label displayed on the button. Supports any text or Power Fx formula that evaluates to a string. Use this property to set or change the button text.
 
 **Visible** – Whether the control appears or is hidden. Use a Power Fx formula to show or hide the button based on app state.
 
 ## Behavior
 
-**OnSelect** – How the app responds when the user selects the button. The control is accessible: **OnSelect** also triggers when the user presses Enter or Space while the control has keyboard focus.
+**OnSelect** – Use the **OnSelect** property to define what happens when the button is selected. It's how the app responds when the user selects the button. The control is accessible: **OnSelect** also triggers when the user presses Enter or Space while the control has keyboard focus.
+
+> [!TIP]
+> Common OnSelect actions include:
+ > - `Navigate(Screen2)` - Navigate to another screen
+ > - `SubmitForm(Form1)` - Submit a form
+ > - `Set(varName, value)` - Set a variable
+ > - `Notify("Message", NotificationType.Success)` - Show a notification
+ > - `Patch(DataSource, Record, Updates)` - Update data
 
 **DisplayMode** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**). When **Disabled**, the button is visually dimmed and **OnSelect** doesn't fire.
 
