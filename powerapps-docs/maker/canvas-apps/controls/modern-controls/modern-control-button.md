@@ -45,7 +45,7 @@ The **Button** modern control provides a clickable element that triggers app log
 
 ## Getting started
 
-### Setting button text
+### Set button text
 
 To change what text appears on your button, set the **Text** property:
 
