@@ -44,16 +44,15 @@ You can now ask questions about the entities in the app from this declarative ag
 > [!NOTE]
 > You can customize the declarative agent included in the app package at you own discretion. To reduce the possibility of unexpected behavior when using AI agents, use caution when you customize the declarative agent code. More information: Declarative Agents for Microsoft 365 Copilot.
 
-## Custom tools
+## Create custom tools
 
 <!-- Please add one or two sentences for introduction to what custom tools are.-->
-1. Select Create custom tool under Tolls section of MCP apps tab.
-1. Add the instructions to fetch the records from the relevant source, which could be a table in the app or an input parameter to the prompt.
-   The tool name, description, and input parameters names should be self explanatory so that the LLM can identify and use them correctly. <!--Please revise "self explantory to something more concise and use values from the image as an example... e.g. "for example, a name of "flight map and timelines" and desciption of animated arc map and Gantt timeline for the flights.-->
+1. Select **Create custom tool** under the **Tools** section of the **MCP apps** tab.
+1. Add the instructions to fetch the records from the relevant source, which could be a table in the app or an input parameter to the prompt. The tool name, description, and input parameters names should be self explanatory so that the LLM can identify and use them correctly. <!--Please revise "self explantory" to something more concise (e.g. be specific about what you want the AI to do using keywords...) and use values from the image as an example... e.g. "for example, a name of "flight map and timelines" and desciption of "animated arc map and Gantt timeline for the flights."-->
    :::image type="content" source="media/enable-your-app-copilot/create-custom-tool.png" alt-text="Create a custom tool to view flight data":::
 1. Select **Test** to validate the tool output JSON.
 1. If the output JSON is what you want, select **Next**. You can now add optional custom UX HTML specific to this tool (and JSON output) created using the `/generate-mcp-apps-ui skill` or your own development workflow. Select **Save**.
    :::image type="content" source="media/enable-your-app-copilot/create-custom-tool-output.png" alt-text="Custom tool example output JSON":::
 1. Download the updated app package zip and upload the latest version to the copilot.
 1. Invoke the tool by issuing the relevant query in the app agent to see the custom UI in action.
-   :::image type="content" source="media/enable-your-app-copilot/flight-map-and-timelines.png" alt-text="Custom UI created depicting flight times":::
+   :::image type="content" source="media/enable-your-app-copilot/flight-map-and-timelines.png" alt-text="Custom UI created depicting flight times"::: <!-- I didn't see the image from the doc in your image folder so used this one instead.-->
