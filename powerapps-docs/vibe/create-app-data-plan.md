@@ -127,10 +127,6 @@ Use keyboard shortcuts to open and close inline edit actions while editing your 
 - **Hold and release Alt** to toggle the inline edit gesture.
 - **Press Esc** to dismiss the inline edit gesture.
 
-## Edit the generated plan
-
-Select the **Plan** focus area to view the plan. As you make edits, the agent automatically updates the plan to reflect the overview, target audience, key features, design direction, and other aspects of the app. You can't edit the plan inline directly. 
-
 ## Edit the generated data model
 
 Select **Data** to review and refine your data model. The data view displays all proposed tables, their relationships, and sample data to help you understand the schema and how the generated app uses the data. The tables exist in memory only and aren't published to a data source until you explicitly publish them. You can modify them until they meet your business needs. For more information, see [Create and edit tables using Power Apps](../maker/data-platform/create-edit-entities-portal.md).
