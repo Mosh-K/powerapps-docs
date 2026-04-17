@@ -1,5 +1,5 @@
 ---
-title: "Create apps, data, and plans together using Power Apps vibe"
+title: "Create Apps, Data, and Plans With Power Apps Vibe"
 description: Learn how Power Apps vibe simplifies app creation by generating plans, data models, and apps in parallel. Build modern web apps faster with AI assistance.
 author: mduelae
 ms.author: mkaur
@@ -37,37 +37,37 @@ Key capabilities
     > [!TIP]
     > To skip planning and start creating apps, select **Plan** again to turn it off.
 
-    :::image type="content" source="media/create-app-data-plan/prompt-text-box.png" alt-text="Screenshot showing a prompt input box." lightbox="media/create-app-data-plan/power-apps-prompt-text-box.png":::
+    :::image type="content" source="media/create-app-data-plan/prompt-text-box.png" alt-text="Screenshot of prompt input box where you enter a description to create an app." lightbox="media/create-app-data-plan/power-apps-prompt-text-box.png":::
 
 
-1. In **Plan** mode, the agent shows you a proposed plan to review before generating the app. It might also ask you some follow-up questions to clarify.
+1. In **Plan** mode, the agent shows you a proposed plan to review before generating the app. It might also ask follow-up questions to clarify your requirements.
  
-1. When the plan looks good, select **Accept this plan and create app**  and then **Submit** to start generating your app. 
+1. When the plan looks good, select **Accept this plan and create app** > **Submit** to start generating your app. 
 
-1. The agent starts working and loads assets. When it's finished, you have a generated app, data model (if applicable), and a plan (if applicable). When all the components are generated, you can make any necessary edits.
+1. The agent starts working and loads assets. When it's finished, you have a generated app, data model (if applicable), and a plan (if applicable). You can then make any necessary edits.
     
-1. The first save stores the app, tables, and plan together in your selected solution, while your data remains in in-memory draft tables. If you don't see a **Save** button on the top right side of the screen, that means the app is auto-saved and you don't have to worry about losing progress. 
+1. The first save stores the app, tables, and plan together in your selected solution, while your data remains in draft tables (in memory). If you don't see a **Save** button in the top right of the screen, your app is autosaved automatically. 
 
 
 ## Review and refine your generated app and data model
 
-The new workspace uses a single, unified chat that keeps context as you switch between **Plan**, **Data**, and **App**. It speeds up development by letting you preview the app visually, inspect the code, and make inline changes all without leaving the workspace.
+The new workspace uses a unified chat experience that keeps context as you switch between **Plan**, **Data**, and **App**. It speeds up development by letting you preview the app visually, inspect the code, and make changes without leaving the workspace.
 
-:::image type="content" source="media/create-app-data-plan/plan-data-app-menu-options.png" alt-text="view plan, data, and app ":::
+:::image type="content" source="media/create-app-data-plan/plan-data-app-menu-options.png" alt-text="Screenshot of the Plan, Data, and App menu options in the workspace.":::
 
 A list of next actions appears above the chat area to suggest relevant next steps.
 
-:::image type="content" source="media/create-app-data-plan/edit-app.png" alt-text="Screenshot of how to edit generated components." lightbox="media/create-app-data-plan/edit-app.png":::
+:::image type="content" source="media/create-app-data-plan/edit-app.png" alt-text="Screenshot of suggested next actions above the chat area for editing generated app components." lightbox="media/create-app-data-plan/edit-app.png":::
 
 If you submit a request and then decide to cancel it, select the stop button.
 
-:::image type="content" source="media/create-app-data-plan/cancel-chat.png" alt-text="Select the stop button to cancel the chat":::
+:::image type="content" source="media/create-app-data-plan/cancel-chat.png" alt-text="Screenshot of the stop button used to cancel a chat request in Power Apps vibe.":::
 
 ## Focus area
 
 Each focus area displays its specific tools above the work surface. For instance, when you select the **App** focus area, you see these options:
 
-:::image type="content" source="media/create-app-data-plan/app-menu-options.png" alt-text="Menu option in the App area":::
+:::image type="content" source="media/create-app-data-plan/app-menu-options.png" alt-text="Screenshot of the menu options available in the workspace.":::
 
 Legend:
 
@@ -95,11 +95,11 @@ When you modify the app, plan, or data, the agent analyzes your changes to see i
 
 Use the chat input on the work surface to ask questions or request changes to the generated app. For example: "What does this button do?" or "Change theme to blue."
 
-- **Plan** mode: If you want to chat with the agent without making changes until you're ready, in the chat box select, **Plan** to turn on plan mode. This mode allows you to plan with the agent on potential changes without making changes to your app until you're ready to do so. The agent proposes a plan. Once you accept the plan, the agent starts executing the agreed-upon plan and makes necessary edits to the app. When the agent completes the edits, it automatically turns off **Plan** mode.  
+- **Plan mode**: To discuss potential changes with the agent before applying them, select **Plan** in the chat box. The agent proposes a plan for your review. Once you accept it, the agent executes the plan and makes the necessary edits. When the edits are complete, **Plan** mode turns off automatically.
 
-- If you ask a question, the agent provides an explanatory response.
-- If you request a change, the agent evaluates the request, outlines an implementation plan, and then applies it.
-- If the agent can't implement the change directly, you receive step-by-step guidance or instructions for retrying the request.
+- **Questions**: If you ask a question, the agent provides an explanatory response.
+- **Change requests**: If you request a change, the agent evaluates the request, outlines an implementation plan, and then applies it.
+- **Unsupported changes**: If the agent can't implement the change directly, you receive step-by-step guidance or instructions for retrying the request.
 
 ### Edit the app using inline actions
 
@@ -107,11 +107,15 @@ Use inline actions to edit the style of your app.
 
  1. Select the option to toggle inline edits.
  1. Select the item you want to edit. The element is outlined and labeled with the corresponding code object so you know exactly what you're editing.
-    Depending on the element type, a properties pane or inline controls appear for typography, styling, or layout. Adjust values like font, color, or spacing directly in the pane. If multiple elements share the same style, a single change can apply across the group. For example, changing a button color inside a card updates all buttons in that card group.
- 
-    Inline edits update the associated code directly without an AI agent involved.
 
-    When you select an element, open inline chat and request a change like **Make this button primary blue**. The selected element's context is passed automatically, so you don't have to describe it in the prompt. This feature is equivalent to typing the same request in the main chat but faster.
+    Depending on the element type, a properties pane or inline controls appear for typography, styling, or layout. Adjust values like font, color, or spacing directly in the pane.
+
+    > [!TIP]
+    > If multiple elements share the same style, a single change applies across the group. For example, changing a button color inside a card updates all buttons in that card group.
+ 
+    Inline edits update the associated code directly without involving the AI agent.
+
+    You can also open inline chat on a selected element and request a change like **Make this button primary blue**. The element's context is passed automatically, so you don't need to describe it in the prompt.
 
 1. When you're done, review the result in the visual preview. If needed, switch to **Code** view or **Split** view to inspect the generated files.
 
@@ -125,14 +129,14 @@ Use keyboard shortcuts to open and close inline edit actions while editing your 
 
 ## Edit the generated plan
 
-Select the **Plan** focus area to see as you make edits the agent automatically updates the plan to best describe the overview, target audience, key features, design direction, and other aspects that best describe the app. You can't directly edit the plan inline. 
+Select the **Plan** focus area to view the plan. As you make edits, the agent automatically updates the plan to reflect the overview, target audience, key features, design direction, and other aspects of the app. You can't edit the plan inline directly. 
 
 ## Edit the generated data model
 
-Select **Data** and review and refine your data. The data view displays all proposed tables, their relationships, and sample data. It helps you understand the schema and how the generated app uses the data. The tables are currently in memory only and aren't published to any data source. You can modify them until they meet your business needs. For more information, see [Create and edit tables using Power Apps](../maker/data-platform/create-edit-entities-portal.md).
+Select **Data** to review and refine your data model. The data view displays all proposed tables, their relationships, and sample data to help you understand the schema and how the generated app uses the data. The tables exist in memory only and aren't published to a data source until you explicitly publish them. You can modify them until they meet your business needs. For more information, see [Create and edit tables using Power Apps](../maker/data-platform/create-edit-entities-portal.md).
 
 
-:::image type="content" source="media/create-app-data-plan/edit-data-model-details.png" alt-text="Edit the data for your app" lightbox="media/create-app-data-plan/edit-data-model-details.png":::
+:::image type="content" source="media/create-app-data-plan/edit-data-model-details.png" alt-text="Screenshot of the data model editor showing tables, relationships, and sample data." lightbox="media/create-app-data-plan/edit-data-model-details.png":::
 
 Legend
 
@@ -192,9 +196,9 @@ Add new or existing tables, or make targeted changes to relationships, tables, a
 
 ### Row ownership
 
-Follow one of these steps to change the ownership type to **User**, **Team**, or **Organization**:
+To change the ownership type to **User**, **Team**, or **Organization**, use one of the following methods:
 
-1. Select **View options** and then select **Row ownership**.
+1. Select **View options**, and then select **Row ownership**.
 
    :::image type="content" source="media/create-app-data-plan/edit-row-ownership.png" alt-text="Edit the row ownership":::
 
@@ -215,13 +219,16 @@ Follow one of these steps to change the ownership type to **User**, **Team**, or
 
 The following [ALM](/power-platform/alm/overview-alm) features are supported: 
 
-- **Save**: For new apps created after April 9, 2026, autosave is turned on by default. You don't need to manually select save. For apps created before this date, manual saving is still required. To save your progress, select **Save** in the command bar at any time. This action saves all edits to every solution object in your preferred solution.
+- **Save**: For new apps created after April 9, 2026, AutoSave is turned on by default. You don't need to manually select save. For apps created before this date, manual saving is still required. To save your progress, select **Save** in the command bar at any time. This action saves all edits to every solution object in your preferred solution.
   
 - **Publish data**: To publish draft tables, select **Publish draft tables** from the data card’s context menu when you're ready to make a table available for production. You can choose Dataverse as the target data source. Once published, any apps using these draft tables automatically update to use the published versions.
 
 - **Publishing app**: When you're ready to release your app for production, select **Publish** in the app’s command bar. If your app uses any draft tables, you're prompted to publish those tables as well.
 
-- **Share the app**: To share your app with others, select **Share** and add the accounts of users you want to grant access to run the app. You can also share apps with groups in Vibe if the group is Microsoft Entra ID security-enabled. Distribution lists and nonsecurity Microsoft 365 Groups aren't supported. Group sharing only works in production environments. Developer environments don't allow group-level permissions. Once these requirements are met, eligible groups appear in the share dialog.
+- **Share the app**: To share your app with others, select **Share** and add the accounts of users you want to grant access to. You can also share with Microsoft Entra ID security-enabled groups. Distribution lists and nonsecurity Microsoft 365 Groups aren't supported. 
+
+  > [!NOTE]
+  > Group sharing only works in production environments. Developer environments don't support group-level permissions.
 
 ## Choose a data source and publish
 
