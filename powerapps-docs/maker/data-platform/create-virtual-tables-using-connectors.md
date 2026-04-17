@@ -74,7 +74,7 @@ Creating a virtual table in Power Apps (make.powerapps.com) using the virtual co
 1. [Choose to create a table using an external data source](#choose-to-create-a-table-using-an-external-data-source)
 1. [Create the virtual table](#create-the-virtual-table)
 1. [Create and select the connection reference (optional)](#create-and-select-a-connection-reference-optional)
-1. Choose your connection details and select your data, such as <a href="#SQL-or-SharePoint">SQL or SharePoint</a>.
+1. Choose your connection details and select your data, such as SQL or SharePoint.
 1. [Configure your data](#configure-your-data)
 1. [Configure column and table names (optional)](#configure-table-and-column-names-optional)
 1. [Complete the setup](#complete-the-setup)
