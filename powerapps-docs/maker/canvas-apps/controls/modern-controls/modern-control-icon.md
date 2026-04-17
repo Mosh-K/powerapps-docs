@@ -21,7 +21,7 @@ Displays a Fluent icon that can optionally respond to user interaction.
 The **Icon** modern control displays a Fluent icon from the [Fluent icon library](https://developer.microsoft.com/en-us/fluentui#/styles/web/icons). You can use it in two ways:
 
 - **Decorative** – Display a static icon as a visual indicator (for example, a status badge or label prefix). Leave the **OnSelect** property empty.
-- **Interactive** – Respond to user clicks or taps. Set the **OnSelect** property to a formula, and the control automatically renders with button semantics so it works with keyboard navigation and screen readers.
+- **Interactive** – Respond to user input. Set the **OnSelect** property to a formula, and the control automatically renders with button semantics so it works with keyboard navigation and screen readers.
 
 Common uses include toolbar actions, status indicators, inline navigation, and lightweight call-to-action elements.
 
