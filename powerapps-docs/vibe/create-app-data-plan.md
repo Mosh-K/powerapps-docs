@@ -32,18 +32,25 @@ Key capabilities
 
 1. Sign in to [https://vibe.powerapps.com](https://vibe.powerapps.com/).
 
-1. Enter your prompt in the text box. Plan mode is the default mode, which means it starts with a plan that includes potential clarifying questions before building the app. If you want to jump straight into app creation, turn off **Plan** mode. You can also select **Start dictation** and use your voice to turn speech into text.
+1. Enter your prompt in the text box. **Plan** mode is the default mode, which means it starts with a plan that includes potential clarifying questions before building the app. You can also select **Start dictation** and use your voice to turn speech into text.
+
+    > [!TIP]
+    > To skip planning and start creating apps, select **Plan** again to turn it off.
 
     :::image type="content" source="media/create-app-data-plan/prompt-text-box.png" alt-text="Screenshot of Power Apps vibe showing a prompt input box for the new experience." lightbox="media/create-app-data-plan/power-apps-prompt-text-box.png":::
 
 
-1. In Plan mode, the agent shows you a proposed plan to review before generating the app. It might also ask you some follow-up questions to clarify. When the plan looks good, select **Accept this plan and create app** to start generating your app. 
+1. In **Plan** mode, the agent shows you a proposed plan to review before generating the app. It might also ask you some follow-up questions to clarify.
+ 
+1. When the plan looks good, select **Accept this plan and create app**  and then **Submit** to start generating your app. 
 
 1. The agent starts working and loads assets. When it's finished, you have a generated app, data model (if applicable), and a plan (if applicable). 
- 
-   :::image type="content" source="media/create-app-data-plan/powerapps-data-model-app-preview.png" alt-text="Screenshot of the Power Apps vibe workspace showing AI agents generating the plan, data model, and app preview simultaneously." lightbox="media/create-app-data-plan/powerapps-data-model-app-preview.png":::
 
-1. After the plan, data, and app generate, make any necessary edits to your scenario. The first save stores the app, tables, and plan together in your selected solution, while your data remains in in-memory draft tables. If you don't see a **Save** button on the top right side of the screen, that means the app is auto-saved and you don't have to worry about losing progress. 
+1. After the plan, data, and app generate, you can make any necessary edits. 
+
+   :::image type="content" source="media/create-app-data-plan/data-model-app-preview.png" alt-text="Screenshotof generated  plan, data model, and app preview." lightbox="media/create-app-data-plan/data-model-app-preview.png":::
+
+1. The first save stores the app, tables, and plan together in your selected solution, while your data remains in in-memory draft tables. If you don't see a **Save** button on the top right side of the screen, that means the app is auto-saved and you don't have to worry about losing progress. 
 
 
 ## Review and refine your generated app and data model
