@@ -16,7 +16,7 @@ This article shows you how to discover, add, invoke, and remove Power Automate c
 ## Prerequisites
 
 - An initialized Power Apps code app. See [Quickstart: Create a code app by using the npm CLI](./npm-quickstart.md).
-- A Power Automate flow that is **solution-aware** and uses a **Manual** trigger with the **PowerApps** trigger type. If your flow isn't in a solution yet, see [Add an existing flow to a solution](/power-automate/create-flow-solution). To learn how to create a flow with a PowerApps trigger, see [Trigger a flow from a Power Apps app](/power-automate/mobile/use-flow-powerapps-app).
+- A Power Automate flow that is **solution-aware** and is an instant flow with the **PowerApps** trigger type. If your flow isn't in a solution yet, see [Add an existing flow to a solution](/power-automate/create-flow-solution).
 - The [`@microsoft/power-apps`](https://www.npmjs.com/package/@microsoft/power-apps) npm package version **1.1.1** or later.
 
 > [!NOTE]
