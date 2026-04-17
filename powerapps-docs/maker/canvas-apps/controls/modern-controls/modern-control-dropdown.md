@@ -18,7 +18,7 @@ Let users pick a single value from a collapsible list.
 
 ## Description
 
-The **Dropdown** modern control presents a list of choices in a compact, collapsible format. Users select one item and the list collapses back to a single line. Use the **Dropdown** control when you need users to choose one option from a list of more than seven items, for required fields with a fixed set of choices, or for forms where screen space is limited. For fewer options (two to seven), consider using a [Radio group](modern-controls-radio-group.md) instead. If users need to select multiple items, use a [Combo box](modern-control-combobox).
+The **Dropdown** modern control presents a list of choices in a compact, collapsible format. Users select one item and the list collapses back to a single line. Use the **Dropdown** control when you need users to choose one option from a list of more than seven items, for required fields with a fixed set of choices, or for forms where screen space is limited. For fewer options (two to seven), consider using a [Radio group](modern-controls-radio-group.md) instead. If users need to select multiple items, use a [Combo box](modern-control-combobox.md).
 
 Key properties for this control are **Items**, **Default**, **ValidationState**, and **OnChange**.
 
