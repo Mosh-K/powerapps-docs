@@ -77,8 +77,8 @@ Part of the name of any virtual table you create is the customization prefix. Th
 1. Select a connector, and then follow the instructions on your screen to create the virtual table. More information: [Create virtual tables using the virtual connector provider](create-virtual-tables-using-connectors.md) and [OData v4 Data Provider configuration, requirements, and best practices](virtual-entity-odata-provider-requirements.md)  
     
 > [!IMPORTANT]
-> Several options, such as Access Teams, Queues, and Quick Create,  aren't available with virtual tables. More Information [Considerations when you use virtual tables](#considerations)  
-      
+> Several options, such as Access Teams, Queues, and Quick Create, aren't available with virtual tables. More Information: [Considerations when you use virtual tables](#considerations-when-you-use-virtual-tables)  
+
 ## Considerations when you use virtual tables  
 
 Virtual tables have these restrictions.  

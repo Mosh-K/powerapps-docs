@@ -1,7 +1,7 @@
 ---
 title: "Create virtual tables using virtual connectors in Microsoft Dataverse"
 description: "Learn how to create virtual tables using virtual connectors in Microsoft Dataverse."
-ms.date: 06/09/2025
+ms.date: 04/17/2026
 ms.reviewer: matp
 ms.topic: how-to
 author: mkannapiran
@@ -21,12 +21,13 @@ Virtual tables enable integrating data from external data sources by seamlessly 
 This document covers the new  experience using Power Apps (make.powerapps.com) to create virtual tables using the following virtual connector providers:
 
 - SQL Server
-- Microsoft SharePoint
-- Microsoft Fabric (preview)
-- Salesforce (preview)
-- Oracle (preview)
-- Snowflake (preview)
+- SharePoint
+- Microsoft Fabric
+- Salesforce
+- Oracle Database
+- Snowflake
 - PostgreSQL
+- Azure Databricks
 
 These virtual connector providers use a Power Platform connector. More information: [Connector reference for virtual connector providers used with virtual tables](#connector-reference-for-virtual-connector-providers-used-with-virtual-tables)
 
