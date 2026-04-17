@@ -32,18 +32,18 @@ Key capabilities
 
 1. Sign in to [https://vibe.powerapps.com](https://vibe.powerapps.com/).
 
-1. Enter your prompt in the text box. Plan mode is the default mode, meaning by default, it'll start with a plan with potential clarifying questions before building the app. If you'd like to jump straight into app creation, turn off Plan mode. You can also select **Start dictation** and use your voice to turn speech into text.
+1. Enter your prompt in the text box. Plan mode is the default mode, which means it starts with a plan that includes potential clarifying questions before building the app. If you want to jump straight into app creation, turn off **Plan** mode. You can also select **Start dictation** and use your voice to turn speech into text.
 
-    :::image type="content" source="media/create-app-data-plan/power-apps-prompt-text-box.png" alt-text="Screenshot of Power Apps vibe showing a prompt input box for the new experience." lightbox="media/create-app-data-plan/power-apps-prompt-text-box.png":::
+    :::image type="content" source="media/create-app-data-plan/prompt-text-box.png" alt-text="Screenshot of Power Apps vibe showing a prompt input box for the new experience." lightbox="media/create-app-data-plan/power-apps-prompt-text-box.png":::
 
 
-1. In Plan mode, the agent will show you a proposed plan to review first before generating the app. It may also asks you some follow up questions to clarify. Once the plan looks good, click "Accept this plan and create app" to start generating your app. 
+1. In Plan mode, the agent shows you a proposed plan to review before generating the app. It might also ask you some follow-up questions to clarify. When the plan looks good, select **Accept this plan and create app** to start generating your app. 
 
-1. The agent will then start working and assets load. Once finished, you will have a generated app, data model (if applicable), and a plan (if applicable). 
+1. The agent starts working and loads assets. When it's finished, you have a generated app, data model (if applicable), and a plan (if applicable). 
  
    :::image type="content" source="media/create-app-data-plan/powerapps-data-model-app-preview.png" alt-text="Screenshot of the Power Apps vibe workspace showing AI agents generating the plan, data model, and app preview simultaneously." lightbox="media/create-app-data-plan/powerapps-data-model-app-preview.png":::
 
-1. After the plan, data, and app generate, make any necessary edits to your scenario. The first save stores the app, tables, and plan together in your selected solution, while your data remains in in-memory draft tables. If you don't see a **Save** button on the top right side of the screen, that means it is auto-saved and you don't have to worry about losing progress. 
+1. After the plan, data, and app generate, make any necessary edits to your scenario. The first save stores the app, tables, and plan together in your selected solution, while your data remains in in-memory draft tables. If you don't see a **Save** button on the top right side of the screen, that means the app is auto-saved and you don't have to worry about losing progress. 
 
 
 ## Review and refine your generated app and data model
@@ -92,7 +92,7 @@ When you modify the app, plan, or data, the agent analyzes your changes to see i
 
 Use the chat input on the work surface to ask questions or request changes to the generated app. For example: "What does this button do?" or "Change theme to blue."
 
-- **Plan mode**: If you want to chat with the agent wihtout making changes until you're ready, turn on **Plan** mode by the chat input box. This allows you to plan with the agent on potential changes without making changes to your app until you're ready to do so. The agent will propose a plan. Once accepted, the agent will start executing the agreed upon plan and make necessary edits to the app. Once edits are completed, plan mode is then turned off automatically. 
+- **Plan** mode: If you want to chat with the agent without making changes until you're ready, turn on **Plan** mode by the chat input box. This mode allows you to plan with the agent on potential changes without making changes to your app until you're ready to do so. The agent proposes a plan. Once you accept the plan, the agent starts executing the agreed-upon plan and makes necessary edits to the app. When the agent completes the edits, it automatically turns off plan mode.  
 - If you ask a question, the agent provides an explanatory response.
 - If you request a change, the agent evaluates the request, outlines an implementation plan, and then applies it.
 - If the agent can't implement the change directly, you receive step-by-step guidance or instructions for retrying the request.
@@ -103,7 +103,7 @@ Use inline actions to edit the style of your app.
 
  1. Select the option to toggle inline edits.
  1. Select the item you want to edit. The element is outlined and labeled with the corresponding code object so you know exactly what you're editing.
-    Depending on the element type, a properties pane or inline controls appear for typography, styling, or lay out. Adjust values like font, color, or spacing directly in the pane. If multiple elements share the same style, a single change can apply across the group. For example, changing a button color inside a card updates all buttons in that card group.
+    Depending on the element type, a properties pane or inline controls appear for typography, styling, or layout. Adjust values like font, color, or spacing directly in the pane. If multiple elements share the same style, a single change can apply across the group. For example, changing a button color inside a card updates all buttons in that card group.
  
     Inline edits update the associated code directly without an AI agent involved.
 
@@ -114,7 +114,7 @@ Use inline actions to edit the style of your app.
 
 ### Keyboard shortcuts for inline actions
 
-Use quick keys to open and close inline edit actions while editing your app.
+Use keyboard shortcuts to open and close inline edit actions while editing your app.
 
 - **Hold and release Alt** to toggle the inline edit gesture.
 - **Press Esc** to dismiss the inline edit gesture.
@@ -125,7 +125,7 @@ Select the **Plan** focus area to access these options:
 
 :::image type="content" source="media/create-app-data-plan/edit-plan.png" alt-text="Edit the plan pivot":::
 
-As you make edits to the app, the agent automatically updates the plan to best describe what the overview, target audience, key features, design direction, etc that best describe the app. Directly editing the plan inline is not available as of now. 
+As you make edits to the app, the agent automatically updates the plan to best describe the overview, target audience, key features, design direction, and other aspects that best describe the app. You can't directly edit the plan inline. 
 
 ## Edit the generated data model
 
@@ -156,7 +156,7 @@ Some actions might not be supported through agent chat. For more information, se
 
 Add new or existing tables, or make targeted changes to relationships, tables, and sample data directly within the data workspace.
 
-1. To edit, select the relationship line or the ellipsis (...) next to the table you want to modify.
+1. To edit data, select the relationship line or the ellipsis (...) next to the table you want to modify.
 1. Select **Remove** to remove relationships or tables from the data model, or make specific edits as needed.
 
     :::image type="content" source="media/create-app-data-plan/edit-data-relationships.png" alt-text="Edit data relationships":::
@@ -215,7 +215,7 @@ Follow one of these steps to change the ownership type to **User**, **Team**, or
 
 The following [ALM](/power-platform/alm/overview-alm) features are supported: 
 
-- **Save**: For new apps created after April 9th, 2026, autosave is turned on by default. No need to manually click save. For apps created before, manual saving is still required. To save your progress, select **Save** in the command bar at any time. This action saves all edits to every solution object in your preferred solution.
+- **Save**: For new apps created after April 9, 2026, autosave is turned on by default. You don't need to manually select save. For apps created before this date, manual saving is still required. To save your progress, select **Save** in the command bar at any time. This action saves all edits to every solution object in your preferred solution.
   
 - **Publish data**: To publish draft tables, select **Publish draft tables** from the data card’s context menu when you're ready to make a table available for production. You can choose Dataverse as the target data source. Once published, any apps using these draft tables automatically update to use the published versions.
 
@@ -227,7 +227,7 @@ The following [ALM](/power-platform/alm/overview-alm) features are supported:
 
 1. When you're ready to publish, select **Publish**.
 
-1. Your Dataverse tables will then be published in the same environment. 
+1. Your Dataverse tables are published in the same environment. 
 
 ## Known limitations
 
