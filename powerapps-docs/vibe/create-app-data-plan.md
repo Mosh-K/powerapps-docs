@@ -37,19 +37,15 @@ Key capabilities
     > [!TIP]
     > To skip planning and start creating apps, select **Plan** again to turn it off.
 
-    :::image type="content" source="media/create-app-data-plan/prompt-text-box.png" alt-text="Screenshot of Power Apps vibe showing a prompt input box for the new experience." lightbox="media/create-app-data-plan/power-apps-prompt-text-box.png":::
+    :::image type="content" source="media/create-app-data-plan/prompt-text-box.png" alt-text="Screenshot showing a prompt input box." lightbox="media/create-app-data-plan/power-apps-prompt-text-box.png":::
 
 
 1. In **Plan** mode, the agent shows you a proposed plan to review before generating the app. It might also ask you some follow-up questions to clarify.
  
 1. When the plan looks good, select **Accept this plan and create app**  and then **Submit** to start generating your app. 
 
-1. The agent starts working and loads assets. When it's finished, you have a generated app, data model (if applicable), and a plan (if applicable). 
-
-1. After the plan, data, and app generate, you can make any necessary edits. 
-
-   :::image type="content" source="media/create-app-data-plan/data-model-app-preview.png" alt-text="Screenshotof generated  plan, data model, and app preview." lightbox="media/create-app-data-plan/data-model-app-preview.png":::
-
+1. The agent starts working and loads assets. When it's finished, you have a generated app, data model (if applicable), and a plan (if applicable). When all the components are generated, you can make any necessary edits.
+    
 1. The first save stores the app, tables, and plan together in your selected solution, while your data remains in in-memory draft tables. If you don't see a **Save** button on the top right side of the screen, that means the app is auto-saved and you don't have to worry about losing progress. 
 
 
@@ -61,7 +57,7 @@ The new workspace uses a single, unified chat that keeps context as you switch b
 
 A list of next actions appears above the chat area to suggest relevant next steps.
 
-:::image type="content" source="media/create-app-data-plan/next-action-suggestions.png" alt-text="Suggested next actions":::
+:::image type="content" source="media/create-app-data-plan/edit-app.png" alt-text="Screenshot of how to edit generated components." lightbox="media/create-app-data-plan/edit-app.png":::
 
 If you submit a request and then decide to cancel it, select the stop button.
 
@@ -99,7 +95,8 @@ When you modify the app, plan, or data, the agent analyzes your changes to see i
 
 Use the chat input on the work surface to ask questions or request changes to the generated app. For example: "What does this button do?" or "Change theme to blue."
 
-- **Plan** mode: If you want to chat with the agent without making changes until you're ready, turn on **Plan** mode by the chat input box. This mode allows you to plan with the agent on potential changes without making changes to your app until you're ready to do so. The agent proposes a plan. Once you accept the plan, the agent starts executing the agreed-upon plan and makes necessary edits to the app. When the agent completes the edits, it automatically turns off plan mode.  
+- **Plan** mode: If you want to chat with the agent without making changes until you're ready, in the chat box select, **Plan** to turn on plan mode. This mode allows you to plan with the agent on potential changes without making changes to your app until you're ready to do so. The agent proposes a plan. Once you accept the plan, the agent starts executing the agreed-upon plan and makes necessary edits to the app. When the agent completes the edits, it automatically turns off **Plan** mode.  
+
 - If you ask a question, the agent provides an explanatory response.
 - If you request a change, the agent evaluates the request, outlines an implementation plan, and then applies it.
 - If the agent can't implement the change directly, you receive step-by-step guidance or instructions for retrying the request.
@@ -128,11 +125,7 @@ Use keyboard shortcuts to open and close inline edit actions while editing your 
 
 ## Edit the generated plan
 
-Select the **Plan** focus area to access these options:
-
-:::image type="content" source="media/create-app-data-plan/edit-plan.png" alt-text="Edit the plan pivot":::
-
-As you make edits to the app, the agent automatically updates the plan to best describe the overview, target audience, key features, design direction, and other aspects that best describe the app. You can't directly edit the plan inline. 
+Select the **Plan** focus area to see as you make edits the agent automatically updates the plan to best describe the overview, target audience, key features, design direction, and other aspects that best describe the app. You can't directly edit the plan inline. 
 
 ## Edit the generated data model
 
