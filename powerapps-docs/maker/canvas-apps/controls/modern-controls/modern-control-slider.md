@@ -131,7 +131,6 @@ This example uses a vertical slider for a volume control and writes the selected
       LayoutDirection: =LayoutDirection.Vertical
       Size: =SliderSize.Small
       AccessibleLabel: ="Volume"
-      OnChange: =Set(varVolume, Self.Value)
       Width: =35
       Height: =200
 ```
