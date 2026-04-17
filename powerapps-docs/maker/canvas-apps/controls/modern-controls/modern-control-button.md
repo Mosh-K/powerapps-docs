@@ -18,7 +18,7 @@ The **Button** modern control provides a clickable element that triggers actions
 
 ## Description
 
-The **Button** modern control provides a clickable element that triggers app logic when selected. Use it for form submissions, navigation, confirmations, and any interaction that requires user input. The control supports icon and text combinations, full font styling, and multiple appearance styles through fluent theming. Key properties for this control are **Text**, **Appearance**, and **OnSelect**.
+The **Button** modern control provides a clickable element that triggers app logic when selected. Use it for form submissions, navigation, confirmations, and any interaction that requires user input. The control supports icon and text combinations, full font styling, and multiple appearance styles through Fluent theming. Key properties for this control are **Text**, **Appearance**, and **OnSelect**.
 
 > [!NOTE]
 > This article describes the updated Button modern control. For information about what changed from the previous version, see [Recent updates](#recent-updates).
