@@ -4,7 +4,7 @@ description: Learn about recent updates to modern controls in Power Apps canvas 
 author: yogeshgupta698
 ms.topic: overview
 ms.custom: canvas
-ms.date: 04/16/2026
+ms.date: 04/20/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
 ms.reviewer: mkaur
