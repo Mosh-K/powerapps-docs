@@ -60,7 +60,7 @@ The following table lists each control that has an updated version, with a link 
 | Link | [Updates to Link](modern-control-link.md#recent-updates) | URL security validation (XSS protection), FontWeight fix, Wrap fix |
 | Info Button | [Updates to Info Button](modern-control-info-button.md#recent-updates) | Content flyout expansion fixed, click reliability improved, AcceptsFocus removed |
 | Button | [Updates to Button](modern-control-button.md#recent-updates) | Six property renames, enum values for Appearance/Layout/IconStyle, new Tooltip and border properties, AcceptsFocus removed |
-| Dropdown | [Updates to Dropdown control](modern-control-dropdown. md#recent-updates) | Fluent-themed flyout on desktop, DefaultSelectedItems renamed to Default, FontSize renamed to Size, enum format changes |
+| Dropdown | [Updates to Dropdown control](modern-control-dropdown.md#recent-updates) | Fluent-themed flyout on desktop, DefaultSelectedItems renamed to Default, FontSize renamed to Size, enum format changes |
 | Icon | [Updates to Icon control](modern-control-icon.md#recent-updates) | OnSelect support, TabIndex removed, Style renamed to IconStyle, new border and padding properties |
 | Slider | [Updates to Slider](modern-control-slider.md#recent-updates) | Value renamed to Default, Layout renamed to LayoutDirection, enum values for Size and LayoutDirection, new Tooltip property |
 
