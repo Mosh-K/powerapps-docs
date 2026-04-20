@@ -37,7 +37,7 @@ Key capabilities
     > [!TIP]
     > To skip planning and start creating apps, select **Plan** again to turn it off.
 
-    :::image type="content" source="media/create-app-data-plan/prompt-text-box.png" alt-text="Screenshot of prompt input box where you enter a description to create an app." lightbox="media/create-app-data-plan/power-apps-prompt-text-box.png":::
+    :::image type="content" source="media/create-app-data-plan/prompt-text-box.png" alt-text="Screenshot of prompt input box where you enter a description to create an app." lightbox="media/create-app-data-plan/prompt-text-box.png":::
 
 
 1. In **Plan** mode, the agent shows you a proposed plan to review before generating the app. It might also ask follow-up questions to clarify your requirements.
