@@ -356,9 +356,9 @@ After enabling this setting, you might receive the following error:
 
 Before you enable this feature, the [Deleted Record Keeping Configuration (RecycleBinConfig) table](reference/entities/recyclebinconfig.md) has no rows.
 
-Over time, most tables will support deleted record keeping. [Solution components](/power-platform/alm/solution-concepts-alm#solution-components), [virtual tables](../../maker/data-platform/create-edit-virtual-entities.md), and [elastic tables](../../maker/data-platform/create-edit-elastic-tables.md) aren't supported for deleted record keeping. During this preview, some tables that aren't currently enabled might be enabled later (for example, tables with more than 600 columns). For a list of tables that don't support this feature, see [Tables not currently supported](#tables-not-currently-supported-for-the-restore-deleted-records-feature).
+Over time, most tables will support deleted record keeping. [Solution components](/power-platform/alm/solution-concepts-alm#solution-components), [virtual tables](../../maker/data-platform/create-edit-virtual-entities.md), and [elastic tables](../../maker/data-platform/create-edit-elastic-tables.md) aren't supported for deleted record keeping. During this preview, some tables that aren't currently enabled might be enabled later (for example, tables with more than 600 columns). For a list of tables that don't support this feature, see [Tables not currently supported](#tables-not-currently-supported-for-deleted-record-keeping).
 
-You can also [disable deleted record keeping for specific tables](#disable-restore-deleted-records-feature-for-a-table) and [disable deleted record keeping for the environment](#disable-restore-deleted-records-feature-for-the-environment). If deleted record keeping isn't enabled for a table, you won't [find any records eligible to be restored](#retrieve-deleted-records-that-can-be-restored). You can query Dataverse to find out whether deleted record keeping is enabled for a table or not.
+You can also [disable deleted record keeping for specific tables](#disable-deleted-record-keeping-for-a-table) and [disable deleted record keeping for the environment](#disable-deleted-record-keeping-for-the-environment). If deleted record keeping isn't enabled for a table, you won't [find any records eligible to be restored](#retrieve-deleted-records-that-can-be-restored). You can query Dataverse to find out whether deleted record keeping is enabled for a table or not.
 
 Tables that are enabled for deleted record keeping have a row in the `RecycleBinConfig` table where the `statecode` is active and `isreadyforrecyclebin` is true. The `RecycleBinConfig` table doesn't contain the name of the table, but refers to a row in the [Entity table](reference/entities/entity.md) where the `logicalname` column contains the [LogicalName](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata.logicalname) of the table.
 
@@ -391,7 +391,7 @@ Use the following FetchXml query to detect which tables have deleted record keep
 
 ## Detect which tables aren't enabled for deleted record keeping
 
-To know which tables aren't enabled for deleted record keeping, use the following FetchXml query that is the reverse of the one found in [Detect which tables are enabled](#detect-which-tables-are-enabled).
+To know which tables aren't enabled for deleted record keeping, use the following FetchXml query that is the reverse of the one found in [Detect which tables are enabled](#detect-which-tables-are-enabled-for-deleted-record-keeping).
 
 ```xml
 <fetch>
@@ -422,7 +422,7 @@ To know which tables aren't enabled for deleted record keeping, use the followin
 
 [Learn to query data using FetchXml](fetchxml/overview.md)
 
-The results of this query as of May 2024 when this preview feature began are in [Tables not currently supported for deleted record keeping](#tables-not-currently-supported-for-the-restore-deleted-records-feature).
+The results of this query as of May 2024 when this preview feature began are in [Tables not currently supported for deleted record keeping](#tables-not-currently-supported-for-deleted-record-keeping).
 
 
 ## Retrieve and set the automatic cleanup time period configuration for deleted record keeping
@@ -674,7 +674,7 @@ If you have this kind of custom business logic, Dataverse doesn't know about it 
 
 ## Tables not currently supported for deleted record keeping
 
-The query described in [Detect which tables aren't enabled](#detect-which-tables-arent-enabled) was used to generate [this list](/power-platform/admin/restore-deleted-table-records#tables-not-currently-supported-for-the-deleted-records-feature) in August 2024.
+The query described in [Detect which tables aren't enabled](#detect-which-tables-arent-enabled-for-deleted-record-keeping) was used to generate [this list](/power-platform/admin/restore-deleted-table-records#tables-not-currently-supported-for-the-deleted-records-feature) in August 2024.
 
 
 
