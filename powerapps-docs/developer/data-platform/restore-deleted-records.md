@@ -19,9 +19,9 @@ ms.custom: bap-template
 
 [This article is prerelease documentation and is subject to change.]
 
-Sometimes people delete records that they shouldn't. Administrators can enable tables so that they can restore deleted records within a specified period of time. [Learn how administrators can restore deleted records](/power-platform/admin/restore-deleted-table-records).
+Sometimes people delete records that they shouldn't. Administrators can enable deleted record keeping so that they can restore deleted records within a specified period of time. [Learn how administrators can restore deleted records](/power-platform/admin/restore-deleted-table-records).
 
-[When the this feature is enabled](/power-platform/admin/restore-deleted-table-records#enable-restore-table-records), developers can use the `Restore` message to restore deleted record before the specified period of time. The period of time can be up to 30 days.
+[When deleted record keeping is enabled](/power-platform/admin/restore-deleted-table-records#enable-restore-table-records), developers can use the `Restore` message to restore deleted record before the specified period of time. The period of time can be up to 30 days.
 
 ## Retrieve deleted records that can be restored
 
@@ -352,17 +352,17 @@ After enabling this setting, you might receive the following error:
 > Number: `-2147182279`<br />
 > Message: `A record that has the attribute values Deleted Object already exists on Delete.`
 
-## Detect which tables are enabled
+## Detect which tables are enabled for deleted record keeping
 
 Before you enable this feature, the [Restore Deleted Records Configuration (RecycleBinConfig) table](reference/entities/recyclebinconfig.md) has no rows.
 
-Over time, most tables will support this feature. [Solution components](/power-platform/alm/solution-concepts-alm#solution-components), [virtual tables](../../maker/data-platform/create-edit-virtual-entities.md), and [elastic tables](../../maker/data-platform/create-edit-elastic-tables.md) aren't supported. During this preview, some tables that aren't currently enabled might be enabled later (for example, tables with more than 400 columns). For a list of tables that don't support this feature, see [Tables not currently supported](#tables-not-currently-supported-for-the-restore-deleted-records-feature).
+Over time, most tables will support deleted record keeping. [Solution components](/power-platform/alm/solution-concepts-alm#solution-components), [virtual tables](../../maker/data-platform/create-edit-virtual-entities.md), and [elastic tables](../../maker/data-platform/create-edit-elastic-tables.md) aren't supported. During this preview, some tables that aren't currently enabled might be enabled later (for example, tables with more than 600 columns). For a list of tables that don't support this feature, see [Tables not currently supported](#tables-not-currently-supported-for-the-restore-deleted-records-feature).
 
 You can also [disable the restore deleted records feature for specific tables](#disable-restore-deleted-records-feature-for-a-table) and [disable Restore deleted records feature for the environment](#disable-restore-deleted-records-feature-for-the-environment). If the restore deleted records feature isn't enabled for a table, you won't [find any records eligible to be restored](#retrieve-deleted-records-that-can-be-restored). You can query Dataverse to find out whether the restore deleted records feature is enabled for a table or not.
 
-Tables that are enabled for the restore deleted records feature have a row in the `RecycleBinConfig` table where the `statecode` is active and `isreadyforrecyclebin` is true. The `RecycleBinConfig` table doesn't contain the name of the table, but refers to a row in the [Entity table](reference/entities/entity.md) where the `logicalname` column contains the [LogicalName](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata.logicalname) of the table.
+Tables that are enabled for deleted record keeping have a row in the `RecycleBinConfig` table where the `statecode` is active and `isreadyforrecyclebin` is true. The `RecycleBinConfig` table doesn't contain the name of the table, but refers to a row in the [Entity table](reference/entities/entity.md) where the `logicalname` column contains the [LogicalName](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata.logicalname) of the table.
 
-Use the following FetchXml query to detect which tables have the restore deleted records feature enabled:
+Use the following FetchXml query to detect which tables have deleted record keeping enabled:
 
 ```xml
 <fetch>
@@ -389,9 +389,9 @@ Use the following FetchXml query to detect which tables have the restore deleted
 
 [Learn to query data using FetchXml](fetchxml/overview.md)
 
-## Detect which tables aren't enabled
+## Detect which tables aren't enabled for deleted record keeping
 
-To know which tables aren't enabled for the restore deleted records feature, use the following FetchXml query that is the reverse of the one found in [Detect which tables are enabled](#detect-which-tables-are-enabled).
+To know which tables aren't enabled for deleted record keeping, use the following FetchXml query that is the reverse of the one found in [Detect which tables are enabled](#detect-which-tables-are-enabled).
 
 ```xml
 <fetch>
@@ -422,10 +422,10 @@ To know which tables aren't enabled for the restore deleted records feature, use
 
 [Learn to query data using FetchXml](fetchxml/overview.md)
 
-The results of this query as of May 2024 when this preview feature began are in [Tables not currently supported for restore deleted records](#tables-not-currently-supported-for-the-restore-deleted-records-feature).
+The results of this query as of May 2024 when this preview feature began are in [Tables not currently supported for deleted record keeping](#tables-not-currently-supported-for-the-restore-deleted-records-feature).
 
 
-## Retrieve and set the automatic cleanup time period configuration for the restore deleted records feature
+## Retrieve and set the automatic cleanup time period configuration for deleted record keeping
 
 Set the value that determines how long deleted records are available to be restored in the [RecycleBinConfig.CleanupIntervalInDays](reference/entities/recyclebinconfig.md#BKMK_CleanupIntervalInDays) column where the [Name](reference/entities/recyclebinconfig.md#BKMK_Name) column value is `organization`. Every other row in the `RecycleBinConfig` table has a `CleanupIntervalInDays` column value of `-1`. This value indicates it uses the same values set for the `organization` table.
 
@@ -482,7 +482,7 @@ static void SetCleanupIntervalInDays(
     }
     else
     {
-        throw new Exception($"Restore deleted records configuration for table '{tableLogicalName}' not found.");
+        throw new Exception($"Deleted record keeping configuration for table '{tableLogicalName}' not found.");
     }
 }
 ```
@@ -518,7 +518,7 @@ function Set-CleanupIntervalInDays{
          }
       }
       else {
-         Write-Host "Restore deleted records configuration for table $tableEntityId not found."
+         Write-Host "Deleted record keeping configuration for table $tableEntityId not found."
       }
 }
 ```
@@ -529,7 +529,7 @@ function Set-CleanupIntervalInDays{
 
 ---
 
-## Disable restore deleted records feature for a table
+## Disable deleted record keeping for a table
 
 To disable this feature for a table, disable the `recyclebinconfig` record for the table by setting the [statecode](reference/entities/recyclebinconfig.md#BKMK_statecode) and [statuscode](reference/entities/recyclebinconfig.md#BKMK_statuscode) properties to their **Inactive** values: `2` and `1` respectively.
 
@@ -538,11 +538,11 @@ To disable this feature for a table, disable the `recyclebinconfig` record for t
 
 ### [SDK for .NET](#tab/sdk)
 
-Use this static `DisableRestoreDeletedRecordsFeatureForTable` method to disable the restore deleted records feature for a specific table.
+Use this static `DisableRestoreDeletedRecordsFeatureForTable` method to disable the deleted record keeping for a specific table.
 
 ```csharp
 /// <summary>
-/// Disable the restore deleted records feature for a specified table
+/// Disable deleted record keeping for a specified table
 /// </summary>
 /// <param name="service">The authenticated IOrganizationService instance</param>
 /// <param name="tableEntityId">The entityId of the table</param>
@@ -585,7 +585,7 @@ static void DisableRestoreDeletedRecordsFeatureForTable(
     }
     else
     {
-        string message = $"Restore deleted records configuration for table '{extensionofrecordid}' not found.";
+        string message = $"Deleted record keeping configuration for table '{extensionofrecordid}' not found.";
         throw new Exception(message);
     }
 }
@@ -597,7 +597,7 @@ static void DisableRestoreDeletedRecordsFeatureForTable(
 ### [Web API](#tab/webapi)
 
 
-Use this `Disable-RestoreDeletedRecordsFeatureForTable` PowerShell function to disable the restore deleted records feature for a specific table. This function depends on the `Get-Records` and `Update-Record` functions described in [Create table operations functions](webapi/use-ps-and-vscode-web-api.md#create-table-operations-functions).
+Use this `Disable-RestoreDeletedRecordsFeatureForTable` PowerShell function to disable deleted record keeping for a specific table. This function depends on the `Get-Records` and `Update-Record` functions described in [Create table operations functions](webapi/use-ps-and-vscode-web-api.md#create-table-operations-functions).
 
 
 ```powershell
@@ -627,7 +627,7 @@ function Disable-RestoreDeletedRecordsFeatureForTable {
       } | Out-Null
    }
    else {
-      Write-Host "Restore deleted records configuration for table $tableId not found."
+      Write-Host "Deleted record keeping configuration for table $tableId not found."
    }
 }
 ```
@@ -638,12 +638,12 @@ function Disable-RestoreDeletedRecordsFeatureForTable {
 
 ---
 
-## Disable restore deleted records feature for the environment
+## Disable deleted record keeping for the environment
 
 > [!NOTE]
-> The preferred way to disable the restore deleted records feature for an environment is to [turn it off in the Power Platform admin center](/power-platform/admin/restore-deleted-table-records#enable-restore-table-records). The method described here might change before the feature becomes generally available.
+> The preferred way to disable deleted record keeping for an environment is to [turn it off in the Power Platform admin center](/power-platform/admin/restore-deleted-table-records#enable-restore-table-records). The method described here might change before the feature becomes generally available.
 
-Delete the row in the [RecycleBinConfig](reference/entities/recyclebinconfig.md) table where the `name` value is `"organization"`. This action deletes all the records in the `RecycleBinConfig` table and disables the restore deleted records feature for the environment.
+Delete the row in the [RecycleBinConfig](reference/entities/recyclebinconfig.md) table where the `name` value is `"organization"`. This action deletes all the records in the `RecycleBinConfig` table and disables the deleted record keeping for the environment.
 
 > [!IMPORTANT]
 > Don't try to delete other individual records. It's important that Dataverse manages this action.
@@ -672,7 +672,7 @@ If you have this kind of custom business logic, Dataverse doesn't know about it 
 >
 > The [InputParameters](understand-the-data-context.md#inputparameters) and [OutputParameters](understand-the-data-context.md#outputparameters) of the `Restore` message are similar to `Create` message, so plug-ins written to be registered for the `Create` message can be re-used for the `Restore` message with fewer changes.
 
-## Tables not currently supported for the restore deleted records feature
+## Tables not currently supported for deleted record keeping
 
 The query described in [Detect which tables aren't enabled](#detect-which-tables-arent-enabled) was used to generate [this list](/power-platform/admin/restore-deleted-table-records#tables-not-currently-supported-for-the-deleted-records-feature) in August 2024.
 
