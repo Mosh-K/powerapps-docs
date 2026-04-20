@@ -14,7 +14,7 @@ ms.subservice: mda-maker
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This article explains how to use AI code generation tools like GitHub Copilot CLI or Claude Code to generate interactive model context protocol (MCP) app widgets for your model-driven Power Apps MCP tools. MCP apps are self-contained HTML files that render a tool's JSON output visually—as cards, charts, dashboards, or maps inside any MCP Apps–compatible host, including Microsoft 365 Copilot, Claude, and Visual Studio Code.
+This article explains how to use AI code generation tools like GitHub Copilot CLI or Claude Code to generate interactive model context protocol (MCP) app widgets for your model-driven Power Apps MCP tools. MCP apps are self-contained HTML files that render a tool's JSON output visually - as cards, charts, dashboards, or maps inside any MCP Apps–compatible host, including Microsoft 365 Copilot, Claude, and Visual Studio Code.
 
 If you have an MCP tool that returns JSON data, the `generate-mcp-app-ui` skill can produce a polished, theme-aware widget that displays that data in a compact visual format directly inside a chat conversation.
 
@@ -24,23 +24,13 @@ If you have an MCP tool that returns JSON data, the `generate-mcp-app-ui` skill 
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 > - MCP apps support in Microsoft 365 Copilot Chat is generally available as of March 2026. Power Apps support for MCP apps in declarative agents is currently in public preview. For the full announcement, see [MCP Apps now available in Copilot Chat](https://devblogs.microsoft.com/microsoft365dev/mcp-apps-now-available-in-copilot-chat/).
 
-## What you can do with the generate-mcp-app skill
+## What you can do with the generate-mcp-app-ui skill
 
 - *Create visual widgets* for any MCP tool by describing what you want and pasting the tool's JSON output.
 - Choose the right visual for your data, such as charts for numeric trends, cards for structured records, tables for comparisons, maps for coordinates, and so on.
 - Support light and dark themes automatically through Fluent UI design tokens.
 - Add interactivity so widgets can call your tool again at runtime (for example, a refresh button).
-- Refine iteratively by describing changes in natural language ("make the gallery compact", "add a chart", "use a card layout").
-
-## How it works
-
-1. Test your MCP tool and copy its JSON output.
-2. Invoke the skill and describe the visual you want, pasting the JSON into the conversation.
-3. The AI tool analyzes the data structure, selects the appropriate visual components, and generates a complete HTML widget file.
-4. The widget uses the [MCP Apps protocol](#mcp-apps-protocol) to receive tool data at runtime and render it.
-5. You open the HTML file in a browser to preview it, then attach it to your MCP server for deployment.
-
-You can iterate at any point by describing changes in natural language.
+- Refine the UX iteratively by describing changes in natural language ("make the gallery compact", "add a chart", "use a card layout").
 
 ## Prerequisites
 
@@ -58,18 +48,16 @@ You can iterate at any point by describing changes in natural language.
 
 ### Install the plugin
 
-Run the following installer command from GitHub Copilot CLI or Claude Code:
+Run the following installer command from GitHub Copilot CLI or Claude Code. The installer automatically detects available tools and installs all Power Platform plugins, including `generate-mcp-app-ui`.
 
 ```
 /plugin marketplace add microsoft/power-platform-skills
 ```
 
-The installer automatically detects available tools and installs all Power Platform plugins, including `generate-mcp-apps-UI`.
-
 To install only the MCP App widget skill:
-
-1. Add the Power Platform Skills from Microsoft Marketplace: `/plugin marketplace add microsoft/power-platform-skills`
-2. Install the plugin: `/plugin install model-apps@power-platform-skills`
+```
+/plugin install mcp-apps@power-platform-skills`
+```
 
 > [!TIP]
 > Turn on auto-update to automatically receive skill updates. Use the `/plugin` command, navigate to **Marketplaces**, choose the marketplace, and turn on auto-update.
@@ -78,43 +66,43 @@ To install only the MCP App widget skill:
 
 | Skill | Command | Description |
 |---|---|---|
-| Generate MCP app | `/generate-mcp-app` | Generate a self-contained MCP app widget (HTML file) for an MCP tool's JSON output |
+| MCP Apps Widget Generator | `/generate-mcp-app-ui` | Generate a self-contained MCP app widget (HTML file) for an MCP tool's JSON output |
 
 The skill is also triggered by natural language phrases such as "create a widget", "build a widget for my tool", or "make an MCP app".
 
 ## Generate a widget
 
-Follow this workflow to create a new widget for an MCP tool.
+Follow these steps to create a new widget for an MCP tool.
 
-1. **Test your tool** in your MCP development environment and copy the full JSON output. Make sure the tool's output type is set to JSON.
+1. **Create and test a custom tool** from model-driven app designers and copy the full JSON output. Make sure the tool's output type is set to JSON. More information: [Create custom tools](https://review.learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/enable-your-app-copilot#create-custom-tools)
 
-2. **Invoke the skill** and describe what you want displayed, pasting the JSON output into the conversation:
+1. **Invoke the skill** and describe what you want displayed, pasting the JSON output into the conversation:
 
    ```
-   /generate-mcp-app Show these locations on an interactive map.
-
-   Here's an example of the tool's output:
-   {"attractions":[{"name":"Space Needle","latitude":47.6205,"longitude":-122.3493,"description":"An iconic observation tower"},{"name":"Pike Place Market","latitude":47.6097,"longitude":-122.3425,"description":"A historic public market"}]}
+   /generate-mcp-app-ui Visualizes flights using an animated arc map for routes and a synchronized Gantt timeline for departure and arrival schedules, enabling quick understanding of flight coverage, timing, and overlaps.
+ Here's an example of the tool's output:
+{"flight_records":[{"Departure Time":"2024-07-02T05:00:00Z","Arrival Time":"2024-07-02T07:30:00Z","Flight Name":"Zava 1001","Status":"Active","Airport":"Seattle-Tacoma","Airport1":"Los Angeles Intl"},{"Departure Time":"2024-07-02T03:00:00Z","Arrival Time":"2024-07-02T10:00:00Z","Flight Name":"Zava 103","Status":"Active","Airport":"Seattle-Tacoma","Airport1":"Hartsfield-Jackson"}]}
    ```
 
-3. **Review the generated file.** The skill writes a self-contained HTML file, for example, `travel-map.html`, to your working directory and tells you where it is.
-
-4. **Preview in a browser.** Open the HTML file locally to verify appearance in both light and dark mode.
-
-5. **Iterate.** Describe any changes directly in the chat:
+1. **Review the generated HTML file.** The skill writes a self-contained HTML file, for example, `flight-map.html`, to your working directory.
+1. **Preview in a browser.** Open the HTML file locally as widget has the fallback option for testing. You can ask chat agent to add standalone HTML preview if missing. 
+1. **Iterate.** Describe any changes directly in the chat:
    - "Make the map larger"
-   - "Add a sidebar with attraction details"
-   - "Use a card layout instead"
+   - "Add tool tips on the Chart"
+   - "Decrease the height and fit in 250 pixels with responsive layout and no scroll bars"
 
 > [!NOTE]
 > The skill requires actual JSON from your tool—not sample or mock data. The data shape drives the widget generation. If you paste mock data, the generated widget might not work correctly when connected to the real tool.
 
-## Add interactivity with callServerTool
+## Deploy your widget
 
-If you also provide your tool's name when invoking the skill, the generated widget includes interactive tool-call integration. This allows the widget to call your tool again at runtime—for example, through a refresh button.
+Once your widget is ready, copy over the HTML file to the UX input for corresponding tool and it will be returned as the tool's UI response. Refer to your [create custom tools documentation](https://review.learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/enable-your-app-copilot#create-custom-tools) for details. 
+
+## Add interactivity with callServerTool
+If you also provide your tool's name when invoking the skill, the generated widget can include interactive tool-call integration. This allows the widget to call your tool again at runtime. For example a refresh button on the tool UX can call itself.
 
 ```
-/generate-mcp-app Show the current weather conditions with a refresh button.
+/generate-mcp-app-ui Show the current weather conditions with a refresh button.
 Tool name: get_weather
 
 Tool output:
@@ -122,12 +110,7 @@ Tool output:
 ```
 
 The skill wires up `app.callServerTool` in the widget so that when users select **Refresh**, the widget fetches updated data directly from your tool.
-
 If you don't provide a tool name, the widget is read-only and renders only the data delivered through the `ontoolresult` callback.
-
-## Deploy your widget
-
-Once your widget is ready, register the HTML file with your MCP server so it's returned as the tool's UI response. Refer to your MCP host's documentation for how to associate a widget with a tool result:
 
 - **Microsoft 365 Copilot chat**: See [MCP apps in Copilot Chat](https://devblogs.microsoft.com/microsoft365dev/mcp-apps-now-available-in-copilot-chat/) for deployment paths including sideloading for testing, deploying through the Microsoft 365 Admin Center for organizational use, and publishing to the Microsoft 365 Agent Store.
 - **Power Apps declarative agents**: See [Power Apps MCP declarative agent documentation](/power-apps/maker/model-driven-apps/generative-page-external-tools) for how to connect MCP tools with model-driven apps.
