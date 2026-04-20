@@ -47,6 +47,6 @@ Select an existing SharePoint list to use with your app. Vibe doesn't suggest or
 
     :::image type="content" source="media/Sharepoint-data/sharepoint-data-added-vibe.png" alt-text="SharePoint list added to vibe":::
 
-## limitations
+## Limitations
 
 - **Location**,**ManagedMetadata**, **Calculated**, **ExternalData**, and **TaskOutcome** columns aren’t currently supported and are converted to text columns.
