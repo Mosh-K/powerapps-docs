@@ -53,6 +53,9 @@ You can create generative pages using two approaches:
 1. Optionally choose the AI model you want to use to generate the page.
     :::image type="content" source="media/generative-page/choose-model-generative-page.png" alt-text="Choose the AI model you want to use to generate your page" lightbox="media/generative-page/choose-model-generative-page.png":::
 
+   > [!NOTE]
+   > GPT-4.1 is currently the only available model for generative pages.
+
 1. When you're finished describing the page, select **Generate page**.
 
 The agent begins a multistep build process that you can observe in real time:
