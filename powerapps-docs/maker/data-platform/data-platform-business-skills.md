@@ -25,7 +25,7 @@ This article explains how to create and manage business skills that ground agent
 - The environment where you create and use business skills must be a Managed Environment. More information: [Use preview tools and upcoming features in Dataverse MCP server](data-platform-mcp-preview-tools.md)
 - The environment must be enabled for [Dataverse intelligence](data-platform-intelligence.md).
 
-## Open the Business skills page
+## Open the business skills page
 
 1. Go to [Power Apps](https://make.powerapps.com).
 1. In the left navigation pane, select **More**, and then select **Business skills (preview)**.
@@ -33,7 +33,7 @@ This article explains how to create and manage business skills that ground agent
 > [!TIP]
 > Pin the **Business skills** page to the left navigation pane for quick access.
 
-The Business skills page is the central hub for managing all business process knowledge in your environment. From here, you can create, edit, share, and organize the skills that agents use to follow your organization's processes.
+The **Business skills** page is the central hub for managing all business process knowledge in your environment. From here, you can create, edit, share, and organize the skills that agents use to follow your organization's processes.
 
 ## Manage business skills
 
@@ -42,7 +42,7 @@ The Business skills page is the central hub for managing all business process kn
 1. Select **New business skill** on the command bar, or select the **Create a business skill** card.
 1. Enter a name for your skill. A unique name is generated automatically with the preferred solution's prefix.
 1. In the **Description** field, describe the skill's purpose and when it should be followed. Agents use this description to understand when to perform the skill.
-1. In the **Instructions** section, write the step-by-step process in markdown format. Use the **Edit markdown** and **Preview** toggles to switch between editing and previewing your instructions.
+1. In the **Instructions** section, write the step-by-step process in markdown format. Use the **Edit markdown** and **Preview** options to switch between editing and previewing your instructions.
 1. Select **Save**.
 1. After saving, you can add resource files in the **Resources** section. Select **Add Files** to attach reference materials such as policy documents, SOPs, templates, forms, or calculations (20 MB limit).
 
@@ -60,7 +60,7 @@ You can quickly create a business skill by uploading existing skills.
 
 ### Edit a business skill
 
-1. Open a skill in the Business Skills page by selecting its name in the list, or select a skill and then select **Edit** from the command bar or the three-dot menu (**&#8942;**).
+1. Open a skill in the **Business skills** page by selecting its name in the list, or select a skill and then select **Edit** from the command bar or the three-dot menu (**&#8942;**).
 1. Update the **Name**, **Description**, **Instructions**, or **Resources** as needed.
 1. Select **Save**. 
 
@@ -68,7 +68,7 @@ You can quickly create a business skill by uploading existing skills.
 
 You can also create and update skills through an agent connected to the Dataverse MCP server (preview):
 
-1. Add Dataverse MCP server Preview as a tool to any agent in Microsoft Copilot Studio or connect to it from coding agents in Visual Studio Code or non-Microsoft clients.
+1. Add Dataverse MCP server (preview) as a tool to any agent in Microsoft Copilot Studio or connect to it from coding agents in Visual Studio Code or non-Microsoft clients.
 1. Ask your agent to create a new skill or update an existing one.
 1. Provide your business process information.
 1. The business skill is saved in the environment you used to connect to the MCP server.
@@ -84,7 +84,7 @@ Skills are user-owned by default. You can share skills with specific users or te
    - **Co-owner** - Can view and edit the skill.
 1. Select **Share**.
 
-Select **Manage access** to review who has access, change permission levels, or remove access. Pending invitations that haven't been shared yet are shown on the **Pending Invites** tab.
+Select **Manage access** to review who has access, change permission levels, or remove access. Pending invitations that haven't been shared yet are shown on the **Pending invites** tab.
 
 ### Change skill visibility
 
@@ -115,12 +115,12 @@ To permanently remove a business skill:
 
 ## Use business skills
 
-After you create business skills in your environment, AI agents can use them to understand and run business processes. Access skills through the Dataverse MCP server preview.
+After you create business skills in your environment, AI agents can use them to understand and run business processes. Access skills through the Dataverse MCP server (preview).
 
-- To start using business skills, connect to the Dataverse MCP server preview in Microsoft Copilot Studio or from agent mode in Visual Studio Code or non-Microsoft clients.
+- To start using business skills, connect to the Dataverse MCP server (preview) in Microsoft Copilot Studio or from agent mode in Visual Studio Code or non-Microsoft clients.
 - Try asking your agent, "Show me all business skills in this environment." The agent retrieves a list of all the skills in your connected environment by using the Dataverse MCP server.
 - Start testing by asking your agent a relevant scenario that matches your skill's intended use case. For example, if you created a skill for logging call transcripts into Dataverse, provide a sample transcript to your agent and ask it to log the transcript information in Dataverse.
-  > [!NOTE]
+  > [!TIP]
   > If your agent doesn't automatically fetch skill details, try adding "Using business skills" before your actual prompt. For example, "Using business skills log this transcript in Dataverse."
 - Remember to add any other relevant tools, including MCP servers and connectors, that the agent needs access to for successfully executing your business processes defined in skills.
 - Confirm your intended actions were successful and continue to iterate on the skill instructions based on results.
@@ -136,7 +136,7 @@ To add a skill to a solution:
 1. Select **Add existing** > **Business skill** from the top navigation bar.
 1. Choose the skills you want to add to your solution, and then select **Add**.
 
-## Best practices when creating business skills
+## Best practices for creating business skills
 
 - Write clear, specific instructions. Vague instructions lead to inconsistent agent behavior.
 - Use descriptive names and descriptions. Help agents discover the right skill for the task.
@@ -161,7 +161,7 @@ To add a skill to a solution:
 
 ## Sample business skills for getting started
 
-To help you get started, sample business skills are available here: [Business skills repo on GitHub](https://aka.ms/DVBusinessSkillRepo)
+To help you get started, sample business skills are available: [Business skills repo on GitHub](https://aka.ms/DVBusinessSkillRepo)
 
 This open source GitHub repository also has a downloadable solution. Install the solution in your environment to explore working examples and use them as templates for your own skills. Refer to the ReadMe file located in the repository for more instructions on how you start using these sample skills.
 
