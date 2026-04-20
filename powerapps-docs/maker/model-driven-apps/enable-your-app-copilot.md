@@ -14,7 +14,7 @@ ms.subservice: mda-maker
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Power Apps in Copilot lets users interact with your  model-driven app directly from Copilot. When a user talks to the agent, it can surface your app's data as interactive widgets - a grid for browsing records or a form for viewing, editing, or creating them - all without leaving the Copilot experience. You can use a prompt builder based designer to add custom MCP tools and interactive UI to the app’s declarative agent. This functionality is achieved using MCP Apps which is an extension to MCP that enables MCP servers to deliver interactive user interfaces to hosts. The feature works by generating an MCP server and declarative agent from your app.
+Power Apps in Copilot lets users interact with your  model-driven app directly from Copilot. When a user talks to the agent, it can surface your app's data as interactive widgets - a grid for browsing records or a form for viewing, editing, or creating them - all without leaving the Copilot experience. Additionally, you can use a prompt builder based designer to add custom MCP tools and interactive UI to the app’s declarative agent. This functionality is acheived via [MCP Apps](https://apps.extensions.modelcontextprotocol.io/api/documents/Overview.html) which is an extension to MCP that enables MCP servers to deliver interactive user interfaces to hosts. The feature works by generating an MCP server and declarative agent from your app.
 
 > [!IMPORTANT]
 >
