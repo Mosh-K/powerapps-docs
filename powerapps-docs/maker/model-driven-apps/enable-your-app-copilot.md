@@ -96,5 +96,84 @@ Tool chaining in Power Apps declarative agents uses the Microsoft 365 Copilot or
 
    :::image type="content" source="media/enable-your-app-copilot/sankey-mcp-tool1.png" alt-text="Sankey chart visualizer with tool chaining":::
 
+# Full screen example
+In this example, an expand button is rendered only if the host supports fullscreen mode.
+
+```js
+function renderExpandButton(app) {
+  const ctx = app.getHostContext();
+
+  // Don't render the button if the host doesn't support fullscreen
+  if (!ctx?.availableDisplayModes?.includes('fullscreen')) {
+    return null;
+  }
+
+  const btn = document.createElement('button');
+  btn.addEventListener('click', async () => {
+    const result = await app.requestDisplayMode({ mode: 'fullscreen' });
+    // Always use result.mode — the host may grant a different mode than requested
+    console.log('Granted mode:', result.mode);
+  });
+  return btn;
+}
+```
+
+The same guard applies to any host capability. Check `getHostContext()` before use:
+
+```js
+const ctx = app.getHostContext();
+
+// Theme
+if (ctx?.theme) applyTheme(ctx.theme);
+
+// Current display mode
+if (ctx?.displayMode === 'fullscreen') { /* adjust layout */ }
+
+// Available modes
+if (ctx?.availableDisplayModes?.includes('inline')) { /* show collapse option */ }
+```
+
+React to capability changes at runtime via `onhostcontextchanged` — the host context can update after `connect()`:
+
+```js
+app.onhostcontextchanged = (ctx) => {
+  if (ctx.theme) applyTheme(ctx.theme);
+  if (ctx.displayMode) updateLayout(ctx.displayMode);
+};
+```
+
+## Using fullscreen mode with tool results
+
+A common pattern is to switch to fullscreen automatically when the widget receives data, giving the content more space to render.
+
+```js
+app.ontoolresult = async (result) => {
+  const data = result.structuredContent;
+  if (!data) return;
+
+  // Expand to fullscreen when data arrives, if the host supports it
+  const ctx = app.getHostContext();
+  if (ctx?.availableDisplayModes?.includes('fullscreen') && currentMode !== 'fullscreen') {
+    const granted = await app.requestDisplayMode({ mode: 'fullscreen' });
+    currentMode = granted.mode;
+    document.body.classList.toggle('mode-fullscreen', currentMode === 'fullscreen');
+  }
+
+  renderData(data);
+};
+```
+
+You can also let the user decide — render into the current mode first, then offer the expand button:
+
+```js
+app.ontoolresult = (result) => {
+  const data = result.structuredContent;
+  if (!data) return;
+
+  renderData(data);        // render in whatever mode is active
+  updateExpandBtn();       // show the expand button now that there is content
+};
+```
+
 
 
