@@ -25,8 +25,8 @@ After you describe the page, the system then processes your requirements and spe
 
 You can create generative pages using two approaches:
 
-- Power Apps (make.powerapps.com): As described in this article, makers can create and iterate on generative pages directly in the browser by using a conversational UI experience.
-- AI code generation tools: Developers who prefer working with local development tools and direct access to TypeScript and React code can use external tools like Claude Code to develop generative pages locally with a code-first approach and CLI-based deployment. More information: [Create and edit generative pages with AI code generation tools](generative-page-external-tools.md)
+- Power Apps (make.powerapps.com): As described in this article, makers can create and iterate on generative pages directly in the browser by using a conversational UI experience. Available in the US region only.
+- AI code generation tools: Developers who prefer working with local development tools and direct access to TypeScript and React code can use external tools like Claude Code to develop generative pages locally with a code-first approach and CLI-based deployment. Available worldwide on public clouds. More information: [Create and edit generative pages with AI code generation tools](generative-page-external-tools.md)
 
 ## Prerequisites
 
