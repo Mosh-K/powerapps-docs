@@ -14,7 +14,7 @@ ms.subservice: mda-maker
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This article explains how to use AI code generation tools like GitHub Copilot CLI or Claude Code to generate interactive model context protocol (MCP) app widgets for your model-driven Power Apps MCP tools. MCP apps are self-contained HTML files that render a tool's JSON output visually - as cards, charts, dashboards, or maps inside any MCP Apps–compatible host, including Microsoft 365 Copilot, Claude, and Visual Studio Code.
+This article explains how to use AI code generation tools like GitHub Copilot CLI or Claude Code to generate interactive model context protocol (MCP) apps for your model-driven Power Apps MCP tools. MCP apps are self-contained HTML files that render a tool's JSON output visually - as cards, charts, dashboards, or maps inside any MCP Apps compatible host, including Microsoft 365 Copilot, Claude, and Visual Studio Code.
 
 If you have an MCP tool that returns JSON data, the `generate-mcp-app-ui` skill can produce a polished, theme-aware widget that displays that data in a compact visual format directly inside a chat conversation.
 
@@ -137,7 +137,6 @@ Widgets load all dependencies from CDN. No build step or local installation is r
   | `@modelcontextprotocol/ext-apps` | ESM | `cdn.jsdelivr.net/npm/@modelcontextprotocol/ext-apps/+esm` | MCP Apps `App` class |
   | `@fluentui/tokens` | ESM | `cdn.jsdelivr.net/npm/@fluentui/tokens/+esm` | `webLightTheme` / `webDarkTheme` token sets |
   | `@fluentui/web-components@beta` | UMD | `unpkg.com/@fluentui/web-components@beta/dist/web-components.min.js` | Fluent UI custom elements
-  (`<fluent-spinner>` etc.) — must load before the module script |
 
 ### Visual states
 
@@ -146,7 +145,7 @@ Every widget handles three states:
 | State | Guidance |
 |---|---|
 | Loading | Show a `<fluent-spinner>` with a contextual message ("Finding attractions…" not just "Loading…"). |
-| Data | Render the content compactly. Use the full available width. |
+| Loaded | Render the content compactly. Use the full available width. |
 | Error | Show a friendly message and a "Try again" button. If the widget uses `callServerTool`, the button re-invokes the tool. |
 
   
@@ -184,7 +183,7 @@ Never use hardcoded hexidecimal or RGB values. Don't invent token names not list
 ## Limitations
 
 - Widgets must load all external libraries from CDN. An internet connection is required at runtime.
-- Side-by-side display mode requires additional implementation beyond what the skill generates.
+- [Full screen display mode](https://review.learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/enable-your-app-copilot#full-screen-example) requires additional implementation beyond what the skill generates.
 - The skill doesn't handle MCP server registration or deployment to the Microsoft 365 admin center. You must complete those steps separately.
 - Authentication (OAuth 2.1, Microsoft Entra SSO) is handled by the MCP host environment, not the widget HTML itself.
 
