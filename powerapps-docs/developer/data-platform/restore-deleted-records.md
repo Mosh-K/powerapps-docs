@@ -354,11 +354,11 @@ After enabling this setting, you might receive the following error:
 
 ## Detect which tables are enabled for deleted record keeping
 
-Before you enable this feature, the [Restore Deleted Records Configuration (RecycleBinConfig) table](reference/entities/recyclebinconfig.md) has no rows.
+Before you enable this feature, the [Deleted Record Keeping Configuration (RecycleBinConfig) table](reference/entities/recyclebinconfig.md) has no rows.
 
-Over time, most tables will support deleted record keeping. [Solution components](/power-platform/alm/solution-concepts-alm#solution-components), [virtual tables](../../maker/data-platform/create-edit-virtual-entities.md), and [elastic tables](../../maker/data-platform/create-edit-elastic-tables.md) aren't supported. During this preview, some tables that aren't currently enabled might be enabled later (for example, tables with more than 600 columns). For a list of tables that don't support this feature, see [Tables not currently supported](#tables-not-currently-supported-for-the-restore-deleted-records-feature).
+Over time, most tables will support deleted record keeping. [Solution components](/power-platform/alm/solution-concepts-alm#solution-components), [virtual tables](../../maker/data-platform/create-edit-virtual-entities.md), and [elastic tables](../../maker/data-platform/create-edit-elastic-tables.md) aren't supported for deleted record keeping. During this preview, some tables that aren't currently enabled might be enabled later (for example, tables with more than 600 columns). For a list of tables that don't support this feature, see [Tables not currently supported](#tables-not-currently-supported-for-the-restore-deleted-records-feature).
 
-You can also [disable the restore deleted records feature for specific tables](#disable-restore-deleted-records-feature-for-a-table) and [disable Restore deleted records feature for the environment](#disable-restore-deleted-records-feature-for-the-environment). If the restore deleted records feature isn't enabled for a table, you won't [find any records eligible to be restored](#retrieve-deleted-records-that-can-be-restored). You can query Dataverse to find out whether the restore deleted records feature is enabled for a table or not.
+You can also [disable deleted record keeping for specific tables](#disable-restore-deleted-records-feature-for-a-table) and [disable deleted record keeping for the environment](#disable-restore-deleted-records-feature-for-the-environment). If deleted record keeping isn't enabled for a table, you won't [find any records eligible to be restored](#retrieve-deleted-records-that-can-be-restored). You can query Dataverse to find out whether deleted record keeping is enabled for a table or not.
 
 Tables that are enabled for deleted record keeping have a row in the `RecycleBinConfig` table where the `statecode` is active and `isreadyforrecyclebin` is true. The `RecycleBinConfig` table doesn't contain the name of the table, but refers to a row in the [Entity table](reference/entities/entity.md) where the `logicalname` column contains the [LogicalName](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata.logicalname) of the table.
 
@@ -643,7 +643,7 @@ function Disable-RestoreDeletedRecordsFeatureForTable {
 > [!NOTE]
 > The preferred way to disable deleted record keeping for an environment is to [turn it off in the Power Platform admin center](/power-platform/admin/restore-deleted-table-records#enable-restore-table-records). The method described here might change before the feature becomes generally available.
 
-Delete the row in the [RecycleBinConfig](reference/entities/recyclebinconfig.md) table where the `name` value is `"organization"`. This action deletes all the records in the `RecycleBinConfig` table and disables the deleted record keeping for the environment.
+Delete the row in the [RecycleBinConfig](reference/entities/recyclebinconfig.md) table where the `name` value is `"organization"`. This action deletes all the records in the `RecycleBinConfig` table and disables deleted record keeping for the environment.
 
 > [!IMPORTANT]
 > Don't try to delete other individual records. It's important that Dataverse manages this action.
