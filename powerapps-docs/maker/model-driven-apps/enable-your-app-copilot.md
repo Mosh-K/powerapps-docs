@@ -66,7 +66,7 @@ In addition to the built-in tools available within the app’s declarative agent
 
    :::image type="content" source="media/enable-your-app-copilot/create-custom-tool.png" alt-text="Create a custom tool to view flight data":::
 
-1. Select **Test** to check and validate tool's output and then select **Next**. If the tool output is JSON, you can now paste optional [MCP APPs based custom UX HTML](generate-mcp-app-widgets.md) specific to this tool. This HTML can be created using the `/generate-mcp-apps-ui skill` or your own development tool. Select **Save**.
+1. Select **Test** to check and validate tool's output and then select **Next**. If the tool output is JSON, you can now paste optional [MCP APPs custom HTML](generate-mcp-app-widgets.md) specific to this tool. This HTML can be created using the `/generate-mcp-apps-ui skill` or your own development tool. Select **Save**.
 
    :::image type="content" source="media/enable-your-app-copilot/create-custom-tool-output.png" alt-text="Custom tool example output JSON":::
 
@@ -76,7 +76,7 @@ In addition to the built-in tools available within the app’s declarative agent
    :::image type="content" source="media/enable-your-app-copilot/flight-map-and-timelines.png" alt-text="Custom UI created depicting flight times":::
 
 > [!NOTE]
-> You can issue '-developer on' command to Microsoft 365 Copilot to see agent debug info and tools invoked.
+> You can issue ['-developer on' command](https://learn.microsoft.com/microsoft-365/copilot/extensibility/debugging-agents-copilot-studio) to Microsoft 365 Copilot to see agent debug info and tools invoked.
 
 ## Dynamic tool chaining
 
@@ -84,7 +84,7 @@ Tool chaining in Power Apps declarative agents uses the Microsoft 365 Copilot or
 
 1. Select **Create custom tool** under the **Tools** section of the **MCP apps** tab.
 1. Provide a clear, descriptive **name** and **description** for the tool, as Microsoft 365 Copilot uses this information to determine when to invoke it.
-1. Add the instructions to output data for the tool that is defaulted to JSON format. You can change it to text if the tool does not has UX associated to it. Add the instructions to output data for the tool, which is defaulted to JSON format. You can change it to text if the tool doesn't have UX associated to it. The system creates a Sankey chart visualizer tool, which takes in data via the input paramater `SankeyDiagramVisualizationInputData` to be used in tool-chaining. Use a descriptive input parameter name that makes it easy for LLM to recognize. Make sure to experiment and choose the right prompt AI model.
+1. In this example, we use a Sankey chart visualizer. First, define the JSON input schema required to generate a Sankey chart. Next, create a prompt for the Sankey chart visualizer tool. The tool exposes an input parameter named **SankeyDiagramVisualizationInputData**. This parameter is interpreted by the tool and transformed into the JSON structure expected by the visualizer. Choose a clear and descriptive input parameter name so the LLM can
 
    :::image type="content" source="media/enable-your-app-copilot/create-custom-tool-chain.png" alt-text="Custom tool with tool chaining":::
 
