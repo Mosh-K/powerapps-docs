@@ -4,7 +4,7 @@ description: Learn how to connect and add SharePoint lists as data sources in Po
 author: mduelae
 ms.author: yueshu
 ms.reviewer: mkaur
-ms.date: 03/10/2026
+ms.date: 04/20/2026
 ms.topic: how-to
 ms.subservice: code-apps
 ms.custom: vibe
@@ -47,4 +47,6 @@ Select an existing SharePoint list to use with your app. Vibe doesn't suggest or
 
     :::image type="content" source="media/Sharepoint-data/sharepoint-data-added-vibe.png" alt-text="SharePoint list added to vibe":::
 
+## limitations
 
+- **Location**,**ManagedMetadata**, **Calculated**, **ExternalData**, and **TaskOutcome** columns aren’t currently supported and are converted to text columns.
