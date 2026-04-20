@@ -254,7 +254,7 @@ The best way to give feedback on generative pages is to use the thumbs up/down b
 
 ### What if I don't see generative pages enabled in my environment?
 
-Confirm that your environment is in one of the supported regions: United States, Great Britain, Australia, or Singapore.
+Confirm that your environment is in one of the supported regions for the Power Apps maker studio experience: United States, Great Britain, Australia, or Singapore. If your region isn't listed, you can still create and edit generative pages using AI code generation tools, which are available worldwide on public clouds. More information: [Create and edit generative pages with AI code generation tools](generative-page-external-tools.md)
 
 ## Related articles
 
