@@ -56,7 +56,7 @@ Run the following installer command from GitHub Copilot CLI or Claude Code. The 
 
 To install only the MCP App widget skill:
 ```
-/plugin install mcp-apps@power-platform-skills`
+/plugin install mcp-apps@power-platform-skills
 ```
 
 > [!TIP]
@@ -74,7 +74,7 @@ The skill is also triggered by natural language phrases such as "create a widget
 
 Follow these steps to create a new widget for an MCP tool.
 
-1. **Create and test a custom tool** from model-driven app designers and copy the full JSON output. Make sure the tool's output type is set to JSON. More information: [Create custom tools](https://review.learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/enable-your-app-copilot#create-custom-tools)
+1. **Create and test a custom tool** from model-driven app designers and copy the full JSON output. Make sure the tool's output type is set to JSON. More information: [Create custom tools](enable-your-app-copilot.md#create-custom-tools)
 
 1. **Invoke the skill** and describe what you want displayed, pasting the JSON output into the conversation:
 
@@ -94,9 +94,10 @@ Follow these steps to create a new widget for an MCP tool.
 
 ## Deploy your widget
 
-Once your widget is ready, copy over the HTML file to the UX input for corresponding tool and it will be returned as the tool's UI response. Refer to your [create custom tools documentation](https://review.learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/enable-your-app-copilot#create-custom-tools) for details. 
+Once your widget is ready, copy over the HTML file to the UX input for corresponding tool and it will be returned as the tool's UI response. Refer to your [create custom tools documentation](enable-your-app-copilot.md#create-custom-tools) for details. 
 
 ## Add interactivity with callServerTool
+
 If you also provide your tool's name when invoking the skill, the generated widget can include interactive tool-call integration. This allows the widget to call your tool again at runtime. For example a refresh button on the tool UX can call itself.
 
 ```
