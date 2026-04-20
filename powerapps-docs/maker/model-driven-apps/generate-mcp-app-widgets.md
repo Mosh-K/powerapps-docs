@@ -79,9 +79,7 @@ Follow these steps to create a new widget for an MCP tool.
 1. **Invoke the skill** and describe what you want displayed, pasting the JSON output into the conversation:
 
    ```
-   /generate-mcp-app-ui Visualizes flights using an animated arc map for routes and a synchronized Gantt timeline for departure and arrival schedules, enabling quick understanding of flight coverage, timing, and overlaps.
- Here's an example of the tool's output:
-{"flight_records":[{"Departure Time":"2024-07-02T05:00:00Z","Arrival Time":"2024-07-02T07:30:00Z","Flight Name":"Zava 1001","Status":"Active","Airport":"Seattle-Tacoma","Airport1":"Los Angeles Intl"},{"Departure Time":"2024-07-02T03:00:00Z","Arrival Time":"2024-07-02T10:00:00Z","Flight Name":"Zava 103","Status":"Active","Airport":"Seattle-Tacoma","Airport1":"Hartsfield-Jackson"}]}
+   /generate-mcp-app-ui Visualizes flights using an animated arc map for routes and a synchronized Gantt timeline for departure and arrival schedules, enabling quick understanding of flight coverage, timing, and overlaps. Here's an example of the tool's output: {"flight_records":[{"Departure Time":"2024-07-02T05:00:00Z","Arrival Time":"2024-07-02T07:30:00Z","Flight Name":"Zava 1001","Status":"Active","Airport":"Seattle-Tacoma","Airport1":"Los Angeles Intl"},{"Departure Time":"2024-07-02T03:00:00Z","Arrival Time":"2024-07-02T10:00:00Z","Flight Name":"Zava 103","Status":"Active","Airport":"Seattle-Tacoma","Airport1":"Hartsfield-Jackson"}]}
    ```
 
 1. **Review the generated HTML file.** The skill writes a self-contained HTML file, for example, `flight-map.html`, to your working directory.
@@ -102,11 +100,7 @@ Once your widget is ready, copy over the HTML file to the UX input for correspon
 If you also provide your tool's name when invoking the skill, the generated widget can include interactive tool-call integration. This allows the widget to call your tool again at runtime. For example a refresh button on the tool UX can call itself.
 
 ```
-/generate-mcp-app-ui Show the current weather conditions with a refresh button.
-Tool name: get_weather
-
-Tool output:
-{"city":"Seattle","temp_f":54,"condition":"Overcast","humidity":78,"forecast":[...]}
+/generate-mcp-app-ui Show the current weather conditions with a refresh button. Tool name: get_weather. Tool output: {"city":"Seattle","temp_f":54,"condition":"Overcast","humidity":78,"forecast":[...]}
 ```
 
 The skill wires up `app.callServerTool` in the widget so that when users select **Refresh**, the widget fetches updated data directly from your tool.
