@@ -70,7 +70,7 @@ In addition to the built-in tools available within the app’s declarative agent
 
    :::image type="content" source="media/enable-your-app-copilot/create-custom-tool-output.png" alt-text="Custom tool example output JSON":::
 
-1. Download the updated app package zip and upload the latest version to Microsoft Teams or Microsoft 365 Agents 
+1. Download the updated app package zip and upload the latest version to Microsoft Teams or Microsoft 365 agents.
 1. Invoke the tool by issuing the relevant query in the app agent to see the custom UI in action.
    
    :::image type="content" source="media/enable-your-app-copilot/flight-map-and-timelines.png" alt-text="Custom UI created depicting flight times":::
@@ -78,7 +78,7 @@ In addition to the built-in tools available within the app’s declarative agent
 > [!NOTE]
 > You can issue ['-developer on' command](/microsoft-365/copilot/extensibility/debugging-agents-copilot-studio) to Microsoft 365 Copilot to see agent debug info and tools invoked.
 
-## Dynamic tool chaining
+### Dynamic tool chaining
 
 Tool chaining in Power Apps declarative agents uses the Microsoft 365 Copilot orchestrator to reason over user intent and dynamically invoke multiple MCP-powered actions (tools) in sequence to complete a task. The orchestrator selects, parameterizes, and executes the right combination of MCP app actions based on context and function descriptions, enabling end‑to‑end workflows across Power Apps and enterprise systems. Here's how create a tool with paramaterized input.
 
@@ -98,7 +98,7 @@ Tool chaining in Power Apps declarative agents uses the Microsoft 365 Copilot or
 
    :::image type="content" source="media/enable-your-app-copilot/sankey-mcp-tool1.png" alt-text="Sankey chart visualizer displaying additional information from conversation." lightbox="media/enable-your-app-copilot/sankey-mcp-tool1.png":::
 
-## Full screen example
+### Full screen example
 
 In this example, an expand button is rendered only if the host supports fullscreen mode.
 
@@ -145,7 +145,7 @@ app.onhostcontextchanged = (ctx) => {
 };
 ```
 
-## Using fullscreen mode with tool results
+### Using fullscreen mode with tool results
 
 A common pattern is to switch to fullscreen automatically when the widget receives data, giving the content more space to render.
 
