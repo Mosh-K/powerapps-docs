@@ -1,5 +1,5 @@
 ---
-title: Restore deleted records with code (preview)
+title: Restore deleted records with code
 description: Learn how to configure tables so that you can restore records deleted within a specified time period. 
 ms.date: 01/30/2026
 author: rijoshi1
@@ -15,7 +15,7 @@ contributors:
  - TakeN0
 ms.custom: bap-template
 ---
-# Restore deleted records with code (preview)
+# Restore deleted records with code
 
 [This article is prerelease documentation and is subject to change.]
 
