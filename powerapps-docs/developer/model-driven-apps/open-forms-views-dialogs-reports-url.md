@@ -1,6 +1,6 @@
 ---
-title: "Open apps, forms, views, dialogs, and reports with a URL"
-description: "Learn more about URL addressable elements that enable you to include links to model-driven application forms, views, dialogs, and reports in other applications"
+title: "Open apps, forms, views, and reports with a URL"
+description: "Learn more about URL addressable elements that enable you to include links to model-driven application forms, views, and reports in other applications"
 author: MitiJ
 ms.author: mijosh
 ms.date: 04/21/2026
@@ -12,12 +12,12 @@ search.audienceType:
 contributors: 
   - JimDaly
 ---
-# Open apps, forms, views, dialogs, and reports with a URL
+# Open apps, forms, views, and reports with a URL
 
-URL addressable elements enable you to include links to model-driven apps, forms, views, dialogs, and reports in other applications.
+URL addressable elements enable you to include links to model-driven apps, forms, views, and reports in other applications.
 
 > [!NOTE]
-> URL addressable apps, forms, views, dialogs, and reports can't bypass security. Only licensed users, based on their security roles, can access the data and the records they see.
+> URL addressable apps, forms, views, and reports can't bypass security. Only licensed users, based on their security roles, can access the data and the records they see.
 
 ## App URLs
 
@@ -158,54 +158,7 @@ Url="/main.aspx?appid=11112222-bbbb-3333-cccc-4444dddd5555&pagetype=entitylist&e
  When you use this URL, you must also specify appropriate values for `<Titles>` and `<Descriptions>`, and specify an icon for the table.  
 
 > [!NOTE]
-> If you specify the view by using the `/main.aspx` page, the view selector still appears. If the user changes the view, Model-driven apps remembers the user's most recent selection and the initial default view displays after they close and re-open their browser.  
-
-<a name="BKMK_OpenADialogProcess"></a>   
-
-## Open a dialog process by using a URL
-
-> [!IMPORTANT]
-> [Dialogs are deprecated](/power-platform/important-changes-coming#process-dialogs-are-deprecated). Replace dialogs with business process flows or canvas apps. For more information, see [Replace dialogs with business process flows or canvas apps](/power-automate/replace-dialogs).
-
-A common customization is to enable a user to open a specific dialog process in the context of a specific record. For example, you might want to add a custom button to the ribbon for a specific table by using the ID value for the current record as an input parameter for the dialog process.  
-
-To open a dialog, you need the following information:
-
-- The unique identifier for the dialog.
-- The logical name for the table the dialog is created for.
-- The unique identifier for the record you want the dialog to run against.
-
-> [!TIP]
->  To get the unique identifier for the dialog, go to **Settings**. In the default solution, select **Processes**. Select a process, and then in the **Actions** options on the command bar, select **Copy a Link**. This action copies a link to edit the dialog to your clipboard. For example, *[organization url]*`/sfa/workflow/edit.aspx?id=%7b6A6E93C9-1FE6-4C07-91A9-E0E2A7C70976%7d`.  
-
- The following sample shows the URL and query string parameters to open a dialog:  
-
-```
-[organization url]/cs/dialog/rundialog.aspx?DialogId=[dialog unique identifier]&EntityName=[table logical name]&ObjectId=[unique identifier for the record]  
-```  
-
- For example, to open the dialog with ID =`{6A6E93C9-1FE6-4C07-91A9-E0E2A7C70976}` with the account record ID = `{40C9ADFD-90A8-DF11-840E-00155DBA380F}`, use the URL in the following example.  
-
-```
-[organization url]/cs/dialog/rundialog.aspx?DialogId=%7b6A6E93C9-1FE6-4C07-91A9-E0E2A7C70976%7d&EntityName=account&ObjectId=%7b40C9ADFD-90A8-DF11-840E-00155DBA380F%7d  
-```  
-
-> [!TIP]
->  If you open a dialog process from a link, the **Finish** button might not work. The data is saved, but the user needs to select the **Close** button on the window to close it. This limitation exists because other browsers don't provide a `window.close` method if the window isn't opened by using JavaScript from another window. When possible, use JavaScript and the `window.open` method to open dialog processes rather than simply providing links.  
-
- You can create a JavaScript function to open the dialog as shown in the following example:  
-
-```javascript  
-function openDialogProcess(dialogId, entityName, objectId)  
-{  
- var url = Xrm.Page.context.getClientUrl() +  
-  "/cs/dialog/rundialog.aspx?DialogId=" +  
-  dialogId + "&EntityName=" +  
-  entityName + "&ObjectId=" +  
-  objectId;  
- window.open(url);  
-}  
-```  
+> If you specify the view by using the `/main.aspx` page, the view selector still appears. If the user changes the view, Model-driven apps remembers the user's most recent selection and the initial default view displays after they close and re-open their browser. 
 
 <a name="BKMK_OpenReportWithURL"></a>
 
