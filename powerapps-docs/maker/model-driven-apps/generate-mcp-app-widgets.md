@@ -44,7 +44,7 @@ If you have an MCP tool that returns JSON data, the `generate-mcp-app-ui` skill 
 ### Additional requirements
 
 - An MCP tool that returns JSON output. Your tool's output type must be set to **JSON**.
-- A working internet connection. Widgets load Fluent UI and other libraries from CDN <!--Please spell out this acronym on first mention. --> at runtime.
+- A working internet connection. Widgets load Fluent UI and other libraries from Content Delivery Network(CDN) at runtime.
 
 ### Install the plugin
 
@@ -131,8 +131,8 @@ Widgets communicate with the chat host using the `App` class from the `@modelcon
 
 Widgets load all dependencies from CDN. No build step or local installation is required. Dependencies come in two formats:
 
-- **ESM** — imported inside `<script type="module">` using a URL ending in `/+esm`
-- **UMD** — loaded via a plain `<script src>` tag; registers itself globally as a side effect
+- **ECMAScript Modules (ESM)** — imported inside `<script type="module">` using a URL ending in `/+esm`
+- **Universal Module Definition(UMD)** — loaded via a plain `<script src>` tag; registers itself globally as a side effect
 
   | Library | Format | URL | Purpose |
   |---|---|---|---|
