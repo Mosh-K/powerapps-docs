@@ -6,7 +6,10 @@ ms.author: mkaur
 ms.reviewer: mkaur
 ms.date: 04/16/2026
 ms.topic: concept-article
-ms.custom: CXT 
+ms.custom: 
+ - CXT
+ - vibe
+
 ---
 
 #  Overview of the new Power Apps vibe experience (preview)
