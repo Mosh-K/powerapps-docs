@@ -6,6 +6,7 @@ ms.author: mkaur
 ms.reviewer: mkaur
 ms.date: 01/29/2026
 ms.topic: concept-article
+ms.custom: vibe
 ---
 
 # Create apps, data, and plans together using vibe (preview)
@@ -202,6 +203,9 @@ Add new or existing tables, or make targeted changes to relationships, tables, a
 1. Choose **Draft table** to create a new in-memory table from scratch, or select **Existing Dataverse table** to add data you already have.
 
     :::image type="content" source="media/create-app-data-plan/add-tables.png" alt-text="Add more data tables":::
+
+> [!NOTE]
+> You can also add SharePoint data. For more information, [Add a SharePoint list in Power Apps vibe](add-data-source-sharepoint-lists.md).
 
 ### Add and edit relationship
 
