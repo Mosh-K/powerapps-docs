@@ -70,7 +70,7 @@ In addition to the built-in tools available within the app’s declarative agent
 
    :::image type="content" source="media/enable-your-app-copilot/create-custom-tool-output.png" alt-text="Custom tool example output JSON":::
 
-1. Download the updated app package zip and upload the latest version to Microsoft Teams or Microsoft 365 Agents <!-- Do you mean Microsoft Agent 365 agents?-->.
+1. Download the updated app package zip and upload the latest version to Microsoft Teams or Microsoft 365 Agents 
 1. Invoke the tool by issuing the relevant query in the app agent to see the custom UI in action.
    
    :::image type="content" source="media/enable-your-app-copilot/flight-map-and-timelines.png" alt-text="Custom UI created depicting flight times":::
@@ -84,7 +84,7 @@ Tool chaining in Power Apps declarative agents uses the Microsoft 365 Copilot or
 
 1. Select **Create custom tool** under the **Tools** section of the **MCP apps** tab.
 1. Provide a clear, descriptive **name** and **description** for the tool, as Microsoft 365 Copilot uses this information to determine when to invoke it.
-1. In this example, we use a Sankey chart visualizer. First, define the JSON input schema required to generate a Sankey chart. Next, create a prompt for the Sankey chart visualizer tool. The tool exposes an input parameter named **SankeyDiagramVisualizationInputData**. This parameter is interpreted by the tool and transformed into the JSON structure expected by the visualizer. Choose a clear and descriptive input parameter name so the LLM can <!-- Need to complete this sentence.-->
+1. In this example, we use a Sankey chart visualizer. First, define the JSON input schema required to generate a Sankey chart. Next, create a prompt for the Sankey chart visualizer tool. The tool exposes an input parameter named **SankeyDiagramVisualizationInputData**. This parameter is interpreted by the tool and transformed into the JSON structure expected by the visualizer. Choose a clear and descriptive input parameter name so the LLM can correctly identify and invoke the tool.
 
    :::image type="content" source="media/enable-your-app-copilot/create-custom-tool-chain.png" alt-text="Custom tool with tool chaining" lightbox="media/enable-your-app-copilot/create-custom-tool-chain.png":::
 
