@@ -1,6 +1,6 @@
 ---
-title: Enable your app in Microsoft 365 Copilot
-description: Learn how to enable your app in Microsoft 365 Copilot to create app skills and custom tools.
+title: Enable your app and custom tools in Microsoft 365 Copilot
+description: Learn how to enable your app in Microsoft 365 Copilot to create app skills and custom tools with Power Apps.
 #customer intent: As a Power Apps maker, I want to enable my model-driven app in Microsoft 365 Copilot so that users can interact with app data through Copilot.
 author: Mattp123
 ms.author: hemantg
@@ -10,11 +10,11 @@ ms.topic: how-to
 ms.service: powerapps
 ms.subservice: mda-maker
 ---
-# Enable your app in Microsoft 365 Copilot
+# Enable your app and custom tools in Microsoft 365 Copilot
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Power Apps in Copilot lets users interact with your  model-driven app directly from Copilot. When a user talks to the agent, it can surface your app's data as interactive widgets - a grid for browsing records or a form for viewing, editing, or creating them - all without leaving the Copilot experience. Additionally, you can add custom MCP tools and interactive UI to the app’s declarative agent. This functionality is acheived via [MCP Apps](https://apps.extensions.modelcontextprotocol.io/api/documents/Overview.html) which is an extension to MCP that enables MCP servers to deliver interactive user interfaces to hosts. The feature works by generating an MCP server and declarative agent from your app.
+Power Apps in Microsoft 365 Copilot lets users interact with your model-driven app directly from Copilot. When a user talks to the agent, it can surface your app's data as interactive widgets, a grid for browsing records or a form for viewing, editing, or creating them, all without leaving the Copilot experience. Additionally, you can add custom MCP tools and interactive UI to the app’s declarative agent. This functionality is acheived via [MCP Apps](https://apps.extensions.modelcontextprotocol.io/api/documents/Overview.html) which is an extension to MCP that enables MCP servers to deliver interactive user interfaces to hosts. The feature works by generating an MCP server and declarative agent from your app.
 
 > [!IMPORTANT]
 >
@@ -42,7 +42,7 @@ Power Apps in Copilot lets users interact with your  model-driven app directly f
    - Teams: Upload for personal use as a custom app in Teams. More information [Upload your app in Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload)
    - Microsoft 365 Agents: Publish the package for a team or group from the Microsoft 365 admin center. More information: [Publish agents](/microsoft-365/admin/manage/agent-registry?view=o365-worldwide&preserve-view=true#publish-agents)
 
-You can now ask questions about the tables in the app from this declarative agent. Built-in tools can show interactive grid for the dataset queries.
+You can now ask questions about the tables in the app from this declarative agent. Built-in tools can show an interactive grid for the dataset queries.
 
    :::image type="content" source="media/enable-your-app-copilot/copilot-view-data-flights.png" alt-text="Example of viewing flights returned from the declaritive agent":::
    
@@ -62,7 +62,7 @@ In addition to the built-in tools available within the app’s declarative agent
 
 1. Select **Create custom tool** under the **Tools** section of the **MCP apps** tab.
 1. Provide a clear, descriptive **name** and **description** for the tool, as Microsoft 365 Copilot uses this information to determine when to invoke it.
-1. Add the instructions to output data for the tool which is defaulted to JSON format. You can change it to text if the tool does not has UX associated to it. Instructions can be query for specific records of the table in the app or it could be an input parameter to the tool to be used in tool-chaining. Make sure to experiment and choose the right prompt AI model.
+1. Add the instructions to output data for the tool that defaults to JSON format. You can change it to text if the tool doesn't have UX associated with it. Instructions can include queries for specific records of the table in the app or it could be an input parameter to the tool to be used in tool-chaining. Make sure to experiment and choose the right prompt AI model.
 
    :::image type="content" source="media/enable-your-app-copilot/create-custom-tool.png" alt-text="Create a custom tool to view flight data":::
 
@@ -70,13 +70,13 @@ In addition to the built-in tools available within the app’s declarative agent
 
    :::image type="content" source="media/enable-your-app-copilot/create-custom-tool-output.png" alt-text="Custom tool example output JSON":::
 
-1. Download the updated app package zip and upload the latest version to Microsoft Teams or Microsoft 365 Agents.
+1. Download the updated app package zip and upload the latest version to Microsoft Teams or Microsoft 365 Agents <!-- Do you mean Microsoft Agent 365 agents?-->.
 1. Invoke the tool by issuing the relevant query in the app agent to see the custom UI in action.
    
    :::image type="content" source="media/enable-your-app-copilot/flight-map-and-timelines.png" alt-text="Custom UI created depicting flight times":::
 
 > [!NOTE]
-> You can issue ['-developer on' command](https://learn.microsoft.com/microsoft-365/copilot/extensibility/debugging-agents-copilot-studio) to Microsoft 365 Copilot to see agent debug info and tools invoked.
+> You can issue ['-developer on' command](/microsoft-365/copilot/extensibility/debugging-agents-copilot-studio) to Microsoft 365 Copilot to see agent debug info and tools invoked.
 
 ## Dynamic tool chaining
 
@@ -84,19 +84,19 @@ Tool chaining in Power Apps declarative agents uses the Microsoft 365 Copilot or
 
 1. Select **Create custom tool** under the **Tools** section of the **MCP apps** tab.
 1. Provide a clear, descriptive **name** and **description** for the tool, as Microsoft 365 Copilot uses this information to determine when to invoke it.
-1. In this example, we use a Sankey chart visualizer. First, define the JSON input schema required to generate a Sankey chart. Next, create a prompt for the Sankey chart visualizer tool. The tool exposes an input parameter named **SankeyDiagramVisualizationInputData**. This parameter is interpreted by the tool and transformed into the JSON structure expected by the visualizer. Choose a clear and descriptive input parameter name so the LLM can
+1. In this example, we use a Sankey chart visualizer. First, define the JSON input schema required to generate a Sankey chart. Next, create a prompt for the Sankey chart visualizer tool. The tool exposes an input parameter named **SankeyDiagramVisualizationInputData**. This parameter is interpreted by the tool and transformed into the JSON structure expected by the visualizer. Choose a clear and descriptive input parameter name so the LLM can <!-- Need to complete this sentence.-->
 
-   :::image type="content" source="media/enable-your-app-copilot/create-custom-tool-chain.png" alt-text="Custom tool with tool chaining":::
+   :::image type="content" source="media/enable-your-app-copilot/create-custom-tool-chain.png" alt-text="Custom tool with tool chaining" lightbox="media/enable-your-app-copilot/create-custom-tool-chain.png":::
 
 1. Create and paste [MCP APPs based custom UX HTML](generate-mcp-app-widgets.md) specific to this tool.
 1. Download the updated app package zip and upload the latest version to Microsoft Teams or Microsoft 365 Agents.
-1. Copilot can now use natural language queries to fetch the data and pass it to the tool for visualization. For example we can use a complex query to dynamically get inputs from 'isues' table data and visualize them using Sankey Chart Visualizer tool.
+1. Copilot can now use natural language queries to fetch the data and pass it to the tool for visualization. For example you can use a complex query to dynamically get inputs from the 'issues' table data and visualize them using Sankey Chart Visualizer tool.
    
-   :::image type="content" source="media/enable-your-app-copilot/sankey-mcp-tool2.png" alt-text="Sankey chart visualizer displaying issues table data.":::
+   :::image type="content" source="media/enable-your-app-copilot/sankey-mcp-tool2.png" alt-text="Sankey chart visualizer displaying issues table data." lightbox="media/enable-your-app-copilot/sankey-mcp-tool2.png":::
 
 1. You can further refine the Sankey chart by continuing the conversation.
 
-   :::image type="content" source="media/enable-your-app-copilot/sankey-mcp-tool1.png" alt-text="Sankey chart visualizer displaying additional information from conversation.":::
+   :::image type="content" source="media/enable-your-app-copilot/sankey-mcp-tool1.png" alt-text="Sankey chart visualizer displaying additional information from conversation." lightbox="media/enable-your-app-copilot/sankey-mcp-tool1.png":::
 
 ## Full screen example
 

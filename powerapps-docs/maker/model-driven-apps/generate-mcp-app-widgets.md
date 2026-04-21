@@ -14,7 +14,7 @@ ms.subservice: mda-maker
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This article explains how to use AI code generation tools like GitHub Copilot CLI or Claude Code to generate interactive model context protocol (MCP) apps for your model-driven Power Apps MCP tools. MCP apps are self-contained HTML files that render a tool's JSON output visually - as cards, charts, dashboards, or maps inside any MCP Apps compatible host, including Microsoft 365 Copilot, Claude, and Visual Studio Code.
+This article explains how to use AI code generation tools like GitHub Copilot CLI or Claude Code to generate interactive model context protocol (MCP) apps for your model-driven Power Apps MCP tools. MCP apps are self-contained HTML files that render a tool's JSON output visually as cards, charts, dashboards, or maps inside any MCP Apps compatible host, including Microsoft 365 Copilot, Claude, and Visual Studio Code.
 
 If you have an MCP tool that returns JSON data, the `generate-mcp-app-ui` skill can produce a polished, theme-aware widget that displays that data in a compact visual format directly inside a chat conversation.
 
@@ -30,7 +30,7 @@ If you have an MCP tool that returns JSON data, the `generate-mcp-app-ui` skill 
 - Choose the right visual for your data, such as charts for numeric trends, cards for structured records, tables for comparisons, maps for coordinates, and so on.
 - Support light and dark themes automatically through Fluent UI design tokens.
 - Add interactivity so widgets can call your tool again at runtime (for example, a refresh button).
-- Refine the UX iteratively by describing changes in natural language ("make the gallery compact", "add a chart", "use a card layout").
+- Refine the UX iteratively by describing changes in natural language. For example, "make the gallery compact," "add a chart," or "use a card layout."
 
 ## Prerequisites
 
@@ -44,7 +44,7 @@ If you have an MCP tool that returns JSON data, the `generate-mcp-app-ui` skill 
 ### Additional requirements
 
 - An MCP tool that returns JSON output. Your tool's output type must be set to **JSON**.
-- A working internet connection. Widgets load Fluent UI and other libraries from CDN at runtime.
+- A working internet connection. Widgets load Fluent UI and other libraries from CDN <!--Please spell out this acronym on first mention. --> at runtime.
 
 ### Install the plugin
 
@@ -66,9 +66,9 @@ To install only the MCP App widget skill:
 
 | Skill | Command | Description |
 |---|---|---|
-| MCP Apps Widget Generator | `/generate-mcp-app-ui` | Generate a self-contained MCP app widget (HTML file) for an MCP tool's JSON output |
+| MCP Apps widget generator | `/generate-mcp-app-ui` | Generate a self-contained MCP app widget (HTML file) for an MCP tool's JSON output |
 
-The skill is also triggered by natural language phrases such as "create a widget", "build a widget for my tool", or "make an MCP app".
+The skill is also triggered by natural language phrases such as "create a widget," "build a widget for my tool," or "make an MCP app."
 
 ## Generate a widget
 
@@ -94,7 +94,7 @@ Follow these steps to create a new widget for an MCP tool.
 
 ## Deploy your widget
 
-Once your widget is ready, copy over the HTML file to the UX input for corresponding tool and it will be returned as the tool's UI response. Refer to your [create custom tools documentation](enable-your-app-copilot.md#create-custom-tools) for details. 
+Once your widget is ready, copy the HTML file to the UX input for corresponding tool and it will be returned as the tool's UI response. Refer to your [create custom tools documentation](enable-your-app-copilot.md#create-custom-tools) for details. 
 
 ## Add interactivity with callServerTool
 
@@ -107,9 +107,9 @@ If you also provide your tool's name when invoking the skill, the generated widg
 The skill wires up `app.callServerTool` in the widget so that when users select **Refresh**, the widget fetches updated data directly from your tool.
 If you don't provide a tool name, the widget is read-only and renders only the data delivered through the `ontoolresult` callback.
 
-- **Microsoft 365 Copilot chat**: See [MCP apps in Copilot Chat](https://devblogs.microsoft.com/microsoft365dev/mcp-apps-now-available-in-copilot-chat/) for deployment paths including sideloading for testing, deploying through the Microsoft 365 Admin Center for organizational use, and publishing to the Microsoft 365 Agent Store.
+- **Microsoft 365 Copilot chat**: See [MCP apps in Copilot Chat](https://devblogs.microsoft.com/microsoft365dev/mcp-apps-now-available-in-copilot-chat/) for deployment paths including sideloading for testing, deploying through the Microsoft 365 admin center for organizational use, and publishing to the Microsoft 365 agent store.
 - **Power Apps declarative agents**: See [Power Apps MCP declarative agent documentation](/power-apps/maker/model-driven-apps/generative-page-external-tools) for how to connect MCP tools with model-driven apps.
-- **Other MCP hosts**: Consult your host's documentation for the MCP Apps widget registration process.
+- **Other MCP hosts**: Consult your host's documentation for the MCP apps widget registration process.
 
 ## Widget technical details
 
@@ -128,13 +128,15 @@ Widgets communicate with the chat host using the `App` class from the `@modelcon
 
 
 ### CDN imports
+
 Widgets load all dependencies from CDN. No build step or local installation is required. Dependencies come in two formats:
-  - **ESM** — imported inside `<script type="module">` using a URL ending in `/+esm`
-  - **UMD** — loaded via a plain `<script src>` tag; registers itself globally as a side effect
+
+- **ESM** — imported inside `<script type="module">` using a URL ending in `/+esm`
+- **UMD** — loaded via a plain `<script src>` tag; registers itself globally as a side effect
 
   | Library | Format | URL | Purpose |
   |---|---|---|---|
-  | `@modelcontextprotocol/ext-apps` | ESM | `cdn.jsdelivr.net/npm/@modelcontextprotocol/ext-apps/+esm` | MCP Apps `App` class |
+  | `@modelcontextprotocol/ext-apps` | ESM | `cdn.jsdelivr.net/npm/@modelcontextprotocol/ext-apps/+esm` | MCP apps `App` class |
   | `@fluentui/tokens` | ESM | `cdn.jsdelivr.net/npm/@fluentui/tokens/+esm` | `webLightTheme` / `webDarkTheme` token sets |
   | `@fluentui/web-components@beta` | UMD | `unpkg.com/@fluentui/web-components@beta/dist/web-components.min.js` | Fluent UI custom elements
 
@@ -148,9 +150,9 @@ Every widget handles three states:
 | Loaded | Render the content compactly. Use the full available width. |
 | Error | Show a friendly message and a "Try again" button. If the widget uses `callServerTool`, the button re-invokes the tool. |
 
-  
 ### Fluent UI components
-The following Fluent UI Web Components are available in widgets:
+
+The following Fluent UI web components are available in widgets:
 
 `<fluent-card>`, `<fluent-button>`, `<fluent-text-input>`, `<fluent-textarea>`, `<fluent-dropdown>`, `<fluent-listbox>`, `<fluent-option>`, `<fluent-checkbox>`, `<fluent-spinner>`, `<fluent-divider>`, `<fluent-badge>`, `<fluent-switch>`, `<fluent-tooltip>`
 
@@ -159,6 +161,7 @@ The following Fluent UI Web Components are available in widgets:
 Widgets support light and dark themes through Fluent UI design tokens. The widget applies the correct token values when the host's theme changes via `onhostcontextchanged`. Always use token variables, for example, `var(--colorNeutralForeground1)`, rather than hardcoded color values to ensure correct rendering in both themes.
 
 ### Color tokens
+
 | Use | Token |
 |---|---|
 | Primary text | `var(--colorNeutralForeground1)` |
@@ -174,6 +177,7 @@ Widgets support light and dark themes through Fluent UI design tokens. The widge
 Never use hardcoded hexidecimal or RGB values. Don't invent token names not listed here.
 
 ## Best practices
+
 - Provide real test data. The skill analyzes the actual JSON structure to select the right visual. Mock data produces widgets that break when connected to the real tool.
 - Be specific about the visual. Describe the format you want, such as map, chart, table, or card layout. Vague descriptions lead to generic results.
 - Start with one view. Widgets are compact conversation cards, not full applications. No tabs, page navigation, or search bars that duplicate the chat input.
@@ -183,7 +187,7 @@ Never use hardcoded hexidecimal or RGB values. Don't invent token names not list
 ## Limitations
 
 - Widgets must load all external libraries from CDN. An internet connection is required at runtime.
-- [Full screen display mode](https://review.learn.microsoft.com/en-us/power-apps/maker/model-driven-apps/enable-your-app-copilot#full-screen-example) requires additional implementation beyond what the skill generates.
+- [Full screen display mode](enable-your-app-copilot.md#full-screen-example) requires additional implementation beyond what the skill generates.
 - The skill doesn't handle MCP server registration or deployment to the Microsoft 365 admin center. You must complete those steps separately.
 - Authentication (OAuth 2.1, Microsoft Entra SSO) is handled by the MCP host environment, not the widget HTML itself.
 
