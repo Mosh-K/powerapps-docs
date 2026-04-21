@@ -42,11 +42,11 @@ Power Apps in Microsoft 365 Copilot lets users interact with your model-driven a
    - Teams: Upload for personal use as a custom app in Teams. More information [Upload your app in Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload)
    - Microsoft 365 Agents: Publish the package for a team or group from the Microsoft 365 admin center. More information: [Publish agents](/microsoft-365/admin/manage/agent-registry?view=o365-worldwide&preserve-view=true#publish-agents)
 
-You can now ask questions about the tables in the app from this declarative agent. Built-in tools can show an interactive grid for the dataset queries.
+You can now ask questions about the tables in the app from this declarative agent. Built-in tools can show an [interactive grid](http://aka.ms/appskills/grid) for the dataset queries.
 
    :::image type="content" source="media/enable-your-app-copilot/copilot-view-data-flights.png" alt-text="Example of viewing flights returned from the declaritive agent":::
    
-Additionally, table forms can be used to create, view, and edit records within the Microsoft 365 Copilot context.
+Additionally, [intelligent forms](http://aka.ms/appskills/form) can be used to create, view, and edit records within the Microsoft 365 Copilot context.
 
    :::image type="content" source="media/enable-your-app-copilot/copilot-create-record-from-email.png" alt-text="Example of creating a new record from email via declaritive agent":::
 
