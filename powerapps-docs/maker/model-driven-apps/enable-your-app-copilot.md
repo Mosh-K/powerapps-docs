@@ -30,7 +30,7 @@ Power Apps in Microsoft 365 Copilot lets users interact with your model-driven a
 ## Set up Power Apps in Copilot
 
 1. Go to https://make.preview.powerapps.com/ and open the desired model-driven app after selecting the right environment.
-1. Select the **App MCP** icon on the left navigation bar, and then select **Set up MCP**. This activates the MCP server for the app.
+1. Select the **App MCP** icon on the left navigation bar, and then select **Set up MCP**. This action sets up the MCP server for the app, which provides MCP tools for Copilot conversations. This is a one-time step and may take a few seconds to complete.
 
    :::image type="content" source="media/enable-your-app-copilot/setup-app-mcp.png" alt-text="Setup app MCP for model-driven app":::
    
