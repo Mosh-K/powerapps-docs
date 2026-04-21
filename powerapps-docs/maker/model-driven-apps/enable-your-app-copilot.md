@@ -60,13 +60,13 @@ In addition to the built-in tools available within the app’s declarative agent
 > [!NOTE]
 > Custom tools and UX is based on Microsoft 365 Copilot extensibility for declarative agents. More information: [Microsoft 365 Copilot Extensibility and Supported capabilities](/microsoft-365/copilot/extensibility/declarative-agent-ui-widgets)
 
-1. Select **Create custom tool** under the **Tools** section of the **MCP apps** tab.
+1. Select **Create custom tool** under the **Tools** section of the **App MCP** tab.
 1. Provide a clear, descriptive **name** and **description** for the tool, as Microsoft 365 Copilot uses this information to determine when to invoke it.
 1. Add the instructions to output data for the tool that defaults to JSON format. You can change it to text if the tool doesn't have UX associated with it. Instructions can include queries for specific records of the table in the app or it could be an input parameter to the tool to be used in tool-chaining. Make sure to experiment and choose the right prompt AI model.
 
    :::image type="content" source="media/enable-your-app-copilot/create-custom-tool.png" alt-text="Create a custom tool to view flight data":::
 
-1. Select **Test** to check and validate tool's output and then select **Next**. If the tool output is JSON, you can now paste optional [MCP APPs custom HTML](generate-mcp-app-widgets.md) specific to this tool. This HTML can be created using the `/generate-mcp-apps-ui skill` or your own development tool. Select **Save**.
+1. Select **Test** to check and validate tool's output and then select **Next**. You can now create and paste optional [custom HTML](generate-mcp-app-widgets.md) specific to this tool. This HTML can be created using the `/generate-mcp-apps-ui skill` or your own development tool. Select **Save**.
 
    :::image type="content" source="media/enable-your-app-copilot/create-custom-tool-output.png" alt-text="Custom tool example output JSON":::
 
@@ -80,15 +80,15 @@ In addition to the built-in tools available within the app’s declarative agent
 
 ### Dynamic tool chaining
 
-Tool chaining in Power Apps declarative agents uses the Microsoft 365 Copilot orchestrator to reason over user intent and dynamically invoke multiple MCP-powered actions (tools) in sequence to complete a task. The orchestrator selects, parameterizes, and executes the right combination of MCP app actions based on context and function descriptions, enabling end‑to‑end workflows across Power Apps and enterprise systems. Here's how create a tool with paramaterized input.
+Tool chaining in Power Apps declarative agents uses the Microsoft 365 Copilot orchestrator to reason over user intent and dynamically invoke multiple MCP-powered actions (tools) in sequence to complete a task. The orchestrator selects, parameterizes, and executes the right combination of MCP app actions based on context and function descriptions, enabling end‑to‑end workflows across Power Apps and enterprise systems. Here’s how to create a tool with parameterized input.
 
-1. Select **Create custom tool** under the **Tools** section of the **MCP apps** tab.
+1. Select **Create custom tool** under the **Tools** section of the **App MCP** tab.
 1. Provide a clear, descriptive **name** and **description** for the tool, as Microsoft 365 Copilot uses this information to determine when to invoke it.
 1. In this example, we use a Sankey chart visualizer. First, define the JSON input schema required to generate a Sankey chart. Next, create a prompt for the Sankey chart visualizer tool. The tool exposes an input parameter named **SankeyDiagramVisualizationInputData**. This parameter is interpreted by the tool and transformed into the JSON structure expected by the visualizer. Choose a clear and descriptive input parameter name so the LLM can correctly identify and invoke the tool.
 
    :::image type="content" source="media/enable-your-app-copilot/create-custom-tool-chain.png" alt-text="Custom tool with tool chaining" lightbox="media/enable-your-app-copilot/create-custom-tool-chain.png":::
 
-1. Create and paste [MCP APPs based custom UX HTML](generate-mcp-app-widgets.md) specific to this tool.
+1. You can now create and paste [custom HTML](generate-mcp-app-widgets.md) specific to this tool. This HTML can be created using the `/generate-mcp-apps-ui skill` or your own development tool. Select **Save**.
 1. Download the updated app package zip and upload the latest version to Microsoft Teams or Microsoft 365 Agents.
 1. Copilot can now use natural language queries to fetch the data and pass it to the tool for visualization. For example you can use a complex query to dynamically get inputs from the 'issues' table data and visualize them using Sankey Chart Visualizer tool.
    
