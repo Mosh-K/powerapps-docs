@@ -1,6 +1,7 @@
 ---
 title: Add Microsoft 365 Copilot chat for app users in canvas apps (preview)
 description: Learn how to enable Microsoft 365 Copilot chat in canvas apps to provide AI-powered insights and enhance productivity for your app users.
+# customer intent: As a Power Apps maker, I want to enable Microsoft 365 Copilot in my canvas app so that users can get AI-powered answers about app data through natural language.
 author: mduelae
 ms.service: powerapps
 ms.subservice: canvas-maker
@@ -89,7 +90,7 @@ Makers can enable or disable Microsoft 365 Copilot for a specific canvas app.
 - Agents you author can't yet use in‑app user context to optimize their responses.
 - M365 Copilot in canvas apps supports apps that use either SharePoint or Dataverse as a data source but not both within the same app.
 - During the initial preview phase, for SharePoint, only applications containing a single SharePoint list will return answers to questions.
-- If your canvas app connects to a SharePoint list through an environment variable, Microsoft 365 Copilot responses will not reference data from that SharePoint list.
+- If your canvas app connects to a SharePoint list through an environment variable, Microsoft 365 Copilot won't reference data from that SharePoint list.
 - Microsoft 365 Copilot for canvas apps allows users to view data by using read-only operations. This capability means that users can only view data that matches their queries and can't make any changes. To make changes, customization with an agent is required.
 - Microsoft 365 Copilot for canvas apps isn't available in the Power Apps mobile app.
 - As this feature is being gradually deployed, certain settings in the Power Platform Admin Center might not be accessible yet, depending on the geographic location of your tenant.
