@@ -1,13 +1,12 @@
 ---
 title: Add Microsoft 365 Copilot chat for app users in canvas apps (preview)
 description: Learn how to enable Microsoft 365 Copilot chat in canvas apps to provide AI-powered insights and enhance productivity for your app users.
-# customer intent: As a Power Apps maker, I want to enable Microsoft 365 Copilot in my canvas app so that users can get AI-powered answers about app data through natural language.
 author: mduelae
 ms.service: powerapps
 ms.subservice: canvas-maker
 ms.author: marcsc
 ms.reviewer: mkaur
-ms.date: 04/15/2026
+ms.date: 04/22/2026
 ms.update-cycle: 180-days
 ms.topic: how-to
 applies_to: 
