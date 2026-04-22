@@ -182,4 +182,4 @@ app.ontoolresult = (result) => {
 
 [Generate MCP app widgets with AI code generation tools](generate-mcp-app-widgets.md)
 
-[FAQ for Power Apps in agents](../common/faq-apps-in-agents)
+[FAQ for Power Apps in agents](../common/faq-apps-in-agents.md)
