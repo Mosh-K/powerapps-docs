@@ -14,7 +14,7 @@ ms.subservice: mda-maker
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Power Apps in Microsoft 365 Copilot lets users interact with your model-driven app directly from Copilot. When a user talks to the agent, it can surface your app's data as interactive widgets, a grid for browsing records or a form for viewing, editing, or creating them, all without leaving the Copilot experience. Additionally, you can add custom MCP tools and interactive UI to the app’s declarative agent. This functionality is achieved via [MCP Apps](https://apps.extensions.modelcontextprotocol.io/api/documents/Overview.html) which is an extension to MCP that enables MCP servers to deliver interactive user interfaces to hosts. The feature works by generating an MCP server and declarative agent from your app.
+Power Apps in Microsoft 365 Copilot lets users interact with your model-driven app directly from Copilot. When a user talks to the agent, it can surface your app's data as interactive widgets, a grid for browsing records or a form for viewing, editing, or creating them, all without leaving the Copilot experience. Additionally, you can add custom MCP tools and interactive UI to the app’s declarative agent. This functionality is achieved via [MCP apps](https://apps.extensions.modelcontextprotocol.io/api/documents/Overview.html) which is an extension to MCP that enables MCP servers to deliver interactive user interfaces to hosts. The feature works by generating an MCP server and declarative agent from your app.
 
 > [!IMPORTANT]
 >
@@ -29,7 +29,7 @@ Power Apps in Microsoft 365 Copilot lets users interact with your model-driven a
 
 ## Set up Power Apps in Copilot
 
-1. Go to https://make.preview.powerapps.com/ and open the desired model-driven app after selecting the right environment.
+1. Go to [Power Apps](https://make.preview.powerapps.com/), select the environment you want, and then open the desired model-driven app.
 1. Select the **App MCP** icon on the left navigation bar, and then select **Set up MCP**. This action sets up the MCP server for the app, which provides MCP tools for Copilot conversations. This is a one-time step and may take a few seconds to complete.
 
    :::image type="content" source="media/enable-your-app-copilot/setup-app-mcp.png" alt-text="Setup app MCP for model-driven app":::
@@ -42,11 +42,11 @@ Power Apps in Microsoft 365 Copilot lets users interact with your model-driven a
    - Teams: Upload for personal use as a custom app in Teams. More information [Upload your app in Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload)
    - Microsoft 365 Agents: Publish the package for a team or group from the Microsoft 365 admin center. More information: [Publish agents](/microsoft-365/admin/manage/agent-registry?view=o365-worldwide&preserve-view=true#publish-agents)
 
-You can now ask questions about the tables in the app from this declarative agent. Built-in tools can show an [interactive grid](http://aka.ms/appskills/grid) for the dataset queries.
+You can now ask questions about the tables in the app from this declarative agent. Built-in tools can show an [interactive grid](https://aka.ms/appskills/grid) for the dataset queries.
 
    :::image type="content" source="media/enable-your-app-copilot/copilot-view-data-flights.png" alt-text="Example of viewing flights returned from the declaritive agent":::
    
-Additionally, [intelligent forms](http://aka.ms/appskills/form) can be used to create, view, and edit records within the Microsoft 365 Copilot context.
+Additionally, [intelligent forms](https://aka.ms/appskills/form) can be used to create, view, and edit records within the Microsoft 365 Copilot context.
 
    :::image type="content" source="media/enable-your-app-copilot/copilot-create-record-from-email.png" alt-text="Example of creating a new record from email via declaritive agent":::
 
@@ -84,7 +84,7 @@ Tool chaining in Power Apps declarative agents uses the Microsoft 365 Copilot or
 
 1. Select **Create custom tool** under the **Tools** section of the **App MCP** tab.
 1. Provide a clear, descriptive **name** and **description** for the tool, as Microsoft 365 Copilot uses this information to determine when to invoke it.
-1. In this example, we use a Sankey chart visualizer. First, define the JSON input schema required to generate a Sankey chart. Next, create a prompt for the Sankey chart visualizer tool. The tool exposes an input parameter named **SankeyDiagramVisualizationInputData**. This parameter is interpreted by the tool and transformed into the JSON structure expected by the visualizer. Choose a clear and descriptive input parameter name so the LLM can correctly identify and invoke the tool.
+1. In this example, we use a Sankey chart visualizer. First, define the JSON input schema required to generate a Sankey chart. Next, create a prompt for the Sankey chart visualizer tool. The tool exposes an input parameter named `SankeyDiagramVisualizationInputData`. This parameter is interpreted by the tool and transformed into the JSON structure expected by the visualizer. Choose a clear and descriptive input parameter name so the LLM can correctly identify and invoke the tool.
 
    :::image type="content" source="media/enable-your-app-copilot/create-custom-tool-chain.png" alt-text="Custom tool with tool chaining" lightbox="media/enable-your-app-copilot/create-custom-tool-chain.png":::
 
@@ -181,4 +181,5 @@ app.ontoolresult = (result) => {
 ## Related articles
 
 [Generate MCP app widgets with AI code generation tools](generate-mcp-app-widgets.md)
-[FAQ for Power Apps in agents](../../common/faq-apps-in-agents)
+
+[FAQ for Power Apps in agents](../common/faq-apps-in-agents)
