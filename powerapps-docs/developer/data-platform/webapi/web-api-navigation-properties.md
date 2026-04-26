@@ -36,7 +36,7 @@ The following table describes the attributes of `NavigationProperty` elements.
 
 ## Single-valued navigation properties
 
-When a navigation property `Type` refers to a single value, it represents a one-to-many relationship that creates a reference to another table record. This relationship is commonly called a *lookup*. The following example is the `account` table `createdby` navigation property:
+When a navigation property `Type` refers to a single value, it represents a many-to-one relationship that creates a reference to another table record. This relationship is commonly called a *lookup*. The following example is the `account` table `createdby` navigation property:
 
 ```xml
 <NavigationProperty 
@@ -113,7 +113,7 @@ In these cases, setting the value of any of the single-valued navigation propert
 
 ## Collection-valued navigation properties
 
-When a navigation property `Type` refers to a collection value, it represents a many-to-one or many-to-many relationship. The following example is the account entity `Account_Tasks` navigation property:
+When a navigation property `Type` refers to a collection value, it represents a one-to-many or many-to-many relationship. The following example is the account entity `Account_Tasks` navigation property:
 
 ```xml
 <NavigationProperty 
